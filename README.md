@@ -2,8 +2,8 @@
 # Bioconductor conference template website
 
 This repository contains material for the Bioconductor annual conference. 
-View the example at https://bioc2022.bioconductor.org/ and the corresponding
-[GitHub repo](https://github.com/Bioconductor/BioC2022)
+View the example at https://gbcc2025.bioconductor.org/ and the corresponding
+[GitHub repo](https://github.com/Bioconductor/gbcc2025)
 
 # Create a new website for an annual BiocConference
 
