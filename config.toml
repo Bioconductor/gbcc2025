@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Bioconductor"
+title = "GBCC2025"
 theme = "hugo-universal-theme"
 # themesDir = "../.."
 languageCode = "en-us"
@@ -23,11 +23,11 @@ paginate = 50
     url  = "/"
     weight = 10
 
-[[menu.main]]
-    identifier="schedule"
-    name = "Schedule"
-    url  = "/schedule/"
-    weight = 20
+# [[menu.main]]
+#    identifier="schedule"
+#    name = "Schedule"
+#    url  = "/schedule/"
+#    weight = 20
 
 [[menu.main]]
     identifier="Workshops"
@@ -53,12 +53,12 @@ paginate = 50
     url  = "#"
     weight = 60
 
-[[menu.main]]
-    identifier="submissions"
-    parent = "about"
-    name = "Submissions"
-    url  = "/submissions/"
-    weight = 30
+# [[menu.main]]
+#    identifier="submissions"
+#    parent = "about"
+#   name = "Submissions"
+#   url  = "/submissions/"
+#   weight = 30
 
 # [[menu.main]]
 #    identifier="registration"
@@ -88,12 +88,12 @@ paginate = 50
     url  = "/code/"
     weight = 8
 
-[[menu.main]]
-    identifier = "conferences"
-    parent = "about"
-    name = "Past events"
-    url  = "/conferences/"
-    weight = 9
+#[[menu.main]]
+#    identifier = "conferences"
+#    parent = "about"
+#    name = "Past events"
+#    url  = "/conferences/"
+#    weight = 9
 
 #[[menu.main]]
 #    identifier = "conferences"
@@ -177,7 +177,7 @@ paginate = 50
     email = "your@email.com"
     contact_form_ajax = false
 
-    about_us = "<p>Bioconductor conference highlights current developments within and beyond the Bioconductor project.</p>"
+    about_us = "<p>GBCC2025 will highlight current developments within and beyond the Galaxy and Bioconductor projects.</p>"
     copyright = "Copyright (c) 2020 - 2023, Bioconductor."
 
     # Format dates with Go's time formatting
@@ -185,9 +185,8 @@ paginate = 50
 
     logo = "img/logo.png"
     logo_small = "img/logo.png"
-    address = """<p class="text-uppercase"><strong><a href="http://bioconductor.org/" target="_blank">Bioconductor web site</a></strong></p>
-        <p><a href="http://bioconductor.org/about" target="_blank">About Bioconductor</a>
-        <br><a href="http://bioconductor.org/help" target="_blank">Getting help</a>
+    address = """<p class="text-uppercase"><strong><a href="https://bioconductor.org/" target="_blank">Bioconductor web site</a></strong></p>
+        <p class="text-uppercase"><strong><a href="https://galaxyproject.org/" target="_blank">Galaxy web site</a></strong></p>
       </p>
       """
 
@@ -196,7 +195,7 @@ paginate = 50
 
 # Enable or disable top bar with social icons
 [params.topbar]
-    enable = true
+    enable = false
     text = """<p class="hidden-sm hidden-xs">Join/follow our community</p>
       <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
       <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>

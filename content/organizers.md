@@ -3,14 +3,9 @@ title = "Organizers"
 description = "Organizers"
 +++
 
-## Co-chairs
-
-{{< cochairs >}}
-
-## Organizer Comittee
+## Organizing Committee
 
 {{< committee >}}
-
 
 <!--
 ## Co-chairs
@@ -48,12 +43,12 @@ description = "Organizers"
 
 
 * Andrew McDavid
-* Charlotte Soneson 
+* Charlotte Soneson
 * Chelsea Lundstrom
 * Erica Feick
 * Glenn Morton
 * Jason Wendler
-* Jayaram Kancherla 
+* Jayaram Kancherla
 * Jenny Drnevich
 * Joyce Hsiao
 * Kayla Interdonato
@@ -67,7 +62,7 @@ description = "Organizers"
 * Michael Love
 * Mikhail Dozmorov
 * Nathan Sheffield
-* Qian Liu 
+* Qian Liu
 * Rafael Irizarry
 * Sean Davis
 * Simone Bell

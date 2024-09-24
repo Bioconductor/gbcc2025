@@ -3,7 +3,7 @@ title = "Schedule"
 description = "Schedule"
 +++
 
-### Coming soon
+## Coming soon
 
 <!--
 + [All short talks](../tags/short-talk/)
@@ -113,7 +113,7 @@ All times are in US Pacific Daylight savings Time (PDT). +3 hours = US EDT, +9 h
 | 19:45                      | Closing   remarks                           | Networking                                                                                                                                                                                                                                                                    | [video](https://youtu.be/N7LCSUWYof0) |
 
 
-Change the time zone in the teamup calendar ('hamburger button' in the upper-right corner). Add this calendar to your calendar using "Preferences/iCalendar Feeds". 
+Change the time zone in the teamup calendar ('hamburger button' in the upper-right corner). Add this calendar to your calendar using "Preferences/iCalendar Feeds".
 
 {{< iframe >}}
 -->
