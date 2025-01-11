@@ -23,6 +23,12 @@ paginate = 50
     url  = "/"
     weight = 10
 
+[[menu.main]]
+    identifier="information"
+    name = "Conference Information"
+    url  = "/information/"
+    weight = 20
+
 # [[menu.main]]
 #    identifier="schedule"
 #    name = "Schedule"
