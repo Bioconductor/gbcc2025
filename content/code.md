@@ -3,7 +3,7 @@ title = "Code of conduct"
 description = "Code of conduct"
 +++
 
-This code of conduct was developed for the Bioconductor conferences. For more details, see the [Bioconductor Code of Conduct](https://www.bioconductor.org/about/code-of-conduct/)
+This code of conduct was developed for the Bioconductor conferences. For more details, see the [Bioconductor Code of Conduct](https://www.bioconductor.org/about/code-of-conduct/). Also, refer to the [CODE OF CONDUCT FOR ALL PARTICIPANTS IN CSHL MEETINGS](https://meetings.cshl.edu/policies.aspx?meet=SINGLE&year=19#conduct).
 <!-- The original Code of Conduct is copy-pasted and quoted below -->
 
 ## Social media policy
