@@ -5,6 +5,8 @@ description = "Schedule"
 
 ## Coming soon
 
+The schedule will be finalized in April, 2025.
+
 <!--
 + [All short talks](../tags/short-talk/)
 + [All workshops and package demos](../workshops/)
