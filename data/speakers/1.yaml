@@ -1,4 +1,4 @@
-text: "Jane Smith is a professor . http://homepage and  https://twitter."
-name: "Jane Smith, Keynote: \"Title\""
-position: "Professor, University"
-avatar: "img/speakers/avatar.png"
+text: "Charlotte Soneson is a distinguished computational biologist from Osby, Sweden. She earned her master's degree in engineering physics and a PhD in mathematics from Lund University. Her professional journey includes roles as a bioinformatician and project manager at the SIB Swiss Institute of Bioinformatics in Lausanne, and as a postdoctoral researcher at the University of Zurich. Since October 2018, she has been a research associate at the Friedrich Miescher Institute for Biomedical Research in Basel, Switzerland, contributing significantly to the Computational Biology Platform. Charlotte has made notable contributions to the Bioconductor project, an open-source software initiative for bioinformatics, and was honored with the Bioconductor Award in 2021 for her outstanding involvement. In 2023, she received the Ruth Chiquet Prize for co-developing einprot, an open-source software package for the statistical analysis of quantitative proteomics data. https://csoneson.github.io/ and https://fosstodon.org/@csoneson."
+name: "Charlotte Soneson"
+position: "Research Associate, Computational Biology Platform, Friedrich Miescher Institute for Biomedical Research"
+avatar: "img/speakers/charlotte-soneson.jpg" 
