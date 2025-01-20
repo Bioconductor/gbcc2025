@@ -3,6 +3,26 @@ title = "Conference Information"
 description = "information"
 +++
 
+# Conference logos
+
+<div class="responsive-row">
+  <img src="/img/carousel/winner-Marie.Josse.png" alt="Winner" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/runner-up.Charlie.Bayne.png" alt="Runner-Up" class="responsive-logo">
+</div>
+
+<div class="responsive-row">
+  <img src="/img/carousel/gallery/converted_images/gallery-Ana.T.Alonso.png" alt="Gallery: Ana T. Alonso" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Dongmei.Li.png" alt="Gallery: Dongmei Li" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Fahran.Ameen.png" alt="Gallery: Fahran Ameen" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Hannah.Kim-0.png" alt="Gallery: Hannah Kim (Page 1)" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Hannah.Kim-1.png" alt="Gallery: Hannah Kim (Page 2)" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Kahla.Nesrine.Aicha.png" alt="Gallery: Kahla Nesrine Aicha" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Pedro.Cabello.png" alt="Gallery: Pedro Cabello" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Raziye.Rabiei.png" alt="Gallery: Raziye Rabiei" class="responsive-logo">
+  <img src="/img/carousel/gallery/converted_images/gallery-Shaw.Hong.Ser.png" alt="Gallery: Shaw Hong Ser" class="responsive-logo">
+</div>
+
+
 # Coming soon
 
 ### Venue

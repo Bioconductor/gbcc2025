@@ -8,3 +8,19 @@
 .box-simple {
   min-height: 230px;
 }
+
+.responsive-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures wrapping for small screens */
+  gap: 20px; /* Space between images */
+  margin: 20px 0;
+}
+
+.responsive-logo {
+  max-width: 100%; /* Ensures images do not exceed container width */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 200px; /* Optional: limits the height for consistent display */
+  object-fit: contain; /* Ensures the image is contained properly */
+}
