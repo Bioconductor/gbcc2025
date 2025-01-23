@@ -146,6 +146,7 @@ paginate = 50
     pre = "<i class='fab fa-2x fa-slack'></i>"
 
 [params]
+    customCSS = ["css/style.css"]
     viewMorePostLink = "/blog/"
     author = "DevCows"
     defaultKeywords = ["devows", "hugo", "go"]

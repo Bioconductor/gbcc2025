@@ -1,0 +1,24 @@
+.hosts-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 15px; 
+  }
+  
+  /* Logo container styles */
+  .logo-container {
+    flex: 0 1 auto; 
+  }
+  
+  /* Logo image styles */
+  .logo-image {
+    max-width: 150px; 
+    height: auto;
+    transition: transform 0.2s ease; 
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.1); 
+  }
+  
