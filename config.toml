@@ -18,100 +18,186 @@ paginate = 50
 # Main menu
 
 [[menu.main]]
-    identifier="home"
-    name = "Home"
-    url  = "/"
-    weight = 10
+identifier = "gbcc2025"
+name = "GBCC2025"
+url = "/about/greetings"
+weight = 2
+
+  [[menu.main]]
+  parent = "gbcc2025"
+  name = "Greetings"
+  url = "/about/greetings"
+  weight = 1
+
+  [[menu.main]]
+  parent = "gbcc2025"
+  name = "Overview"
+  url = "/about/overview"
+  weight = 2
+
+  [[menu.main]]
+  parent = "gbcc2025"
+  name = "Committee"
+  url = "/about/committee"
+  weight = 3
+
+  [[menu.main]]
+  parent = "gbcc2025"
+  name = "Venue"
+  url = "/about/venue"
+  weight = 4
+
+  [[menu.main]]
+  parent = "gbcc2025"
+  name = "Previous Meetings"
+  url = "/about/previous_meetings"
+  weight = 5
 
 [[menu.main]]
-    identifier="information"
-    name = "Conference Information"
-    url  = "/information/"
-    weight = 20
+identifier = "program"
+name = "Program"
+url = "/program/glance"
+weight = 3
+
+  [[menu.main]]
+  parent = "program"
+  name = "Program at a Glance"
+  url = "/program/glance"
+  weight = 1
+
+  [[menu.main]]
+  parent = "program"
+  name = "Scientfic Program"
+  url = "/program/scientific_program"
+  weight = 2
+
+  [[menu.main]]
+  parent = "program"
+  name = "Keynote and Invited Speakers"
+  url = "/program/keynotes"
+  weight = 3
 
 [[menu.main]]
-   identifier="schedule"
-   name = "Schedule"
-   url  = "/schedule/"
-   weight = 20
+identifier = "abstracts"
+name = "Abstracts"
+url = "/abstracts/submission_guidelines"
+weight = 4
 
-# [[menu.main]]
-#   identifier="keynotes"
-#   name = "Keynotes"
-#   url  = "/keynotes/"
-#   weight = 21
+  [[menu.main]]
+  parent = "abstracts"
+  name = "Abstract Submission Guidelines"
+  url = "/abstracts/submission_guidelines"
+  weight = 1
 
-#[[menu.main]]
-#    identifier="Package demos"
-#    name = "Package demos"
-#    url  = "/package-demo/"
-#    weight = 22
+  [[menu.main]]
+  parent = "abstracts"
+  name = "Scolarships and Rewards"
+  url = "/abstracts/scholarships"
+  weight = 2
 
-[[menu.main]]
-    identifier = "sponsors"
-    name = "Sponsors"
-    url  = "/sponsors/"
-    weight = 50
+  [[menu.main]]
+  parent = "abstracts"
+  name = "Abstract Book"
+  url = "/abstracts/book"
+  weight = 3
 
-[[menu.main]]
-    identifier = "about"
-    name = "About"
-    url  = "#"
-    weight = 60
-
-# [[menu.main]]
-#    identifier="submissions"
-#    parent = "about"
-#   name = "Submissions"
-#   url  = "/submissions/"
-#   weight = 30
-
-# [[menu.main]]
-#    identifier="registration"
-#    parent = "about"
-#    name = "Registration"
-#    url  = "/registration/"
-#    weight = 55
-
-#[[menu.main]]
-#    identifier="workshops"
-#    name = "Workshops"
-#    url  = "/workshops-status/"
-#    weight = 4
-
-# https://github.com/devcows/hugo-universal-theme/issues/34
-[[menu.main]]
-    identifier = "organizers"
-    parent = "about"
-    name = "Organizers"
-    url  = "/organizers/"
-    weight = 6
 
 [[menu.main]]
-    identifier = "code"
-    parent = "about"
-    name = "Code of conduct"
-    url  = "/code/"
-    weight = 8
+identifier = "registration"
+name = "Registration"
+url = "/registration/conference"
+weight = 5
 
-#[[menu.main]]
-#    identifier = "conferences"
-#    parent = "about"
-#    name = "Past events"
-#    url  = "/conferences/"
-#    weight = 9
+  [[menu.main]]
+  parent = "registration"
+  name = "Conference Registration"
+  url = "/registration/conference"
+  weight = 1
 
-#[[menu.main]]
-#    identifier = "conferences"
-#    name = "Past events"
-#    url  = "/conferences/"
-#    weight = 9
+  [[menu.main]]
+  parent = "registration"
+  name = "Cofest Registration"
+  url = "/registration/cofest"
+  weight = 2
 
-# [[menu.main]]
-#     identifier = "contact"
-#     name = "Contact"
-#     url  = "/contact/"
-#     weight = 8
+[[menu.main]]
+identifier = "sponsor"
+name = "Sponsorships"
+url = "/sponsorships/"
+weight = 6
+
+  [[menu.main]]
+  parent = "sponsor"
+  name = "Sponsor Information"
+  url = "/sponsorships/"
+  weight = 1
+
+[[menu.main]]
+identifier = "general_info"
+name = "General Information"
+url = "/general_information/transportation"
+weight = 7
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Transportation"
+  url = "/general_information/transportation"
+  weight = 1
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Things to do in the Area"
+  url = "/general_information/things_to_do"
+  weight = 2
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Logo Gallery"
+  url = "/general_information/logo_contest_gallery"
+  weight = 3
+
+[[menu.main]]
+identifier = "cofest"
+name = "Cofest"
+url = "/cofest/overview"
+weight = 8
+
+  [[menu.main]]
+  parent = "cofest"
+  name = "Cofest Overview"
+  url = "/cofest/overview"
+  weight = 1
+
+  [[menu.main]]
+  parent = "cofest"
+  name = "Past Projects"
+  url = "/cofest/past_projects"
+  weight = 2
+
+  [[menu.main]]
+  parent = "cofest"
+  name = "Venue Information"
+  url = "/cofest/venue_info"
+  weight = 3
+
+  [[menu.main]]
+  parent = "cofest"
+  name = "Proposed Projects"
+  url = "/cofest/proposed_projects"
+  weight = 4
+
+[[menu.main]]
+identifier = "bofs"
+name = "BOFs"
+url = "/bofs/overview"
+weight = 9
+
+  [[menu.main]]
+  parent = "bofs"
+  name = "BOFs Overview"
+  url = "/bofs/overview"
+  weight = 1
+
 
 # Top bar social links menu
 
@@ -147,9 +233,10 @@ paginate = 50
 
 [params]
     customCSS = ["css/style.css"]
+    dropdown_mouse_over = true
     viewMorePostLink = "/blog/"
     author = "DevCows"
-    defaultKeywords = ["devows", "hugo", "go"]
+    defaultKeywords = ["GCC2025", "Bioconductor", "Galaxy Project"]
     mainSections = ["blog"]
     # defaultDescription = "Site template made by devcows using hugo"
 
@@ -166,7 +253,7 @@ paginate = 50
     longitude = "-77.028333"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "blue"
+    style = "green"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -202,17 +289,12 @@ paginate = 50
 
 # Enable or disable top bar with social icons
 [params.topbar]
-    enable = false
-    text = """<p class="hidden-sm hidden-xs">Join/follow our community</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
-      """
+    enable = true
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    categories = true
-    tags = true
+    categories = false
+    tags = false
     search = false
 
 [params.carousel]

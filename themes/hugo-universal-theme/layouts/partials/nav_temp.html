@@ -1,0 +1,38 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<header class="navbar-affixed-top" data-spy="affix" data-offset-top="62">
+  <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+    <div class="container">
+      <!-- Logo and Mobile Menu Toggle -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand home" href="{{ "/" | relURL }}">
+          <img src="{{ .Site.Params.logo | relURL }}" alt="Logo" class="conference_logo">
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="navbar-collapse collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          {{ range .Site.Menus.main }}
+          <li class="main-menu-item {{ if .Children }}has-children{{ end }}">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ if .Children }}
+            <!-- Submenu -->
+            <ul class="submenu">
+              {{ range .Children }}
+              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
