@@ -35,8 +35,11 @@ description = "Organizers"
 ### Members
 
 - **Anil Thanki**, EMBL-EBI
+- **Charlotte Soneson**, Friedrich Miescher Institute for Biomedical Research
 - **Chinenyenwa Fortune	Chukwuneme**, Vaal University of Technology
 - **Damitha Liyanaarachchi**, University of Colombo School of Computing
+- **Gareth Price**, Galaxy Australia
+- **Hans-Rudolf Hotz**, Friedrich Miescher Institute for Biomedical Research
 - **Juan, Martinez Villalobos**, Yale
 - **Katarina Flöer**, Smith College and Mass General Hospital
 - **Maria Chavero**, Barcelona Supercomputing Center
