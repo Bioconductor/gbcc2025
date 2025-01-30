@@ -34,4 +34,17 @@ description = "Organizers"
 
 ### Members
 
-**TBD**
+- **Anil Thanki**, EMBL-EBI
+- **Chinenyenwa Fortune	Chukwuneme**, Vaal University of Technology
+- **Damitha Liyanaarachchi**, University of Colombo School of Computing
+- **Juan, Martinez Villalobos**, Yale
+- **Katarina Flöer**, Smith College and Mass General Hospital
+- **Maria Chavero**, Barcelona Supercomputing Center
+- **Miguel Camacho**, Johannes Gutenberg University
+- **Mikhail Dozmorov**, VCU
+- **Mohammad Saeed Tajdary**, Shahid Beheshti University
+- **Oriana Barros**, University of Aveiro
+- **Pedro Madrigal**, EMBL-EBI
+- **Pratik Jagtap**, University of Minnesota
+- **Sudhanshu Shekhar**, University of North Carolina
+- **Tim Triche**, VAI
