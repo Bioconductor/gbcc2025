@@ -1,0 +1,39 @@
+title: "Day 4: June 26 (Thurs.)"
+
+rooms:
+  - "Grace Auditorium"
+  - "Bush Auditorium"
+  - "Bush Fireplace"
+  - "Nicholls Biondi"
+  - "Hawkins"
+
+schedule:
+  - time: "9:00 - 10:00"
+    slots:
+        - session: "Keynote 3 (Jason)"
+          class: "session-keynote"
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: " "
+
+  - time: "10:00 - 10:30"
+    slots:
+      - colspan: 5
+        session: "Break"
+        class: "session-break"
+
+  - time: "10:30 - 12:00"
+    slots:
+        - session: "Oral session 4"
+          class: "session-oral"
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: " "
+
+  - time: "12:00 - 1:00"
+    slots:
+      - colspan: 5
+        session: "Lunch + departures"
+        class: "session-lunch"

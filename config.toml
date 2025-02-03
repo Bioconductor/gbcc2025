@@ -91,12 +91,6 @@ weight = 4
 
   [[menu.main]]
   parent = "abstracts"
-  name = "Scolarships and Rewards"
-  url = "/abstracts/scholarships"
-  weight = 2
-
-  [[menu.main]]
-  parent = "abstracts"
   name = "Abstract Book"
   url = "/abstracts/book"
   weight = 3
@@ -120,6 +114,12 @@ weight = 5
   url = "/registration/cofest"
   weight = 2
 
+  [[menu.main]]
+  parent = "registration"
+  name = "Scolarships and Rewards"
+  url = "/registration/scholarships"
+  weight = 2
+
 [[menu.main]]
 identifier = "sponsor"
 name = "Sponsorships"
@@ -129,7 +129,7 @@ weight = 6
   [[menu.main]]
   parent = "sponsor"
   name = "Sponsor Information"
-  url = "/sponsorships/"
+  url = "/sponsorships/sponsor_info"
   weight = 1
 
 [[menu.main]]

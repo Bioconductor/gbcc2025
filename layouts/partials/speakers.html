@@ -1,47 +1,115 @@
 {{ if isset .Site.Params "speakers" }}
 {{ if .Site.Params.speakers.enable }}
 {{ if gt (len .Site.Data.speakers) 0 }}
-<style>
-    .bg-white {
-        background:#ffffff !important;
-    }
-    .row.extra-bottom-padding{
-        margin-bottom: 20px;
-    }
-</style>
-<section class="bar background-pentagon no-mb">
+<section class="bar background-pentagon no-mb speaker-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="heading text-center">
-                    <h2>{{ .Site.Params.speakers.title }}</h2>
+                    <h2 class="gbcc-header">{{ .Site.Params.speakers.title }}</h2>
                 </div>
 
-                <p class="lead">
+                <p class="lead text-muted">
                     {{ .Site.Params.speakers.subtitle | markdownify }}
                 </p>
 
-                <!-- *** speakers CAROUSEL *** -->
+                <!-- Speakers Carousel -->
                 <div class="container">
                     {{ range .Site.Data.speakers }}
-                    <div class="row bg-white extra-bottom-padding">
-                        <div>
-                            <img class="img-responsive" alt="" src="{{ .avatar | absURL }}" style="height:200px; margin: 15px; float: left">
+                    <div class="row speaker-info bg-soft-beige extra-bottom-padding">
+                        <div class="speaker-item">
+                            <img class="speaker-avatar img-responsive" alt="{{ .name }}" src="{{ .avatar | absURL }}" style="height: 200px; margin-right: 15px; border-radius: 50%">
 
-                            <div>
-                                <h4>{{ .name  }}</h4>
-                                <h4>{{ .position  }}</h4>
-                                <p style="margin: 15px" >{{ .text | markdownify }}</p>
+                            <div class="speaker-details">
+                                <h4 class="speaker-name">{{ .name }}</h4>
+                                <h5 class="speaker-position text-muted">{{ .position }}</h5>
+                                <p class="speaker-description">{{ .text | markdownify }}</p>
                             </div>
                         </div>
-
                     </div>
                     {{ end }}
                 </div>
             </div>
         </div>
+    </div>
 </section>
-<!-- /.bar -->
 {{ end }}
 {{ end }}
 {{ end }}
+
+<style>
+    /* Adjusting speaker section background and layout */
+.speaker-section {
+    background: linear-gradient(to bottom, #1B3A4B, #2E5636); /* Deep Navy Blue to Forest Green gradient */
+    padding: 40px 0;
+}
+
+.speaker-info {
+    background-color: #F5F1E3; /* Soft Beige background for each speaker entry */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-item {
+    display: flex;
+    align-items: center;
+}
+
+.speaker-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #2E5636; /* Forest Green border around the image */
+}
+
+.speaker-details {
+    flex: 1;
+}
+
+.speaker-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1B3A4B; /* Deep Navy Blue */
+}
+
+.speaker-position {
+    font-size: 1.2rem;
+    color: #2E5636; /* Forest Green */
+    margin-bottom: 10px;
+}
+
+.speaker-description {
+    color: #3A3A3A; /* Dark Gray */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .speaker-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .speaker-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .speaker-name {
+        font-size: 1.2rem;
+    }
+
+    .speaker-position {
+        font-size: 1rem;
+    }
+
+    .speaker-description {
+        font-size: 0.9rem;
+    }
+}
+
+</style>

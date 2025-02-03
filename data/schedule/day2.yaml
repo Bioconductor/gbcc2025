@@ -1,0 +1,83 @@
+title: "Day 2: June 24 (Tues.)"
+
+rooms:
+  - "Grace Auditorium"
+  - "Bush Auditorium"
+  - "Bush Fireplace"
+  - "Nicholls Biondi"
+  - "Hawkins"
+
+schedule:
+  - time: "09:00 - 10:00"
+    slots:
+        - session: "Keynote 1 (Sergei)"
+          class: "session-keynote"
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: " "
+
+  - time: "10:00 - 10:30"
+    slots:
+      - colspan: 5
+        session: "Break"
+        class: "session-break"
+
+  - time: "10:30 - 12:00"
+    slots:
+        - session: "Oral Session 1"
+          class: "session-oral"
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: " "
+
+  - time: "12:00 - 1:00"
+    slots:
+      - colspan: 5
+        session: "Lunch"
+        class: "session-lunch"
+
+  - time: "1:00 - 2:30"
+    slots:
+        - session: "Training / Demo 1"
+          class: "session-training"
+        - session: "Training / Demo 2"
+          class: "session-training"
+        - session: "Training / Demo 3"
+          class: "session-training"
+        - session: "Training / Demo 4"
+          class: "session-training"
+        - session: "Training / Demo 5"
+          class: "session-training"
+
+  - time: "2:30 - 3:00"
+    slots:
+      - colspan: 5
+        session: "Break"
+        class: "session-break"
+
+  - time: "3:00 - 5:00"
+    slots:
+        - session: "Oral session 2"
+          class: "session-oral"
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: " "
+
+  - time: "5:00 - 7:00"
+    slots:
+      - colspan: 5
+        session: "Networking with wine & cheese + dinner"
+        class: "session-networking"
+
+  - time: "8:00 - 9:30"
+    slots:
+        - session: " "
+        - session: " "
+        - session: " "
+        - session: "Posters 1"
+          class: "session-posters"
+        - session: " "
+

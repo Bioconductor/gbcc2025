@@ -22,68 +22,196 @@
     transform: scale(1.1); 
   }
 
-/* Ensure the navbar menu items stay on one line */
+/* NAVBAR STYLING */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--deep-navy);
+  padding: 10px 20px;
+  margin-bottom: 0px !important;
+}
+
+/* Align logo to the left */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Ensures it takes up left-side space */
+}
+
+/* Style the logo */
+.navbar-logo {
+  height: 40px;
+  margin-right: 15px;
+}
+
+/* Ensure menu stays inline */
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Navbar items */
 .navbar-nav {
   display: flex;
   flex-wrap: nowrap;
-  overflow: visible;
   white-space: nowrap;
-  margin: 0; 
-  padding: 0; 
+  gap: 15px;
 }
 
-.navbar-nav > li {
-  flex: 0 0 auto;
-  margin: 0; 
-  padding: 0;
-  position: relative; 
-}
-
-.navbar-nav > li > a {
-  padding-left: inherit;
-  font-size: 14px;    
-  white-space: nowrap; 
-}
-
+/* Dropdown menu styling */
 .dropdown-menu {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 100%;
-  padding: 0; 
-  border: none;
+  min-width: 160px;
+  background-color: var(--soft-beige);
+  border-radius: 4px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-menu li {
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-menu li a {
-  padding: 10px 15px; 
-  display: block;
-  text-align: left;
-  width: 100%; 
-}
-
+/* Show dropdown menu on hover */
 .dropdown:hover .dropdown-menu,
 .show > .dropdown-menu {
-  display: block; 
+  display: block;
 }
 
-/*  Add a scrollbar for small screens */
-.navbar-nav {
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+  /* Ensure navbar becomes a column for mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Center logo and toggle button */
+  .navbar-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Stack menu items vertically */
+  .navbar-collapse {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+
+  /* Ensure dropdowns stack correctly */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .navbar-nav > li {
+    width: 100%;
+  }
+
+  /* Show menu when toggled */
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  /* Dropdown menu full-width */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
 }
 
-/*  Hide scrollbar */
-.navbar-nav::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+/* Footer Styles */
+#footer {
+  background-color: #1B3A4B; /* Deep Navy Blue background */
+  color: #FFFFFF; /* White text for readability */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Center the footer horizontally */
+  width: 85%; /* Set footer width to 85% */
+  margin: 0 auto; /* Center the footer */
 }
 
-.navbar-nav {
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+/* Ensure the footer content is centered horizontally */
+#footer .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
+
+/* Adjust spacing between the three sections */
+#footer .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Adjust the margin-right between the columns to add more space */
+#footer .col-md-4, #footer .col-md-3 {
+  margin-right: 40px;
+  align-self: center;
+}
+
+/* Ensure the contact information section is smaller (25% of the row) */
+#footer .col-md-3 {
+  flex: 0 0 25%; /* Make contact information 25% */
+}
+
+/* Newsletter Section */
+#footer .form-group label {
+  color: #F5F1E3; /* Soft Beige label text */
+}
+
+#footer .btn {
+  background-color: #2E5636; /* Forest Green button */
+  color: #FFFFFF; /* White text */
+  border: none;
+}
+
+#footer .btn:hover {
+  background-color: #6C91C2; /* Muted Sky Blue on hover */
+}
+
+/* Hosts Section */
+#footer h4 {
+  color: #FFFFFF; /* White for section headings */
+}
+
+#footer .hosts-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#footer .logo-container {
+  margin-bottom: 20px;
+}
+
+#footer .logo-image {
+  max-width: 150px;
+  max-height: 50%;
+  object-fit: contain;
+  min-width: 100px; /* Ensure logos don't get too small */
+}
+
+#footer .hosted {
+  text-align: center;;
+}
+
+/* Contact Information */
+#footer a {
+  color: #6C91C2; /* Muted Sky Blue links */
+}
+
+#footer a:hover {
+  color: #F5F1E3; /* Soft Beige on hover */
+}
+
+#footer p {
+  color: #F5F1E3; /* Soft Beige text for contact info */
+}
+

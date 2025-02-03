@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <!-- Load Google Fonts: one for body text, one for cursive signatures -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Great+Vibes&display=swap">
+
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <div class="greetings-page">
+        <div class="letter-container">
+          <!-- Your main Markdown content goes here -->
+          {{ .Content }}
+
+          <!-- Signatures at the bottom -->
+          <div class="signature-block">
+            <div class="signature">
+              <p>GBCC 2025 Organizing Committee<br><em>Organizing Committee</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+
+<style>
+    /* -----------------------------------------
+       PALETTE (reference)
+       -----------------------------------------
+       --deep-navy:   #1B3A4B;
+       --forest-green:#2E5636;
+       --soft-beige:  #F5F1E3;
+       --sky-blue:    #6C91C2;
+       --dark-gray:   #3A3A3A;
+       --white:       #FFFFFF;
+    */
+    
+    /* Page background with a soft beige, creating a letter-like warmth */
+    .greetings-page {
+      background-color: var(--soft-beige);
+      padding: 2rem 0;
+    }
+    
+    /* Main container: "paper" in the middle, with a serif font and bigger text */
+    .letter-container {
+      width: 60%;
+      margin: 0 auto;
+      background-color: var(--white);
+      padding: 2rem 10rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+      /* Typography */
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dark-gray);
+      font-size: 2.5rem;      /* Larger body text for readability */
+      line-height: 1.7;       /* Comfortable line spacing */
+      letter-spacing: 0.3px;  /* Slight letter spacing */
+      border-radius: 6px;
+      font-weight: 550;
+    }
+    
+    /* Narrower on mobile for better reading */
+    @media (max-width: 768px) {
+      .letter-container {
+        width: 90%;
+        padding: 1rem 1.5rem;
+        font-size: 1.7rem;
+      }
+    }
+    
+    /* Paragraph spacing */
+    .letter-container p {
+      margin-bottom: 1.2rem;
+    }
+    
+    /* Headings: use your deep navy or sky blue for contrast */
+    .letter-container h1,
+    .letter-container h2,
+    .letter-container h3 {
+      color: var(--deep-navy);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Signatures: horizontally spaced, cursive, stylized */
+    .signature-block {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+    }
+    
+    .signature p {
+      font-family: 'Great Vibes', cursive; /* The cursive signature font */
+      font-size: 2rem;                     /* Larger, decorative size */
+      color: var(--deep-navy);            /* A nice contrast color */
+      text-align: center;
+      margin-bottom: 0.5rem;              /* Slight bottom gap */
+    }
+    
+    /* Possibly style the secondary line (title) smaller or italic */
+    .signature p em {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--dark-gray);
+      font-style: italic;
+    }
+    
+    /* Stack signatures vertically on small screens */
+    @media (max-width: 768px) {
+      .signature-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* spacing between each signature block */
+      }
+
+    }
+
+    </style>
+    
+    
+  

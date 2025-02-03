@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <main class="glance-container">
+        <h1>Program at a Glance</h1>
+
+        <!-- We define the days we want to show -->
+        {{ $days := slice "day1" "day2" "day3" "day4" }}
+
+        <!-- TABS WRAPPER -->
+        <div class="tabs-wrapper">
+            {{ range $i, $d := $days }}
+            {{ $dayData := index $.Site.Data "schedule" $d }}
+            <a href="#{{ $d }}"
+              class="tab-link {{ if eq $i 0 }}active{{ end }}"
+              data-day="{{ $d }}"
+            >
+              {{ $dayData.title }}
+            </a>
+          {{ end }}
+        </div>
+
+        <!-- RENDER EACH DAY SCHEDULE via partial -->
+        {{ range $i, $d := $days }}
+            {{ partial "schedule.html" (dict "i" $i "d" $d "day" $d "Site" $.Site) }}
+        {{ end }}
+
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+
+    <!-- JavaScript for tab toggling -->
+<script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const scheduleDays = document.querySelectorAll(".schedule-day");
+
+        tabLinks.forEach(link => {
+          link.addEventListener("click", function(e) {
+            e.preventDefault();
+            // Remove 'active' from all tab links and days
+            tabLinks.forEach(t => t.classList.remove("active"));
+            scheduleDays.forEach(day => day.classList.remove("active"));
+
+            // Activate clicked tab
+            this.classList.add("active");
+            const dayId = this.getAttribute("data-day");
+            document.getElementById(dayId).classList.add("active");
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+
+        // For each table row, parse the time range in the first cell.
+        const scheduleRows = document.querySelectorAll(".schedule-table tbody tr");
+        scheduleRows.forEach(row => {
+            let timeCell = row.querySelector(".time-col");
+            if (!timeCell) return;
+
+            // The text might be like "08:00 - 09:00" or "9:00 - 10:00".
+            let timeRange = timeCell.innerText.trim(); 
+            // e.g. "08:00 - 09:00"
+            // We'll split by "-" to get ["08:00 ", " 09:00"]
+            let parts = timeRange.split("-");
+            if (parts.length !== 2) return; // skip if format is unexpected
+
+            let startStr = parts[0].trim(); // "08:00"
+            let endStr = parts[1].trim();   // "09:00"
+
+            // Convert to hours/minutes. This is simplistic and assumes HH:MM 24-hr format
+            let [startH, startM] = startStr.split(":").map(Number);
+            let [endH, endM] = endStr.split(":").map(Number);
+
+            // Convert current time and slot times to minutes from midnight for easy comparison
+            let currentTotal = currentHour * 60 + currentMinute;
+            let startTotal = startH * 60 + (startM || 0);
+            let endTotal   = endH * 60 + (endM || 0);
+
+            // If current time is between start & end, highlight
+            if (currentTotal >= startTotal && currentTotal < endTotal) {
+            row.classList.add("current-time-highlight");
+            }
+        });
+        });
+</script>
+
+    <!-- Example CSS (inline for brevity) -->
+    <style>
+      :root {
+        --deep-navy:   #1B3A4B;
+        --forest-green:#2E5636;
+        --soft-beige:  #F5F1E3;
+        --sky-blue:    #6C91C2;
+        --dark-gray:   #3A3A3A;
+        --white:       #FFFFFF;
+      }
+
+      .glance-container {
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+
+      .tabs-wrapper {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .tab-link {
+        padding: 0.5rem 1rem;
+        background-color: var(--soft-beige);
+        color: var(--dark-gray);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .tab-link.active {
+        background-color: var(--forest-green);
+        color: var(--white);
+      }
+
+      .current-time-highlight {
+        outline: 10px solid black;
+      }
+
+      .schedule-day {
+        display: none;
+      }
+      .schedule-day.active {
+        display: block;
+      }
+
+      .schedule-table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        border: 1px solid #ddd;
+      }
+
+      .schedule-table tr {
+        height: 10vh; /* Each row is 10% of the viewport height */
+      }
+
+      .schedule-table thead tr {
+        height: 7vh;  /* Header row is 7vh tall */
+      }
+
+        /* Make sure table cells handle overflow gracefully */
+      .schedule-table th,
+      .schedule-table td {
+        overflow: hidden;         /* hides content that doesn't fit */
+        text-overflow: ellipsis;  /* shows ... if truncated (works best with white-space: nowrap) */
+        white-space: nowrap;      /* keep session text on one line */
+        vertical-align: middle;   /* center text vertically */
+        border: 2px solid #ddd; 
+        text-align: center;
+      }
+      .schedule-table th, .schedule-table td {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 0.75rem;
+      }
+      .time-col {
+        width: 12%;  /* Adjust as needed, 12-15% works well */
+        min-width: 120px; /* Ensures readability even on small screens */
+        white-space: nowrap;  /* Prevents multi-line wrapping */
+        text-align: center;  /* Center aligns times */
+        font-weight: bold;
+        background-color: var(--deep-navy); /* Ensure it stands out */
+        color: #fff;
+        padding: 10px;
+      }
+
+      .schedule-table th.time-col,
+      .schedule-table td.time-col {
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+      }
+
+      .current-time-highlight > td {
+        background: linear-gradient(90deg, #fff6d1 0%, #ffe7a8 100%);
+        }
+      .current-time-highlight {
+        box-shadow: inset 0 0 0 3px #fcbd58;
+      }
+
+      /* Session classes - adapt to your brand colors or style */
+      .session-keynote {
+        background-color: #1B3A4B; /* Deep Navy Blue */
+        color: #FFFFFF;           /* White text */
+      }
+
+      .session-break {
+        background-color: #F5F1E3; /* Soft Beige */
+        color: #3A3A3A;            /* Dark Gray text */
+      }
+
+      .session-lunch, .session-networking, .session-dinner {
+        background-color: #2E5636; /* Forest Green */
+        color: #FFFFFF;            
+      }
+
+      .session-oral {
+        background-color: #6C91C2; /* Muted Sky Blue */
+        color: #FFFFFF;
+      }
+
+      /* Poster sessions or BoFs */
+      .session-posters, .session-bofs {
+        background-color: #3A3A3A; /* Dark Gray */
+        color: #FFFFFF;
+      }
+
+      /* Panels or Training (lightened navy or green) */
+      .session-panel {
+        background-color: rgba(27, 58, 75, 0.8); /* A slightly transparent Deep Navy */
+        color: #FFFFFF;
+      }
+      .session-training {
+        background-color: #6E8B68; /* Lighter forest green variant */
+        color: #FFFFFF;
+      }
+      /* Check-In: Use Forest Green for a clear, welcoming highlight */
+      .session-checkin {
+      background-color: #2E5636; /* Forest Green */
+      color: #FFFFFF;            /* White text for contrast */
+      }
+
+      /* Check-Out: Use Deep Navy for a bold, concluding block */
+      .session-checkout {
+      background-color: #1B3A4B; /* Deep Navy Blue */
+      color: #FFFFFF;
+      }
+
+    </style>
+  </body>
+</html>
+
