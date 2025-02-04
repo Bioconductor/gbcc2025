@@ -201,35 +201,12 @@ weight = 9
 
 # Top bar social links menu
 
-[[menu.topbar]]
-    weight = 1
-    name = "GitHub"
-    url = "https://github.com/Bioconductor/"
-    pre = "<i class='fab fa-2x fa-github'></i>"
-
 # [[menu.topbar]]
 #     weight = 2
 #     name = "Facebook"
 #     url = "http://facebook.com"
 #     pre = "<i class='fab fa-2x fa-facebook'></i>"
 
-[[menu.topbar]]
-    weight = 3
-    name = "Twitter"
-    url = "https://twitter.com/Bioconductor"
-    pre = "<i class='fab fa-2x fa-twitter'></i>"
-
-[[menu.topbar]]
-    weight = 4
-    name = "Email"
-    url = "mailto:workshop@bioconductor.org"
-    pre = "<i class='fas fa-2x fa-envelope'></i>"
-
-[[menu.topbar]]
-    weight = 5
-    name = "Slack"
-    url = "https://slack.bioconductor.org/"
-    pre = "<i class='fab fa-2x fa-slack'></i>"
 
 [params]
     customCSS = ["css/style.css"]
@@ -289,7 +266,7 @@ weight = 9
 
 # Enable or disable top bar with social icons
 [params.topbar]
-    enable = true
+    enable = false
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
