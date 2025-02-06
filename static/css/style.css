@@ -24,64 +24,71 @@
 
 /* Footer Styles */
 #footer {
-  background-color: #1B3A4B; /* Deep Navy Blue background */
-  color: #FFFFFF; /* White text for readability */
+  background-color: #1B3A4B;
+  color: #FFFFFF;
   padding: 20px 0;
   display: flex;
-  justify-content: center; /* Center the footer horizontally */
-  width: 85%; /* Set footer width to 85% */
-  margin: 0 auto; /* Center the footer */
-}
-
-/* Ensure the footer content is centered horizontally */
-#footer .container {
+  justify-content: center;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
+  margin: 0 auto;
 }
 
-/* Adjust spacing between the three sections */
+/* Ensure footer content is centered */
+#footer .container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Footer sections layout */
 #footer .row {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
   justify-content: space-between;
   width: 100%;
 }
 
-/* Adjust the margin-right between the columns to add more space */
+/* Adjust column spacing */
 #footer .col-md-4, #footer .col-md-3 {
-  margin-right: 40px;
+  flex: 1;
+  min-width: 250px; /* Prevent elements from shrinking too much */
+  margin: 20px 10px;
   align-self: center;
 }
 
-/* Ensure the contact information section is smaller (25% of the row) */
+/* Ensure the contact section takes up less space */
 #footer .col-md-3 {
-  flex: 0 0 25%; /* Make contact information 25% */
+  flex: 0 0 30%;
 }
 
-/* Newsletter Section */
+/* Newsletter Form */
 #footer .form-group label {
-  color: #F5F1E3; /* Soft Beige label text */
+  color: #F5F1E3;
 }
 
 #footer .btn {
-  background-color: #2E5636; /* Forest Green button */
-  color: #FFFFFF; /* White text */
+  background-color: #2E5636;
+  color: #FFFFFF;
   border: none;
 }
 
 #footer .btn:hover {
-  background-color: #6C91C2; /* Muted Sky Blue on hover */
+  background-color: #6C91C2;
 }
 
 /* Hosts Section */
 #footer h4 {
-  color: #FFFFFF; /* White for section headings */
+  color: #FFFFFF;
 }
 
 #footer .hosts-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Ensure proper alignment on mobile */
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -90,26 +97,46 @@
 }
 
 #footer .logo-image {
-  max-width: 150px;
-  max-height: 50%;
+  max-width: 350px;
+  max-height: 200px;
   object-fit: contain;
-  min-width: 100px; /* Ensure logos don't get too small */
+  min-width: 100px;
 }
 
-#footer .hosted {
-  text-align: center;;
-}
-
-/* Contact Information */
+/* Contact Info */
 #footer a {
-  color: #6C91C2; /* Muted Sky Blue links */
+  color: #6C91C2;
 }
 
 #footer a:hover {
-  color: #F5F1E3; /* Soft Beige on hover */
+  color: #F5F1E3;
 }
 
 #footer p {
-  color: #F5F1E3; /* Soft Beige text for contact info */
+  color: #F5F1E3;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #footer .row {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  #footer .col-md-4, #footer .col-md-3 {
+    flex: 1 1 100%; /* Take full width on small screens */
+    text-align: center;
+  }
+
+  #footer .hosts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .logo-image {
+    max-width: 200px; /* Reduce logo size slightly for mobile */
+  }
+}
+
+
 

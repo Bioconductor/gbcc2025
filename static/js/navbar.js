@@ -47,41 +47,36 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownContent.innerHTML = ""; // Clear previous content
 
     navItems.forEach(parentItem => {
-      const menuId = parentItem.getAttribute("data-dropdown");
-      const menuChildren = getMenuChildren(menuId);
+        const menuId = parentItem.getAttribute("data-dropdown");
+        const menuChildren = getMenuChildren(menuId);
 
-      if (menuChildren.length > 0) {
-        const dropdownColumn = document.createElement("div");
-        dropdownColumn.classList.add("dropdown-column");
+        if (menuChildren.length > 0) {
+            const dropdownColumn = document.createElement("div");
+            dropdownColumn.classList.add("dropdown-column");
 
-        // Add parent menu title for grouping
-        const header = document.createElement("div");
-        header.classList.add("dropdown-header");
-        header.textContent = parentItem.textContent.trim();
-        dropdownColumn.appendChild(header);
+            const ul = document.createElement("ul");
 
-        const ul = document.createElement("ul");
+            menuChildren.forEach(child => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = child.url;
+                a.textContent = child.name;
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
 
-        menuChildren.forEach(child => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = child.url;
-          a.textContent = child.name;
-          li.appendChild(a);
-          ul.appendChild(li);
-        });
+            dropdownColumn.appendChild(ul);
+            dropdownContent.appendChild(dropdownColumn);
 
-        dropdownColumn.appendChild(ul);
-        dropdownContent.appendChild(dropdownColumn);
-
-        // Align child items below their corresponding parent
-        const parentRect = parentItem.getBoundingClientRect();
-        dropdownColumn.style.minWidth = `${parentRect.width}px`;
-      }
+            // Get parent width and apply to dropdown column
+            const parentWidth = parentItem.getBoundingClientRect().width;
+            dropdownColumn.style.width = `${parentWidth}px`; // Set width exactly
+        }
     });
 
     dropdownContainer.style.display = "flex"; // Ensures proper alignment
-  }
+}
+
 
   function hideDropdown() {
     dropdownContainer.style.display = "none";
@@ -99,16 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "program": [
         { name: "Program at a Glance", url: "/program/glance" },
         { name: "Scientific Program", url: "/program/scientific_program" },
-        { name: "Keynote and Invited Speakers", url: "/program/keynotes" }
+        { name: "Invited Speakers", url: "/program/keynotes" }
       ],
       "abstracts": [
-        { name: "Abstract Submission Guidelines", url: "/abstracts/submission_guidelines" },
+        { name: "Submission Guidelines", url: "/abstracts/submission_guidelines" },
         { name: "Abstract Book", url: "/abstracts/book" }
       ],
       "registration": [
         { name: "Conference Registration", url: "/registration/conference" },
         { name: "Cofest Registration", url: "/registration/cofest" },
-        { name: "Scholarships and Rewards", url: "/registration/scholarships" }
+        { name: "Scholarships", url: "/registration/scholarships" }
       ],
       "sponsor": [
         { name: "Sponsor Information", url: "/sponsorships/sponsor_info" }
@@ -143,4 +138,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navMenu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.querySelector(".custom-navbar");
+  const navbarLogo = document.querySelector(".navbar-header");
 
+  function adjustNavbar() {
+    const navbarWidth = navbar.offsetWidth;
+    const logoWidth = navbarLogo.offsetWidth;
+    const availableSpace = navbarWidth - logoWidth - 50; // Ensure 50px buffer
+
+    if (availableSpace < 400) { // If nav can't fit, switch to mobile view
+      navMenu.classList.add("mobile-view");
+      navMenu.style.display = "none";
+      menuToggle.style.display = "block";
+    } else {
+      navMenu.classList.remove("mobile-view");
+      navMenu.style.display = "flex";
+      menuToggle.style.display = "none";
+    }
+  }
+
+  // Run adjustment on load & window resize
+  adjustNavbar();
+  window.addEventListener("resize", adjustNavbar);
+
+  // Toggle mobile menu
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+  });
+});

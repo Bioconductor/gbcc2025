@@ -2,11 +2,13 @@
 .bulletin_board {
   width: 90%;
   margin: 60px 5%;
+  margin-top: 0px;
   display: flex;
   background-color: #F5F1E3; /* Soft Beige background */
   padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Each container for the bulletin (Latest News, Key Dates, Quick Links) */

@@ -99,9 +99,10 @@ body {
 }
 
 .navbar-logo {
-  max-height: 80px;
+  max-height: 140px;
   width: auto;
   display: block;
+  top: -20px;
 }
 
 /* ✅ NAVIGATION MENU */
@@ -124,7 +125,7 @@ body {
   padding: 0;
   display: flex;
   height: 100%;
-  gap: 0px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
@@ -147,6 +148,7 @@ body {
   white-space: nowrap;
   font-size: 20px;
   font-weight: bold;
+  min-width: 140px;
 }
 
 .nav-link:hover {
@@ -156,45 +158,38 @@ body {
 
 /* ✅ Dropdown Container - Full width below navbar */
 .dropdown-container {
-  position: absolute;
+  position: fixed;
   top: calc(var(--navbar-height) + 40px); /* Ensures dropdown appears below navbar */
   left: 0;
   width: 100%;
   background-color: rgba(42, 77, 100, 0.85);
   text-align: left; /* Align text to start */
   z-index: 999;
-  display: none;
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  display: flex;
+  display: none;
   justify-content: center; /* Centers the dropdown content */
+  display: flex;
+  align-items: center;
 }
 
 /* ✅ Parent & Child Alignment */
 .dropdown {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
   padding: 10px 20px;
   width: 100%;
-  max-width: 1200px; /* Adjust based on your layout */
 }
+
 
 /* ✅ Each Parent Section */
 .dropdown-column {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 150px; /* Match width to parent */
-}
-
-/* ✅ Parent Menu Title */
-.dropdown-header {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--soft-beige);
-  padding-bottom: 5px;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* ✅ Child Items */
@@ -211,7 +206,7 @@ body {
 .dropdown li a {
   color: var(--soft-beige);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   padding: 5px 10px;
   max-width: 100%; /* Ensures child menu does not exceed parent width */
@@ -223,7 +218,6 @@ body {
   background-color: var(--sky-blue);
   border-radius: 3px;
 }
-
 
 /* ✅ Mobile Menu */
 .menu-toggle {
@@ -250,6 +244,7 @@ body {
     top: 100px;
     left: 0;
     z-index: 1000;
+    min-width: none;
   }
 
   .nav-links.show {

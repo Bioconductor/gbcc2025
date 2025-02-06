@@ -213,7 +213,7 @@ weight = 9
     dropdown_mouse_over = true
     viewMorePostLink = "/blog/"
     author = "DevCows"
-    defaultKeywords = ["GCC2025", "Bioconductor", "Galaxy Project"]
+    defaultKeywords = ["GBCC2025", "Bioconductor", "Galaxy Project", "Scientific Conference"]
     mainSections = ["blog"]
     # defaultDescription = "Site template made by devcows using hugo"
 
@@ -254,7 +254,7 @@ weight = 9
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
-    logo = "img/logo.png"
+    logo = "img/gbcc_logo_transparent.png"
     logo_small = "img/logo.png"
     address = """<p class="text-uppercase"><strong><a href="https://bioconductor.org/" target="_blank">Bioconductor web site</a></strong></p>
         <p class="text-uppercase"><strong><a href="https://galaxyproject.org/" target="_blank">Galaxy web site</a></strong></p>
@@ -299,7 +299,7 @@ weight = 9
     # All testimonials are defined in their own files. You can find example items
     # at 'exampleSite/data/speakers'.
     # For more informtion take a look at the README.
-    title = "Speakers"
+    title = "Keynote Speakers"
     # subtitle = "Confirmed speakers"
 
 [params.see_more]
