@@ -75,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     dropdownContainer.style.display = "flex"; // Ensures proper alignment
-}
-
+  }
 
   function hideDropdown() {
     dropdownContainer.style.display = "none";
