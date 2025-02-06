@@ -1,48 +1,45 @@
 <link rel="stylesheet" href="/css/navbar.css"> <!-- New custom CSS -->
-<!-- Social Media Icons Section -->
-<div class="social-bar">
-  <ul>
-    <li><a href="https://github.com/Bioconductor/" target="_blank">{{
-      "<i class='fab fa-github'></i>" | safeHTML }}</a></li>
-    <li><a href="https://twitter.com/Bioconductor" target="_blank">{{
-      "<i class='fab fa-2x fa-twitter'></i>" | safeHTML }}</a></li>
-    <li><a href="mailto:workshop@bioconductor.org">{{
-      "<i class='fas fa-envelope'></i>" | safeHTML }}</a></li>
-    <li><a href="https://slack.bioconductor.org/" target="_blank">{{
-      "<i class='fab fa-slack'></i>" | safeHTML }}</a></li>
-  </ul>
-</div>
 
-<header class="custom-navbar">
-  <div class="navbar-container">
-    <!-- Left-Aligned Logo -->
-    <div class="navbar-header">
-      <a href="{{ "/" | relURL }}" class="navbar-brand">
-        <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="navbar-logo">
-      </a>
+<div class="top-bar">
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <a href="{{ "/" | relURL }}" class="logo-holder">
+      <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="navbar-logo">
+    </a>
+  </div>
+
+  <!-- Social Media and Navbar Container -->
+  <div class="nav-container">
+    <!-- Social Media Icons -->
+    <div class="social-bar">
+      <ul>
+        <li><a href="https://github.com/Bioconductor/" target="_blank">{{
+          "<i class='fab fa-github'></i>" | safeHTML }}</a></li>
+        <li><a href="https://twitter.com/Bioconductor" target="_blank">{{
+          "<i class='fab fa-2x fa-twitter'></i>" | safeHTML }}</a></li>
+        <li><a href="mailto:workshop@bioconductor.org">{{
+          "<i class='fas fa-envelope'></i>" | safeHTML }}</a></li>
+        <li><a href="https://slack.bioconductor.org/" target="_blank">{{
+          "<i class='fab fa-slack'></i>" | safeHTML }}</a></li>
+      </ul>
     </div>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Navigation Menu -->
-    <nav class="nav-links" id="nav-menu">
-      <ul>
-        {{ range .Site.Menus.main }}
-          {{ if not .Parent }}  <!-- Only top-level menu items -->
-            <li class="nav-item has-dropdown" data-dropdown="{{ .Identifier }}">
-              <a href="{{ .URL }}" class="nav-link">
-                {{ .Name }}
-              </a>
-            </li>
+    <!-- Custom Navbar -->
+    <header class="custom-navbar">
+      <nav class="nav-links" id="nav-menu">
+        <ul>
+          {{ range .Site.Menus.main }}
+            {{ if not .Parent }}
+              <li class="nav-item has-dropdown" data-dropdown="{{ .Identifier }}">
+                <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+              </li>
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </header>
   </div>
-</header>
+</div>
 
 <!-- ✅ Dropdown Container (Separate from Navbar) -->
 <div class="dropdown-container">
