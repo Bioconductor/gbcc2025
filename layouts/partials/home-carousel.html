@@ -1,0 +1,65 @@
+<section class="carousel-container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/img/carousel/home/registration_open.svg" alt="Registration Open">
+        </div>
+        <div class="swiper-slide">
+          <img src="/img/carousel/home/discover_harbor.svg" alt="Learn about Gold Spring Harbor">
+        </div>
+      </div>
+      <!-- Swiper pagination/navigation can go here -->
+    </div>
+  </section>
+  
+  <!-- Swiper CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        /* Add navigation or other options as needed */
+      });
+    });
+  </script>
+  
+  <style>
+  /* 1. Container: Full width, fixed 40vh height */
+  .carousel-container {
+    width: 100vw;      /* Full browser width */
+    height: 60vh;      /* Fixed 40% of viewport height */
+    overflow: hidden;  /* Hide overflow (important if images are bigger) */
+  }
+  
+  /* 2. Swiper: Fill the container's width, let the container define height */
+  .swiper {
+    width: 100%;
+    height: 100%; /* Make swiper itself fill the container (which is 40vh) */
+  }
+  
+  /* 3. Each slide is just a flex container to center the image if needed */
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 4. Images: Fill container, scale up, and "cover" to avoid gaps */
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Fill the entire slide: no letterboxing, but crops edges */
+    object-position: 50% 50%; /* Center the image when cropping */
+  }
+  </style>
+  

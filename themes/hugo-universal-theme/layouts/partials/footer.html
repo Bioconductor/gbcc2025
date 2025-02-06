@@ -1,63 +1,83 @@
-<footer id="footer">
-  <div class="container">
-    {{ if isset .Site.Params "about_us" }}
-    <div class="col-md-4 col-sm-6">
-      <h4>{{ i18n "aboutUs" }}</h4>
+<link rel="stylesheet" href="/css/style.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 
-      {{ .Site.Params.about_us | safeHTML }}
+<footer id="footer" style="background-color: #1B3A4B;  width: 100%;">
+  <div class="container" style="color: #FFFFFF; display: flex; justify-content: center; margin: 0 auto; width:85%;">
+    <div class="row" style="display: flex; justify-content: space-between; width: 100%;">
+      <!-- Newsletter Sign-Up -->
+      <div class="col-md-4 col-sm-6" style="margin-right: 40px;">
+        <h4 style="color: #FFFFFF;">Keep Me Updated</h4>
+        <form action="https://gaggle.email/join/gbcc2025-announce@gaggle.email" method="post">
+          <div class="form-group">
+            <label for="name" style="color: #F5F1E3;">Enter your name:</label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Your name"
+              required
+            />
+            <label for="email" style="color: #F5F1E3;">Enter your email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Your email address"
+              required
+            />
+          </div>
+          <button type="submit" class="btn" style="background-color: #2E5636; color: #FFFFFF;">Subscribe</button>
+        </form>
+        <hr class="hidden-md hidden-lg hidden-sm" />
+      </div>
+      <!-- /.col-md-4 -->
 
-      <hr class="hidden-md hidden-lg hidden-sm" />
-    </div>
-    <!-- /.col-md-4 -->
-    {{ end }}
-
-    <div class="col-md-4 col-sm-6">
-      {{ if isset .Site.Params "recent_posts" }} {{ if
-      .Site.Params.recent_posts.enable }}
-      <h4>{{ i18n "recentPosts" }}</h4>
-
-      <div class="blog-entries">
-        {{ range first 3 (where .Site.RegularPages "Type" "in"
-        .Site.Params.mainSections) }}
-        <div class="item same-height-row clearfix">
-          <div class="image same-height-always">
-            <a href="{{ .Permalink }}">
-              {{ if isset .Params "banner" }}
+      <!-- Hosts Section -->
+      <div class="col-md-4 col-sm-6" style="margin-right: 40px;">
+        <h4 class="hosted" style="color: #FFFFFF;">Hosted By</h4>
+        <div class="hosts-container">
+          <!-- Host 1 -->
+          <div class="logo-container">
+            <a href="https://galaxyproject.org/" target="_blank">
               <img
-                src="{{ .Params.banner | relURL }}"
-                class="img-responsive"
-                alt="{{ .Title }}"
+                src="/img/host_organizations/galaxy_logo_white.png"
+                alt="Galaxy Project"
+                class="logo-image"
               />
-              {{ else }} <img src="{{ "img/placeholder.png" | relURL }}"
-              class="img-responsive" alt="{{ .Title }}"> {{ end }}
             </a>
           </div>
-          <div class="name same-height-always">
-            <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+          <!-- Host 2 -->
+          <div class="logo-container">
+            <a href="https://www.bioconductor.org/" target="_blank">
+              <img
+                src="/img/host_organizations/BioconductorSticker.png"
+                alt="Bioconductor"
+                class="logo-image"
+              />
+            </a>
           </div>
         </div>
-        {{ end }}
       </div>
+      <!-- /.col-md-4 -->
 
-      <hr class="hidden-md hidden-lg" />
-      {{ end }} {{ end }}
+      <!-- Contact Information -->
+      <div class="col-md-3 col-sm-6" style="flex: 0 0 25%;"> <!-- Adjusted flex-basis to 25% -->
+        <h4 style="color: #FFFFFF;">Contact Information</h4>
+        <p style="color: #F5F1E3;">
+          GBCC2025 Organizing Committee<br />
+          Email: <a href="gbcc2025-org@gaggle.mail" style="color: #6C91C2;">gbcc2025-org@gaggle.mail</a><br />
+          Website: <a href="https://gbcc2025.org" style="color: #6C91C2;">www.gbcc2025.org</a>
+        </p>
+      </div>
+      <!-- /.col-md-3 -->
     </div>
-    <!-- /.col-md-4 -->
-
-    {{ if isset .Site.Params "address" }}
-    <div class="col-md-4 col-sm-6">
-      <h4>{{ i18n "contactTitle" }}</h4>
-
-      {{ .Site.Params.address | safeHTML }}
-
-      <hr class="hidden-md hidden-lg hidden-sm" />
-    </div>
-    <!-- /.col-md-4 -->
-    {{ end }}
+    <!-- /.row -->
   </div>
   <!-- /.container -->
 </footer>
-
 <!-- /#footer -->
 
 <!-- *** FOOTER END *** -->

@@ -1,0 +1,43 @@
+{{- /* 
+    layouts/partials/schedule.html
+    Expects: 
+      .i   (int: index in the parent loop)
+      .d   (string: "day1", "day2", etc.)
+      .day (same as .d, used for the data lookup)
+      .Site (root site context)
+ */ -}}
+ 
+ {{- $i := .i -}}
+ {{- $d := .d -}}
+ {{- $day := .day -}}
+ {{- $dayData := index .Site.Data "schedule" $day -}}
+ 
+ <div class="schedule-day {{ if eq $i 0 }}active{{ end }}" id="{{ $d }}">
+   <h2>{{ $dayData.title }}</h2>
+   <table class="schedule-table">
+     <thead>
+       <tr>
+         <th class="time-col">Time</th>
+         {{ range $dayData.rooms }}
+           <th>{{ . }}</th>
+         {{ end }}
+       </tr>
+     </thead>
+     <tbody>
+       {{ range $slot := $dayData.schedule }}
+         <tr>
+           <td class="time-col">{{ $slot.time }}</td>
+           {{ range $detail := $slot.slots }}
+             <td 
+               {{ if $detail.colspan }}colspan="{{ $detail.colspan }}"{{ end }}
+               class="session {{ $detail.class }}"
+             >
+               {{ $detail.session }}
+             </td>
+           {{ end }}
+         </tr>
+       {{ end }}
+     </tbody>
+   </table>
+ </div>
+ 

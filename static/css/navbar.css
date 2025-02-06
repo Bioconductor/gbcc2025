@@ -1,0 +1,287 @@
+/* ✅ GENERAL NAVBAR STYLING */
+:root {
+  --deep-navy:   #1B3A4B;
+  --forest-green:#2E5636;
+  --soft-beige:  #F5F1E3;
+  --sky-blue:    #6C91C2;
+  --dark-gray:   #3A3A3A;
+  --white:       #FFFFFF;
+  --navbar-height: 100px;
+}
+
+body {
+  padding-top: 140px; /* Pushes content below navbar on load */
+  transition: padding-top 0.3s ease-in-out;
+}
+
+.scrolled body {
+  padding-top: 0; /* Allows content to move under navbar */
+}
+
+/* General Styling for the Top Bar */
+.top-bar {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(42, 77, 100, 0.9); /* Background color */
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 0 0 15%; /* Take 20% of the width */
+  height: 100%; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Add spacing around the logo */
+}
+.logo-holder {
+  max-height: 100%; /* Logo fills the height of the section */
+  height: 100%; /* Logo fills the height of the section */
+  width: auto;
+}
+.logo-section img {
+  max-height: 100%; /* Logo fills the height of the section */
+  height: 100%; /* Logo fills the height of the section */
+  width: auto;
+  padding: 5px 0; /* Add spacing around the logo */
+}
+
+/* Social Media and Navbar Container */
+.nav-container {
+  flex: 1; /* Take the remaining space */
+  display: flex;
+  flex-direction: column; /* Stack social bar and navbar */
+  height: 100%;
+}
+
+/* Social Media Icons Section */
+.social-bar {
+  height: 40px; /* Fixed height */
+  display: flex;
+  justify-content: flex-end; /* Align icons to the right */
+  align-items: center;
+  padding: 0 20px;
+}
+
+.social-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social-bar a {
+  color: var(--soft-beige);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-bar a i {
+  font-size: 18px; /* Ensures all icons are the same visual size */
+  width: 24px;  /* Fixed width */
+  height: 24px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 24px; /* Ensures proper centering */
+}
+
+.social-bar a:hover {
+  color: var(--sky-blue);
+  transform: scale(1.1);
+}
+
+/* Navbar Section */
+.custom-navbar {
+  flex: 1; /* Fill the remaining space */
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  position: relative;
+  min-width: 140px;
+}
+
+.nav-link {
+  color: var(--soft-beige);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 140px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--sky-blue);
+  border-radius: 5px;
+}
+
+/* ✅ Dropdown Container - Full width below navbar */
+.dropdown-container {
+  position: fixed;
+  top: calc(var(--navbar-height) + 40px); /* Ensures dropdown appears below navbar */
+  left: 0;
+  width: 100%;
+  background-color: rgba(42, 77, 100, 0.85);
+  text-align: left; /* Align text to start */
+  z-index: 999;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: none;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-logo {
+  flex: 0 0 15%; 
+  height: 100%; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Add spacing around the logo */
+}
+
+/* ✅ Parent & Child Alignment */
+.dropdown {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 10px 0px;
+  flex: 1;
+}
+
+
+/* ✅ Each Parent Section */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ✅ Child Items */
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 5px 0;
+}
+
+.dropdown li a {
+  color: var(--soft-beige);
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+  padding: 5px 10px;
+  max-width: 100%; /* Ensures child menu does not exceed parent width */
+  white-space: nowrap;
+}
+
+/* ✅ Hover Effect */
+.dropdown li a:hover {
+  background-color: var(--sky-blue);
+  border-radius: 3px;
+}
+
+/* ✅ Mobile Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--soft-beige);
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* ✅ MOBILE MENU STYLING */
+@media (max-width: 1740px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--deep-navy);
+    position: absolute;
+    top: 140px; /* Adjusted to match the height of the top-bar */
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-item {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: static;
+    display: none;
+    background-color: var(--forest-green);
+    width: 100%;
+  }
+
+  .has-dropdown.active .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown li a {
+    padding: 10px 20px;
+  }
+
+  .social-bar {
+    display: none; /* Hide social bar in mobile view */
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .custom-navbar {
+    justify-content: flex-end;
+  }
+}

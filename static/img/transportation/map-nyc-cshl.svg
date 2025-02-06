@@ -1,0 +1,148 @@
+<svg
+  width="100%"
+  viewBox="0 0 800 600"
+  xmlns="http://www.w3.org/2000/svg"
+  style="max-width: 900px; margin: 2rem auto; display: block;"
+>
+  <!-- 
+    STYLIZED ROUTE MAP (NOT TO SCALE) 
+    * Manhattan silhouette on the left
+    * Long Island swirling shape on the right
+    * Vibrant color usage from your conference palette + fun icons for airports/stations
+    * Additional abstract waves in background
+  -->
+
+  <!-- DEFINITIONS: GRADIENTS, STYLES, ICON SHAPES -->
+  <defs>
+    <!-- COLOR DEFINITIONS (Hugo brand palette) -->
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6C91C2" />      <!-- Muted Sky Blue -->
+      <stop offset="100%" stop-color="#F5F1E3" />    <!-- Soft Beige -->
+    </linearGradient>
+
+    <!-- For land shapes: a forest-green to soft-beige gradient -->
+    <linearGradient id="landGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2E5636"/>       <!-- Forest Green -->
+      <stop offset="100%" stop-color="#F5F1E3"/>     <!-- Soft Beige -->
+    </linearGradient>
+
+    <!-- For accent waves or roads: a deep navy to sky-blue gradient -->
+    <linearGradient id="routeGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B3A4B"/>       <!-- Deep Navy -->
+      <stop offset="100%" stop-color="#6C91C2"/>     <!-- Muted Sky Blue -->
+    </linearGradient>
+
+    <!-- Reusable styles for label text, icons, etc. -->
+    <style>
+      .background-wave {
+        fill: url(#skyGradient);
+      }
+      .land-shape {
+        fill: url(#landGradient);
+      }
+      .route {
+        stroke: url(#routeGradient);
+        stroke-width: 6;
+        fill: none;
+        stroke-linecap: round;
+        stroke-dasharray: 6 6; /* dashes for style */
+      }
+      .icon-circle {
+        fill: #1B3A4B; /* Deep Navy for station/CSHL points */
+        stroke: #ffffff;
+        stroke-width: 2;
+      }
+      .airport-circle {
+        fill: #2E5636; /* Forest Green for airport icons */
+        stroke: #ffffff;
+        stroke-width: 2;
+      }
+      .label {
+        font-family: Arial, sans-serif;
+        fill: #3A3A3A; /* Dark Gray text */
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .map-title {
+        font-family: "Gill Sans", sans-serif;
+        fill: #1B3A4B; /* Deep Navy */
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </defs>
+
+
+  <!-- BACKGROUND: Abstract wave shapes for a dynamic look -->
+  <!-- Large wave filling the entire background -->
+  <path
+    class="background-wave"
+    d="M0,0 L800,0 L800,600 L0,600 Q200,450 400,300 Q200,150 0,0"
+  />
+
+  <!-- 
+    LAYER 1: 'Manhattan Silhouette' - stylized abstract shape on the left
+    The shape is just a playful curve to hint at the city
+  -->
+  <path
+    class="land-shape"
+    d="M80,100 
+       C120,50 180,40 220,120 
+       C250,180 240,300 200,370
+       C180,400 100,460 80,440
+       Z"
+  />
+
+  <!-- LAYER 2: 'Long Island' swirling shape on the right -->
+  <path
+    class="land-shape"
+    d="M400,230
+       C450,220 530,210 650,250
+       C700,270 750,320 780,360
+       C790,380 790,420 770,440
+       C730,480 680,490 620,470
+       C550,450 420,380 400,340
+       Z"
+  />
+
+  <!-- ROUTE: Example dashed path from Manhattan to Long Island -->
+  <path
+    class="route"
+    d="M 250,160
+       C 300,200 350,220 400,250
+       S 500,330 550,350
+       S 650,410 700,420
+    "
+  />
+
+  <!-- ICONS: Train stations, airports, lab, etc. -->
+  <!-- Manhattan Station (Penn) -->
+  <circle cx="240" cy="150" r="10" class="icon-circle" />
+  <text x="240" y="135" class="label">Penn Station</text>
+
+  <!-- CSHL on Long Island -->
+  <circle cx="600" cy="360" r="12" class="icon-circle" />
+  <text x="600" y="400" class="label">CSHL</text>
+
+  <!-- Syosset Station, roughly in between -->
+  <circle cx="500" cy="310" r="10" class="icon-circle" />
+  <text x="500" y="295" class="label">Syosset</text>
+
+  <!-- Airports (JFK, LGA, Newark) - stylized circles in forest green -->
+  <!-- LGA, near Manhattan -->
+  <circle cx="220" cy="240" r="8" class="airport-circle" />
+  <text x="220" y="230" class="label">LGA</text>
+
+  <!-- JFK, a bit further SE -->
+  <circle cx="280" cy="300" r="8" class="airport-circle" />
+  <text x="280" y="290" class="label">JFK</text>
+
+  <!-- Newark, left side -->
+  <circle cx="120" cy="180" r="8" class="airport-circle" />
+  <text x="120" y="170" class="label">EWR</text>
+
+  <!-- OPTIONAL: Title for the map itself -->
+  <text x="400" y="50" class="map-title" text-anchor="middle">
+    NYC to Cold Spring Harbor
+  </text>
+</svg>

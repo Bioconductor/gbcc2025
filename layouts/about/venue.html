@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <div class="venue-page">
+        <div class="letter-container">
+          <!-- Your main Markdown content goes here -->
+          {{ .Content }}
+
+          <!-- Signatures at the bottom -->
+          <div class="signature-block">
+            <div class="signature">
+              <p>Dr. Jane Smith<br><em>Bioconductor Representative</em></p>
+            </div>
+            <div class="signature">
+              <p>Dr. John Doe<br><em>Galaxy Project Representative</em></p>
+            </div>
+            <div class="signature">
+              <p>Dr. Ximena Lee<br><em>Organizing Chair</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>

@@ -80,10 +80,7 @@ button i[class^="fa"] {
 p.lead {
   margin-bottom: 40px;
 }
-section,
-div.section {
-  margin-bottom: 40px;
-}
+
 .no-mb {
   margin-bottom: 0 !important;
 }
@@ -311,11 +308,8 @@ ul.list-style-none {
   text-decoration: underline;
   font-weight: bold;
   letter-spacing: 0.08em;
-  border-top: solid 5px transparent;
 }
-.navbar ul.nav > li > a:hover {
-  border-top: solid 5px #6aae7a;
-}
+
 .navbar ul.nav > li.active > a,
 .navbar ul.nav > li.open > a {
   text-decoration: none !important;
@@ -331,18 +325,14 @@ ul.list-style-none {
   }
 }
 .navbar.navbar-light ul.nav > li.active > a {
-  border-top: solid 5px #3f734b;
   background: #fff !important;
   color: #555555 !important;
 }
-.navbar.navbar-light ul.nav > li.active > a:hover {
-  border-top: solid 5px #3f734b;
-}
+
 .navbar.navbar-light ul.nav > li > a:hover,
 .navbar.navbar-light ul.nav > li.open > a:hover,
 .navbar.navbar-light ul.nav > li > a:focus,
 .navbar.navbar-light ul.nav > li.open > a:focus {
-  border-top: solid 5px #6aae7a;
   background: #fff !important;
   color: #555555 !important;
 }
@@ -3553,7 +3543,7 @@ a.list-group-item.active > .badge,
 }
 .yamm .nav.navbar-right .dropdown-menu {
   left: auto;
-  right: 0;
+  right: auto;
 }
 .yamm .yamm-content {
   padding: 20px 30px;

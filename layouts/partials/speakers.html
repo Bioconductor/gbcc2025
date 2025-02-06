@@ -1,47 +1,175 @@
 {{ if isset .Site.Params "speakers" }}
 {{ if .Site.Params.speakers.enable }}
 {{ if gt (len .Site.Data.speakers) 0 }}
-<style>
-    .bg-white {
-        background:#ffffff !important;
-    }
-    .row.extra-bottom-padding{
-        margin-bottom: 20px;
-    }
-</style>
-<section class="bar background-pentagon no-mb">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading text-center">
-                    <h2>{{ .Site.Params.speakers.title }}</h2>
-                </div>
+<section class="gbcc-speaker-section">
+    <div class="gbcc-speaker-container">
+        <div class="gbcc-speaker-header text-center">
+            <h2 class="gbcc-header">{{ .Site.Params.speakers.title }}</h2>
+            <p class="text-large">
+                {{ .Site.Params.speakers.subtitle | markdownify }}
+            </p>
+        </div>
 
-                <p class="lead">
-                    {{ .Site.Params.speakers.subtitle | markdownify }}
-                </p>
-
-                <!-- *** speakers CAROUSEL *** -->
-                <div class="container">
-                    {{ range .Site.Data.speakers }}
-                    <div class="row bg-white extra-bottom-padding">
-                        <div>
-                            <img class="img-responsive" alt="" src="{{ .avatar | absURL }}" style="height:200px; margin: 15px; float: left">
-
-                            <div>
-                                <h4>{{ .name  }}</h4>
-                                <h4>{{ .position  }}</h4>
-                                <p style="margin: 15px" >{{ .text | markdownify }}</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    {{ end }}
+        <!-- Speakers List -->
+        <div class="gbcc-speaker-list">
+            {{ range .Site.Data.speakers }}
+            <div class="gbcc-speaker-card">
+                <img class="gbcc-speaker-avatar" alt="{{ .name }}" src="{{ .avatar | absURL }}">
+                <div class="gbcc-speaker-details">
+                    <h4 class="gbcc-speaker-name">{{ .name }}</h4>
+                    <h5 class="gbcc-speaker-position">{{ .position }}</h5>
+                    <p class="gbcc-speaker-description">{{ .text | markdownify }}</p>
                 </div>
             </div>
+            {{ end }}
         </div>
+    </div>
 </section>
-<!-- /.bar -->
 {{ end }}
 {{ end }}
 {{ end }}
+
+<style>
+/* Speaker Section - Gradient Background */
+.gbcc-speaker-section {
+    padding: 100px 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--light-cream) 50%, rgba(255, 255, 255, 0.9) 85%, white 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Diagonal Accent for Visual Interest */
+.gbcc-speaker-section::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 160%;
+    height: 150%;
+    background: linear-gradient(120deg, var(--deep-navy) 15%, rgba(27, 58, 75, 0.15) 60%, transparent 100%);
+    opacity: 0.12;
+    transform: rotate(-5deg);
+    z-index: 0;
+}
+
+/* Speaker Container - Flexbox Layout */
+.gbcc-speaker-container {
+    max-width: 2400px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Speaker Header */
+.gbcc-speaker-header {
+    margin-bottom: 60px;
+}
+
+.gbcc-speaker-header h2 {
+    font-size: 5rem;
+    color: var(--deep-navy);
+    margin-bottom: 20px;
+}
+
+.gbcc-speaker-header .text-large {
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+}
+
+/* Speaker List - Flexbox Layout */
+.gbcc-speaker-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Speaker Card - Flexbox Layout */
+.gbcc-speaker-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1 1 calc(50% - 30px); /* Two cards per row by default */
+    max-width: 800px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gbcc-speaker-card:hover {
+    transform: scale(1.03);
+}
+
+/* Speaker Avatar - Larger by Default */
+.gbcc-speaker-avatar {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--deep-navy);
+    flex-shrink: 0;
+}
+
+/* Speaker Text Details - Larger Font Sizes */
+.gbcc-speaker-details {
+    flex: 1;
+    text-align: left;
+}
+
+.gbcc-speaker-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--deep-navy);
+    margin-bottom: 10px;
+}
+
+.gbcc-speaker-position {
+    font-size: 1.6rem;
+    color: var(--sky-blue);
+    margin-bottom: 15px;
+}
+
+.gbcc-speaker-description {
+    color: var(--dark-gray);
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+    .gbcc-speaker-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .gbcc-speaker-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        flex: 1 1 100%; /* One card per row on mobile */
+    }
+
+    .gbcc-speaker-avatar {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .gbcc-speaker-name {
+        font-size: 1.8rem;
+    }
+
+    .gbcc-speaker-position {
+        font-size: 1.4rem;
+    }
+
+    .gbcc-speaker-description {
+        font-size: 1.2rem;
+    }
+}
+</style>

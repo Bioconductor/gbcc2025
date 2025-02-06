@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Carousel -->
+      {{ partial "home-carousel.html" . }}
+
+      <!-- News Section -->
+      {{ partial "news.html" . }}
+
+      <!-- Home Panels (What's New, Key Dates, etc.) -->
+      {{ partial "home-panels.html" . }}
+
+      <!-- Countdown Section -->
+      {{ partial "countdown.html" . }}
+      
+      <!-- Speakers Section -->
+      {{ partial "speakers.html" . }}
+
+      <!-- Clients Section -->
+      {{ partial "clients.html" . }}
+
+      <!-- Footer Section -->
+      {{ partial "footer.html" . }}
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+
+  </body>
+</html>
+
