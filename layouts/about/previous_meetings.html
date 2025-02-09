@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="previous-meetings" class="container">
+        <header class="page-header">
+          <h1>Previous Meetings</h1>
+          <p>Relive the memorable moments from past Galaxy Community and Bioconductor Conferences.</p>
+        </header>
+
+        <!-- Highlights Section -->
+        <section class="highlights-section">
+          <div class="highlight">
+            <h2>Galaxy Community Conferences</h2>
+            <p>
+              The Galaxy Community Conferences (GCCs) bring together researchers, developers, and educators from across the world.
+              Recent highlights include:
+            </p>
+            <ul>
+              <li>Workshops on advanced bioinformatics tools and workflows.</li>
+              <li>Engaging keynote talks from industry leaders in genomics and data science.</li>
+              <li>Collaborative "Birds of a Feather" sessions promoting innovation and community building.</li>
+            </ul>
+          </div>
+          <div class="highlight">
+            <h2>Bioconductor Conferences</h2>
+            <p>
+              The Bioconductor Conferences (BioC) are the premier events for open-source software in computational biology. Highlights include:
+            </p>
+            <ul>
+              <li>Hands-on tutorials for R packages like DESeq2, edgeR, and Shiny.</li>
+              <li>Panel discussions on reproducibility and the future of bioinformatics.</li>
+              <li>Networking sessions with developers and researchers from around the globe.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+          <h2>Photo Gallery</h2>
+          <div class="gallery-grid">
+            {{ range .Site.Params.previous_meetings.photos }}
+              <div class="gallery-item">
+                <img src="{{ .url }}" alt="{{ .alt }}">
+              </div>
+            {{ end }}
+          </div>
+        </section>
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+#previous-meetings {
+  padding: 20px;
+  background-color: #f5f1e3; /* Light beige background */
+}
+
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b; /* Deep navy */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+}
+
+/* Highlights Section */
+.highlights-section {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  flex: 1 1 calc(50% - 20px);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight h2 {
+  color: #2e5636; /* Forest green */
+  margin-bottom: 10px;
+}
+
+.highlight ul {
+  padding-left: 20px;
+}
+
+.highlight ul li {
+  margin-bottom: 10px;
+}
+
+/* Gallery Section */
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #1b3a4b; /* Deep navy */
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .highlights-section {
+    flex-direction: column;
+  }
+
+  .highlight {
+    flex: 1 1 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+</style>
