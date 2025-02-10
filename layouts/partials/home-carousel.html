@@ -1,17 +1,20 @@
 <section class="carousel-container">
-    <div class="swiper">
+  <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="/img/carousel/home/registration_open.svg" alt="Registration Open">
-        </div>
-        <div class="swiper-slide">
-          <img src="/img/carousel/home/discover_harbor.svg" alt="Learn about Gold Spring Harbor">
-        </div>
+          <div class="swiper-slide">
+              <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25" target="_blank" class="carousel-link">
+                  <img src="/img/carousel/home/registration_open.svg" alt="Registration Open">
+              </a>
+          </div>
+          <div class="swiper-slide">
+              <a href="{{ "about/venue/" | relURL }}" class="carousel-link">
+                  <img src="/img/carousel/home/discover_harbor.svg" alt="Learn about Cold Spring Harbor">
+              </a>
+          </div>
       </div>
-      <!-- Swiper pagination/navigation can go here -->
-    </div>
-  </section>
-  
+  </div>
+</section>
+
   <!-- Swiper CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -34,32 +37,45 @@
   </script>
   
   <style>
-  /* 1. Container: Full width, fixed 40vh height */
-  .carousel-container {
+/* 1. Container: Full width, fixed height */
+.carousel-container {
     width: 100vw;      /* Full browser width */
-    height: 60vh;      /* Fixed 40% of viewport height */
-    overflow: hidden;  /* Hide overflow (important if images are bigger) */
-  }
-  
-  /* 2. Swiper: Fill the container's width, let the container define height */
-  .swiper {
+    height: 60vh;      /* Fixed 60% of viewport height */
+    overflow: hidden;  /* Prevents content overflow */
+}
+
+/* 2. Swiper: Full container width & height */
+.swiper {
     width: 100%;
-    height: 100%; /* Make swiper itself fill the container (which is 40vh) */
-  }
-  
-  /* 3. Each slide is just a flex container to center the image if needed */
-  .swiper-slide {
+    height: 100%;
+}
+
+/* 3. Each slide as a flex container to center content */
+.swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  /* 4. Images: Fill container, scale up, and "cover" to avoid gaps */
-  .swiper-slide img {
+    position: relative; /* Needed to make links fill the slide */
+}
+
+/* 4. Clickable Link Container */
+.carousel-link {
+    display: block;  /* Makes <a> fill the slide */
     width: 100%;
     height: 100%;
-    object-fit: cover;    /* Fill the entire slide: no letterboxing, but crops edges */
-    object-position: 50% 50%; /* Center the image when cropping */
-  }
+    position: absolute; /* Ensures full coverage of the slide */
+    top: 0;
+    left: 0;
+}
+
+/* 5. Images: Fill container and stay properly scaled */
+.carousel-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill their space */
+    object-position: center; /* Keeps image centered */
+    pointer-events: none; /* Prevents interference with link clicking */
+}
+
   </style>
   
