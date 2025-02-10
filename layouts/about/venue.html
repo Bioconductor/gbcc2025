@@ -1,35 +1,173 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-
   <body>
     <div id="all">
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <div class="venue-page">
-        <div class="letter-container">
-          <!-- Your main Markdown content goes here -->
-          {{ .Content }}
+      <!-- Main Content -->
+      <main id="venue-page" class="container">
+        <header class="page-header">
+          <h1>Conference Venue</h1>
+          <p>Welcome to Cold Spring Harbor, New York - the home of GBCC 2025.</p>
+        </header>
 
-          <!-- Signatures at the bottom -->
-          <div class="signature-block">
-            <div class="signature">
-              <p>Dr. Jane Smith<br><em>Bioconductor Representative</em></p>
+        <!-- Venue Information Section -->
+        <section class="venue-info">
+          <h2>About Cold Spring Harbor</h2>
+          <p>
+            Located on Long Island, New York, Cold Spring Harbor Laboratory is a world-renowned center for research and education in biology and genetics. The campus offers state-of-the-art facilities, beautiful surroundings, and a vibrant atmosphere for collaboration and innovation.
+          </p>
+          <p>
+            The conference will take place in various venues across the campus, providing attendees with the opportunity to learn, network, and exchange ideas in an inspiring setting.
+          </p>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section">
+          <h2>Venue Photos</h2>
+          <div class="gallery-grid">
+            {{ range .Site.Params.venue.photos }}
+            <div class="gallery-item">
+              <img src="{{ .url }}" alt="{{ .alt }}">
             </div>
-            <div class="signature">
-              <p>Dr. John Doe<br><em>Galaxy Project Representative</em></p>
-            </div>
-            <div class="signature">
-              <p>Dr. Ximena Lee<br><em>Organizing Chair</em></p>
-            </div>
+            {{ end }}
           </div>
-        </div>
-      </div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section class="maps-section">
+          <h2>How to Get Here</h2>
+          <p>Cold Spring Harbor Laboratory, 1 Bungtown Rd, Cold Spring Harbor, NY 11724, USA</p>
+          <div class="maps-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.781018567258!2d-73.45746198459414!3d40.86709547931452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e817be95093bbd%3A0xf0410660c43d118!2sCold%20Spring%20Harbor%20Laboratory!5e0!3m2!1sen!2sus!4v1699721714428!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
+      </main>
 
       {{ partial "footer.html" . }}
     </div>
+
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
   </body>
 </html>
+<Style>
+  /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#venue-page {
+  padding: 20px;
+  background-color: #f5f1e3; /* Light beige background */
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b; /* Deep navy */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+}
+
+/* Venue Information Section */
+.venue-info {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.venue-info h2 {
+  font-size: 2rem;
+  color: #2e5636; /* Forest green */
+  margin-bottom: 20px;
+}
+
+.venue-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #3a3a3a; /* Dark gray */
+}
+
+/* Gallery Section */
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #1b3a4b; /* Deep navy */
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Maps Section */
+.maps-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.maps-section h2 {
+  font-size: 2rem;
+  color: #2e5636; /* Forest green */
+  margin-bottom: 20px;
+}
+
+.maps-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+</Style>
