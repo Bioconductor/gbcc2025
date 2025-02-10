@@ -1,177 +1,172 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-
   <body>
     <div id="all">
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- A hero/intro block for the Transportation Page -->
-      <section class="transportation-hero">
-        <div class="hero-overlay">
-          <h1>Getting to the Conference</h1>
-          <p class="hero-subtitle">Planes, Trains, & Automobiles</p>
-        </div>
-      </section>
+      <!-- Main Content -->
+      <main id="transportation-page" class="container">
+        <header class="page-header">
+          <h1>Getting to Cold Spring Harbor</h1>
+          <p>Find the best way to travel to GBCC 2025 at Cold Spring Harbor Laboratory.</p>
+        </header>
 
-      <!-- Main content area -->
-      <div class="transportation-content">
-        <!-- This is where the Markdown content from `transportation.md` goes -->
-        {{ .Content }}
-      </div>
+        <!-- By Train -->
+        <section class="transport-section">
+          <h2>🚆 By Train (From NYC)</h2>
+          <p>The **Long Island Rail Road (LIRR)** runs between **Moynihan Train Hall (Penn Station)** in NYC and **Syosset LIRR Station**.</p>
+          <p><b>Free Shuttle:</b> CSHL provides a complimentary **shuttle service** between Syosset and Grace Auditorium.</p>
+        </section>
+
+        <!-- By Taxi -->
+        <section class="transport-section">
+          <h2>🚖 By Taxi (From Syosset LIRR & Local Areas)</h2>
+          <p>Need a ride? Call one of the **local taxi services**:</p>
+          <ul>
+            <li><b>Syosset Taxi:</b> <a href="tel:5169212141">(516) 921-2141</a></li>
+          </ul>
+        </section>
+
+        <!-- By Plane -->
+        <section class="transport-section">
+          <h2>✈️ By Plane</h2>
+          <div class="airport-info">
+            <h3>🛬 John F. Kennedy International Airport (JFK)</h3>
+            <p>**45-90 min travel time** to CSHL depending on traffic.</p>
+            <p>Take the **JFK AirTrain** to Jamaica Station, then connect to the **LIRR**.</p>
+          </div>
+
+          <div class="airport-info">
+            <h3>🛬 LaGuardia Airport (LGA)</h3>
+            <p>**45-90 min travel time** to CSHL.</p>
+            <p>Uber/Lyft or a reserved car is recommended.</p>
+          </div>
+
+          <div class="airport-info">
+            <h3>🛬 Long Island MacArthur Airport (ISP)</h3>
+            <p>**40-60 min travel time** to CSHL.</p>
+            <p>Uber/Lyft is recommended.</p>
+          </div>
+
+          <div class="airport-info">
+            <h3>🚫 Newark Liberty International Airport (EWR) (Not Recommended)</h3>
+            <p>Up to **2 hours** by car and expensive.</p>
+            <p>Alternative: Take the **Newark AirTrain** to **Penn Station NYC**, then transfer to the LIRR.</p>
+          </div>
+        </section>
+
+        <!-- Recommended Car Services -->
+        <section class="transport-section">
+          <h2>🚗 Recommended Car Services</h2>
+          <p>For safe and reliable transportation, use one of these services:</p>
+          <ul>
+            <li><b>Syosset Limousine Service (SLS)</b> - <a href="tel:5163649681">(516) 364-9681</a> | <a href="mailto:syossetlimo@aol.com">Email</a></li>
+            <li><b>Limos Long Island</b> - <a href="tel:5164003364">(516) 400-3364</a> (Use **promo code CSHL** for a discount)</li>
+            <li><b>Salmon Limousine Services</b> - <a href="tel:6315436412">(631) 543-6412</a></li>
+            <li><b>Executive Limousine</b> - <a href="tel:5168268172">(516) 826-8172</a> | <a href="https://www.executivelimousine.org" target="_blank">Website</a></li>
+          </ul>
+        </section>
+
+        <!-- Driving Directions -->
+        <section class="transport-section">
+          <h2>🛣️ Driving Directions</h2>
+          <div class="directions">
+            <h3>From NYC & Points West</h3>
+            <p>Take **I-495E (Long Island Expressway)** → Exit **41N** → Follow **107N → 106N → 25A** to Bungtown Road (CSHL entrance).</p>
+          </div>
+
+          <div class="directions">
+            <h3>From Points South</h3>
+            <p>Take **Southern State Pkwy → NY-135N → 25A** → Bungtown Road (CSHL entrance).</p>
+          </div>
+
+          <div class="directions">
+            <h3>From Points East</h3>
+            <p>Take **I-495W → NY-231 → 25A** → Bungtown Road (CSHL entrance).</p>
+          </div>
+        </section>
+
+        <!-- Hotel Information -->
+        <section class="transport-section">
+          <h2>🏨 Hotels & Accommodations</h2>
+          <p>CSHL arranges **housing for ~90% of attendees**. If you prefer to book your own accommodations, here are some local hotels:</p>
+          <table class="hotel-table">
+            <thead>
+              <tr>
+                <th>Hotel</th>
+                <th>Travel Time</th>
+                <th>Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>The Days Inn at Woodbury</td><td>~12 min</td><td><a href="tel:5169216900">(516) 921-6900</a></td></tr>
+              <tr><td>Comfort Inn</td><td>~15 min</td><td><a href="tel:5169211111">(516) 921-1111</a></td></tr>
+              <tr><td>Hampton Inn & Suites</td><td>~10 min</td><td><a href="tel:6318127054">(631) 812-7054</a></td></tr>
+              <tr><td>Holiday Inn</td><td>~15 min</td><td><a href="tel:5163497400">(516) 349-7400</a></td></tr>
+              <tr><td>The Inn at Fox Hollow</td><td>~12 min</td><td><a href="tel:5162248100">(516) 224-8100</a></td></tr>
+              <tr><td>Four Points by Sheraton</td><td>~15 min</td><td><a href="tel:5166946500">(516) 694-6500</a></td></tr>
+            </tbody>
+          </table>
+          <p class="note"><b>Note:</b> CSHL's shuttle service is **only available for specific hotels**. Please confirm before booking.</p>
+        </section>
+      </main>
 
       {{ partial "footer.html" . }}
     </div>
 
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
-
-    <!-- Inline or external CSS for the transportation page -->
-    <style>
-    :root {
-      --deep-navy:   #1B3A4B;
-      --forest-green:#2E5636;
-      --soft-beige:  #F5F1E3;
-      --sky-blue:    #6C91C2;
-      --dark-gray:   #3A3A3A;
-      --white:       #FFFFFF;
-    }
-
-    /**************************************
-     * HERO SECTION
-     **************************************/
-    .transportation-hero {
-      position: relative;
-      height: 50vh;
-      background: var(--deep-navy) url('/img/transportation/map-nyc-cshl.svg') no-repeat center center;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      text-align: center;
-    }
-    /* If you don't have a hero image, you can simply use a gradient or solid color. */
-
-    .hero-overlay {
-      background: rgba(0,0,0,0.4);
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .hero-overlay h1 {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-    }
-
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin: 0;
-      font-style: italic;
-    }
-
-    /**************************************
-     * MAIN CONTENT AREA
-     **************************************/
-    .transportation-content {
-      max-width: 1100px;
-      margin: -3rem auto 2rem; /* pull up slightly into hero overlay */
-      background-color: var(--white);
-      padding: 2rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 2;
-    }
-
-    .transportation-content h2 {
-      color: var(--forest-green);
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--forest-green);
-      padding-bottom: 0.4rem;
-    }
-
-    /* For subheadings that might need sky-blue or dark-gray color */
-    .transportation-content h3 {
-      color: var(--sky-blue);
-      margin-top: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .transportation-content p,
-    .transportation-content li {
-      color: var(--dark-gray);
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Example for stylized callout boxes */
-    .callout-box {
-      background-color: var(--soft-beige);
-      border-left: 4px solid var(--forest-green);
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 4px;
-    }
-
-    .callout-box strong {
-      color: var(--deep-navy);
-    }
-
-    /* Stylized link colors */
-    .transportation-content a {
-      color: var(--sky-blue);
-      text-decoration: none;
-    }
-
-    .transportation-content a:hover {
-      text-decoration: underline;
-    }
-
-    /* Horizontal rule styling */
-    .transportation-content hr {
-      border: none;
-      border-top: 1px solid var(--forest-green);
-      margin: 2rem 0;
-    }
-
-    /* Example: Hotel cards in a grid */
-    .hotel-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .hotel-card {
-      background-color: var(--soft-beige);
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 1rem;
-    }
-    .hotel-card h4 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      color: var(--deep-navy);
-    }
-
-    /* Responsive tweaks if needed */
-    @media (max-width: 768px) {
-      .transportation-hero {
-        height: 40vh;
-      }
-      .hero-overlay h1 {
-        font-size: 2rem;
-      }
-      .transportation-content {
-        margin: -2rem auto 1rem;
-        padding: 1rem;
-      }
-    }
-    </style>
   </body>
 </html>
+
+<style>
+  /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#transportation-page {
+  padding: 20px;
+  background-color: #f5f1e3;
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* Section Styling */
+.transport-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Hotel Table */
+.hotel-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hotel-table th, .hotel-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.hotel-table th {
+  background-color: #2e5636;
+  color: white;
+}
+
+</style>

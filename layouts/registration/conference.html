@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="conference-registration-page" class="container">
+        <header class="page-header">
+          <h1>GBCC 2025 Conference Registration</h1>
+          <p>Join us in-person at Cold Spring Harbor or virtually for this exciting event.</p>
+        </header>
+
+        <!-- Registration Link -->
+        <section class="registration-link">
+          <h2>Register Now</h2>
+          <p>Click the button below to complete your registration.</p>
+          <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25" target="_blank" class="register-button">
+            Register for GBCC 2025
+          </a>
+        </section>
+
+        <!-- In-Person Pricing Section -->
+        <section class="pricing-section">
+          <h2>In-Person Registration Fees</h2>
+          <p>Full payment is due four weeks before the meeting. Room package reservations close **two weeks before** the start date.</p>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Package Type</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Academic/Media</td><td>Private Room / Private Bath</td><td>$1505</td></tr>
+              <tr><td>Academic/Media</td><td>Private Room / Shared Bath</td><td>$1415</td></tr>
+              <tr><td>Academic</td><td>Shared Room</td><td>$1300</td></tr>
+              <tr><td>Academic/Media</td><td>No-Housing Package</td><td>$990</td></tr>
+              <tr><td>Student</td><td>Double Occupancy</td><td>$1195</td></tr>
+              <tr><td>Student</td><td>No-Housing Package</td><td>$885</td></tr>
+              <tr><td>Corporate</td><td>Private Room / Private Bath</td><td>$1935</td></tr>
+              <tr><td>Corporate</td><td>No-Housing Package</td><td>$1420</td></tr>
+            </tbody>
+          </table>
+          <p class="note"><b>Note:</b> **Student housing is default double occupancy.** Please inquire about availability and fees for a private room.</p>
+          <p class="note"><b>Housing:</b> We cannot guarantee on-campus housing.</p>
+        </section>
+
+        <!-- Virtual Participation -->
+        <section class="virtual-pricing">
+          <h2>Virtual Participation</h2>
+          <p>Includes access to the oral sessions via Zoom, the digital poster gallery, the Slack discussion workspace, and the Leading Strand video archive.</p>
+          <p><b>If you are submitting an abstract for an oral or poster presentation, you must attend in-person.</b></p>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Package</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Academic</td><td>Virtual Package</td><td>$85</td></tr>
+              <tr><td>Grad Student</td><td>Virtual Package</td><td>$50</td></tr>
+              <tr><td>Corporate</td><td>Virtual Package</td><td>$125</td></tr>
+              <tr><td colspan="3"><b>Late Registration (after June 10, 5:00 PM ET)</b></td></tr>
+              <tr><td>Late Academic</td><td>Virtual Package</td><td>$110</td></tr>
+              <tr><td>Late Student</td><td>Virtual Package</td><td>$75</td></tr>
+              <tr><td>Late Corporate</td><td>Virtual Package</td><td>$150</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Special Categories -->
+        <section class="non-presenting">
+          <h2>Non-Presenting Participants</h2>
+          <p>Certain categories of **non-presenting participants** may qualify for **reduced virtual fees**:</p>
+          <ul>
+            <li>Individuals from low & middle-income countries (LMIC)</li>
+            <li>Individuals from non-LMIC countries in Asia, Australasia, Africa, or South America</li>
+            <li>Individuals from U.S. & Canadian minority-serving institutions</li>
+            <li>Individuals with demonstrable financial barriers</li>
+            <li>Individuals with family obligations or other special circumstances</li>
+          </ul>
+        </section>
+
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#conference-registration-page {
+  padding: 20px;
+  background-color: #f5f1e3; /* Light beige background */
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b; /* Deep navy */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Registration Button */
+.register-button {
+  display: inline-block;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #6c91c2;
+}
+
+/* Pricing Table */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pricing-table th, .pricing-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.pricing-table th {
+  background-color: #2e5636;
+  color: white;
+}
+
+/* Special Sections */
+.non-presenting, .virtual-pricing, .pricing-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pricing-table th, .pricing-table td {
+    padding: 8px;
+  }
+}
+
+</style>

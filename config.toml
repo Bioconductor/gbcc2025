@@ -260,7 +260,16 @@ weight = 9
         <p class="text-uppercase"><strong><a href="https://galaxyproject.org/" target="_blank">Galaxy web site</a></strong></p>
       </p>
       """
-
+[params.previous_meetings]
+photos = [
+  { url = "/img/past_gallery/bio-1.png", alt = "Photo 1" },
+  { url = "/img/past_gallery/galaxy-1.jpg", alt = "Photo 2" },
+  { url = "/img/past_gallery/bio-2.png", alt = "Photo 3" },
+  { url = "/img/past_gallery/galaxy-2.jpg", alt = "Photo 4" },
+  { url = "/img/past_gallery/bio-3.png", alt = "Photo 5" },
+  { url = "/img/past_gallery/galaxy-3.jpg", alt = "Photo 5" },
+  { url = "/img/past_gallery/bio-4.png", alt = "Photo 5" },
+]
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
 

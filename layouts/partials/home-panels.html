@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="{{ "/css/home-panels.css" | relURL }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
 <section class="bulletin_board">
     <div class="notice_container bulletin_container">
@@ -28,7 +30,7 @@
                     <div>Abstract Submission Opens</div>
                 </div>
                 <div class="key_date_logo">
-                    <img src="img\carousel\winner-Marie.Josse.png" alt="Calendar Icon">
+                    <img src="img\abstract_open.svg" alt="Abstrct Opening">
                 </div>
             </li>
             <li>
@@ -37,7 +39,7 @@
                     <div>Abstract Submission Deadline</div>
                 </div>
                 <div class="key_date_logo">
-                    <img src="img\carousel\winner-Marie.Josse.png" alt="Calendar Icon">
+                    <img src="img\abstract_close.svg" alt="Abstract Closing">
                 </div>
             </li>
             <li>
@@ -46,7 +48,7 @@
                     <div>Registration Closes</div>
                 </div>
                 <div class="key_date_logo">
-                    <img src="img\carousel\winner-Marie.Josse.png" alt="Calendar Icon">
+                    <img src="img\registration_close.svg" alt="Registration Closing">
                 </div>
             </li>
         </ul>
@@ -57,29 +59,29 @@
         </div>
         <ul>
             <li>
-                <a href="#">
+                <a href="{{ "registration/conference/" | relURL }}">
                     <div class="quick_link_image">
-                        <img src="img/logo.png" alt="Calendar Icon">
+                        <i class="fas fa-user-edit"></i>
                     </div>
-                    <div>Registration Guidelines</div>
+                    <div>Registration Information</div>
                 </a>
-            </li>
+            </li> 
             <li>
-                <a href="#">
+                <a href="{{ "program/glance/" | relURL }}">
                     <div class="quick_link_image">
-                        <img src="img/logo.png" alt="Calendar Icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
                     <div>Program at a Glance</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ "about/venue/" | relURL }}">
                     <div class="quick_link_image">
-                        <img src="img/logo.png" alt="Calendar Icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div>Cold Spring Harbor</div>
                 </a>
-            </li>
+            </li> 
         </ul>
     </div>
 </section>

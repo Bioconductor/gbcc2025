@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="conference-overview-page" class="container">
+        <header class="page-header">
+          <h1>🌍 Welcome to GBCC 2025!</h1>
+          <p>The **Galaxy Bioconductor Community Conference (GBCC)** is the premier annual event for the **Galaxy and Bioconductor communities**, bringing together scientists, software developers, educators, and researchers from around the world.</p>
+        </header>
+
+        <!-- Conference Details -->
+        <section class="conference-details">
+          <h2>📅 Conference Dates & Location</h2>
+          <p>GBCC 2025 will take place from **Monday, June 23, to Thursday, June 26, 2025**, at the prestigious **Cold Spring Harbor Laboratory (CSHL), New York**.</p>
+          <p>The conference will **kick off with dinner and an evening session** on Monday and **conclude with lunch** on Thursday.</p>
+        </section>
+
+        <!-- Why Attend -->
+        <section class="why-attend">
+          <h2>💡 Why Attend GBCC 2025?</h2>
+          <p>GBCC is **not just another conference**—it’s a **dynamic, interactive, and inclusive** gathering that fosters collaboration and innovation. Whether you are a researcher, developer, or educator, GBCC provides **immense value**:</p>
+          <ul>
+            <li>🔬 **Stay Ahead in Bioinformatics** – Learn about the latest advancements in **Galaxy and Bioconductor**.</li>
+            <li>🤝 **Network with Experts & Peers** – Meet and collaborate with **leading scientists, developers, and trainers**.</li>
+            <li>🛠️ **Hands-On Training** – Gain practical skills through **interactive workshops and tutorials**.</li>
+            <li>📢 **Showcase Your Work** – Present your **research, tools, and workflows** to an engaged audience.</li>
+            <li>🚀 **Contribute to the Community** – Shape the future of **open-source bioinformatics**.</li>
+          </ul>
+        </section>
+
+        <!-- Conference Highlights -->
+        <section class="conference-highlights">
+          <h2>🎤 What to Expect at GBCC 2025</h2>
+          <p>GBCC offers a **diverse and exciting program** that includes:</p>
+          <div class="highlights-grid">
+            <div class="highlight-item">
+              <h3>🔥 Keynote Talks</h3>
+              <p>Inspiring presentations by **leaders in bioinformatics** and computational biology.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>📝 Workshops & Trainings</h3>
+              <p>Hands-on sessions covering **Galaxy & Bioconductor** workflows, tools, and best practices.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>🎤 Invited Talks</h3>
+              <p>Hear from **scientists and developers** working on cutting-edge research and technology.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>📊 Poster Sessions</h3>
+              <p>Discover new ideas and discuss innovative projects with presenters.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>🦜 Birds of a Feather (BoF) Sessions</h3>
+              <p>Small-group discussions on **specialized topics of interest**.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>🌎 Community Networking</h3>
+              <p>Opportunities to meet fellow attendees, build collaborations, and connect with the **Galaxy & Bioconductor** teams.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Who Should Attend -->
+        <section class="who-should-attend">
+          <h2>👩‍🔬 Who Should Attend?</h2>
+          <p>GBCC welcomes **everyone** who is passionate about **open-source bioinformatics**. This includes:</p>
+          <ul>
+            <li>🧑‍🏫 **Researchers & Scientists** – Stay updated on **bioinformatics tools & workflows**.</li>
+            <li>💻 **Software Developers** – Improve or build new **Galaxy & Bioconductor** tools.</li>
+            <li>📚 **Educators & Trainers** – Enhance **bioinformatics education & training programs**.</li>
+            <li>🔬 **Students & Early-Career Scientists** – Gain experience & connect with mentors.</li>
+            <li>⚡ **Industry Professionals** – Learn how **Galaxy & Bioconductor** impact real-world applications.</li>
+          </ul>
+        </section>
+
+        <!-- Join the Conference -->
+        <section class="register">
+          <h2>📢 Ready to Join GBCC 2025?</h2>
+          <p>Be part of the **most exciting bioinformatics conference of the year**! Click below to register.</p>
+          <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25" target="_blank" class="register-button">
+            Register for GBCC 2025
+          </a>
+        </section>
+
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#conference-overview-page {
+  padding: 20px;
+  background-color: #f5f1e3;
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Sections */
+.conference-details,
+.why-attend,
+.conference-highlights,
+.who-should-attend,
+.register {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Highlights Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.highlight-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2e5636;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+  margin-bottom: 8px;
+}
+
+/* Register Button */
+.register-button {
+  display: inline-block;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #6c91c2;
+}
+
+</style>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="logo-contest-page" class="container">
+        <header class="page-header">
+          <h1>🎨 GBCC 2025 Logo Contest</h1>
+          <p>We asked, and you delivered! Check out the creative designs from our amazing community.</p>
+        </header>
+
+        <!-- Winning Logo Announcement -->
+        <section class="winning-logo">
+          <h2>🏆 And the Winner Is...</h2>
+          <p>After an exciting round of voting, we are thrilled to announce the **winning logo** for GBCC 2025!</p>
+          <div class="logo-display">
+            <img src="/img/logo_contest/winner-Marie.Josse.png" alt="Winning Logo" class="winning-logo-img">
+          </div>
+          <p>Congratulations to **[Winner's Name]** for their fantastic design! This logo will represent GBCC 2025 across our website, social media, and official materials.</p>
+        </section>
+
+        <!-- Gallery of Logo Submissions -->
+        <section class="logo-gallery">
+          <h2>🎨 All Logo Submissions</h2>
+          <p>A huge thank you to everyone who submitted their designs! Here’s a look at the incredible creativity from our community.</p>
+          <div class="gallery-grid">
+            {{ range (readDir "static/img/logo_contest") }}
+            <div class="gallery-item">
+              <img src="/img/logo_contest/{{ .Name }}" alt="Logo submission" class="logo-img">
+            </div>
+            {{ end }}
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="thank-you">
+          <h2>🙌 Thank You to Our Community!</h2>
+          <p>Your creativity and passion make events like this special. We can’t wait to see GBCC 2025 come to life with this amazing logo!</p>
+        </section>
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#logo-contest-page {
+  padding: 20px;
+  background-color: #f5f1e3;
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* Winning Logo Section */
+.winning-logo {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.winning-logo h2 {
+  color: #2e5636;
+}
+
+.logo-display {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.winning-logo-img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Gallery Section */
+.logo-gallery {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo-img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Thank You Section */
+.thank-you {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.thank-you h2 {
+  color: #1b3a4b;
+}
+
+</style>

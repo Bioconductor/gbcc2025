@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="cofest-overview-page" class="container">
+        <header class="page-header">
+          <h1>✨ What is CoFest?</h1>
+          <p>A hands-on, interactive event where **everyone** can contribute to the Galaxy & Bioconductor communities!</p>
+        </header>
+
+        <!-- About CoFest -->
+        <section class="about-cofest">
+          <h2>🚀 CoFest: A Collaborative Sprint for Everyone</h2>
+          <p>CoFest is a **community-driven event** where participants work together on exciting projects related to **Galaxy and Bioconductor**. It’s similar to a hackathon, but it's **not just for programmers**—it’s for anyone who wants to contribute to the ecosystem!</p>
+          <p>Whether you're a **developer, scientist, educator, writer, or designer**, there’s a place for you at CoFest!</p>
+        </section>
+
+        <!-- What to Expect -->
+        <section class="what-to-expect">
+          <h2>🤝 What to Expect at CoFest</h2>
+          <p>CoFest is **highly interactive and informal**—you’ll work side by side with others who share your interests! Here’s what you can look forward to:</p>
+          <ul>
+            <li>🔧 **Improve Tools & Workflows** – Help enhance Galaxy & Bioconductor tools and functionalities.</li>
+            <li>📖 **Enhance Documentation & Training** – Make it easier for others to use and learn these platforms.</li>
+            <li>🎨 **Design & User Experience** – Improve accessibility, visuals, and usability.</li>
+            <li>📢 **Community Discussions** – Connect with like-minded people and explore new ideas.</li>
+            <li>💡 **No Pressure, Just Collaboration** – Work at your own pace on projects that interest you.</li>
+          </ul>
+        </section>
+
+        <!-- Why You Should Join -->
+        <section class="why-join">
+          <h2>🌍 Why Should You Join?</h2>
+          <p>CoFest is more than just a gathering—it’s an opportunity to:</p>
+          <ul>
+            <li>✅ **Meet Experts & Enthusiasts** – Connect with the Galaxy & Bioconductor communities.</li>
+            <li>✅ **Learn New Skills** – Get hands-on experience contributing to real-world projects.</li>
+            <li>✅ **Make an Impact** – Your contributions will help improve the ecosystem for thousands of users.</li>
+            <li>✅ **Have Fun!** – Work in a relaxed environment with passionate, supportive people.</li>
+          </ul>
+        </section>
+
+        <!-- Accommodation & Travel -->
+        <section class="accommodation-travel">
+          <h2>🛏️ Accommodation & Travel</h2>
+          <p>We are working on **group travel & accommodation blocks** from **CSHL to Manhattan**—stay tuned for updates!</p>
+        </section>
+
+        <!-- Register for CoFest -->
+        <section class="register">
+          <h2>📅 How to Join</h2>
+          <p>Interested in participating? Click below to register!</p>
+          <a href="https://jhu.campusgroups.com/otp_signup?module=event&event_id=1965989" target="_blank" class="register-button">
+            Register for CoFest 2025
+          </a>
+        </section>
+
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#cofest-overview-page {
+  padding: 20px;
+  background-color: #f5f1e3;
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Sections */
+.about-cofest,
+.what-to-expect,
+.why-join,
+.accommodation-travel,
+.register {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2e5636;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #3a3a3a;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+  margin-bottom: 8px;
+}
+
+/* Register Button */
+.register-button {
+  display: inline-block;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #6c91c2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-cofest,
+  .what-to-expect,
+  .why-join,
+  .accommodation-travel,
+  .register {
+    padding: 15px;
+  }
+
+  .register-button {
+    padding: 10px 16px;
+  }
+}
+
+</style>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <!-- Main Content -->
+      <main id="abstract-guidelines-page" class="container">
+        <header class="page-header">
+          <h1>Abstract Submission Guidelines</h1>
+          <p>Everything you need to know about submitting an abstract for GBCC 2025.</p>
+        </header>
+
+        <!-- Submission Requirements -->
+        <section class="abstract-requirements">
+          <h2>Submission Requirements</h2>
+          <p>You must **register for the meeting** before submitting an abstract.</p>
+          <p>After registering, you will receive an **email with a web link** to submit your abstract.</p>
+          <p>Abstracts should be written in **plain text** and can be copied and pasted from **Word, Google Docs, or Notepad**.</p>
+          <p>Abstracts are limited to **~2900 characters** (including spaces).</p>
+        </section>
+
+        <!-- Program Information -->
+        <section class="program-information">
+          <h2>Program Information</h2>
+          <p>The **electronic abstract book** will be sent out **three working days before** the conference.</p>
+          <p>Printed copies will be available **upon arrival** at Cold Spring Harbor Laboratory.</p>
+          <p>Only **keynote speakers and first-night presenters** will receive their session date and time in advance.</p>
+          <p>Other program details will only be available once the electronic abstract book is released.</p>
+          <p>This policy is designed to **maximize interactions** and encourage participants to stay for the full event.</p>
+        </section>
+
+        <!-- Additional Instructions -->
+        <section class="poster-instructions">
+          <h2>Talk and Poster Information</h2>
+          <p>Please check your **email** for details regarding:</p>
+          <ul>
+            <li>Talk length and scheduling</li>
+            <li>Poster session instructions</li>
+            <li>Poster printing options at Cold Spring Harbor Laboratory</li>
+          </ul>
+          <p>For **poster printing**, CSHL offers an on-site service where your poster will be ready for collection upon arrival.</p>
+        </section>
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ partial "custom-scripts.html" . }}
+  </body>
+</html>
+
+<style>
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#abstract-guidelines-page {
+  padding: 20px;
+  background-color: #f5f1e3; /* Light beige background */
+}
+
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b; /* Deep navy */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+}
+
+/* Section Styling */
+.abstract-requirements,
+.program-information,
+.poster-instructions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2e5636; /* Forest green */
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #3a3a3a; /* Dark gray */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+  margin-bottom: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .abstract-requirements,
+  .program-information,
+  .poster-instructions {
+    padding: 15px;
+  }
+}
+
+</style>
+    
