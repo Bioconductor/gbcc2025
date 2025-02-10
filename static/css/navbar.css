@@ -213,75 +213,89 @@ body {
   border-radius: 3px;
 }
 
-/* ✅ Mobile Menu */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--soft-beige);
-  font-size: 50px;
-  cursor: pointer;
-}
-
-/* ✅ MOBILE MENU STYLING */
+/* MOBILE SPECIFIC STYLES (for viewports ≤1740px) */
 @media (max-width: 1740px) {
+  /* Position the menu toggle button at the top–right with some right margin */
   .menu-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
+    top: 20px;
     right: 20px;
     z-index: 1001;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: var(--soft-beige);
+    cursor: pointer;
   }
 
+  /* Hide the default (desktop) nav-links styling */
   .nav-links {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--deep-navy);
-    position: absolute;
-    top: 140px; /* Adjusted to match the height of the top-bar */
-    left: 0;
-    z-index: 1000;
   }
 
-  .nav-links.show {
+  /* Mobile overlay menu (when shown) */
+  .nav-links.mobile-menu.show {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 140px; /* Starts just below the fixed top-bar */
+    right: 20px; /* Right–justified with a margin */
+    width: 300px; /* Reasonable width for mobile */
+    height: calc(100vh - 140px); /* Extends to the bottom of the viewport */
+    background-color: var(--mobile-menu-bg);
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 1002;
   }
 
-  .nav-item {
-    text-align: center;
-    width: 100%;
+  /* Main menu list – vertical stack */
+  .nav-links.mobile-menu.show ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links.mobile-menu.show li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 10px;
+  }
+  .nav-links.mobile-menu.show li a {
+    color: var(--soft-beige);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
   }
 
-  .nav-link {
-    padding: 15px;
-    width: 100%;
-  }
-
-  .dropdown {
-    position: static;
+  /* Mobile submenu styling – these expand inline, pushing content below */
+  .mobile-submenu {
+    background-color: var(--mobile-submenu-bg);
+    padding-left: 20px;
+    margin-top: 10px;
     display: none;
-    background-color: var(--forest-green);
-    width: 100%;
+    flex-direction: column;
   }
-
-  .has-dropdown.active .dropdown {
+  .mobile-submenu.open {
     display: flex;
-    flex-direction: column;
+  }
+  .mobile-submenu li {
+    border: none;
+    padding: 10px 0;
+  }
+  .mobile-submenu li a {
+    font-size: 16px;
   }
 
-  .dropdown li a {
-    padding: 10px 20px;
+  /* Mobile social links appear at the bottom of the overlay */
+  .mobile-social {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
   }
-
-  .social-bar {
-    display: none; /* Hide social bar in mobile view */
-  }
-
-  .nav-container {
-    flex-direction: column;
-  }
-
-  .custom-navbar {
-    justify-content: flex-end;
+  .mobile-social a {
+    color: var(--soft-beige);
+    font-size: 20px;
   }
 }

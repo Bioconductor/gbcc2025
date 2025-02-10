@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/navbar.css"> <!-- New custom CSS -->
+<link rel="stylesheet" href="/css/navbar.css"> <!-- Your existing CSS -->
 
 <div class="top-bar">
   <!-- Logo Section -->
@@ -10,22 +10,35 @@
 
   <!-- Social Media and Navbar Container -->
   <div class="nav-container">
-    <!-- Social Media Icons -->
+    <!-- Desktop Social Media Icons (left unchanged) -->
     <div class="social-bar">
       <ul>
-        <li><a href="https://github.com/Bioconductor/" target="_blank">{{
-          "<i class='fab fa-github'></i>" | safeHTML }}</a></li>
-        <li><a href="https://twitter.com/Bioconductor" target="_blank">{{
-          "<i class='fab fa-2x fa-twitter'></i>" | safeHTML }}</a></li>
-        <li><a href="mailto:workshop@bioconductor.org">{{
-          "<i class='fas fa-envelope'></i>" | safeHTML }}</a></li>
-        <li><a href="https://slack.bioconductor.org/" target="_blank">{{
-          "<i class='fab fa-slack'></i>" | safeHTML }}</a></li>
+        <li>
+          <a href="https://github.com/Bioconductor/" target="_blank">
+            {{ "<i class='fab fa-github'></i>" | safeHTML }}
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Bioconductor" target="_blank">
+            {{ "<i class='fab fa-2x fa-twitter'></i>" | safeHTML }}
+          </a>
+        </li>
+        <li>
+          <a href="mailto:workshop@bioconductor.org">
+            {{ "<i class='fas fa-envelope'></i>" | safeHTML }}
+          </a>
+        </li>
+        <li>
+          <a href="https://slack.bioconductor.org/" target="_blank">
+            {{ "<i class='fab fa-slack'></i>" | safeHTML }}
+          </a>
+        </li>
       </ul>
     </div>
 
     <!-- Custom Navbar -->
     <header class="custom-navbar">
+      <!-- Mobile Menu Toggle Button -->
       <button id="menu-toggle" class="menu-toggle">&#9776;</button>
       <nav class="nav-links" id="nav-menu">
         <ul>
@@ -38,15 +51,38 @@
           {{ end }}
         </ul>
       </nav>
+      <nav class="mobile-nav-links" id="mobile-nav-menu">
+        <ul>
+          {{ range .Site.Menus.main }}
+            {{ if not .Parent }}
+              <li class="nav-item has-dropdown" data-dropdown="{{ .Identifier }}">
+                <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+        <!-- Mobile Social Icons (displayed only in mobile overlay) -->
+        <div class="mobile-social">
+          <a href="https://github.com/Bioconductor/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/Bioconductor" target="_blank">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+          <a href="mailto:workshop@bioconductor.org">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://slack.bioconductor.org/" target="_blank">
+            <i class="fab fa-slack"></i>
+          </a>
+        </div>
     </header>
   </div>
 </div>
 
-<!-- ✅ Dropdown Container (Separate from Navbar) -->
 <div class="dropdown-container">
   <div class="dropdown-logo"></div>
   <div class="dropdown" id="dropdown-content"></div>
 </div>
 
-<!-- Custom JavaScript -->
 <script src="/js/navbar.js"></script>

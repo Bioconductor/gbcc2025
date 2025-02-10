@@ -168,3 +168,108 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("show");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileBreakpoint = 1740;
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  // On initial load, if width ≤1740, add the mobile-menu class.
+  if (window.innerWidth <= mobileBreakpoint) {
+    navMenu.classList.add("mobile-menu");
+  }
+
+  // Watch for window resize to add or remove mobile behavior.
+  window.addEventListener("resize", function () {
+    if (window.innerWidth <= mobileBreakpoint) {
+      navMenu.classList.add("mobile-menu");
+    } else {
+      navMenu.classList.remove("mobile-menu");
+      navMenu.classList.remove("show");
+    }
+  });
+
+  // Toggle the mobile overlay menu when the toggle button is clicked.
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+  });
+
+  // Handle main menu item clicks to expand submenus (mobile only).
+  const navItems = navMenu.querySelectorAll(".nav-item.has-dropdown");
+  navItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      if (window.innerWidth <= mobileBreakpoint) {
+        // Prevent following the link if submenu exists.
+        e.preventDefault();
+        let submenu = item.querySelector(".mobile-submenu");
+        if (submenu) {
+          // Toggle the submenu’s open/close state.
+          submenu.classList.toggle("open");
+        } else {
+          // Create the submenu dynamically from our menu data.
+          const menuId = item.getAttribute("data-dropdown");
+          const children = getMenuChildren(menuId);
+          if (children.length > 0) {
+            submenu = document.createElement("ul");
+            submenu.classList.add("mobile-submenu", "open");
+            children.forEach(child => {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = child.url;
+              a.textContent = child.name;
+              li.appendChild(a);
+              submenu.appendChild(li);
+            });
+            item.appendChild(submenu);
+          }
+        }
+      }
+    });
+  });
+
+  // The submenu data – adjust as needed.
+  function getMenuChildren(menuId) {
+    const menuData = {
+      "gbcc2025": [
+        { name: "Greetings", url: "/about/greetings" },
+        { name: "Overview", url: "/about/overview" },
+        { name: "Committee", url: "/about/committee" },
+        { name: "Venue", url: "/about/venue" },
+        { name: "Previous Meetings", url: "/about/previous_meetings" }
+      ],
+      "program": [
+        { name: "Program at a Glance", url: "/program/glance" },
+        { name: "Scientific Program", url: "/program/scientific_program" },
+        { name: "Invited Speakers", url: "/program/keynotes" }
+      ],
+      "abstracts": [
+        { name: "Submission Guidelines", url: "/abstracts/submission_guidelines" },
+        { name: "Abstract Book", url: "/abstracts/book" }
+      ],
+      "registration": [
+        { name: "Conference Registration", url: "/registration/conference" },
+        { name: "Cofest Registration", url: "/registration/cofest" },
+        { name: "Scholarships", url: "/registration/scholarships" }
+      ],
+      "sponsor": [
+        { name: "Sponsor Information", url: "/sponsorships/sponsor_info" }
+      ],
+      "general_info": [
+        { name: "Transportation", url: "/general_information/transportation" },
+        { name: "Things to do in the Area", url: "/general_information/things_to_do" },
+        { name: "Logo Gallery", url: "/general_information/logo_contest_gallery" }
+      ],
+      "cofest": [
+        { name: "Cofest Overview", url: "/cofest/overview" },
+        { name: "Past Projects", url: "/cofest/past_projects" },
+        { name: "Venue Information", url: "/cofest/venue_info" },
+        { name: "Proposed Projects", url: "/cofest/proposed_projects" }
+      ],
+      "bofs": [
+        { name: "BOFs Overview", url: "/bofs/overview" }
+      ]
+    };
+    return menuData[menuId] || [];
+  }
+});
+
