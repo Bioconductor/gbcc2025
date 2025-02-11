@@ -4,6 +4,7 @@
   margin: 60px 5%;
   margin-top: 0px;
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   background-color: #F5F1E3; /* Soft Beige background */
   padding: 20px;
   border-radius: 8px;
@@ -13,10 +14,11 @@
 
 /* Each container for the bulletin (Latest News, Key Dates, Quick Links) */
 .bulletin_container {
-  width: 33%;
-  max-width: 33%;
+  width: 100%; /* Full width on mobile */
+  max-width: 100%; /* Full width on mobile */
   padding: 0 20px;
   box-sizing: border-box;
+  margin-bottom: 20px; /* Add space between sections on mobile */
 }
 
 /* Title wrapper (title + border) */
@@ -47,7 +49,7 @@
 
 /* Styling for list items */
 .notice_container ul > li {
-  height: 80px;
+  height: auto; /* Adjust height for mobile */
   padding-left: 5px;
   box-sizing: border-box;
   background-position: left 2px center;
@@ -58,10 +60,11 @@
 .key_dates_container ul > li {
   width: 100%;
   margin-bottom: 5px;
-  height: 80px;
+  height: auto; /* Adjust height for mobile */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .quick_links_container ul > li {
@@ -115,7 +118,7 @@
 
 .quick_links_container ul > li > a {
   width: 100%;
-  height: 80px;
+  height: auto; /* Adjust height for mobile */
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -144,34 +147,52 @@
 
 /* Media query for responsiveness (on smaller screens) */
 @media (max-width: 768px) {
-  /* Stack the containers vertically on small screens */
-  .bulletin-container {
-    max-width: 100%;
-    margin-bottom: 20px;
+  .bulletin_board {
+    flex-direction: column; 
+    margin: 20px 5%; 
   }
 
-  /* Adjust the title size for better readability on mobile */
-  .bulletin-container .bulletin_title {
-    font-size: 1.2rem;
+  .bulletin_container {
+    width: 100%; 
+    max-width: 100%; 
+    padding: 0; 
   }
 
-  /* Remove the right padding to make use of all available space */
-  .bulletin-container .bulletin_title_wrap {
-    padding: 15px 0;
+  .bulletin_container .bulletin_title_wrap .bulletin_title {
+    font-size: 1.2rem; 
   }
 
-  /* Adjust spacing between items in the lists */
-  .bulletin-container .notice_container ul > li,
-  .bulletin-container .key_dates_container ul > li,
-  .bulletin-container .quick_links_container ul > li {
-    padding-left: 15px;
+  .bulletin_container ul > li {
+    padding-left: 15px; 
   }
 
-  /* Adjust link padding for smaller screens */
-  .bulletin-container .notice_container ul > li > a,
-  .bulletin-container .key_dates_container ul > li > a,
-  .bulletin-container .quick_links_container ul > li > a {
-    padding: 12px 0;
+  .bulletin_container ul > li > a {
+    padding: 12px 0; 
+  }
+
+  .key_dates_container {
+    margin-bottom: 0px;
+  }
+
+  .key_dates_container ul > li {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding-bottom: 10px;
+    height: 70px;
+
+  }
+
+  .key_date_logo img {
+    max-width: 80px; 
+  }
+
+  .quick_links_container ul > li > a {
+    height: auto; 
+    padding: 10px 0; 
+  }
+
+  .quick_link_image {
+    margin: 0 15px; 
   }
 }
 
