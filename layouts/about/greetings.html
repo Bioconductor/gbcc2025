@@ -3,8 +3,7 @@
   {{ partial "head.html" . }}
 
   <!-- Load Google Fonts: one for body text, one for cursive signatures -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Great+Vibes&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <body>
     <div id="all">
@@ -19,7 +18,7 @@
           <!-- Signatures at the bottom -->
           <div class="signature-block">
             <div class="signature">
-              <p>GBCC 2025 Organizing Committee<br><em>Organizing Committee</em></p>
+              <p>GBCC 2025 Organizing Committee</p>
             </div>
           </div>
         </div>
@@ -44,13 +43,13 @@
        --dark-gray:   #3A3A3A;
        --white:       #FFFFFF;
     */
-    
+
     /* Page background with a soft beige, creating a letter-like warmth */
     .greetings-page {
       background-color: var(--soft-beige);
       padding: 2rem 0;
     }
-    
+
     /* Main container: "paper" in the middle, with a serif font and bigger text */
     .letter-container {
       width: 60%;
@@ -58,7 +57,7 @@
       background-color: var(--white);
       padding: 2rem 10rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    
+
       /* Typography */
       font-family: 'Cormorant Garamond', serif;
       color: var(--dark-gray);
@@ -68,7 +67,7 @@
       border-radius: 6px;
       font-weight: 550;
     }
-    
+
     /* Narrower on mobile for better reading */
     @media (max-width: 768px) {
       .letter-container {
@@ -77,12 +76,12 @@
         font-size: 1.7rem;
       }
     }
-    
+
     /* Paragraph spacing */
     .letter-container p {
       margin-bottom: 1.2rem;
     }
-    
+
     /* Headings: use your deep navy or sky blue for contrast */
     .letter-container h1,
     .letter-container h2,
@@ -91,22 +90,21 @@
       margin-top: 1.5rem;
       margin-bottom: 1rem;
     }
-    
+
     /* Signatures: horizontally spaced, cursive, stylized */
     .signature-block {
       display: flex;
       justify-content: space-evenly;
       margin-top: 3rem;
     }
-    
+
     .signature p {
-      font-family: 'Great Vibes', cursive; /* The cursive signature font */
       font-size: 2rem;                     /* Larger, decorative size */
       color: var(--deep-navy);            /* A nice contrast color */
       text-align: center;
       margin-bottom: 0.5rem;              /* Slight bottom gap */
     }
-    
+
     /* Possibly style the secondary line (title) smaller or italic */
     .signature p em {
       display: block;
@@ -114,7 +112,7 @@
       color: var(--dark-gray);
       font-style: italic;
     }
-    
+
     /* Stack signatures vertically on small screens */
     @media (max-width: 768px) {
       .signature-block {
@@ -126,6 +124,3 @@
     }
 
     </style>
-    
-    
-  
