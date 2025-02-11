@@ -33,7 +33,7 @@ body {
 
 /* Logo Section */
 .logo-section {
-  flex: 0 0 15%; /* Take 20% of the width */
+  flex: 0 0 15%; /* Take 15% of the width */
   height: 100%; /* Full height */
   display: flex;
   align-items: center;
@@ -155,7 +155,6 @@ body {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   display: none;
   justify-content: flex-start;
-  display: flex;
   align-items: center;
 }
 
@@ -176,7 +175,6 @@ body {
   padding: 10px 0px;
   flex: 1;
 }
-
 
 /* ✅ Each Parent Section */
 .dropdown-column {
@@ -213,89 +211,180 @@ body {
   border-radius: 3px;
 }
 
-/* MOBILE SPECIFIC STYLES (for viewports ≤1740px) */
-@media (max-width: 1740px) {
+.mobile-nav-links {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+/* Laptop size Changes */
+@media (max-width: 1740px) and (min-width: 1280px) {
+  .nav-links ul {
+    gap: 10px;
+  }
+  .nav-item {
+    min-width: 120px;
+  }
+  .dropdown{
+    gap:10px
+  }
+  .dropdown li a {
+    font-size: 12px;
+  }
+}
+
+
+/* MOBILE SPECIFIC STYLES (for viewports ≤1280px) */
+@media (max-width: 1280px) {
+
+  /* Hide the default (desktop) nav-links styling */
+  .nav-links {
+    display: none;
+  }
+  .social-bar {
+    display: none;
+  }
+  
   /* Position the menu toggle button at the top–right with some right margin */
   .menu-toggle {
     display: block;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    font-size: 40px;
+    top: 30px;
+    right: 50px;
+    z-index: 99999;
+    font-size: 60px;
     background: none;
     border: none;
     color: var(--soft-beige);
     cursor: pointer;
   }
 
-  /* Hide the default (desktop) nav-links styling */
-  .nav-links {
+  /* Use your site’s color theme for the mobile navigation overlay */
+  .mobile-nav-links {
     display: none;
-  }
-
-  /* Mobile overlay menu (when shown) */
-  .nav-links.mobile-menu.show {
-    display: flex;
-    flex-direction: column;
+    right: 0;
+    width: 100%;
+    max-width: 350px;
     position: fixed;
-    top: 140px; /* Starts just below the fixed top-bar */
-    right: 20px; /* Right–justified with a margin */
-    width: 300px; /* Reasonable width for mobile */
-    height: calc(100vh - 140px); /* Extends to the bottom of the viewport */
-    background-color: var(--mobile-menu-bg);
+    top: 0;
     overflow-y: auto;
-    padding: 10px;
     z-index: 1002;
+    background-color: var(--deep-navy);  /* using your deep navy color */
+    height: 100vh;
   }
 
-  /* Main menu list – vertical stack */
-  .nav-links.mobile-menu.show ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .nav-links.mobile-menu.show li {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding: 15px 10px;
-  }
-  .nav-links.mobile-menu.show li a {
-    color: var(--soft-beige);
-    text-decoration: none;
-    font-size: 18px;
+  .mobile-nav-links.mobile-show {
     display: block;
   }
 
-  /* Mobile submenu styling – these expand inline, pushing content below */
-  .mobile-submenu {
-    background-color: var(--mobile-submenu-bg);
-    padding-left: 20px;
-    margin-top: 10px;
-    display: none;
-    flex-direction: column;
-  }
-  .mobile-submenu.open {
-    display: flex;
-  }
-  .mobile-submenu li {
-    border: none;
-    padding: 10px 0;
-  }
-  .mobile-submenu li a {
-    font-size: 16px;
+  /* Mobile navigation list (starts below the top-bar) */
+  #mobile-navigation {
+    width: 100%;
+    background-color: var(--deep-navy);
+    margin-top: 140px;
+    padding: 0;
+    list-style-type: none;
   }
 
-  /* Mobile social links appear at the bottom of the overlay */
+  .mobile-nav-item {
+    display: list-item;
+    width: 100%;
+    background-color: var(--deep-navy);
+    text-align: left;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 5% 12%;
+    font-size: 18px;
+    color: var(--soft-beige);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    font-weight: 600;
+    text-decoration: none;
+    
+  }
+
+  /* Smooth submenu animation via max-height transition */
+  #mobile-navigation .mobile-submenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    background-color: var(--soft-beige);
+    list-style: none;
+    margin: 0;
+  }
+
+  #mobile-navigation .mobile-submenu li {
+    padding: 0;
+    margin: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+  #mobile-navigation .mobile-submenu li > a {
+    display: block;
+    font-size: 15px;
+    padding: 4% 23.5% 4% 10%;
+    letter-spacing: -0.5px;
+    color: var(--deep-navy); /* Contrast text on soft-beige */
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  /* When open, allow enough max-height for the submenu to fully expand */
+  #mobile-navigation .mobile-submenu.open {
+    max-height: 500px; /* Adjust if your submenu content is taller */
+    width: 100%;
+    background-color: var(--soft-beige); /* Submenu uses soft-beige for contrast */
+    list-style: none;
+    margin: 0;
+  }
+
+  #mobile-navigation .mobile-submenu.open li {
+    padding: 0;
+    margin: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    border-bottom: #1B3A4B;
+  }
+  #mobile-navigation .mobile-submenu.open li > a {
+    display: block;
+    font-size: 18px;
+    padding: 4% 23.5% 4% 10%;
+    letter-spacing: -0.5px;
+    color: var(--deep-navy); /* Contrast text on soft-beige */
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* Standardize mobile social media icon size and center them */
   .mobile-social {
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: space-around; /* Evenly space the icons */
+    align-items: center; /* Center the icons vertically */
+    padding: 10px 0;
+    width: 100%; /* Ensure the container takes full width */
+  }
+
+  .mobile-social a {
+    display: inline-block;
+    font-size: 24px;  /* Standard icon size */
+    color: var(--soft-beige);
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  .mobile-social a i {
+    font-size: 24px; 
+    width: 24px;  
+    height: 24px; 
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    line-height: 24px; /* Ensures proper centering */
   }
-  .mobile-social a {
-    color: var(--soft-beige);
-    font-size: 20px;
+
+  .mobile-social a:hover {
+    color: var(--sky-blue);
+    transform: scale(1.1);
   }
 }

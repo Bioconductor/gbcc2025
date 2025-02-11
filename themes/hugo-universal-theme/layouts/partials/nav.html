@@ -52,11 +52,11 @@
         </ul>
       </nav>
       <nav class="mobile-nav-links" id="mobile-nav-menu">
-        <ul>
+        <ul id="mobile-navigation">
           {{ range .Site.Menus.main }}
             {{ if not .Parent }}
-              <li class="nav-item has-dropdown" data-dropdown="{{ .Identifier }}">
-                <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+              <li class="mobile-nav-item has-dropdown" data-dropdown="{{ .Identifier }}">
+                <a href="{{ .URL }}" class="mobile-nav-link">{{ .Name }}</a>
               </li>
             {{ end }}
           {{ end }}
@@ -76,6 +76,7 @@
             <i class="fab fa-slack"></i>
           </a>
         </div>
+      </nav>
     </header>
   </div>
 </div>

@@ -1,3 +1,5 @@
+// navbar.js
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
@@ -5,16 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle mobile menu
   menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
+    navMenu.classList.toggle("mobile-show");
   });
 
-  // Dropdowns expand inline on mobile
-  dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", function (e) {
-      e.preventDefault();
-      dropdown.classList.toggle("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth > 1280) {
+    document.querySelectorAll('.nav-links .nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
     });
-  });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,80 +143,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navMenu = document.getElementById("nav-menu");
+  // Updated mobileBreakpoint from 1740 to 1280px.
+  const mobileBreakpoint = 1280;
   const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.querySelector(".custom-navbar");
-  const navbarLogo = document.querySelector(".navbar-header");
+  const mobileNavMenu = document.getElementById("mobile-nav-menu");
+  const body = document.body;
 
-  function adjustNavbar() {
-    const navbarWidth = navbar.offsetWidth;
-    const logoWidth = navbarLogo.offsetWidth;
-    const availableSpace = navbarWidth - logoWidth - 50; // Ensure 50px buffer
-
-    if (availableSpace < 400) { // If nav can't fit, switch to mobile view
-      navMenu.classList.add("mobile-view");
-      navMenu.style.display = "none";
-      menuToggle.style.display = "block";
-    } else {
-      navMenu.classList.remove("mobile-view");
-      navMenu.style.display = "flex";
-      menuToggle.style.display = "none";
-    }
-  }
-
-  // Run adjustment on load & window resize
-  adjustNavbar();
-  window.addEventListener("resize", adjustNavbar);
-
-  // Toggle mobile menu
-  menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const mobileBreakpoint = 1740;
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  // On initial load, if width ≤1740, add the mobile-menu class.
-  if (window.innerWidth <= mobileBreakpoint) {
-    navMenu.classList.add("mobile-menu");
-  }
-
-  // Watch for window resize to add or remove mobile behavior.
-  window.addEventListener("resize", function () {
+  // Function to update mobile menu state based on viewport width.
+  function updateMobileMenu() {
     if (window.innerWidth <= mobileBreakpoint) {
-      navMenu.classList.add("mobile-menu");
+      mobileNavMenu.classList.add("mobile-menu");
     } else {
-      navMenu.classList.remove("mobile-menu");
-      navMenu.classList.remove("show");
+      mobileNavMenu.classList.remove("mobile-menu");
+      mobileNavMenu.classList.remove("mobile-show");
+      menuToggle.innerHTML = "&#9776;"; // reset to hamburger
+      body.classList.remove("mobile-menu-active");
     }
-  });
+  }
+
+  updateMobileMenu();
+  window.addEventListener("resize", updateMobileMenu);
 
   // Toggle the mobile overlay menu when the toggle button is clicked.
   menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
+    mobileNavMenu.classList.toggle("mobile-show");
+    body.classList.toggle("mobile-menu-active");
+    if (mobileNavMenu.classList.contains("mobile-show")) {
+      // Change icon to an X (close)
+      menuToggle.innerHTML = "&times;";
+    } else {
+      // Change icon back to hamburger
+      menuToggle.innerHTML = "&#9776;";
+    }
   });
 
-  // Handle main menu item clicks to expand submenus (mobile only).
-  const navItems = navMenu.querySelectorAll(".nav-item.has-dropdown");
-  navItems.forEach(item => {
+  // Handle mobile nav items with dropdowns for submenu toggling.
+  const mobileNavItems = document.querySelectorAll("#mobile-navigation .mobile-nav-item.has-dropdown");
+  mobileNavItems.forEach(item => {
     item.addEventListener("click", function (e) {
-      if (window.innerWidth <= mobileBreakpoint) {
-        // Prevent following the link if submenu exists.
-        e.preventDefault();
+      // Check if the clicked element is the parent link (not a submenu link)
+      if (e.target.classList.contains("mobile-nav-link")) {
+        e.preventDefault(); // Prevent default only for parent links
         let submenu = item.querySelector(".mobile-submenu");
+
+        // Close any open submenus
+        document.querySelectorAll(".mobile-submenu.open").forEach(openSubmenu => {
+          if (openSubmenu !== submenu) {
+            openSubmenu.classList.remove("open");
+          }
+        });
+
         if (submenu) {
-          // Toggle the submenu’s open/close state.
           submenu.classList.toggle("open");
         } else {
-          // Create the submenu dynamically from our menu data.
           const menuId = item.getAttribute("data-dropdown");
           const children = getMenuChildren(menuId);
           if (children.length > 0) {
             submenu = document.createElement("ul");
-            submenu.classList.add("mobile-submenu", "open");
+            submenu.classList.add("mobile-submenu");
             children.forEach(child => {
               const li = document.createElement("li");
               const a = document.createElement("a");
@@ -221,13 +210,16 @@ document.addEventListener("DOMContentLoaded", function () {
               submenu.appendChild(li);
             });
             item.appendChild(submenu);
+            // Force reflow so the transition is triggered.
+            void submenu.offsetHeight;
+            submenu.classList.add("open");
           }
         }
       }
     });
   });
 
-  // The submenu data – adjust as needed.
+  // Example submenu data. Adjust as needed.
   function getMenuChildren(menuId) {
     const menuData = {
       "gbcc2025": [
@@ -272,4 +264,3 @@ document.addEventListener("DOMContentLoaded", function () {
     return menuData[menuId] || [];
   }
 });
-

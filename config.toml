@@ -134,7 +134,7 @@ weight = 6
 
 [[menu.main]]
 identifier = "general_info"
-name = "General Information"
+name = "General Info"
 url = "/general_information/transportation"
 weight = 7
 
