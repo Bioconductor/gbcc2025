@@ -33,7 +33,7 @@ body {
 
 /* Logo Section */
 .logo-section {
-  flex: 0 0 15%; /* Take 20% of the width */
+  flex: 0 0 15%; /* Take 15% of the width */
   height: 100%; /* Full height */
   display: flex;
   align-items: center;
@@ -155,7 +155,6 @@ body {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   display: none;
   justify-content: flex-start;
-  display: flex;
   align-items: center;
 }
 
@@ -176,7 +175,6 @@ body {
   padding: 10px 0px;
   flex: 1;
 }
-
 
 /* ✅ Each Parent Section */
 .dropdown-column {
@@ -213,75 +211,180 @@ body {
   border-radius: 3px;
 }
 
-/* ✅ Mobile Menu */
-.menu-toggle {
+.mobile-nav-links {
   display: none;
-  background: none;
-  border: none;
-  color: var(--soft-beige);
-  font-size: 50px;
-  cursor: pointer;
 }
 
-/* ✅ MOBILE MENU STYLING */
-@media (max-width: 1740px) {
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 20px;
-    z-index: 1001;
+.menu-toggle {
+  display: none;
+}
+/* Laptop size Changes */
+@media (max-width: 1740px) and (min-width: 1280px) {
+  .nav-links ul {
+    gap: 10px;
   }
+  .nav-item {
+    min-width: 120px;
+  }
+  .dropdown{
+    gap:10px
+  }
+  .dropdown li a {
+    font-size: 12px;
+  }
+}
 
+
+/* MOBILE SPECIFIC STYLES (for viewports ≤1280px) */
+@media (max-width: 1280px) {
+
+  /* Hide the default (desktop) nav-links styling */
   .nav-links {
     display: none;
-    flex-direction: column;
+  }
+  .social-bar {
+    display: none;
+  }
+  
+  /* Position the menu toggle button at the top–right with some right margin */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    z-index: 99999;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: var(--soft-beige);
+    cursor: pointer;
+  }
+
+  /* Use your site’s color theme for the mobile navigation overlay */
+  .mobile-nav-links {
+    display: none;
+    right: 0;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1002;
+    background-color: var(--deep-navy);  /* using your deep navy color */
+    height: 100vh;
+  }
+
+  .mobile-nav-links.mobile-show {
+    display: block;
+  }
+
+  /* Mobile navigation list (starts below the top-bar) */
+  #mobile-navigation {
     width: 100%;
     background-color: var(--deep-navy);
-    position: absolute;
-    top: 140px; /* Adjusted to match the height of the top-bar */
-    left: 0;
-    z-index: 1000;
+    margin-top: 140px;
+    padding: 0;
+    list-style-type: none;
   }
 
-  .nav-links.show {
+  .mobile-nav-item {
+    display: list-item;
+    width: 100%;
+    background-color: var(--deep-navy);
+    text-align: left;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 5% 12%;
+    font-size: 18px;
+    color: var(--soft-beige);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    font-weight: 600;
+    text-decoration: none;
+    
+  }
+
+  /* Smooth submenu animation via max-height transition */
+  #mobile-navigation .mobile-submenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    background-color: var(--soft-beige);
+    list-style: none;
+    margin: 0;
+  }
+
+  #mobile-navigation .mobile-submenu li {
+    padding: 0;
+    margin: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+  #mobile-navigation .mobile-submenu li > a {
+    display: block;
+    font-size: 15px;
+    padding: 4% 23.5% 4% 10%;
+    letter-spacing: -0.5px;
+    color: var(--deep-navy); /* Contrast text on soft-beige */
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  /* When open, allow enough max-height for the submenu to fully expand */
+  #mobile-navigation .mobile-submenu.open {
+    max-height: 500px; /* Adjust if your submenu content is taller */
+    width: 100%;
+    background-color: var(--soft-beige); /* Submenu uses soft-beige for contrast */
+    list-style: none;
+    margin: 0;
+  }
+
+  #mobile-navigation .mobile-submenu.open li {
+    padding: 0;
+    margin: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    border-bottom: #1B3A4B;
+  }
+  #mobile-navigation .mobile-submenu.open li > a {
+    display: block;
+    font-size: 18px;
+    padding: 4% 23.5% 4% 10%;
+    letter-spacing: -0.5px;
+    color: var(--deep-navy); /* Contrast text on soft-beige */
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* Standardize mobile social media icon size and center them */
+  .mobile-social {
     display: flex;
+    justify-content: space-around; /* Evenly space the icons */
+    align-items: center; /* Center the icons vertically */
+    padding: 10px 0;
+    width: 100%; /* Ensure the container takes full width */
   }
 
-  .nav-item {
-    text-align: center;
-    width: 100%;
+  .mobile-social a {
+    display: inline-block;
+    font-size: 24px;  /* Standard icon size */
+    color: var(--soft-beige);
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
   }
 
-  .nav-link {
-    padding: 15px;
-    width: 100%;
-  }
-
-  .dropdown {
-    position: static;
-    display: none;
-    background-color: var(--forest-green);
-    width: 100%;
-  }
-
-  .has-dropdown.active .dropdown {
+  .mobile-social a i {
+    font-size: 24px; 
+    width: 24px;  
+    height: 24px; 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 24px; /* Ensures proper centering */
   }
 
-  .dropdown li a {
-    padding: 10px 20px;
-  }
-
-  .social-bar {
-    display: none; /* Hide social bar in mobile view */
-  }
-
-  .nav-container {
-    flex-direction: column;
-  }
-
-  .custom-navbar {
-    justify-content: flex-end;
+  .mobile-social a:hover {
+    color: var(--sky-blue);
+    transform: scale(1.1);
   }
 }

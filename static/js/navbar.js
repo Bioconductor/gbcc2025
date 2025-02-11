@@ -1,3 +1,5 @@
+// navbar.js
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
@@ -5,16 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle mobile menu
   menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
+    navMenu.classList.toggle("mobile-show");
   });
 
-  // Dropdowns expand inline on mobile
-  dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", function (e) {
-      e.preventDefault();
-      dropdown.classList.toggle("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth > 1280) {
+    document.querySelectorAll('.nav-links .nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
     });
-  });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,33 +143,124 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navMenu = document.getElementById("nav-menu");
+  // Updated mobileBreakpoint from 1740 to 1280px.
+  const mobileBreakpoint = 1280;
   const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.querySelector(".custom-navbar");
-  const navbarLogo = document.querySelector(".navbar-header");
+  const mobileNavMenu = document.getElementById("mobile-nav-menu");
+  const body = document.body;
 
-  function adjustNavbar() {
-    const navbarWidth = navbar.offsetWidth;
-    const logoWidth = navbarLogo.offsetWidth;
-    const availableSpace = navbarWidth - logoWidth - 50; // Ensure 50px buffer
-
-    if (availableSpace < 400) { // If nav can't fit, switch to mobile view
-      navMenu.classList.add("mobile-view");
-      navMenu.style.display = "none";
-      menuToggle.style.display = "block";
+  // Function to update mobile menu state based on viewport width.
+  function updateMobileMenu() {
+    if (window.innerWidth <= mobileBreakpoint) {
+      mobileNavMenu.classList.add("mobile-menu");
     } else {
-      navMenu.classList.remove("mobile-view");
-      navMenu.style.display = "flex";
-      menuToggle.style.display = "none";
+      mobileNavMenu.classList.remove("mobile-menu");
+      mobileNavMenu.classList.remove("mobile-show");
+      menuToggle.innerHTML = "&#9776;"; // reset to hamburger
+      body.classList.remove("mobile-menu-active");
     }
   }
 
-  // Run adjustment on load & window resize
-  adjustNavbar();
-  window.addEventListener("resize", adjustNavbar);
+  updateMobileMenu();
+  window.addEventListener("resize", updateMobileMenu);
 
-  // Toggle mobile menu
+  // Toggle the mobile overlay menu when the toggle button is clicked.
   menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
+    mobileNavMenu.classList.toggle("mobile-show");
+    body.classList.toggle("mobile-menu-active");
+    if (mobileNavMenu.classList.contains("mobile-show")) {
+      // Change icon to an X (close)
+      menuToggle.innerHTML = "&times;";
+    } else {
+      // Change icon back to hamburger
+      menuToggle.innerHTML = "&#9776;";
+    }
   });
+
+  // Handle mobile nav items with dropdowns for submenu toggling.
+  const mobileNavItems = document.querySelectorAll("#mobile-navigation .mobile-nav-item.has-dropdown");
+  mobileNavItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      // Check if the clicked element is the parent link (not a submenu link)
+      if (e.target.classList.contains("mobile-nav-link")) {
+        e.preventDefault(); // Prevent default only for parent links
+        let submenu = item.querySelector(".mobile-submenu");
+
+        // Close any open submenus
+        document.querySelectorAll(".mobile-submenu.open").forEach(openSubmenu => {
+          if (openSubmenu !== submenu) {
+            openSubmenu.classList.remove("open");
+          }
+        });
+
+        if (submenu) {
+          submenu.classList.toggle("open");
+        } else {
+          const menuId = item.getAttribute("data-dropdown");
+          const children = getMenuChildren(menuId);
+          if (children.length > 0) {
+            submenu = document.createElement("ul");
+            submenu.classList.add("mobile-submenu");
+            children.forEach(child => {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = child.url;
+              a.textContent = child.name;
+              li.appendChild(a);
+              submenu.appendChild(li);
+            });
+            item.appendChild(submenu);
+            // Force reflow so the transition is triggered.
+            void submenu.offsetHeight;
+            submenu.classList.add("open");
+          }
+        }
+      }
+    });
+  });
+
+  // Example submenu data. Adjust as needed.
+  function getMenuChildren(menuId) {
+    const menuData = {
+      "gbcc2025": [
+        { name: "Greetings", url: "/about/greetings" },
+        { name: "Overview", url: "/about/overview" },
+        { name: "Committee", url: "/about/committee" },
+        { name: "Venue", url: "/about/venue" },
+        { name: "Previous Meetings", url: "/about/previous_meetings" }
+      ],
+      "program": [
+        { name: "Program at a Glance", url: "/program/glance" },
+        { name: "Scientific Program", url: "/program/scientific_program" },
+        { name: "Invited Speakers", url: "/program/keynotes" }
+      ],
+      "abstracts": [
+        { name: "Submission Guidelines", url: "/abstracts/submission_guidelines" },
+        { name: "Abstract Book", url: "/abstracts/book" }
+      ],
+      "registration": [
+        { name: "Conference Registration", url: "/registration/conference" },
+        { name: "Cofest Registration", url: "/registration/cofest" },
+        { name: "Scholarships", url: "/registration/scholarships" }
+      ],
+      "sponsor": [
+        { name: "Sponsor Information", url: "/sponsorships/sponsor_info" }
+      ],
+      "general_info": [
+        { name: "Transportation", url: "/general_information/transportation" },
+        { name: "Things to do in the Area", url: "/general_information/things_to_do" },
+        { name: "Logo Gallery", url: "/general_information/logo_contest_gallery" }
+      ],
+      "cofest": [
+        { name: "Cofest Overview", url: "/cofest/overview" },
+        { name: "Past Projects", url: "/cofest/past_projects" },
+        { name: "Venue Information", url: "/cofest/venue_info" },
+        { name: "Proposed Projects", url: "/cofest/proposed_projects" }
+      ],
+      "bofs": [
+        { name: "BOFs Overview", url: "/bofs/overview" }
+      ]
+    };
+    return menuData[menuId] || [];
+  }
 });
