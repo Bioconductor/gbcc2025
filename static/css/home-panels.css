@@ -4,7 +4,8 @@
   margin: 60px 5%;
   margin-top: 0px;
   display: flex;
-  background-color: #F5F1E3; /* Soft Beige background */
+  flex-wrap: wrap; 
+  background-color: #F5F1E3; 
   padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -13,8 +14,8 @@
 
 /* Each container for the bulletin (Latest News, Key Dates, Quick Links) */
 .bulletin_container {
-  width: 33%;
-  max-width: 33%;
+  width: 33.33%; 
+  max-width: 33.33%; 
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -25,14 +26,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid #1B3A4B; /* Deep Navy Blue */
+  border-bottom: 3px solid #1B3A4B; 
 }
 
 /* Title styling */
 .bulletin_container .bulletin_title_wrap .bulletin_title {
   font-size: 23px;
   font-weight: bold;
-  color: #1B3A4B; /* Deep Navy Blue */
+  color: #1B3A4B; 
 }
 
 /* Unstyled list items */
@@ -47,7 +48,7 @@
 
 /* Styling for list items */
 .notice_container ul > li {
-  height: 80px;
+  height: auto; 
   padding-left: 5px;
   box-sizing: border-box;
   background-position: left 2px center;
@@ -58,43 +59,46 @@
 .key_dates_container ul > li {
   width: 100%;
   margin-bottom: 5px;
-  height: 80px;
+  height: auto; 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; 
 }
 
 .quick_links_container ul > li {
   width: 100%;
-  margin-bottom: 5px;
-  background-color: #2E5636; /* Forest Green */
+  margin-bottom: 10px;
+  background-color: #2E5636; 
   transition: background 0.3s ease-in-out;
 }
 
 .quick_links_container ul > li:nth-child(2) {
-  background-color: rgba(46, 86, 54, 0.9); /* Slightly lighter and more transparent */
+  background-color: rgba(46, 86, 54, 0.9); 
 }
 
 .quick_links_container ul > li:nth-child(3) {
-  background-color: rgba(46, 86, 54, 0.7); /* More transparent and lighter */
+  background-color: rgba(46, 86, 54, 0.7); 
 }
 
 /* Styling the links inside the list items */
 .notice_container ul > li > a {
+  min-height: 60px;
   padding: 15px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px dotted #3A3A3A; /* Dark Gray for text */
+  border-bottom: 1px dotted #3A3A3A; 
   text-decoration: none;
-  color: #3A3A3A; /* Dark Gray text */
+  color: #3A3A3A; 
+  
 }
 
 .key_date_down > div:nth-child(1){
   margin-bottom: 4px;
   font-size: 20px;
-  color: #1B3A4B; /* Deep Navy Blue */
+  color: #1B3A4B; 
   line-height: 1.3;
 }
 
@@ -115,20 +119,20 @@
 
 .quick_links_container ul > li > a {
   width: 100%;
-  height: 80px;
+  height: 80px; 
   display: flex;
   align-items: center;
   font-size: 20px;
   line-height: 1.3;
   font-weight: bold;
-  color: #FFFFFF; /* White for link text */
+  color: #FFFFFF; 
 }
 
 .quick_link_image {
   width: 67px;
   height: 67px;
   min-width: 70px;
-  background-color: #FFFFFF; /* White for icon background */
+  background-color: #FFFFFF; 
   border-radius: 50%;
   margin: 0 23px;
   display: flex;
@@ -144,35 +148,50 @@
 
 /* Media query for responsiveness (on smaller screens) */
 @media (max-width: 768px) {
-  /* Stack the containers vertically on small screens */
-  .bulletin-container {
-    max-width: 100%;
-    margin-bottom: 20px;
+  .bulletin_board {
+    flex-direction: column; 
+    margin: 20px 5%; 
   }
 
-  /* Adjust the title size for better readability on mobile */
-  .bulletin-container .bulletin_title {
-    font-size: 1.2rem;
+  .bulletin_container {
+    width: 100%; 
+    max-width: 100%; 
+    padding: 0; 
   }
 
-  /* Remove the right padding to make use of all available space */
-  .bulletin-container .bulletin_title_wrap {
-    padding: 15px 0;
+  .bulletin_container .bulletin_title_wrap .bulletin_title {
+    font-size: 1.2rem; 
   }
 
-  /* Adjust spacing between items in the lists */
-  .bulletin-container .notice_container ul > li,
-  .bulletin-container .key_dates_container ul > li,
-  .bulletin-container .quick_links_container ul > li {
-    padding-left: 15px;
+  .bulletin_container ul > li {
+    padding-left: 15px; 
   }
 
-  /* Adjust link padding for smaller screens */
-  .bulletin-container .notice_container ul > li > a,
-  .bulletin-container .key_dates_container ul > li > a,
-  .bulletin-container .quick_links_container ul > li > a {
-    padding: 12px 0;
+  .bulletin_container ul > li > a {
+    padding: 12px 0; 
+  }
+
+  .key_dates_container {
+    margin-bottom: 0px;
+  }
+
+  .key_dates_container ul > li {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding-bottom: 10px;
+    height: 70px;
+  }
+
+  .key_date_logo img {
+    max-width: 80px; 
+  }
+
+  .quick_links_container ul > li > a {
+    height: auto; 
+    padding: 10px 0; 
+  }
+
+  .quick_link_image {
+    margin: 0 15px; 
   }
 }
-
-

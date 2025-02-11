@@ -6,11 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const minutesEl = document.getElementById("minutes");
             const secondsEl = document.getElementById("seconds");
 
-            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-                console.error("Countdown elements not found in the DOM.");
-                return;
-            }
-
             const eventDate = new Date("2025-06-23T00:00:00").getTime();
             const now = new Date().getTime();
             const timeLeft = eventDate - now;
