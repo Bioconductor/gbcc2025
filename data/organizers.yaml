@@ -1,12 +1,12 @@
 scientific_committee:
 
 general_organizing_committee:
-  - name: "Alex Mahmoude"
-    photo: "/img/organizers/avatar.png"
+  - name: "Alex Mahmoud"
+    photo: "/img/organizers/AlexMahmoud.png"
     title: "Research Software/Cloud Engineer"
     organization: "Harvard Medical School"
   - name: "Andres Wokaty"
-    photo: "/img/organizers/avatar.png"
+    photo: "/img/organizers/AndresWokaty.png"
     title: "Research Associate"
     organization: "CUNY Institute for Implementation Science in Population Health (ISPH)"
   - name: "Charlotte Soneson"
@@ -34,7 +34,7 @@ general_organizing_committee:
     title: ""
     organization: "Roswell Park Comprehensive Cancer Center"
   - name: "Maria Doyle"
-    photo: "/img/organizers/avatar.png"
+    photo: "/img/organizers/MariaDoyle.png"
     title: "Bioconductor Community Manager"
     organization: "University of Limerick"
   - name: "Mikhail Dozmorov"
@@ -42,7 +42,7 @@ general_organizing_committee:
     title: "Associate Professor"
     organization: "Virginia Commonwealth University"
   - name: "Natalie Whitaker-Allen"
-    photo: "/img/organizers/avatar.png"
+    photo: "/img/organizers/NatalieWhitaker-Allen.png"
     title: "Communications Specialist"
     organization: "Johns Hopkins University"
   - name: "Tim Triche"
@@ -50,7 +50,7 @@ general_organizing_committee:
     title: "Associate Professor"
     organization: "Van Andel Institute"
   - name: "Tyler Collins"
-    photo: "/img/organizers/avatar.png"
+    photo: "/img/organizers/TylerCollins.png"
     title: "Senior Programming Analyst"
     organization: "Johns Hopkins University"  
 
