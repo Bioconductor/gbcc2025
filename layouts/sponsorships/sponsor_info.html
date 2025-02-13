@@ -7,12 +7,146 @@
       {{ partial "nav.html" . }}
 
       <!-- Main Content -->
-      <main id="coming-soon-page" class="container">
+      <main id="sponsors-page" class="container">
         <header class="page-header">
-          <h1>🚀 Something Exciting is Coming Soon!</h1>
-          <p>We're working hard to bring you something amazing. Stay tuned!</p>
+          <h1>GBCC2025 Sponsors</h1>
+          <p>The GBCC2025 conference aims to bridge the gap in integrating data science tools, platforms, and communities. With rapid advancements in computational methods generating increasing volumes of data, there is a critical need for robust, accessible tools and collaborative environments. Galaxy and Bioconductor offer complementary strengths that, when combined, provide powerful solutions for the broader data science research community.</p>
         </header>
 
+        <section class="sponsorship-benefits">
+          <h2>Why Sponsor GBCC2025?</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <h3 class="benefit-header">🌐 Be Part of a Unique Global Open-Source Collaboration</h3>
+              <p>Galaxy has over <strong>500,000 users</strong>, and Bioconductor packages were downloaded by over <strong><a href="https://www.bioconductor.org/packages/stats/bioc/index.html" target="_blank">1 million distinct IPs in 2024.</a></strong></p>
+            </div>
+            <div class="benefit-card">
+              <h3 class="benefit-header">👥 Gain Visibility Among Leading Researchers & Developers</h3>
+              <p>The conference is expected to attract <strong>300+ participants</strong>, including faculty, investigators, students, postdocs, developers, and platform users.</p>
+            </div>
+            <div class="benefit-card">
+              <h3 class="benefit-header">🗣️ Engage with Key Decision-Makers</h3>
+              <p>Connect with leading researchers, innovators, and decision-makers driving advancements in <strong>computational science and data-driven research.</strong></p>
+            </div>
+            <div class="benefit-card">
+              <h3 class="benefit-header">💼 Expand Business Opportunities & Recruitment</h3>
+              <p>Find new <strong>talent, collaborators, and clients</strong> across multiple research domains, from biomedical science to environmental modeling and beyond.</p>
+            </div>
+            <div class="benefit-card">
+              <h3 class="benefit-header">🔬 Support Open & Reproducible Science</h3>
+              <p>Galaxy and Bioconductor power open-source platforms that advance scientific reproducibility across fields like <strong>biomedical research, environmental sciences, and astronomy.</strong></p>
+            </div>
+            <div class="benefit-card">
+              <h3 class="benefit-header">🚀 Stay Ahead with Cutting-Edge Innovations</h3>
+              <p>Gain early insights into the latest advancements in <strong>data science, high-performance computing, and open-source research tools</strong> that enable new scientific breakthroughs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sponsorship-levels">
+          <h2>Sponsorship Levels</h2>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th class="table-header">Benefit</th>
+                <th class="table-header">Platinum<br><span class="amount">$10,000</span></th>
+                <th class="table-header">Gold<br><span class="amount">$7,000</span></th>
+                <th class="table-header">Silver<br><span class="amount">$4,000</span></th>
+                <th class="table-header">Bronze<br><span class="amount">$2,500</span></th>
+                <th class="table-header">Friends<br><span class="amount">$1,000</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Invited Talk (Conference Session)</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sponsorship of Lunch/Event</td>
+                <td>✔ (Dinner)</td>
+                <td>✔ (Lunch)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Poster Presentation Slot</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Exhibit Space</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>VIP Networking Opportunities</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>VIP In-Person Passes</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Virtual Passes</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Branding on Event Materials & Website</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+              </tr>
+              <tr>
+                <td>Social Media Thank You</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        
+        <section class="download-prospectus">
+          <a class="btn" href="/data/GBCC2025_Sponsorship.pdf">Download Sponsorship Prospectus</a>
+        </section>
+
+        <!-- Sponsors Logos -->
+        <section class="sponsors-logos">
+        <!-- <h2>Bronze Sponsors</h2> -->
+          <div class="sponsor-container">
+            <a href="https://www.limagrain.com/en" target="_blank">
+              <img src="/img/sponsors/limagrain-logo-text.png" alt="Limagrain" class="sponsor-logo"/>
+            </a>
+          </div>
+        </section>
+        
       </main>
 
       {{ partial "footer.html" . }}
@@ -20,42 +154,82 @@
 
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
-
   </body>
 </html>
 
 <style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  text-align: center;
-}
+    /* Benefits Grid Layout */
+    .benefits-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-#coming-soon-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
+    .benefit-card {
+      background: #f5f5f5;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+    
+    .benefit-header {
+      font-size: 1.7rem;
+    }
 
-/* Header Section */
-.page-header {
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
+    /* Table Styling */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
 
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
+    .table-header {
+      background: #2e5636;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .stay-updated form {
-    flex-direction: column;
-  }
-}
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #1b3a4b;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
 
+    .btn:hover {
+      background-color: #6c91c2;
+    }
+
+    .sponsor-logo {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .pricing-table th, .pricing-table td {
+        padding: 8px;
+      }
+    }
 </style>
