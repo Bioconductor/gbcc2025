@@ -1,0 +1,75 @@
+logos:
+  - name: "Marie Jossé"
+    filename: "winner-Marie.Josse.png"
+    short_description: "Incorporates Cold Spring Harbor scenery with Galaxy and Bioconductor elements"
+    long_description: "As with the last two GCCs I attended, I wanted to have a logo representing the place where the GBCC was held. Plus, I added some data nodes on the mountains and a DNA strand to represent both Galaxy and Bioconductor (plus their respective logos). I also like to have the paysage of Cold Spring Harbor that can represent both ocean and earth sciences (which are actually the domains for which I work on Galaxy). This is the first I do ... :) Thanks for the organization!"
+    award: winner
+
+  - name: "Charlie Bayne"
+    filename: "runner-up.Charlie.Bayne.png"
+    short_description: ""
+    long_description: ""
+    award: runner-up
+    
+  - name: "Ana T. Alonso"
+    filename: "gallery-Ana.T.Alonso.png"
+    short_description: "A geometric logo combining the letters 'G' and 'B'."
+    long_description: "My design proposal is quite simple. I first thought about merging the Galaxy and Bioconductor logos, but the combination of colors and elements didn't get me anywhere. As the design was intended to fit in a hexagon, I started thinking about something more geometric. That's why I created the line composition that represents a 'G' for Galaxy and a 'B' for Bioconductor. As I wouldn't say I like the classical structure to include information about the name of an event, year, and place, I opted for this (also classical) organization of contents. The intersecting words allow different possibilities and combinations. Also, it can be reusable for the next editions of the conference. This design opens the door to a design system, where the logo can change its appearance depending on the application: the wording can be structurally changed, and the line composition can be transformed as needed."
+    award: ""
+    
+  - name: "Dongmei Li"
+    filename: "gallery-Dongmei.Li.png"
+    short_description: "Designed using AI with bioinformatics and data science themes."
+    long_description: "This logo is designed using the Logo Creator from Open AI with prompt 'Design a logo for the first-ever Galaxy and Bioconductor Community Conference (GBCC2025). This joint conference will be held in June 2025 at Cold Spring Harbor Laboratory, bringing together bioinformatics and data science communities for collaborative learning and innovation. The design will have a complexity scale of 8 and with purple and teal color.'"
+    award: ""
+
+  - name: "Farhan Ameen"
+    filename: "gallery-Farhan.Ameen.png"
+    short_description: "A meteor representing Bioconductor shooting through the Galaxy."
+    long_description: "This is a Bioconductor meteor shooting through the galaxy. Here, the meteor uses colors of the Bioconductor logo, and the planets use the yellow of the Galaxy Project logo. The cosmic clouds in the background represent the shape of DNA, which is a motif found in the Bioconductor logo."
+    award: ""
+    
+  - name: "Hannah Kim"
+    filename: "gallery-Hannah.Kim.png"
+    short_description: "A musical score representing harmony between the communities."
+    long_description: "The design symbolizes the harmony expected to be formed by the Galaxy and Bioconductor communities, represented as a musical score."
+    award: ""
+    
+  - name: "Kahla Nesrine Aicha"
+    filename: "gallery-Kahla.Nesrine.Aicha.png"
+    short_description: "A bold 'G' and 'B' logo with an orbit and molecular structures symbolizing bioinformatics workflows."
+    long_description: |
+      "This logo is crafted to encapsulate the essence of the Galaxy and Bioconductor Community Conference (GBCC 2025) by seamlessly integrating key concepts:
+      1. G and B Representation:
+      - The letters 'G' and 'B' dominate the design, emphasizing the partnership between Galaxy and Bioconductor.
+      - Their bold, interconnected structure signifies their collaboration and complementary roles in genomic data analysis.
+      2. Orbit and Interconnection:
+      - The orbit around the letters represents unity, reflecting how these platforms create integrated bioinformatics workflows.
+      - Its elliptical shape conveys movement, growth, and collaboration, essential themes of the conference.
+      3. Data and Molecular Symbols:
+      - Molecular structures and linear DNA sequences incorporated within the design symbolize the biological and computational focus of the conference.
+      - These elements visually communicate the purpose of GBCC: exploring innovative tools for analyzing genomic data.
+      4. Gradient Blue Color Palette:
+      - The gradient from light to dark blue-green emphasizes trust, innovation, and depth, representing the scientific and technological aspects of bioinformatics.
+      Why Choose This Logo?
+      This logo stands out by visually and conceptually representing the GBCC’s mission: bridging biology and technology. Its clean, modern design ensures relevance to the bioinformatics community while maintaining professionalism and approachability. It effectively communicates collaboration, integration, and the advancement of genomic sciences, making it an ideal choice for GBCC 2025."
+    award: ""
+    
+  - name: "Pedro Cabello"
+    filename: "gallery-Pedro.Cabello3.png"
+    short_description: "Statue of Liberty-inspired design with Galaxy and Bioconductor elements."
+    long_description: "This 2025 logo proposal reimagines the Statue of Liberty, an enduring symbol of freedom and New York City's spirit, host of the GBCC conference, as a beacon of bioinformatics innovation through open source. The torch, bearing the Bioconductor logo, signifies the steadfast foundation of computational biology, while the flame, shaped as the Galaxy logo, evokes the transformative and accessible workflows it empowers; an homage to Prometheus' gift of fire to humanity. Together, they illuminate the collaborative path of discovery, celebrating the union of these visionary platforms."
+    award: "" 
+    
+  - name: "Raziye Rabiei"
+    filename: "gallery-Raziye.Rabiei.png"
+    short_description: "A 'G' and 'B' merged to represent collaboration."
+    long_description: "I merged the letters 'G' and 'B' to symbolize the collaboration between the two communities. The green-blue color of the logo is derived from a blend of Galaxy's yellow and Bioconductor's turquoise blue. I have presented the logo in four different layout variations."
+    award: ""
+    
+  - name: "Shaw Hong Ser"
+    filename: "gallery-Shaw.Hong.Ser.png"
+    short_description: "A stylized DNA double helix in blue and green."
+    long_description: "To celebrate the first GBCC2025 conference, this logo design conveys a bioinformatics concept using a DNA symbol and the colors blue and green. Here's an idea for the logo: Use a stylized DNA double helix as the centerpiece. The helix can have a smooth, modern design with gradients or abstract curves to give it a cutting-edge, modern feel. Color selections are blue and green. (Blue - representing technology, data, and trust. Green - representing life, nature, and sustainability.) Typeface used: sans-serif font to match the futuristic and professional theme."
+    award: ""
+    
