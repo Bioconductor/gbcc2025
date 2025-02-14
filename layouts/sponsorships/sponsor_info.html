@@ -158,78 +158,110 @@
 </html>
 
 <style>
-    /* Benefits Grid Layout */
-    .benefits-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    /* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-    .benefit-card {
-      background: #f5f5f5;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      flex: 1 1 30%;
-      min-width: 280px;
-    }
-    
-    .benefit-header {
-      font-size: 1.7rem;
-    }
+#sponsors-page {
+  padding: 20px;
+  background-color: #f5f1e3;
+}
 
-    /* Table Styling */
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-    }
+/* Header Section */
+.page-header {
+  text-align: center;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
 
-    .table-header {
-      background: #2e5636;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-    .pricing-table th, .pricing-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: #1b3a4b;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
+h2 {
+  font-size: 2rem;
+  color: #2e5636;
+  margin-bottom: 15px;
+}
 
-    .btn:hover {
-      background-color: #6c91c2;
-    }
+/* Benefits Grid Layout */
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-    .sponsor-logo {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: auto;
-    }
+.benefit-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 30%;
+  min-width: 280px;
+}
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .pricing-table th, .pricing-table td {
-        padding: 8px;
-      }
-    }
+.benefit-header {
+  font-size: 1.7rem;
+}
+
+/* Table Styling */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-bottom: 30px;
+}
+
+.table-header {
+  background: #2e5636;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.pricing-table th, .pricing-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1b3a4b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #6c91c2;
+}
+
+.sponsor-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pricing-table th, .pricing-table td {
+    padding: 8px;
+  }
+}
 </style>
