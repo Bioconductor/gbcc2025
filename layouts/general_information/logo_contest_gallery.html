@@ -20,21 +20,52 @@
           <div class="logo-display">
             <img src="/img/logo_contest/winner-Marie.Josse.png" alt="Winning Logo" class="winning-logo-img">
           </div>
-          <p>Congratulations to <strong>Marie Josse</strong> for her fantastic design! This logo will represent GBCC 2025 across our website, social media, and official materials.</p>
+          <p>Congratulations to <strong>Marie Jossé</strong> for her fantastic design! This logo will represent GBCC 2025 across our website, social media, and official materials.</p>
         </section>
 
         <!-- Gallery of Logo Submissions -->
-        <section class="logo-gallery">
+        <section class="logo-gallery" id="logo-gallery">
           <h2>🎨 All Logo Submissions</h2>
           <p>A huge thank you to everyone who submitted their designs! Here’s a look at the incredible creativity from our community.</p>
+
           <div class="gallery-grid">
-            {{ range (readDir "static/img/logo_contest") }}
-            <div class="gallery-item">
-              <img src="/img/logo_contest/{{ .Name }}" alt="Logo submission" class="logo-img">
-            </div>
+            {{ range sort .Site.Data.logo_gallery.logo_submissions.logos "award" }}
+              <div class="flip-box 
+                {{ if eq .award "winner" }} winner-highlight {{ end }} 
+                {{ if eq .award "runner-up" }} runner-up-highlight {{ end }}" 
+                onclick="openModal('/img/logo_contest/{{ .filename }}', '{{ .name }}', '{{ .short_description }}', '{{ .long_description }}')">
+                
+                <div class="flip-box-inner">
+                  <!-- Front side (Logo Image) -->
+                  <div class="flip-box-front">
+                    <img src="/img/logo_contest/{{ .filename }}" alt="Logo submission by {{ .name }}" class="logo-img">
+                  </div>
+                  <!-- Back side (Logo Details) -->
+                  <div class="flip-box-back">
+                    <h3>
+                      {{ if eq .award "winner" }}🏆 Official Winner: {{ end }}
+                      {{ if eq .award "runner-up" }}🥈 Runner-up: {{ end }}
+                      {{ .name }}
+                    </h3>
+                    <p>{{ .short_description }}</p>
+                    <button class="read-more-btn">Click to View</button>
+                  </div>
+                </div>
+              </div>
             {{ end }}
           </div>
         </section>
+
+        <!-- Modal Popup -->
+        <div id="logoModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalLogo" src="" alt="Logo Preview">
+            <h3 id="modalTitle"></h3>
+            <p id="modalShortDesc"></p>
+            <blockquote id="modalLongDesc"></blockquote>
+          </div>
+        </div>
 
         <!-- Call to Action -->
         <section class="thank-you">
@@ -48,11 +79,38 @@
 
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
+
+    <!-- JavaScript for Modal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById("logoModal").style.display = "none"; // Ensure modal starts hidden
+      });
+    
+      function openModal(logoSrc, name, shortDesc, longDesc) {
+          document.getElementById("modalLogo").src = logoSrc;
+          document.getElementById("modalTitle").textContent = name;
+          document.getElementById("modalShortDesc").textContent = shortDesc;
+          document.getElementById("modalLongDesc").innerHTML = "<em>" + longDesc + "</em>";
+          document.getElementById("logoModal").style.display = "flex";
+      }
+
+      function closeModal() {
+          document.getElementById("logoModal").style.display = "none";
+      }
+
+      // Close modal if user clicks outside content
+      window.onclick = function(event) {
+          if (event.target == document.getElementById("logoModal")) {
+              closeModal();
+          }
+      };
+    </script>
+
   </body>
 </html>
 
 <style>
-    /* General Page Styling */
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -99,7 +157,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Gallery Section */
 .logo-gallery {
   background: white;
   padding: 20px;
@@ -109,31 +166,162 @@ body {
   text-align: center;
 }
 
+/* Flip-Box Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   justify-items: center;
+  align-items: start;
   margin-top: 20px;
 }
 
-.gallery-item {
+/* Flip Box */
+.flip-box {
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
   background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+.flip-box:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+}
+
+/* Keep Winner & Runner-Up Centered */
+.winner-highlight, .runner-up-highlight {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+/* Flip Box Inner */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s, box-shadow 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Flip Box Front & Back */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.flip-box-front {
+  background-color: white;
+}
+
+.flip-box-back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+/* Winner Highlight */
+.winner-highlight {
+  border: 3px solid gold;
+  box-shadow: 0 0 10px gold;
+}
+
+/* Runner-up Highlight */
+.runner-up-highlight {
+  border: 3px solid silver;
+  box-shadow: 0 0 10px silver;
+}
+
+/* Logo Images */
 .logo-img {
-  max-width: 150px;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
 }
 
 .logo-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Ensure width expands as needed but doesn't become too wide */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: auto;
+    min-width: 300px;
+    max-width: 65vw; /* Limits expansion to 65% of viewport width */
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure images are responsive but don’t exceed modal width */
+.modal-content img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Prevents very long text from making the modal too wide */
+.modal-content p, 
+.modal-content blockquote {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+    padding: 0 20px;
+    max-width: 600px; /* Ensures text doesn’t stretch across the entire modal */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: red;
 }
 
 /* Thank You Section */
