@@ -56,7 +56,7 @@ logos:
     award: ""
     
   - name: "Pedro Cabello"
-    filename: "gallery-Pedro.Cabello3.png"
+    filename: "gallery-Pedro.Cabello.png"
     short_description: "Statue of Liberty-inspired design with Galaxy and Bioconductor elements."
     long_description: "This 2025 logo proposal reimagines the Statue of Liberty, an enduring symbol of freedom and New York City's spirit, host of the GBCC conference, as a beacon of bioinformatics innovation through open source. The torch, bearing the Bioconductor logo, signifies the steadfast foundation of computational biology, while the flame, shaped as the Galaxy logo, evokes the transformative and accessible workflows it empowers; an homage to Prometheus' gift of fire to humanity. Together, they illuminate the collaborative path of discovery, celebrating the union of these visionary platforms."
     award: "" 
