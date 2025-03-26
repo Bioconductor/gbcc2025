@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
 
   let lastScrollTop = 0;
-  
+
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY;
 
@@ -120,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "cofest": [
         { name: "Cofest Overview", url: "/cofest/overview" },
         { name: "Past Projects", url: "/cofest/past_projects" },
-        { name: "Venue Information", url: "/cofest/venue_info" },
         { name: "Proposed Projects", url: "/cofest/proposed_projects" }
       ],
       "bofs": [
@@ -254,7 +253,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "cofest": [
         { name: "Cofest Overview", url: "/cofest/overview" },
         { name: "Past Projects", url: "/cofest/past_projects" },
-        { name: "Venue Information", url: "/cofest/venue_info" },
         { name: "Proposed Projects", url: "/cofest/proposed_projects" }
       ],
       "bofs": [

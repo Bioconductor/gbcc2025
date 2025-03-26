@@ -24,22 +24,15 @@
           </p>
         </section>
 
-        <!-- Photo Gallery Section -->
-        <section class="gallery-section">
-          <h2>Venue Photos</h2>
-          <div class="gallery-grid">
-            {{ range .Site.Params.venue.photos }}
-            <div class="gallery-item">
-              <img src="{{ .url }}" alt="{{ .alt }}">
-            </div>
-            {{ end }}
-          </div>
-        </section>
-
         <!-- Google Maps Section -->
         <section class="maps-section">
-          <h2>How to Get Here</h2>
-          <p>Cold Spring Harbor Laboratory, 1 Bungtown Rd, Cold Spring Harbor, NY 11724, USA</p>
+          <h2>Travel details</h2>
+          <p>
+            The conference will be held at Cold Spring Harbor Laboratory, 1
+            Bungtown Rd, Cold Spring Harbor, NY 11724. Check out the CSHL
+            website for detailed travel information:
+          </p>
+          <a href="https://meetings.cshl.edu/travel.aspx?meet=galaxy&year=25" class="btn btn-primary" target="_blank">Getting to CSHL</a>
           <div class="maps-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.781018567258!2d-73.45746198459414!3d40.86709547931452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e817be95093bbd%3A0xf0410660c43d118!2sCold%20Spring%20Harbor%20Laboratory!5e0!3m2!1sen!2sus!4v1699721714428!5m2!1sen!2sus"
@@ -104,7 +97,6 @@ body {
 }
 
 .venue-info p {
-  font-size: 1.2rem;
   margin-bottom: 20px;
   color: #3a3a3a; /* Dark gray */
 }

@@ -1,4 +1,44 @@
+scientific_committee_chairs:
+  - name: "Enis Afgan"
+    organization: "Johns Hopkins University"
+  - name: "Jenny Drnevich"
+    organization: "University of Illinois at Urbana-Champaign"
+
 scientific_committee:
+  - name: Anil Thanki
+    organization: EMBL-EBI
+  - name: Chinenyenwa Fortune Chukwuneme
+    organization: Vaal University of Technology
+  - name: Damitha Liyanaarachchi
+    organization: University of Colombo School of Computing
+  - name: Juan Martinez Villalobos
+    organization: Yale
+  - name: Katarina Flöer
+    organization: Smith College and Mass General Hospital
+  - name: Maria Chavero
+    organization: Barcelona Supercomputing Center
+  - name: Miguel Camacho
+    organization: Johannes Gutenberg University
+  - name: Mikhail Dozmorov
+    organization: VCU
+  - name: Mohammad Saeed Tajdary
+    organization: Shahid Beheshti University
+  - name: Oriana Barros
+    organization: University of Aveiro
+  - name: Pedro Madrigal
+    organization: EMBL-EBI
+  - name: Pratik Jagtap
+    organization: University of Minnesota
+  - name: Sudhanshu Shekhar
+    organization: University of North Carolina
+  - name: Tim Triche
+    organization: VAI
+  - name: Charlotte Soneson
+    organization: Friedrich Miescher Institute for Biomedical Research
+  - name: Gareth Price
+    organization: Galaxy Australia
+  - name: Hans-Rudolf Hotz
+    organization: Friedrich Miescher Institute for Biomedical Research
 
 general_organizing_committee:
   - name: "Alex Mahmoud"
@@ -52,7 +92,14 @@ general_organizing_committee:
   - name: "Tyler Collins"
     photo: "/img/organizers/TylerCollins.png"
     title: "Senior Programming Analyst"
-    organization: "Johns Hopkins University"  
+    organization: "Johns Hopkins University"
 
 cofest_organizers:
-
+  - name: "Alex Mahmoud"
+    photo: "/img/organizers/AlexMahmoud.png"
+    title: "Research Software/Cloud Engineer"
+    organization: "Harvard Medical School"
+  - name: "Ahmed Awan"
+    photo: "/img/organizers/AhmedAwan.jpeg"
+    title: "Software Engineer"
+    organization: "Johns Hopkins University"

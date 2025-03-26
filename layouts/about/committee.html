@@ -16,15 +16,22 @@
         <!-- Scientific Committee Section -->
         <section class="organizers-section scientific-committee">
           <h2>Scientific Committee</h2>
-          <div class="organizers-grid">
-            {{ range .Site.Data.organizers.scientific_committee }}
-            <div class="organizer-card">
-              <img src="{{ .photo }}" alt="{{ .name }}" class="organizer-photo">
-              <h3>{{ .name }}</h3>
-              <p>{{ .organization }}</p>
-            </div>
+          <strong>Scientific committee chairs</strong>
+          <ul>
+            {{ range .Site.Data.organizers.scientific_committee_chairs }}
+            <li>
+              <strong>{{ .name }}</strong>, {{ .organization }}
+            </li>
             {{ end }}
-          </div>
+          </ul>
+          <strong>Scientific committee members</strong>
+          <ul>
+            {{ range .Site.Data.organizers.scientific_committee }}
+            <li>
+              <strong>{{ .name }}</strong>, {{ .organization }}
+            </li>
+            {{ end }}
+          </ul>
         </section>
 
         <!-- General Organizing Committee Section -->
@@ -156,4 +163,3 @@ body {
   }
 }
 </style>
-

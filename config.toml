@@ -176,12 +176,6 @@ weight = 8
 
   [[menu.main]]
   parent = "cofest"
-  name = "Venue Information"
-  url = "/cofest/venue_info"
-  weight = 3
-
-  [[menu.main]]
-  parent = "cofest"
   name = "Proposed Projects"
   url = "/cofest/proposed_projects"
   weight = 4
