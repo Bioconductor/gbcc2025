@@ -1,5 +1,5 @@
-
-<!DOCTYPE html><html lang="{{ .Site.LanguageCode }}">
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
   <body>
     <div id="all">
@@ -16,9 +16,26 @@
         <!-- Placeholder Section -->
         <section class="program-placeholder">
           <div class="announcement-box">
-            <p>The conference program will be posted here once available, but first contribute and</p>
-            <h2><a href="https://meetings.cshl.edu/abstracts.aspx?meet=galaxy&year=25" target="_blank">Submit your abstract</a></h2>
-            <p>Expect an exciting lineup of keynote talks, research presentations, workshops, and networking sessions.</p>
+            <p>We’re thrilled to announce the inaugural joint conference between <strong>BioConductor</strong> and the <strong>Galaxy Project</strong>! Although the final conference program is still being developed, we are excited to open abstract submissions now.</p>
+            
+            <p>This unique conference brings together experts and enthusiasts from both communities, offering an unparalleled opportunity to explore cutting-edge research, innovative tools, and collaborative projects at the intersection of bioinformatics and data analysis. Whether you’re passionate about genomics, computational biology, or data-driven research, this event will feature:</p>
+            
+            <ul>
+              <li>Keynote presentations by thought leaders in the fields of bioinformatics and computational biology</li>
+              <li>In-depth research presentations showcasing the latest breakthroughs and methodologies</li>
+              <li>Hands-on workshops designed to enhance your technical skills</li>
+              <li>Networking sessions that foster collaboration and idea exchange</li>
+            </ul>
+            
+            <p>To join us, please <strong>register through Cold Spring Harbor</strong>. By clicking the button below, you will be redirected to their registration portal, where you can complete your registration and submit your abstract in one seamless process. Registration is required prior to abstract submission, but don’t worry—you can defer payment until your abstract has been accepted.</p>
+            
+            <h2>
+              <a href="https://meetings.cshl.edu/abstracts.aspx?meet=galaxy&year=25" target="_blank">
+                Register for the conference and submit your abstract
+              </a>
+            </h2>
+            
+            <p>This conference is more than just an event—it’s a platform for building the future of bioinformatics and data science. Be part of a vibrant community, share your innovative ideas, and contribute to the evolution of research in these dynamic fields. We look forward to welcoming you and seeing the exciting contributions you have to offer!</p>
           </div>
         </section>
       </main>
@@ -32,69 +49,86 @@
 </html>
 
 <style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#scientific-program-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 1.2rem;
-}
-
-/* Placeholder Announcement Section */
-.program-placeholder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-}
-
-.announcement-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-}
-
-.announcement-box h2 {
-  color: #2e5636; /* Forest green */
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.announcement-box p {
-  font-size: 1.2rem;
-  color: #3a3a3a; /* Dark gray */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .announcement-box {
-    max-width: 90%;
+  /* Base Typography & Layout */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
   }
-}
 
+  /* Main Container Styling */
+  #scientific-program-page {
+    padding: 20px;
+    background-color: #f5f1e3; /* Light beige background */
+  }
+
+  /* Page Header Styling */
+  .page-header {
+    text-align: center;
+    background-color: #1b3a4b; /* Deep navy */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .page-header p {
+    font-size: 1.2rem;
+  }
+
+  /* Program Placeholder Section */
+  .program-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    text-align: center;
+  }
+
+  /* Announcement Box Styling */
+  .announcement-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .announcement-box p {
+    font-size: 1.2rem;
+    color: #3a3a3a; /* Dark gray */
+    margin-bottom: 20px;
+  }
+  
+  .announcement-box h2 {
+    color: #2e5636; /* Forest green */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  /* List Styling */
+  .announcement-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .announcement-box li {
+    margin-bottom: 10px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .announcement-box {
+      max-width: 90%;
+    }
+  }
 </style>
