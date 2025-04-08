@@ -8,18 +8,108 @@
 
       <!-- Main Content -->
       <main id="scholarships-page" class="container">
+        <!-- PAGE HEADER -->
         <header class="page-header">
           <h1>Scholarships</h1>
-          <p>More information about scholarships and financial aid will be available soon.</p>
+          <p>
+            Discover two unique scholarship opportunities offered by the JXTX Foundation and the Galaxy Project. Whether you’re interested in the JXTX Scholarships or the JJ Travel Fellowships, there’s an opportunity designed to support emerging talent in genomics, data sciences, and computational biology.
+          </p>
         </header>
 
-        <!-- Placeholder Section -->
-        <section class="scholarships-placeholder">
-          <div class="announcement-box">
-            <h2>Details Coming Soon</h2>
-            <p>We are working on finalizing the scholarship opportunities for GBCC 2025.</p>
-            <p>Check back later for information on eligibility, application deadlines, and award amounts.</p>
+        <!-- SCHOLARSHIPS OVERVIEW SECTION -->
+        <section class="scholarships-overview">
+          <h2>Scholarship Opportunities at GBCC 2025</h2>
+          <p>We’re proud to present two separate scholarships:</p>
+          <ul>
+            <li>
+              <strong>JXTX Scholarships:</strong> Awarded in two tiers – one including transportation support, and one for registration only. <br>Apply online using the button below.
+            </li>
+            <li>
+              <strong>JJ Travel Fellowships:</strong> Designed to sponsor graduate students or postdoctoral researchers. <br>Simply apply by emailing the requested documents.
+            </li>
+          </ul>
+        </section>
+
+        <!-- JXTX SCHOLARSHIPS SECTION -->
+        <section class="scholarship-card">
+          <h2>JXTX Scholarships</h2>
+          <p>
+            JXTX Scholarships will be awarded in two tiers:
+          </p>
+          <ul>
+            <li><strong>First tier:</strong> Two individuals receive conference registration <em>plus</em> transportation (up to US$1,000).</li>
+            <li><strong>Second tier:</strong> Two individuals receive conference registration <em>only</em>.</li>
+          </ul>
+          <!-- Application Button for JXTX -->
+          <div class="application-button">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScnoDRK72jRyZK63bC3VLUq01WdGJ-NeS72nbzbYapu_i6WxA/viewform" target="_blank" class="btn">Apply for JXTX Scholarship</a>
           </div>
+        </section>
+
+        <!-- JJ TRAVEL FELLOWSHIPS SECTION -->
+        <section class="scholarship-card">
+          <h2>The JJ Travel Fellowships</h2>
+          <p>
+            These fellowships sponsor up to two graduate students or postdoctoral researchers to attend the Galaxy and Bioconductor Community Conference (GBCC 2025).
+          </p>
+          <div class="key-dates">
+            <h3>Key Dates</h3>
+            <ul>
+              <li><strong>Deadline for applications:</strong> April 8, 2025</li>
+              <li><strong>Winners announced:</strong> April 17, 2025</li>
+            </ul>
+            <p>
+              Applicants should be prepared to present their work at the conference – either as a talk or a poster.
+            </p>
+          </div>
+          <h3>Application Process</h3>
+          <p>
+            To apply for the JJ Travel Fellowship, please prepare the following documents and email them to <a href="mailto:jj-fund@jxtxfoundation.org">jj-fund@jxtxfoundation.org</a>:
+          </p>
+          <ul>
+            <li>
+              A one-page write-up detailing:
+              <ul>
+                <li>a) Your scientific interests</li>
+                <li>b) Your interest in the Galaxy platform</li>
+                <li>c) Reasons for attending GBCC 2025 (include the conference abstract title)</li>
+              </ul>
+            </li>
+            <li>Your curriculum vitae (CV)</li>
+            <li>A reference letter from your advisor</li>
+          </ul>
+          <!-- Email Application Button for JJ Travel Fellowship -->
+          <div class="application-button">
+            <a href="mailto:jj-fund@jxtxfoundation.org" class="btn">Apply for JJ Travel Fellowship</a>
+          </div>
+        </section>
+
+        <!-- OUR MISSION (Related to JJ Fellowships) -->
+        <section class="scholarship-card">
+          <h2>Our Mission</h2>
+          <p>
+            The JJ Travel Fellowships are designed to empower emerging researchers and broaden participation in the Galaxy ecosystem. By supporting future innovators, these awards honor JJ’s legacy as a mentor and trailblazer in the field.
+          </p>
+        </section>
+
+        <!-- ABOUT JJ SECTION -->
+        <section class="scholarship-card">
+          <h2>About JJ: James Johnson (JJ)</h2>
+          <p>
+            James Johnson, or JJ as he was affectionately known, was a senior software developer at the Minnesota Supercomputing Institute at the University of Minnesota. As one of the early adopters and contributors to the Galaxy project, his work has enabled countless research initiatives and inspired many young scientists.
+          </p>
+          <figure>
+            <img src="/img/jj_scholarship.webp" alt="James (JJ) Johnson" class="jj-photo">
+            <figcaption>James (JJ) Johnson</figcaption>
+          </figure>
+        </section>
+
+        <!-- SUPPORT SECTION -->
+        <section class="scholarship-card">
+          <h2>Support the JJ Travel Fellowships</h2>
+          <p>
+            Your support helps ensure that financial constraints do not hinder talented researchers. Donations play a crucial role in sustaining the JJ Travel Fellowships and advancing scientific innovation.
+          </p>
         </section>
       </main>
 
@@ -28,73 +118,160 @@
 
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
+
+    <!-- Inline CSS for demonstration; move to a separate file if desired. -->
+    <style>
+      /* --------------------------
+         GENERAL PAGE STYLING
+      ---------------------------- */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #fafafa;
+        font-size: 18px; 
+      }
+      a {
+        color: #1b3a4b;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #6c91c2;
+      }
+
+      /* Main container for the page content */
+      #scholarships-page {
+        padding: 20px;
+        background-color: #f5f1e3;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      main#scholarships-page::before {
+        content: none !important;
+      }
+
+      /* --------------------------
+         HEADER SECTION
+      ---------------------------- */
+      .page-header {
+        text-align: center;
+        background-color: #1b3a4b;
+        color: white;
+        padding: 40px 20px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+      .page-header h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+      }
+      .page-header p {
+        font-size: 1.7rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* --------------------------
+         SCHOLARSHIPS OVERVIEW
+      ---------------------------- */
+      .scholarships-overview {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .scholarships-overview h2 {
+        font-size: 3rem;
+        color: #1b3a4b;
+        margin-bottom: 10px;
+      }
+      .scholarships-overview p {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+      }
+      .scholarships-overview ul {
+        list-style: none;
+        padding: 0;
+        font-size: 2.1rem;
+      }
+      .scholarships-overview ul li {
+        margin: 10px 0;
+      }
+
+      /* --------------------------
+         SCHOLARSHIP CARD SECTIONS
+      ---------------------------- */
+      .scholarship-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+      .scholarship-card h2 {
+        font-size: 3rem;
+        color: #1b3a4b;
+        margin-bottom: 20px;
+      }
+      .scholarship-card h3 {
+        font-size: 2.5rem;
+        color: #2e5636;
+        margin-top: 1rem;
+        margin-bottom: 10px;
+      }
+      .scholarship-card p {
+        font-size: 2.0rem;
+        margin-bottom: 20px;
+      }
+      .scholarship-card ul {
+        margin-left: 1.5rem;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+      .scholarship-card ul li {
+        margin-bottom: 10px;
+      }
+
+      .jj-photo {
+        display: block;
+        margin: 20px auto;  /* Centers the image */
+      }
+
+      figure {
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      /* --------------------------
+         APPLICATION BUTTONS
+      ---------------------------- */
+      .application-button {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: #1b3a4b;
+        color: white;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #163046;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 3.5rem;
+        }
+        .scholarship-card {
+          padding: 20px;
+        }
+        .scholarship-card h2 {
+          font-size: 2.8rem;
+        }
+      }
+    </style>
   </body>
 </html>
 
-<style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#scholarships-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 1.2rem;
-}
-
-/* Placeholder Announcement Section */
-.scholarships-placeholder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-}
-
-.announcement-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-}
-
-.announcement-box h2 {
-  color: #2e5636; /* Forest green */
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.announcement-box p {
-  font-size: 1.2rem;
-  color: #3a3a3a; /* Dark gray */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .announcement-box {
-    max-width: 90%;
-  }
-}
-
-</style>

@@ -4,8 +4,8 @@
 .navbar:after,
 .navbar-header:before,
 .navbar-header:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: none;
 }
 .clearfix:after,
 .navbar:after,
@@ -1001,7 +1001,7 @@ fieldset[disabled] .btn-template-primary.active {
 .panel.sidebar-menu ul.popular li:after,
 .panel.sidebar-menu ul.recent li:after {
   content: " ";
-  display: table;
+  display: none;
 }
 .panel.sidebar-menu ul.popular li:after,
 .panel.sidebar-menu ul.recent li:after {

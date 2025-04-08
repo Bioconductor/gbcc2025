@@ -15,7 +15,7 @@ body {
 }
 
 .scrolled body {
-  padding-top: 0; /* Allows content to move under navbar */
+  padding-top: 180px;  /* Allows content to move under navbar */
 }
 
 /* General Styling for the Top Bar */
