@@ -26,21 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".custom-navbar");
   const body = document.body;
 
-  let lastScrollTop = 0;
-
   window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY;
-
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down - allow content to go under navbar
+    let threshold = 80; 
+  
+    if (scrollTop > threshold) {
       body.classList.add("scrolled");
     } else {
-      // Scrolling up - restore the padding
       body.classList.remove("scrolled");
     }
-
-    lastScrollTop = scrollTop;
   });
+  
 });
 
 document.addEventListener("DOMContentLoaded", function () {
