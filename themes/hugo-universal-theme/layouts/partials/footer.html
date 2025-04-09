@@ -2,13 +2,13 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 
-<footer id="footer" style="background-color: #1B3A4B;  width: 100%;">
+<footer id="footer" style="background-color: #1B3A4B; width: 100%;">
   <div class="container" style="color: #FFFFFF; display: flex; justify-content: center; margin: 0 auto; width:85%;">
     <div class="row" style="display: flex; justify-content: space-between; width: 100%;">
       <!-- Newsletter Sign-Up -->
       <div class="col-md-4 col-sm-6" style="margin-right: 40px;">
         <h4 style="color: #FFFFFF;">Keep Me Updated</h4>
-        <form action="https://gaggle.email/join/gbcc2025-announce@gaggle.email" method="post">
+        <form action="https://gaggle.email/join/gbcc2025-announce@gaggle.email" method="post" id="newsletterForm">
           <div class="form-group">
             <label for="name" style="color: #F5F1E3;">Enter your name:</label>
             <input
@@ -28,6 +28,17 @@
               placeholder="Your email address"
               required
             />
+            <!-- Honeypot field for spam protection -->
+            <div style="display: none;">
+              <label for="website">Leave this field empty:</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
           </div>
           <button type="submit" class="btn" style="background-color: #2E5636; color: #FFFFFF;">Subscribe</button>
         </form>
@@ -64,11 +75,11 @@
       <!-- /.col-md-4 -->
 
       <!-- Contact Information -->
-      <div class="col-md-3 col-sm-6" style="flex: 0 0 25%;"> <!-- Adjusted flex-basis to 25% -->
+      <div class="col-md-3 col-sm-6" style="flex: 0 0 25%;">
         <h4 style="color: #FFFFFF;">Contact Information</h4>
         <p style="color: #F5F1E3;">
           GBCC2025 Organizing Committee<br />
-          Email: <a href="gbcc2025-org@gaggle.email" style="color: #6C91C2;">gbcc2025-org@gaggle.email</a><br />
+          Email: <a href="mailto:gbcc2025-org@gaggle.email" style="color: #6C91C2;">gbcc2025-org@gaggle.email</a><br />
           Website: <a href="https://gbcc2025.org" style="color: #6C91C2;">www.gbcc2025.org</a>
         </p>
       </div>
@@ -79,5 +90,27 @@
   <!-- /.container -->
 </footer>
 <!-- /#footer -->
+
+<!-- JavaScript for honeypot spam protection -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('newsletterForm');
+  form.addEventListener('submit', function (e) {
+    var honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value.trim() !== "") {
+      e.preventDefault();
+      // Simulate a fake submission: change the button text, then reset the form after 2 seconds.
+      var submitButton = form.querySelector('button[type="submit"]');
+      submitButton.innerText = "Thank you!";
+      setTimeout(function () {
+        submitButton.innerText = "Subscribe";
+        form.reset();
+      }, 2000);
+      return false;
+    }
+    // If the honeypot is empty, the form submits as normal.
+  });
+});
+</script>
 
 <!-- *** FOOTER END *** -->
