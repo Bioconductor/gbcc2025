@@ -28,7 +28,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(42, 77, 100, 0.9); /* Background color */
+  background-color: rgba(42, 77, 100, 0.99); /* Background color */
 }
 
 /* Logo Section */
@@ -147,7 +147,7 @@ body {
   top: calc(var(--navbar-height) + 40px); /* Ensures dropdown appears below navbar */
   left: 0;
   width: 100%;
-  background-color: rgba(42, 77, 100, 0.85);
+  background-color: rgba(42, 77, 100, 0.97);
   text-align: left; /* Align text to start */
   z-index: 999;
   padding: 10px 0;
