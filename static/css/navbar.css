@@ -134,11 +134,14 @@ body {
   min-width: 140px;
   padding: 10px 15px;
   transition: background-color 0.3s ease;
+  cursor: default;
+  pointer-events: none;
+  background: none;
+  color: var(--soft-beige);
 }
 
 .nav-link:hover {
-  background-color: var(--sky-blue);
-  border-radius: 5px;
+  background-color: none
 }
 
 /* ✅ Dropdown Container - Full width below navbar */
