@@ -12,31 +12,33 @@
               </a>
           </div>
       </div>
+      <div class="swiper-pagination"></div>
   </div>
 </section>
 
-  <!-- Swiper CSS & JS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Swiper(".swiper", {
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        /* Add navigation or other options as needed */
-      });
+<!-- Swiper CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper", {
+      loop: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      /* Add navigation or other options as needed */
     });
-  </script>
-  
-  <style>
+  });
+</script>
+
+<style>
 /* 1. Container: Full width, fixed height */
 .carousel-container {
     width: 100vw;      /* Full browser width */
@@ -77,5 +79,25 @@
     pointer-events: none; /* Prevents interference with link clicking */
 }
 
-  </style>
+.swiper-pagination {
+  bottom: 15px;   /* move up a bit inside the carousel */
+}
+
+/* each bullet as a small bar */
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+  background: rgba(255,255,255,0.5);
+  opacity: 1;
+  margin: 0 4px;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+/* active bar highlight */
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+</style>
   
