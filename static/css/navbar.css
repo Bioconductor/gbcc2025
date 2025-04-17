@@ -267,7 +267,7 @@ body {
   .mobile-nav-links {
     display: none;
     right: 0;
-    width: 100%;
+    width: 75%;
     max-width: 350px;
     position: fixed;
     top: 0;
