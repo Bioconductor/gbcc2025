@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Overview", url: "/about/overview" },
         { name: "Committee", url: "/about/committee" },
         { name: "Venue", url: "/about/venue" },
-        { name: "Previous Meetings", url: "/about/previous_meetings" }
+        // { name: "Previous Meetings", url: "/about/previous_meetings" }
       ],
       "program": [
         { name: "Program at a Glance", url: "/program/glance" },
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Overview", url: "/about/overview" },
         { name: "Committee", url: "/about/committee" },
         { name: "Venue", url: "/about/venue" },
-        { name: "Previous Meetings", url: "/about/previous_meetings" }
+        // { name: "Previous Meetings", url: "/about/previous_meetings" }
       ],
       "program": [
         { name: "Program at a Glance", url: "/program/glance" },

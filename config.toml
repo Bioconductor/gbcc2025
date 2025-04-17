@@ -247,7 +247,7 @@ weight = 9
         <p class="text-uppercase"><strong><a href="https://galaxyproject.org/" target="_blank">Galaxy web site</a></strong></p>
       </p>
       """
-[params.previous_meetings]
+
 photos = [
   { url = "/img/past_gallery/bio-1.png", alt = "Photo 1" },
   { url = "/img/past_gallery/galaxy-1.jpg", alt = "Photo 2" },
