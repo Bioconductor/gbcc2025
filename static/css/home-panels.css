@@ -73,13 +73,13 @@
   transition: background 0.3s ease-in-out;
 }
 
-.quick_links_container ul > li:nth-child(2) {
+/* .quick_links_container ul > li:nth-child(2) {
   background-color: rgba(46, 86, 54, 0.9); 
 }
 
 .quick_links_container ul > li:nth-child(3) {
   background-color: rgba(46, 86, 54, 0.7); 
-}
+} */
 
 /* Styling the links inside the list items */
 .notice_container ul > li > a {
