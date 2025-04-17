@@ -33,6 +33,10 @@
   margin: 0 auto;
 }
 
+#footer .row > div:nth-child(1) {
+  padding: 50px 40px;  
+}
+
 /* Ensure footer content is centered */
 #footer .container {
   width: 85%;
@@ -65,6 +69,25 @@
 }
 
 /* Newsletter Form */
+
+#footer #newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;               
+}
+
+#footer #newsletterForm .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;                
+}
+
+#footer #newsletterForm .btn {
+  align-self: center;  
+  margin-top: 0px;
+  padding: 12px 30px;      
+}
+
 #footer .form-group label {
   color: #F5F1E3;
 }
@@ -82,6 +105,7 @@
 /* Hosts Section */
 #footer h4 {
   color: #FFFFFF;
+  margin-bottom: 25px;
 }
 
 #footer .hosts-container {
