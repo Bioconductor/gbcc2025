@@ -8,35 +8,16 @@
 
       <!-- Main Content -->
       <main id="organizers-page" class="container">
-        <header class="page-header">
-          <h1>Conference Organizers</h1>
-          <p>Meet the dedicated teams behind GBCC 2025.</p>
+        <header class="page-intro">
+          <h1>Meet the Teams Powering GBCC 2025</h1>
+          <p>From planning and logistics to scientific guidance, get to know the people who make our conference possible.</p>
         </header>
-
-        <!-- Scientific Committee Section -->
-        <section class="organizers-section scientific-committee">
-          <h2>Scientific Committee</h2>
-          <strong>Scientific committee chairs</strong>
-          <ul>
-            {{ range .Site.Data.organizers.scientific_committee_chairs }}
-            <li>
-              <strong>{{ .name }}</strong>, {{ .organization }}
-            </li>
-            {{ end }}
-          </ul>
-          <strong>Scientific committee members</strong>
-          <ul>
-            {{ range .Site.Data.organizers.scientific_committee }}
-            <li>
-              <strong>{{ .name }}</strong>, {{ .organization }}
-            </li>
-            {{ end }}
-          </ul>
-        </section>
-
         <!-- General Organizing Committee Section -->
         <section class="organizers-section general-organizing-committee">
           <h2>General Organizing Committee</h2>
+          <p class="section-description">
+            The General Organizing Committee manages logistics, sponsorships, and overall conference coordination.
+          </p>
           <div class="organizers-grid">
             {{ range .Site.Data.organizers.general_organizing_committee }}
             <div class="organizer-card">
@@ -47,10 +28,13 @@
             {{ end }}
           </div>
         </section>
-
+      
         <!-- Co-Fest Organizers Section -->
         <section class="organizers-section cofest-organizers">
           <h2>Co-Fest Organizers</h2>
+          <p class="section-description">
+            The CoFest Organizers coordinate the CoFest event schedule, projects, and participant engagement.
+          </p>
           <div class="organizers-grid">
             {{ range .Site.Data.organizers.cofest_organizers }}
             <div class="organizer-card">
@@ -61,6 +45,27 @@
             {{ end }}
           </div>
         </section>
+      
+        <!-- Scientific Committee Section -->
+        <section class="organizers-section scientific-committee">
+          <h2>Scientific Committee</h2>
+          <p class="section-description">
+            The Scientific Committee reviews submitted abstracts, selects presentations, and advises on session themes.
+          </p>
+          <h3>Chairs</h3>
+          <ul>
+            {{ range .Site.Data.organizers.scientific_committee_chairs }}
+              <li><strong>{{ .name }}</strong>, {{ .organization }}</li>
+            {{ end }}
+          </ul>
+          <h3>Members</h3>
+          <ul>
+            {{ range .Site.Data.organizers.scientific_committee }}
+              <li><strong>{{ .name }}</strong>, {{ .organization }}</li>
+            {{ end }}
+          </ul>
+        </section>
+      
       </main>
 
       {{ partial "footer.html" . }}
@@ -102,13 +107,42 @@ body {
   font-size: 1.2rem;
 }
 
+/* Intro Header Styling */
+.page-intro {
+  text-align: center;
+  background: linear-gradient(135deg, #1b3a4b 0%, #2e5636 100%);
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.page-intro h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.page-intro p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Improved text readability in each section */
+.organizers-section .section-description,
+.organizers-section ul li,
+.organizer-card p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
 /* Organizer Sections */
 .organizers-section {
   margin-bottom: 40px;
 }
 
 .organizers-section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #2e5636; /* Forest green */
   margin-bottom: 20px;
   text-align: center;
@@ -151,6 +185,22 @@ body {
   margin-bottom: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+  /* Section description text */
+  .organizers-section .section-description {
+    margin: 0 auto 20px;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  /* Sub‑section headings */
+  .organizers-section h3 {
+    font-size: 2.7rem;
+    color: #1b3a4b;
+    margin: 30px 0 10px;
+    text-align: center;
+    text-decoration: underline;
+  }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

@@ -134,11 +134,14 @@ body {
   min-width: 140px;
   padding: 10px 15px;
   transition: background-color 0.3s ease;
+  cursor: default;
+  pointer-events: none;
+  background: none;
+  color: var(--soft-beige);
 }
 
 .nav-link:hover {
-  background-color: var(--sky-blue);
-  border-radius: 5px;
+  background-color: none
 }
 
 /* ✅ Dropdown Container - Full width below navbar */
@@ -264,7 +267,7 @@ body {
   .mobile-nav-links {
     display: none;
     right: 0;
-    width: 100%;
+    width: 75%;
     max-width: 350px;
     position: fixed;
     top: 0;
@@ -302,17 +305,27 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.33);
     font-weight: 600;
     text-decoration: none;
-    
+    cursor: default;
+    background: none;   
   }
 
-  /* Smooth submenu animation via max-height transition */
+  .mobile-nav-link:hover {
+    background: none;       
+  }
+
+
   #mobile-navigation .mobile-submenu {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 1s ease-out;
-    background-color: var(--soft-beige);
-    list-style: none;
-    margin: 0;
+    opacity: 0;
+    transform-origin: top;
+    transition: 
+      max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1),
+      opacity     0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  #mobile-navigation .mobile-submenu.open {
+    max-height: 500px; 
+    opacity: 1;
   }
 
   #mobile-navigation .mobile-submenu li {

@@ -6,44 +6,99 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- Main Content -->
-      <main id="venue-page" class="container">
-        <header class="page-header">
-          <h1>Conference Venue</h1>
-          <p>Welcome to Cold Spring Harbor, New York - the home of GBCC 2025.</p>
-        </header>
+      <main id="venue-page">
 
-        <!-- Venue Information Section -->
-        <section class="venue-info">
-          <h2>About Cold Spring Harbor</h2>
-          <p>
-            Located on Long Island, New York, Cold Spring Harbor Laboratory is a world-renowned center for research and education in biology and genetics. The campus offers state-of-the-art facilities, beautiful surroundings, and a vibrant atmosphere for collaboration and innovation.
-          </p>
-          <p>
-            The conference will take place in various venues across the campus, providing attendees with the opportunity to learn, network, and exchange ideas in an inspiring setting.
-          </p>
+        <!-- HERO BLOCK -->
+        <section class="block hero">
+          <h1>Discover Cold Spring Harbor Laboratory</h1>
+          <p>Walk the grounds where Nobel‑winning discoveries and harbor views fuel GBCC 2025 inspiration.</p>
+          <a href="#about" class="cta">Explore the Venue</a>
         </section>
 
-        <!-- Google Maps Section -->
-        <section class="maps-section">
-          <h2>Travel details</h2>
-          <p>
-            The conference will be held at Cold Spring Harbor Laboratory, 1
-            Bungtown Rd, Cold Spring Harbor, NY 11724. Check out the CSHL
-            website for detailed travel information:
-          </p>
-          <a href="https://meetings.cshl.edu/travel.aspx?meet=galaxy&year=25" class="btn btn-primary" target="_blank">Getting to CSHL</a>
-          <div class="maps-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.781018567258!2d-73.45746198459414!3d40.86709547931452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e817be95093bbd%3A0xf0410660c43d118!2sCold%20Spring%20Harbor%20Laboratory!5e0!3m2!1sen!2sus!4v1699721714428!5m2!1sen!2sus"
-              width="100%"
-              height="400"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
+        <!-- ABOUT BLOCK -->
+        <section class="block about" id="about">
+          <div class="content">
+            <img src="/img/about/venue/campus.webp" alt="Historic CSHL campus">
+            <div class="text">
+              <h2>About Cold Spring Harbor Laboratory</h2>
+              <p>
+                Founded in 1890, CSHL has driven revolutionary advances in genetics, cancer biology, and neuroscience for over 130 years.
+                Its researchers first unraveled DNA’s structure here, setting the stage for modern molecular biology. 
+                Today, its scenic waterfront campus blends historic brick halls with cutting‑edge labs, creating an inspiring setting for collaboration.
+                Whether you’re wandering the iconic greenhouses or exploring interactive exhibits, you’ll find fresh ideas at every turn.
+              </p>
+            </div>
           </div>
         </section>
+
+        <!-- HISTORY BLOCK -->
+        <section class="block history" id="history">
+          <h2>Why CSHL?</h2>
+          <p>
+            For more than a century, CSHL has not only produced groundbreaking science but has shaped how researchers convene worldwide. Highlights include:
+          </p>
+          <ul>
+            <li><strong>Founding (1890):</strong> Over 130 years of continuous scientific gatherings.</li>
+            <li><strong>Symposia (1933):</strong> Launched the world‑famous Quantitative Biology meetings and the Lab Press.</li>
+            <li><strong>Banbury Center:</strong> Offers elite, small‑group workshops that pioneer interdisciplinary breakthroughs.</li>
+            <li><strong>Meetings & Courses:</strong> Hosts 60+ events yearly, drawing ~9,000 scientists to Long Island.</li>
+            <li><strong>Nobel Legacy:</strong> Eight laureates (Watson, Crick, McClintock…) presenting landmark discoveries here.</li>
+          </ul>
+          <p class="subtext">
+            Each year, over 12,000 scientists from more than 50 countries choose CSHL—voted among the top conferences for scientific rigor, networking, and inspiration.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Cold_Spring_Harbor_Laboratory"
+            class="cta"
+            target="_blank">
+            Learn More About CSHL
+          </a>
+        </section>
+
+        <!-- FEATURES BLOCK -->
+        <section class="block features">
+          <div class="feature">
+            <img src="/img/about/venue/Waltz_of_the_Polypeptides.jpg" alt="Researchers at work">
+            <h3>Landmark Discoveries</h3>
+            <p>From early DNA X‑ray diffraction to modern CRISPR insights, CSHL’s labs have redefined our understanding of life.</p>
+          </div>
+          <div class="feature">
+            <img src="/img/about/venue/harbor_beach.webp" alt="Historic greenhouse">
+            <h3>Scenic Grounds</h3>
+            <p>Explore harbor‑side paths, the iconic DNA helix sculpture, and century‑old greenhouses that inspire creativity.</p>
+          </div>
+          <div class="feature">
+            <img src="/img/about/venue/grace_auditorium.jpg" alt="Grace Auditorium">
+            <h3>Grace Auditorium</h3>
+            <p>Host of GBCC keynotes and plenaries, this state‑of‑the‑art hall blends historic charm with modern AV capabilities.</p>
+          </div>
+        </section>
+
+        <!-- TRAVEL & MAP BLOCK -->
+        <section class="block travel" id="travel">
+          <div class="text">
+            <h2>Getting Here</h2>
+            <p>Cold Spring Harbor Laboratory<br>1 Bungtown Road, Cold Spring Harbor, NY 11724</p>
+            <a href="https://meetings.cshl.edu/travel.aspx?meet=galaxy&year=25" class="cta" target="_blank">Travel & Accommodation Details</a>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.781018567258!2d-73.45746198459414!3d40.86709547931452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e817be95093bbd%3A0xf0410660c43d118!2sCold%20Spring%20Harbor%20Laboratory!5e0!3m2!1sen!2sus!4v1699721714428!5m2!1sen!2sus"
+              width="100%" height="400" style="border:0" allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+        </section>
+
+        <!-- GALLERY BLOCK -->
+        <section class="block gallery" id="gallery">
+          <h2>Campus Photo Gallery</h2>
+          <div class="grid">
+            <img src="/img/about/venue/scultpture.JPG" alt="Biology sculpture">
+            <img src="/img/about/venue/lobster.jpg" alt="lobster dinner">
+            <img src="/img/about/venue/CSHL_volleyball_2001.webp" alt="Volleyball">
+            <img src="/img/about/venue/Cold_Spring_Harbor_Laboratory_sign.jpg" alt="Lab Sign">
+          </div>
+        </section>
+
       </main>
 
       {{ partial "footer.html" . }}
@@ -51,115 +106,169 @@
 
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
+
+    <style>
+      :root {
+        --bg: #1a1a1a;
+        --fg: #fff;
+        --accent: #f5e05a;
+        --pad: 20px;
+        --gap: 40px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: sans-serif;
+        line-height: 1.6;
+      }
+      #venue-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--gap) 20px;
+      }
+
+      .block {
+        background: var(--bg);
+        padding: var(--pad) 20px;
+        margin-bottom: var(--gap);
+        border-radius: 8px;
+      }
+      .block h2, .block h3 {
+        margin-bottom: 1rem;
+        color: var(--fg);
+      }
+      .block p, .block li {
+        color: #ddd;
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        height: 60vh;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        border-radius: 0; 
+        background: url('/img/about/venue/hero.jpg') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        border-radius: 8px;
+      }
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .hero h1 { font-size: 3rem; margin-bottom: .5rem; }
+      .hero p  { font-size: 1.25rem; margin-bottom: 1rem; }
+      .hero .cta { font-size: 1.1rem; }
+
+      /* Split layouts */
+      .about .content,
+      .travel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+        align-items: center;
+      }
+      .about img,
+      .travel .map {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      /* History */
+      .history ul {
+        list-style: none;
+        padding: 0;
+      }
+      .history li {
+        margin-bottom: .75rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      .history li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: var(--gap);
+      }
+      .features .feature img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      /* Gallery */
+      .gallery .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        gap: 15px;
+      }
+      .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        transition: transform .3s ease-in-out;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+
+      .gallery .grid img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      /* CTA buttons */
+      .cta {
+        display: inline-block;
+        background-color: #2e5636;  /* Forest green accent */
+        color: #fff;
+        text-decoration: none;
+        padding: .75rem 1.5rem;
+        border-radius: 4px;
+        transition: background-color .2s ease;
+      }
+      .cta:hover {
+        background: #163c27; 
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero { height: 40vh; }
+        .hero h1 { font-size: 2rem; }
+        .hero p  { font-size: 1rem; }
+        .about .content,
+        .travel {
+          grid-template-columns: 1fr;
+        }
+        .block {
+          padding: 40px 10px;
+        }
+      }
+    </style>
   </body>
 </html>
-<Style>
-  /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#venue-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 1.2rem;
-}
-
-/* Venue Information Section */
-.venue-info {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.venue-info h2 {
-  font-size: 2rem;
-  color: #2e5636; /* Forest green */
-  margin-bottom: 20px;
-}
-
-.venue-info p {
-  margin-bottom: 20px;
-  color: #3a3a3a; /* Dark gray */
-}
-
-/* Gallery Section */
-.gallery-section {
-  text-align: center;
-}
-
-.gallery-section h2 {
-  font-size: 2rem;
-  color: #1b3a4b; /* Deep navy */
-  margin-bottom: 20px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-/* Maps Section */
-.maps-section {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.maps-section h2 {
-  font-size: 2rem;
-  color: #2e5636; /* Forest green */
-  margin-bottom: 20px;
-}
-
-.maps-container {
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-</Style>

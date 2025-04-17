@@ -47,12 +47,6 @@ weight = 2
   url = "/about/venue"
   weight = 4
 
-  [[menu.main]]
-  parent = "gbcc2025"
-  name = "Previous Meetings"
-  url = "/about/previous_meetings"
-  weight = 5
-
 [[menu.main]]
 identifier = "program"
 name = "Program"
@@ -124,7 +118,7 @@ weight = 5
 identifier = "sponsor"
 name = "Sponsorships"
 url = "/sponsorships/"
-weight = 6
+weight = 7
 
   [[menu.main]]
   parent = "sponsor"
@@ -133,34 +127,10 @@ weight = 6
   weight = 1
 
 [[menu.main]]
-identifier = "general_info"
-name = "General Info"
-url = "/general_information/transportation"
-weight = 7
-
-  [[menu.main]]
-  parent = "general_info"
-  name = "Transportation"
-  url = "/general_information/transportation"
-  weight = 1
-
-  [[menu.main]]
-  parent = "general_info"
-  name = "Things to do in the Area"
-  url = "/general_information/things_to_do"
-  weight = 2
-
-  [[menu.main]]
-  parent = "general_info"
-  name = "Logo Gallery"
-  url = "/general_information/logo_contest_gallery"
-  weight = 3
-
-[[menu.main]]
 identifier = "cofest"
-name = "Cofest"
+name = "Hackathon"
 url = "/cofest/overview"
-weight = 8
+weight = 6
 
   [[menu.main]]
   parent = "cofest"
@@ -182,9 +152,9 @@ weight = 8
 
 [[menu.main]]
 identifier = "bofs"
-name = "BOFs"
+name = "Discussions"
 url = "/bofs/overview"
-weight = 9
+weight = 8
 
   [[menu.main]]
   parent = "bofs"
@@ -192,6 +162,29 @@ weight = 9
   url = "/bofs/overview"
   weight = 1
 
+[[menu.main]]
+identifier = "general_info"
+name = "General Info"
+url = "/general_information/transportation"
+weight = 9
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Transportation"
+  url = "/general_information/transportation"
+  weight = 1
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Things to do in the Area"
+  url = "/general_information/things_to_do"
+  weight = 2
+
+  [[menu.main]]
+  parent = "general_info"
+  name = "Logo Gallery"
+  url = "/general_information/logo_contest_gallery"
+  weight = 3
 
 # Top bar social links menu
 
@@ -254,7 +247,7 @@ weight = 9
         <p class="text-uppercase"><strong><a href="https://galaxyproject.org/" target="_blank">Galaxy web site</a></strong></p>
       </p>
       """
-[params.previous_meetings]
+
 photos = [
   { url = "/img/past_gallery/bio-1.png", alt = "Photo 1" },
   { url = "/img/past_gallery/galaxy-1.jpg", alt = "Photo 2" },
