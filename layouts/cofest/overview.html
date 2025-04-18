@@ -9,15 +9,15 @@
       <!-- Main Content -->
       <main id="cofest-overview-page" class="container">
 
-        <!-- Hero Section with Text Overlay -->
-        <section class="hero hero-overlay">
-          <img src="/img/cofest/overview/manhattan_skyline.jpg" alt="CoFest Hero Image">
-          <div class="hero-text">
-            <h1>What is CoFest?</h1>
-            <p class="lead">A hands-on, interactive event where everyone can contribute to the Galaxy & Bioconductor communities!</p>
-            <div class="event-dates">June 27-28, 2025</div>
-          </div>
-        </section>
+      <!-- Hero Section with Overview‑Style Overlay -->
+      <section class="hero hero-overlay cofest-hero">
+        <div class="hero-bg"></div>
+        <div class="hero-text">
+          <h1>What is CoFest?</h1>
+          <p class="lead">A hands‑on, interactive event where everyone can contribute to the Galaxy & Bioconductor communities!</p>
+          <div class="event-dates">June 27–28, 2025</div>
+        </div>
+      </section>
 
         <!-- About CoFest - Split Layout -->
         <section class="card split">
@@ -125,26 +125,44 @@
 
 
 <style>
+  :root {
+    --cf-bg-img: url('/img/cofest/overview/manhattan_skyline.jpg');
+  }
   /* Base Styles */
   body {
     font-family: Arial, sans-serif;
     background-color: #f5f1e3;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
   }
 
   /* Hero Section with Overlay */
-  .hero {
+
+  .cofest-hero {
     position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50vh;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+
+  .cofest-hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--cf-bg-img) center/cover no-repeat;
+  }
+  .cofest-hero .hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
   }
   .hero img {
     width: 100%;

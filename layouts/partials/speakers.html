@@ -35,7 +35,25 @@
     padding: 100px 20px;
     padding-top: 20px;
     padding-bottom: 30px;
-    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--light-cream) 50%, rgba(255, 255, 255, 0.9) 85%, white 100%);
+    background:
+        /* gentle sky‑blue “clouds” in each top corner */
+        radial-gradient(
+            circle at top left,
+            rgba(108,145,194,0.30) 8%,
+            transparent 65%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(108,145,194,0.30) 8%,
+            transparent 65%
+        ),
+        /* smooth fade from light‑cream down into white */
+        linear-gradient(
+            to bottom,
+            var(--light-cream) 0%,
+            rgba(255,255,255,0.95) 80%,
+            white 100%
+        );
     position: relative;
     overflow: hidden;
 }
@@ -48,7 +66,7 @@
     left: -10%;
     width: 160%;
     height: 150%;
-    background: linear-gradient(120deg, var(--deep-navy) 15%, rgba(27, 58, 75, 0.15) 60%, transparent 100%);
+    /* background: linear-gradient(120deg, var(--deep-navy) 15%, rgba(27, 58, 75, 0.15) 60%, transparent 100%); */
     opacity: 0.12;
     transform: rotate(-5deg);
     z-index: 0;
@@ -154,6 +172,28 @@
         flex: 1 1 100%; /* One card per row on mobile */
     }
 
+    .gbcc-speaker-section {
+    background:
+        /* gentle sky‑blue “clouds” in each top corner */
+        radial-gradient(
+            circle at top left,
+            rgba(108,145,194,0.05) 8%,
+            transparent 65%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(108,145,194,0.05) 8%,
+            transparent 65%
+        ),
+        /* smooth fade from light‑cream down into white */
+        linear-gradient(
+            to bottom,
+            var(--light-cream) 0%,
+            rgba(255,255,255,0.95) 80%,
+            white 100%
+        );
+}
+
     .gbcc-speaker-avatar {
         width: 150px;
         height: 150px;
@@ -171,5 +211,6 @@
     .gbcc-speaker-description {
         font-size: 1.2rem;
     }
+
 }
 </style>

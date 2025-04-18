@@ -6,57 +6,61 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- Main Content -->
-      <main id="cofest-registration-page" class="container">
-        <header class="page-header">
-          <h1>Galaxy & Bioconductor CoFest 2025</h1>
-          <p>
-            A community event separate from the main GBCC conference that is
-            focused on collaborative development and contribution.
-          </p>
-        </header>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1><span>Register for CoFest 2025</span></h1>
+            <p>A one‑day community sprint in New York City — $55 per attendee.</p>
+            <a class="pill-btn"
+               href="https://jhu.campusgroups.com/otp_signup?module=event&event_id=1965989"
+               target="_blank">
+              Register Now <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <!-- Event Description -->
-        <section class="cofest-description">
-          <p>
-            <b>Important:</b> This is a <strong>separate registration</strong>
-            from the main GBCC conference in Cold Spring Harbor, and will take
-            place in a <strong>different location: New York City</strong>.
-          </p>
-          <p>
-            For more information about CoFest, including travel and
-            accommodation details, please visit the <a
-            href="/cofest/overview/">CoFest page</a>.
-          </p>
+      <main id="cofest-registration-page" class="container">
+
+        <!-- DESCRIPTION -->
+        <section class="text-card">
+          <h2>About CoFest Registration</h2>
+          <p><strong>Important:</strong> CoFest is a separate event from GBCC 2025, held in New York City on June 27–28. This registration covers only CoFest activities.</p>
+          <p>For full details on schedule, location, travel &amp; lodging, see the <a href="/cofest/overview/" target="_blank">CoFest overview page ↗</a>.</p>
         </section>
 
-        <!-- Registration Information -->
-        <section class="cofest-registration">
+        <!-- REGISTRATION DETAILS -->
+        <section class="text-card">
           <h2>Registration Details</h2>
-          <table class="registration-table">
-            <thead>
-              <tr>
-                <th>Registration Option</th>
-                <th>Sales Start</th>
-                <th>Sales End</th>
-                <th>Availability</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Galaxy BioConductor Community Conference CoFest 2025</td>
-                <td>Jan 24, 2025</td>
-                <td>Jun 13, 2025</td>
-                <td>Unlimited</td>
-                <td>$55</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><b>Note:</b> Only one ticket per person is allowed for this event.</p>
-          <p><b>Registration Process:</b> You must create an account on the registration site to complete your signup.</p>
-          <a href="https://jhu.campusgroups.com/otp_signup?module=event&event_id=1965989" target="_blank" class="register-button">
-            Register for CoFest
+          <div class="table-responsive">
+            <table class="registration-table">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Sales Start</th>
+                  <th>Sales End</th>
+                  <th>Availability</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CoFest 2025 Sprint</td>
+                  <td>Jan 24 2025</td>
+                  <td>Jun 13 2025</td>
+                  <td>Unlimited</td>
+                  <td>$55</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note"><strong>Note:</strong> One ticket per person. You must have a CoFest ticket to participate on-site.</p>
+          <p class="note"><strong>Process:</strong> Create an account on the registration site and follow the steps to complete payment.</p>
+          <a class="pill-btn"
+             href="https://jhu.campusgroups.com/otp_signup?module=event&event_id=1965989"
+             target="_blank">
+            Register for CoFest <i class="fa fa-arrow-right"></i>
           </a>
         </section>
 
@@ -66,98 +70,201 @@
     </div>
 
     {{ partial "scripts.html" . }}
-    {{ partial "custom-scripts.html" . }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </body>
 </html>
 
 <style>
-    /* General Page Styling */
+:root {
+  --bg-light: #f5f1e3;
+  --bg-dark:  #1B3A4B;
+  --fg-light: #fff;
+  --accent:   #2E5636;
+  --cyan:     #6C91C2;
+  --gradient: linear-gradient(90deg, var(--accent), var(--cyan));
+  --pad:      30px;
+  --gap:      30px;
+}
+
 body {
+  margin: 0;
+  background: var(--bg-light);
+  color: #333;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 
-#cofest-registration-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
+/* HERO */
+.hero {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50vh;
+  background: url('/img/cofest/overview/main_indoor_cofest.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--gap);
 }
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
 }
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 1.2rem;
-}
-
-/* Event Details Section */
-.cofest-details, .cofest-registration, .cofest-description, .cofest-accommodations, .cofest-food {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-/* Registration Table */
-.registration-table {
+.hero-inner {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+}
+.hero-text {
+  background: rgba(0,0,0,0.85);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.hero-text h1 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+.hero-text p {
+  color: var(--fg-light);
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  color: var(--fg-light);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.pill-btn:hover {
+  background: var(--cyan);
 }
 
-.registration-table th, .registration-table td {
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+/* TEXT CARD */
+.text-card {
+  background: #fff;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: var(--pad);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: var(--gap);
+}
+.text-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  color: var(--accent);
+  position: relative;
+}
+.text-card h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+.text-card p {
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1.5rem;
+  line-height: 1.65;
+}
+.text-card ul {
+  list-style: disc inside;
+  margin: 1.5rem 0;
+  padding-left: 1.75rem;
+}
+.text-card li {
+  margin-bottom: 1rem;
+}
+
+/* TABLE RESPONSIVE WRAPPER */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0 2rem;
+}
+.table-responsive table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+}
+
+/* REGISTRATION TABLE */
+.registration-table th,
+.registration-table td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
+  font-size: 1.5rem;
 }
-
 .registration-table th {
-  background-color: #2e5636; /* Forest green */
-  color: white;
+  background: var(--accent);
+  color: #fff;
 }
 
-/* Register Button */
-.register-button {
-  display: inline-block;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  margin-top: 20px;
-  transition: background-color 0.3s;
+/* NOTES */
+.note {
+  background: rgba(46,86,54,0.05);
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
 }
 
-.register-button:hover {
-  background-color: #6c91c2; /* Lighter navy */
-}
-
-/* Google Maps Embed */
-.maps-container {
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .registration-table th, .registration-table td {
-    padding: 8px;
+  .hero {
+    height: 50vh;
+  }
+  .hero-text h1 span {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .container {
+    margin-bottom: 40px;
+  }
+  .pill-btn {
+    width: 100%;
+  }
+  .table-responsive {
+    margin: .5rem 0 1.5rem;
+  }
+  .text-card {
+    padding: 20px;
+    margin-bottom: 20px;
   }
 }
-
 </style>

@@ -166,7 +166,7 @@ body {
 }
 .hero-text {
   background: rgba(0, 0, 0, 0.85);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 8px;
 }
 .hero-text h1 span {
@@ -180,8 +180,8 @@ body {
 }
 .hero-text p {
   color: var(--fg-light);
-  margin: 1rem 0;
-  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
 }
 .pill-btn {
   display: inline-flex;
@@ -203,7 +203,7 @@ body {
 
 /* MAIN CONTAINER */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 60px;
   padding: 0 20px;
 }
@@ -218,28 +218,21 @@ section.non-presenting {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-bottom: var(--gap);
 }
-section.pricing-section h2,
-section.virtual-pricing h2,
-section.non-presenting h2 {
-  margin-top: 0;
-  color: var(--accent);
-  font-size: 1.8rem;
-}
 
 /* --- TYPOGRAPHY REFINEMENTS --- */
 
 /* Base paragraph styling in all sections */
 section p {
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.65;
   margin-bottom: 1.25rem;
 }
 
 /* Section sub‑headings (h2) */
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 section h2::after {
@@ -268,6 +261,7 @@ section ul {
 section ul li {
   margin-bottom: 0.75rem;
   color: #555;
+  font-size: 1.5rem;
 }
 
 /* Call‑out notes */
@@ -276,7 +270,7 @@ section ul li {
   padding: 0.75rem 1rem;
   border-left: 3px solid var(--accent);
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
@@ -336,15 +330,11 @@ section.non-presenting ul {
   list-style: disc inside;
   margin: 1rem 0;
 }
-.note {
-  font-size: 0.95rem;
-  margin-top: 1rem;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
-    height: 40vh;
+    height: 50vh;
   }
   .hero-text h1 span {
     font-size: 2rem;
