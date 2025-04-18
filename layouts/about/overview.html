@@ -6,79 +6,92 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <main id="conference-overview-page">
+      <main id="conference-overview-page" class="container">
 
-        <!-- HERO BLOCK (full-width) -->
-        <section class="block hero">
-          <h1>Welcome to GBCC 2025</h1>
-          <p>June 23–26, 2025 at Cold Spring Harbor Laboratory, New York</p>
+        <!-- Hero Section with Overlay -->
+        <section class="hero hero-overlay">
+          <img src="/img/about/overview/aerial.jpg" alt="GBCC 2025 Hero Image">
+          <div class="hero-text">
+            <h1>Welcome to GBCC 2025</h1>
+            <p class="lead">June 23–26, 2025 at Cold Spring Harbor Laboratory, New York</p>
+            <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25"
+               target="_blank"
+               class="cta-link">
+              Register Now
+            </a>
+          </div>
         </section>
 
-        <!-- ABOUT BLOCK -->
+        <!-- About Block -->
         <section class="block about" id="about">
           <div class="content">
             <img src="/img/about/overview/CSHL_Jones_building.jpg" alt="Jones Building">
             <div class="text">
               <h2>About GBCC 2025</h2>
               <p>
-                The Galaxy Bioconductor Community Conference (GBCC) is the first joint meeting of two leading open‑source platforms, uniting Galaxy’s powerful data‑analysis framework with Bioconductor’s rich bioinformatics ecosystem.
-                Over four days, you’ll engage with scientists, developers, and educators to explore cutting‑edge methods in genomics, imaging, machine learning, and high‑performance computing.
-                Through keynote talks, hands‑on trainings, workshops, and Birds of a Feather sessions, GBCC empowers you to accelerate your research and broaden your collaborations.
-                Experience this vibrant intersection of open science at world-renowned Cold Spring Harbor Laboratory.
+                The Galaxy Bioconductor Community Conference (GBCC) is the first joint
+                meeting of two leading open‑source platforms, uniting Galaxy’s data‑analysis
+                framework with Bioconductor’s bioinformatics ecosystem. Over four days,
+                engage with scientists, developers, and educators exploring genomics,
+                imaging, machine learning, and high‑performance computing.
+              </p>
+              <p>
+                Through keynotes, hands‑on workshops, and community sprints, GBCC
+                empowers you to accelerate your research and forge lasting collaborations.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- WHY ATTEND BLOCK -->
+        <!-- Why Attend Block -->
         <section class="block why-attend" id="why-attend">
           <h2>Why Attend GBCC 2025?</h2>
-          <p>GBCC brings together the best of Galaxy and Bioconductor to offer an unparalleled experience in learning, collaboration, and innovation:</p>
           <ul>
-            <li><strong>World‑Class Keynotes</strong> – Be inspired by pioneering researchers who are shaping the future of data‑driven science.</li>
-            <li><strong>Hands‑On Workshops</strong> – Gain practical expertise in integrating Galaxy and Bioconductor to accelerate your own research.</li>
-            <li><strong>Poster Sessions</strong> – Present your work, exchange ideas, and receive constructive feedback from a global audience.</li>
-            <li><strong>Birds of a Feather</strong> – Engage in focused discussions on topics ranging from metagenomics to software security best practices.</li>
-            <li><strong>Collaborative CoFest</strong> – Join a supportive sprint where seasoned developers and newcomers collaborate to enhance community tools and workflows.</li>
+            <li><strong>Inspiring Keynotes</strong> — Learn from leaders at the forefront of data‑driven science.</li>
+            <li><strong>Hands‑On Workshops</strong> — Master Galaxy &amp; Bioconductor workflows directly.</li>
+            <li><strong>Poster Sessions</strong> — Showcase your work and receive live peer feedback.</li>
+            <li><strong>Focused Discussions</strong> — Deep dive into topics from metagenomics to software security.</li>
+            <li><strong>Community Sprint</strong> — Collaborate on tools &amp; materials, regardless of coding skill.</li>
           </ul>
-          <p class="subtext">
-            Connect in person or online with hundreds of peers, learn from community-driven trainings, and forge relationships with leading scientists and open‑source developers.
-          </p>
         </section>
 
-        <!-- HIGHLIGHTS GRID -->
+        <!-- Highlights Grid -->
         <section class="block highlights">
           <h2>Conference Highlights</h2>
           <div class="grid">
             <div class="item">
               <img src="/img/about/overview/sessions.JPG" alt="Integrated Sessions">
               <h3>Integrated Sessions</h3>
-              <p>Explore combined Galaxy &amp; Bioconductor talks for unified, cross‑platform insights.</p>
+              <p>Combined Galaxy &amp; Bioconductor talks for cross‑platform insights.</p>
             </div>
             <div class="item">
               <img src="/img/about/overview/tutorial.jpeg" alt="Interactive Tutorials">
               <h3>Interactive Tutorials</h3>
-              <p>Participate in hands‑on tutorials that guide you through real‑world bioinformatics workflows.</p>
+              <p>Hands‑on exercises to build practical bioinformatics skills.</p>
             </div>
             <div class="item">
               <img src="/img/about/overview/networking.JPG" alt="Networking Events">
               <h3>Networking Events</h3>
-              <p>Engage with peers and experts during receptions and small‑group discussions.</p>
+              <p>Receptions and small‑group meetups to spark collaborations.</p>
             </div>
             <div class="item">
               <img src="/img/cofest/overview/main_indoor_cofest.jpg" alt="Community Projects">
               <h3>Community Projects</h3>
-              <p>Contribute to CoFest sprints, improving the tools and training materials that power our community.</p>
+              <p>CoFest sprint to enhance our collective tools and documentation.</p>
             </div>
           </div>
         </section>
 
-        <!-- REGISTER BLOCK -->
+        <!-- Register Block -->
         <section class="block register">
-          <h2>Secure Your Spot at GBCC 2025</h2>
-          <p>We’d love the opportunity to meet and collaborate with you at GBCC 2025—join us for inspiring talks, hands‑on workshops, and community sprints that turn ideas into impact.</p>
+          <h2>Secure Your Spot at GBCC 2025</h2>
+          <p>
+            We’d love the opportunity to meet and collaborate with you—join us for
+            inspiring talks, hands‑on workshops, and community sprints that turn
+            ideas into real‑world impact.
+          </p>
           <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25"
-             class="cta register-button"
+             class="cta-link"
              target="_blank">
             Register Now
           </a>
@@ -92,148 +105,177 @@
     {{ partial "scripts.html" . }}
     {{ partial "custom-scripts.html" . }}
 
-    <style>
-      :root {
-        --bg-light: #f5f1e3;
-        --fg-dark: #333;
-        --accent: #2e5636;
-        --pad: 40px;
-        --gap: 30px;
-      }
-      body {
-        margin: 0;
-        background: var(--bg-light);
-        color: var(--fg-dark);
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
-      #conference-overview-page {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .block {
-        background: white;
-        padding: var(--pad) 20px;
-        margin-bottom: var(--gap);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      }
-      /* Full‑width hero */
-      .hero {
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        width: 100vw;
-        height: 70vh;
-        background: url('/img/about/overview/aerial.jpg') center/cover no-repeat;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 80px 20px;
-      }
-      .hero::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.1);
-      }
-      .hero > * { position: relative; z-index: 1; }
-      .hero h1 { font-size: 10rem; margin-bottom: .5rem; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);}
-      .hero p { font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.99);}
-
-      .hero h1,
-      .hero p {
-        display: inline-block;
-        background: rgba(0, 0, 0, 0.7);         
-        backdrop-filter: blur(6px);              
-        -webkit-backdrop-filter: blur(6px);      
-        padding: 0.75rem 1.25rem;
-        border-radius: 8px;                     
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); 
-        text-shadow: none;
-      }
-      /* Split about */
-      .about .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--gap);
-        align-items: center;
-      }
-      .about img {
-        width: 100%;
-        border-radius: 8px;
-      }
-      .about h2 { color: var(--accent); margin-bottom: 1rem; }
-      /* Why attend */
-      .why-attend h2 { color: var(--accent); margin-bottom: 1rem; }
-      .why-attend ul {
-        padding-left: 20px;
-        list-style: disc;
-        margin-bottom: 1rem;
-      }
-      .why-attend li {
-        margin-bottom: .75rem;
-      }
-      .subtext {
-        font-style: italic;
-        color: #555;
-        margin-top: 1rem;
-      }
-      /* Highlights grid */
-      .highlights .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-        gap: var(--gap);
-      }
-      .highlights .item {
-        text-align: center;
-      }
-
-      .highlights .item img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 15px;
-      }
-      .register {
-        text-align: center;
-      }
-
-      .register .register-button {
-        display: inline-block;
-        margin: 1.5rem auto 0;
-      }
-      /* CTA buttons */
-      .cta {
-        display: inline-block;
-        background: var(--accent);
-        color: white;
-        text-decoration: none;
-        padding: .75rem 1.5rem;
-        border-radius: 4px;
-        transition: background .2s;
-      }
-      .cta:hover {
-        background: #163c27;
-      }
-      .register-button {
-        margin-top: 1rem;
-      }
-      /* Responsive */
-      @media (max-width: 768px) {
-        .hero { padding: 40px 20px; }
-        .hero h1 { font-size: 3rem; }
-        .hero p { font-size: 1.5rem; }
-        .about .content {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </body>
 </html>
+
+<style>
+  :root {
+    --bg-light:  #f5f1e3;
+    --fg-dark:   #333;
+    --accent:    #2E5636;
+    --cyan:      #6C91C2;
+    --gradient:  linear-gradient(90deg, var(--accent), var(--cyan));
+    --pad:       40px;
+    --gap:       30px;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--fg-dark);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+
+  /* Hero Overlay */
+  .hero {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: var(--gap);
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50vh;
+    background: url('/img/about/overview/aerial.jpg') center/cover no-repeat;
+    margin-bottom: var(--gap);
+  }
+  .hero img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .hero-overlay .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px var(--pad);
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 90%;
+  }
+  .hero-text h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-text .lead {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .cta-link {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    transition: background 0.2s ease;
+  }
+  .cta-link:hover {
+    background: var(--cyan);
+  }
+
+  /* Block & Section Styling */
+  .block {
+    background: white;
+    padding: var(--pad) 20px;
+    margin-bottom: var(--gap);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    position: relative;
+        
+  }
+  h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: var(--gradient);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+  }
+
+  /* About Split */
+  .about .content {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    align-items: center;
+  }
+  .about img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .about h2 { margin-bottom: 0.75rem; }
+
+  /* Lists */
+  ul {
+    padding-left: 1.5rem;
+    list-style: disc inside;
+    margin-bottom: 1rem;
+  }
+  ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  /* Highlights Grid */
+  .highlights .grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
+  .highlights .item {
+    text-align: center;
+  }
+  .highlights img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .highlights h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  /* Register Section */
+  .register p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+  .register h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-overlay .hero-text {
+      padding: 20px;
+      width: 80%;
+    }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-text .lead { font-size: 1.4rem; }
+    .cta-link { font-size: 1.1rem; }
+    .about .content { grid-template-columns: 1fr; }
+  }
+</style>

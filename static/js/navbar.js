@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "registration": [
         { name: "Conference Registration", url: "/registration/conference" },
         { name: "Cofest Registration", url: "/registration/cofest" },
-        { name: "Scholarships", url: "/registration/scholarships" }
+        // { name: "Scholarships", url: "/registration/scholarships" }
       ],
       "sponsor": [
         { name: "Sponsor Information", url: "/sponsorships/sponsor_info" }

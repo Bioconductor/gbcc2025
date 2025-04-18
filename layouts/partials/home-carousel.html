@@ -1,20 +1,37 @@
-<section class="carousel-container">
-  <div class="swiper">
+<div class="carousel-outer">
+  <section class="carousel-container">
+    <div class="swiper">
       <div class="swiper-wrapper">
-          <div class="swiper-slide">
-              <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25" target="_blank" class="carousel-link">
-                  <img src="/img/carousel/home/registration_open.svg" alt="Registration Open">
-              </a>
-          </div>
-          <div class="swiper-slide">
-              <a href="{{ "about/venue/" | relURL }}" class="carousel-link">
-                  <img src="/img/carousel/home/discover_harbor.svg" alt="Learn about Cold Spring Harbor">
-              </a>
-          </div>
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <a href="https://meetings.cshl.edu/meetingsregistrationgeneral.aspx?meet=galaxy&year=25"
+             target="_blank" class="carousel-link">
+            <picture>
+              <!-- Mobile version when viewport ≤768px -->
+              <source media="(max-width: 768px)"
+                      srcset="/img/carousel/home/banner2_5x4.png">
+              <!-- Default desktop version -->
+              <img src="/img/carousel/home/banner2_21x9.png"
+                   alt="Registration Open">
+            </picture>
+          </a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <a href="https://jhu.campusgroups.com/otp_signup?module=event&event_id=1965989" target="_blank" class="carousel-link">
+            <picture>
+              <source media="(max-width: 768px)"
+                      srcset="/img/carousel/home/CoFest_banner_5x4.png">
+              <img src="/img/carousel/home/CoFest_banner_21x9.png"
+                   alt="Learn about Cold Spring Harbor">
+            </picture>
+          </a>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
-  </div>
-</section>
+    </div>
+  </section>
+</div>
 
 <!-- Swiper CSS & JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -39,11 +56,32 @@
 </script>
 
 <style>
-/* 1. Container: Full width, fixed height */
+  :root {
+    --carousel-max: 1800px;
+    --soft-beige: #F5F1E3;
+    --light-cream: #FFF9ED;
+  }
+
+  /* 1. The full‑width “outer” background */
+  .carousel-outer {
+    width: 100vw;
+    padding: 20px 0;
+    background: linear-gradient(
+      to right,
+      rgb(231, 236, 230) 0%,
+      rgb(244, 247, 245) 100%
+    );
+    display: flex;            
+    justify-content: center;
+  }
+
+/* 2. Constrain the carousel itself */
 .carousel-container {
-    width: 100vw;      /* Full browser width */
-    height: 60vh;      /* Fixed 60% of viewport height */
-    overflow: hidden;  /* Prevents content overflow */
+  max-width: var(--carousel-max);
+  width: 100%;
+  height: min(calc(100vw * 9 / 21), 60vh);
+  overflow: hidden;
+  position: relative;
 }
 
 /* 2. Swiper: Full container width & height */
@@ -74,9 +112,10 @@
 .carousel-link img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images fill their space */
-    object-position: center; /* Keeps image centered */
-    pointer-events: none; /* Prevents interference with link clicking */
+    object-fit: contain; 
+    object-position: center; 
+    pointer-events: none;
+    display: block;
 }
 
 .swiper-pagination {
@@ -98,6 +137,13 @@
 .swiper-pagination-bullet-active {
   background: #fff;
 }
-
+@media (max-width: 768px) {
+  .carousel-outer {
+    padding: 0;
+  }
+  .carousel-container {
+    height: min(calc(100vw * 4 / 5), 60vh);
+  }
+}
 </style>
   
