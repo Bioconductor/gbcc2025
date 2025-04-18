@@ -8,14 +8,15 @@
 
       <!-- HERO -->
       <section class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-inner">
           <div class="hero-text">
-            <h1><span>Scholarships @ GBCC 2025</span></h1>
+            <h1><span>Scholarships @ GBCC 2025</span></h1>
             <p class="hero-sub">
-              Applications are now closed — thank you to everyone who applied!
+              Applications are now closed — thank you to everyone who applied!
             </p>
             <p class="hero-note">
-              Please check back for future funding opportunities or contact us at
+              Check back for future funding opportunities, or contact
               <a href="mailto:gbcc2025-org@gaggle.email">gbcc2025-org@gaggle.email</a>
               for virtual registration support.
             </p>
@@ -25,7 +26,7 @@
 
       <main id="scholarships-page" class="container">
 
-        <!-- SCHOLARSHIPS OVERVIEW -->
+        <!-- OVERVIEW -->
         <section class="scholarships-overview">
           <h2>Overview</h2>
           <p>
@@ -33,7 +34,7 @@
             computational biology and open‑source science:
           </p>
           <ul>
-            <li><strong>JXTX Scholarships</strong> — covers registration &amp; travel</li>
+            <li><strong>JXTX Scholarships</strong> — covers conference registration &amp; travel</li>
             <li><strong>JJ Travel Fellowships</strong> — travel grants for students &amp; postdocs</li>
           </ul>
         </section>
@@ -41,16 +42,15 @@
         <!-- JXTX SCHOLARSHIPS -->
         <section class="scholarship-card">
           <h2>JXTX Scholarships</h2>
-          <p>
-            The JXTX Foundation will award four scholarships:
-          </p>
+          <p>The JXTX Foundation will award four scholarships:</p>
           <ul>
-            <li><strong>Tier 1</strong> — registration + up to US$1,000 travel</li>
+            <li><strong>Tier 1</strong> — registration + up to US$1,000 travel</li>
             <li><strong>Tier 2</strong> — registration only</li>
           </ul>
           <div class="application-button">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScnoDRK72jRyZK63bC3VLUq01WdGJ-NeS72nbzbYapu_i6WxA/viewform"
-               target="_blank" class="btn">
+               target="_blank"
+               class="btn">
               Apply for JXTX Scholarship
             </a>
           </div>
@@ -66,15 +66,18 @@
           <div class="key-dates">
             <h3>Key Dates</h3>
             <ul>
-              <li><strong>Apply by:</strong> April 8 2025</li>
-              <li><strong>Winners Announced:</strong> April 17 2025</li>
+              <li><strong>Apply by:</strong> April 8, 2025</li>
+              <li><strong>Winners announced:</strong> April 17, 2025</li>
             </ul>
           </div>
           <h3>How to Apply</h3>
-          <p>Email the following to <a href="mailto:jj-fund@jxtxfoundation.org">jj-fund@jxtxfoundation.org</a>:</p>
+          <p>
+            Email the following documents to
+            <a href="mailto:jj-fund@jxtxfoundation.org">jj-fund@jxtxfoundation.org</a>:
+          </p>
           <ul>
-            <li>A 1‑page statement of research interests &amp; conference goals</li>
-            <li>Your CV</li>
+            <li>A one‑page statement of research interests &amp; conference goals</li>
+            <li>Your curriculum vitae (CV)</li>
             <li>An advisor’s reference letter</li>
           </ul>
           <div class="application-button">
@@ -89,8 +92,7 @@
           <h2>Our Mission</h2>
           <p>
             These awards remove financial barriers and honor JJ’s legacy of
-            mentorship, empowering the next generation of Galaxy &amp;
-            Bioconductor contributors.
+            mentorship, empowering the next generation of Galaxy & Bioconductor contributors.
           </p>
         </section>
 
@@ -103,7 +105,7 @@
             countless scientists.
           </p>
           <figure>
-            <img src="/img/jj_scholarship.webp" alt="James (JJ) Johnson" class="jj-photo">
+            <img src="/img/jj_scholarship.webp" alt="James JJ Johnson" class="jj-photo">
             <figcaption>James “JJ” Johnson</figcaption>
           </figure>
         </section>
@@ -118,15 +120,15 @@
 
     <style>
       :root {
-        --bg-light:  #f5f1e3;
-        --bg-dark:   #1B3A4B;
-        --fg-dark:   #333;
-        --fg-light:  #fff;
-        --accent:    #2E5636;
-        --cyan:      #6C91C2;
-        --gradient:  linear-gradient(90deg, var(--accent), var(--cyan));
-        --pad:       40px;
-        --gap:       40px;
+        --bg-light:   #f5f1e3;
+        --fg-dark:    #333;
+        --fg-light:   #fff;
+        --accent:     #2E5636;
+        --cyan:       #6C91C2;
+        --gradient:   linear-gradient(90deg, var(--accent), var(--cyan));
+        --pad:        40px;
+        --gap:        40px;
+        --hero-img:   url('/img/scholarships/banner.jpg');
       }
       body {
         margin: 0;
@@ -134,14 +136,11 @@
         color: var(--fg-dark);
         font-family: Arial, sans-serif;
         line-height: 1.6;
+        overflow-x: hidden;
       }
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      a:hover {
-        color: var(--cyan);
-      }
+      a { color: var(--accent); }
+      a:hover { color: var(--cyan); }
+
       .container {
         max-width: 1100px;
         margin: 0 auto 60px;
@@ -152,39 +151,37 @@
       .hero {
         position: relative;
         width: 100vw;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50%; transform: translateX(-50%);
         height: 45vh;
-        background: url('/img/scholarships/banner.jpg') center/cover no-repeat;
+        background: var(--hero-img) center/cover no-repeat;
         display: flex; align-items: center; justify-content: center;
         margin-bottom: var(--gap);
       }
       .hero::after {
-        content: '';
+        content: "";
         position: absolute; inset: 0;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.5);
       }
       .hero-inner {
         position: relative; z-index: 1;
         text-align: center; color: var(--fg-light);
-        max-width: 800px; padding: 0 20px;
+        padding: 0 20px;
       }
       .hero-text h1 span {
         background: var(--gradient);
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-weight: 800;
         display: block;
         margin-bottom: 0.5rem;
       }
       .hero-sub {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
       }
       .hero-note {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
         opacity: 0.9;
       }
 
@@ -194,23 +191,23 @@
         margin-bottom: var(--gap);
       }
       .scholarships-overview h2 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         color: var(--accent);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
       }
       .scholarships-overview p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
       }
       .scholarships-overview ul {
         list-style: disc inside;
         display: inline-block;
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         max-width: 600px;
       }
 
-      /* CARD SECTIONS */
+      /* SCHOLARSHIP CARDS */
       .scholarship-card {
         background: #fff;
         padding: var(--pad);
@@ -219,25 +216,26 @@
         margin-bottom: var(--gap);
       }
       .scholarship-card h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: var(--accent);
         margin-bottom: 1rem;
       }
       .scholarship-card p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 1rem;
       }
       .scholarship-card ul {
         margin-left: 1.5rem;
         margin-bottom: 1rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .scholarship-card ul li {
         margin-bottom: 0.5rem;
       }
 
+      /* KEY DATES */
       .key-dates h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: var(--cyan);
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
@@ -248,24 +246,8 @@
         margin: 0 0 1rem;
       }
       .key-dates li {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
-      }
-
-      /* THANK YOU NOTE */
-      .scholarship-thanks {
-        background: var(--cyan);
-        color: var(--fg-light);
-        padding: 20px 30px;
-        border-radius: 4px;
-        margin-bottom: var(--gap);
-        font-size: 1.2rem;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-      .scholarship-thanks a {
-        color: var(--bg-dark);
-        font-weight: bold;
       }
 
       /* FIGURE */
@@ -274,13 +256,13 @@
         margin: 1.5rem 0;
       }
       .jj-photo {
-        max-width: 300px;
+        max-width: 280px;
         width: 100%;
         border-radius: 4px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
       figcaption {
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: #555;
         margin-top: 0.5rem;
       }
@@ -296,7 +278,7 @@
         background: var(--accent);
         color: var(--fg-light);
         border-radius: 4px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         transition: background 0.2s;
       }
       .btn:hover {
@@ -306,12 +288,12 @@
       /* RESPONSIVE */
       @media (max-width: 768px) {
         .hero { height: 35vh; }
-        .hero-text h1 span { font-size: 2.8rem; }
-        .hero-sub, .hero-note { font-size: 1rem; }
-        .scholarships-overview ul { font-size: 1rem; }
+        .hero-text h1 span { font-size: 2.5rem; }
+        .hero-sub, .hero-note { font-size: 0.95rem; }
+        .scholarships-overview ul { font-size: 0.95rem; }
         .scholarship-card { padding: 20px; }
-        .scholarship-card h2 { font-size: 2rem; }
-        .scholarship-card p, .scholarship-card ul li { font-size: 1rem; }
+        .scholarship-card h2 { font-size: 1.8rem; }
+        .scholarship-card p, .scholarship-card ul li { font-size: 0.95rem; }
         .jj-photo { max-width: 80%; }
       }
     </style>
