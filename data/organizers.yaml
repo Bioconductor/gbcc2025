@@ -93,6 +93,10 @@ general_organizing_committee:
     photo: "/img/organizers/TylerCollins.png"
     title: "Senior Programming Analyst"
     organization: "Johns Hopkins University"
+  - name: "Wes Wilson"
+    photo: "/img/organizers/WesWilson.png"
+    title: "Cancer Researcher and Tumor Immunologist"
+    organization: "University of Pennsylvania"
 
 cofest_organizers:
   - name: "Alex Mahmoud"
