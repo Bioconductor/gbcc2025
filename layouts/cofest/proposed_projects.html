@@ -7,12 +7,97 @@
       {{ partial "nav.html" . }}
 
       <!-- Main Content -->
-      <main id="coming-soon-page" class="container">
+      <main id="proposed-projects-page" class="container">
         <header class="page-header">
-          <h1>🚀 Something Exciting is Coming Soon!</h1>
-          <p>We're working hard to bring you something amazing. Stay tuned!</p>
+          <h1>📋 Cofest Proposed Projects</h1>
+          <p>
+            Explore project ideas for the GBCC 2025 Cofest, and share your own ideas using the Google Form available (soon) below!
+          </p>
         </header>
 
+        <!-- About Cofest Projects -->
+        <section class="proposed-projects-section">
+          <h2>🤔 What is a Cofest Project?</h2>
+          <p>
+            A Cofest Project is not necessarily a specific achievable goal, but rather a
+            <b>collaborative effort</b>
+            to explore a topic, share knowledge, write code, develop a tool or in general,
+            <b>work together</b>
+            on something that interests you.
+          </p>
+          <p class="about-cofest-projects-headline">
+            A good project idea for the Cofest is preferrably a collaborative one or at the very least,
+            one that would benefit from in-person planning, feedback and dicussion.
+          </p>
+        </section>
+
+        <!-- Current Proposed Projects -->
+        <section class="proposed-projects-section">
+          <h2>📝 What Kinds of Projects Can You Expect?</h2>
+          <p>
+            We encourage you to suggest your own ideas, but here are some examples of projects that have been proposed,
+            which you can join or use as inspiration:
+          </p>
+
+          <div class="project-grid">
+            <div class="project-item">
+              <h3>📦 Packaging an analysis using R shiny</h3>
+              <p>
+                Work with Galaxy developers to package an analysis using R shiny and deploy it on Galaxy.
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>🔧 Tool Wrapping</h3>
+              <p>Wrap a tool for Galaxy or Bioconductor, making it easier to use and integrate.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>📝 Tool YAMLs and Extending Support</h3>
+              <p>Explore how to create and extend tool YAMLs for better compatibility.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>🤖 Galaxy Machine Learning Tools</h3>
+              <p>Develop and integrate machine learning tools into the Galaxy framework.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>💬 ChatGXY</h3>
+              <p>
+                Work with Galaxy developers on improving the newly introduced ChatGXY (AI assistant)
+                integrated into Galaxy.
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>🐛 Papercuts (Bug Fixes)</h3>
+              <p>
+                Get hands on attention from a regular Galaxy developer, get Galaxy running locally, find
+                an issue to work on and resolve it!
+              </p>
+          </div>
+        </section>
+
+        <!-- How to Work on a Cofest Project -->
+        <section class="proposed-projects-section">
+          <h2>📢 How to Work on a Cofest Project</h2>
+            <p>
+              We will compile a list of projects based on the suggestions you provide through the Google Form.
+              At the start of the Cofest, we will come together to share these projects, along with additional
+              recommendations and the designated point of contact or project lead for each.
+              During the event, you can connect with them and begin collaborating!
+            </p>
+            <p>
+              Don't worry, we'll make sure there's something for everyone to work on.
+            </p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="proposed-projects-section">
+          <h2>🚀 Google Form Available Soon</h2>
+          <p>Stay tuned for the Google Form where you can suggest your own project ideas!</p>
+        </section>
       </main>
 
       {{ partial "footer.html" . }}
@@ -25,20 +110,20 @@
 </html>
 
 <style>
-    /* General Page Styling */
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  text-align: center;
 }
 
-#coming-soon-page {
+#proposed-projects-page {
   padding: 20px;
   background-color: #f5f1e3; /* Light beige background */
 }
 
 /* Header Section */
 .page-header {
+  text-align: center;
   background-color: #1b3a4b; /* Deep navy */
   color: white;
   padding: 20px;
@@ -46,9 +131,58 @@ body {
   margin-bottom: 40px;
 }
 
+.page-header p {
+  color: white;
+}
+
 .page-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+/* Sections */
+.proposed-projects-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.about-cofest-projects-headline {
+  color: white;
+  background: linear-gradient(135deg, #1b3a4b 0%, #2e5636 100%);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* Cofest Proposed Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 2rem;
+  color: #2e5636;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #3a3a3a;
 }
 
 /* Responsive Adjustments */
