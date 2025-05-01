@@ -6,76 +6,101 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- Main Content -->
-      <main id="bof-overview-page" class="container">
-        <header class="page-header">
-          <h1>🦜 Birds of a Feather (BoFs) at GBCC 2025</h1>
-          <p>Informal, interactive, and thought-provoking discussions on topics <b>that matter to you</b>.</p>
-        </header>
+      <main id="bofs-overview" class="container">
 
-        <!-- About BoFs -->
-        <section class="about-bofs">
-          <h2>🔍 What Are Birds of a Feather (BoFs)?</h2>
-          <p>Birds of a Feather (BoFs) are <b>free-form, participant-driven sessions</b> that provide a space for <b>rapid discussion and idea-sharing</b> on topics of shared interest. They can be technical, casual, or even activity-based—whatever sparks your curiosity!</p>
-          <p>Unlike formal presentations, BoFs are conversational — anyone can <b>suggest topics, join discussions, or just listen in</b>.</p>
+        <!-- Hero Section -->
+        <section class="hero hero-overlay">
+          <div class="hero-text">
+            <h1>Birds of a Feather</h1>
+            <p class="lead">Share ideas, connect with peers, and shape the future together.</p>
+          </div>
         </section>
 
-        <!-- Why Join a BoF? -->
-        <section class="why-join">
-          <h2>🤝 Why Should You Join a BoF?</h2>
-          <p>BoFs are a fantastic opportunity to:</p>
-          <ul>
-            <li>💡 <b>Engage in meaningful discussions</b> – Dive deep into topics with like-minded participants.</li>
-            <li>⚡ <b>Get quick insights</b> – Unlike structured sessions, BoFs allow for rapid idea exchange.</li>
-            <li>🛠️ <b>Collaborate & brainstorm</b> – Find potential collaborators or get feedback on projects.</li>
-            <li>🎉 <b>Have fun!</b> – BoFs can be social, interactive, and even spontaneous.</li>
-          </ul>
-        </section>
-
-        <!-- Examples of BoF Topics -->
-        <section class="bof-examples">
-          <h2>📝 What Kinds of BoFs Can You Expect?</h2>
-          <p>BoFs cover a wide range of topics, from technical deep dives to fun community activities. Here are just a few possibilities:</p>
-          <div class="bof-grid">
-            <div class="bof-item">
-              <h3>🌍 Bioinformatics & Tools</h3>
-              <p>Discuss differences in bioinformatics tools for microbial analysis and explore new methodologies.</p>
-            </div>
-            <div class="bof-item">
-              <h3>🖥️ Backend Computing Systems</h3>
-              <p>Share insights into high-performance computing, workflow automation, and system design.</p>
-            </div>
-            <div class="bof-item">
-              <h3>🏛️ Campus Tours</h3>
-              <p>Explore Cold Spring Harbor Laboratory with a guided group walk.</p>
-            </div>
-            <div class="bof-item">
-              <h3>📢 Open Science & Community Engagement</h3>
-              <p>Talk about open-source collaboration, documentation, and training efforts.</p>
-            </div>
-            <div class="bof-item">
-              <h3>🧑‍🏫 Education & Teaching Strategies</h3>
-              <p>Exchange ideas on how to better teach computational science.</p>
-            </div>
-            <div class="bof-item">
-              <h3>🎮 Fun & Networking</h3>
-              <p>From board games to social meetups—not all BoFs are technical!</p>
+        <!-- About BOFs -->
+        <section class="block about" id="about">
+          <div class="content">
+            <img src="/img/discussions/food_discussion.jpg" alt="Discussion at BOFs">
+            <div class="text">
+              <h2>What are BOFs?</h2>
+              <p>
+                Birds of a Feather (BOF) sessions are informal meetups where conference participants gather to discuss shared interests, pain points, or new ideas in a self-organized format.
+              </p>
+              <p>
+                These sessions can be pre-planned or spontaneous and are an excellent opportunity to network, brainstorm, and collaborate with fellow researchers, developers, and educators.
+              </p>
             </div>
           </div>
         </section>
 
-        <!-- How to Join or Propose a BoF -->
-        <section class="how-to-join">
-          <h2>📢 How to Participate in a BoF</h2>
-          <p>BoFs are open to everyone, and you don’t need to register in advance. Just show up and join a conversation!</p>
-          <p>Want to propose a BoF session? Stay tuned for an upcoming BoF proposal form where you can suggest and lead discussions.</p>
+        <!-- Why Join a BOF -->
+        <section class="block why-attend" id="why-bof">
+          <h2>Why Join a BOF?</h2>
+          <ul>
+            <li><strong>Accelerate Innovation</strong> – Coalesce expertise around emergent workflows to solve real-world bioinformatics problems.</li>
+            <li><strong>Forge Collaborations</strong> – Connect with domain experts and form cross-disciplinary teams to build next-generation tools.</li>
+            <li><strong>Share Best Practices</strong> – Rapidly disseminate lessons learned in high-performance computing, reproducibility, and training.</li>
+            <li><strong>Expand Your Network</strong> – Cultivate lasting professional relationships that extend beyond the conference walls.</li>
+          </ul>
+        </section>
+
+        <!-- BOF HIGHLIGHTS -->
+        <section class="bof-highlights block">
+          <h2>BOF Highlights</h2>
+
+          <div class="bof-item">
+            <div class="bof-media">
+              <img src="/img/discussions/rock_climbing.jpg" alt="Rock Climbing Networking">
+            </div>
+            <div class="bof-content">
+              <h3>Fun &amp; Social BOFs</h3>
+              <p>        Step away from the screen and into something playful—board games, rock-climbing challenges, or even an impromptu music jam.  
+                These sessions break down barriers and spark unexpected connections through shared laughter.  
+                You’ll see new colleagues showing off hidden talents and forge bonds that last long after the conference ends.  
+                The casual atmosphere makes it easy to start conversations that might lead to your next big collaboration.  
+                And who knows—you might just learn a new game or skill along the way!</p>
+            </div>
+          </div>
+
+          <div class="bof-item reverse">
+            <div class="bof-media">
+              <img src="/img/discussions/indoor_sitting.jpg" alt="Indoor Discussion">
+            </div>
+            <div class="bof-content">
+              <h3>Formal Indoor Discussions</h3>
+              <p>These carefully curated sessions happen in our breakout rooms with whiteboards at the ready.  
+                Experts and newcomers alike gather to deep-dive into topics like workflow reproducibility and ML integration.  
+                You’ll walk away not just with ideas, but with concrete action items and follow-up plans.  
+                The room buzzes as participants riff off each other’s experience and spark new lines of inquiry.  
+                It’s the perfect space for thoughtful, data-driven conversation in a focused environment.</p>
+            </div>
+          </div>
+
+          <div class="bof-item">
+            <div class="bof-media">
+              <img src="/img/discussions/outdoor_sitting.jpg" alt="Casual Outdoor Discussion">
+            </div>
+            <div class="bof-content">
+              <h3>Casual Outdoor Chats</h3>
+              <p>Why stay cooped up when you can stroll the historic CSHL grounds while you talk shop?  
+                Park-bench brainstorms and oceanside Q&amp;A sessions combine fresh air with fresh ideas.  
+                The open setting encourages creative thinking and low-pressure networking with peers.  
+                You might sketch out your next project on a napkin or swap tips on field-deployment of workflows.  
+                These outdoor gatherings remind us that great science can happen anywhere—even under an oak tree.</p>
+            </div>
+          </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="cta">
-          <h2>🚀 Ready to Join the Discussion?</h2>
-          <p>Stay tuned for the full BoF schedule, and get ready for engaging, unscripted conversations!</p>
+        <section class="block register">
+          <h2>Get Involved with BOFs</h2>
+          <p>
+            Whether you're looking to solve a technical challenge, brainstorm an outreach idea, or connect with people who share your passion, BOFs are the place to start.
+          </p>
+          <a href="https://forms.gle/C1KCK8vPU6KBrrMu5" target="_blank" class="cta-link">
+            Submit Your BOF Idea
+          </a>
         </section>
+
       </main>
 
       {{ partial "footer.html" . }}
@@ -87,99 +112,262 @@
 </html>
 
 <style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#bof-overview-page {
-  padding: 20px;
-  background-color: #f5f1e3;
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* Sections */
-.about-bofs,
-.why-join,
-.bof-examples,
-.how-to-join,
-.cta {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-/* BoF Grid */
-.bof-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.bof-item {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #2e5636;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #3a3a3a;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  font-size: 1.1rem;
-  color: #3a3a3a;
-  margin-bottom: 8px;
-}
-
-/* Call to Action */
-.cta {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cta h2 {
-  color: #1b3a4b;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .bof-grid {
-    grid-template-columns: 1fr;
+  :root {
+    --bg-light:  #f5f1e3;
+    --fg-dark:   #333;
+    --accent:    #2E5636;
+    --cyan:      #6C91C2;
+    --gradient:  linear-gradient(90deg, var(--accent), var(--cyan));
+    --pad:       40px;
+    --gap:       30px;
   }
-}
 
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--fg-dark);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+
+  /* Hero Overlay */
+  .hero {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: var(--gap);
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50vh;
+    background: url('/img/discussions/feather.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: var(--gap);
+  }
+  .hero img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .hero-overlay .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px var(--pad);
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 90%;
+  }
+  .hero-text h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-text .lead {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .bof-highlights h2 {
+    text-align: center;
+    margin-bottom: var(--pad);
+    position: relative;
+  }
+
+  .bof-item {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    padding: var(--pad);
+    border-radius: 8px;
+    border-left: 8px solid transparent;
+    transition: border-color 0.3s;
+    box-shadow:
+    0 2px 4px rgba(0,0,0,0.08),
+    0 8px 16px rgba(0,0,0,0.14);
+    margin-bottom: calc(var(--pad) * 1.5);
+    background: #fff;
+  }
+  .bof-item:nth-child(odd) {
+    border-color: var(--accent);
+  }
+  .bof-item:nth-child(even) {
+    border-color: var(--cyan);
+  }
+  .bof-item.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .bof-media {
+    flex: 1 1 40%;
+  }
+  .bof-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .bof-content {
+    flex: 1 1 60%;
+  }
+  .bof-content h3 {
+    font-size: 2.4rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .bof-content p {
+    font-size: 1.45rem;
+    line-height: 1.6;
+    color: var(--fg-dark);
+  }
+  .cta-link {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    transition: background 0.2s ease;
+  }
+  .cta-link:hover {
+    background: var(--cyan);
+  }
+
+  /* Block & Section Styling */
+  .block {
+    background: white;
+    padding: var(--pad) 20px;
+    margin-bottom: var(--gap);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    position: relative;
+        
+  }
+  h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: var(--gradient);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* About Split */
+  .about .content {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    align-items: center;
+  }
+  .about img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .about h2 { margin-bottom: 0.75rem; }
+
+  /* Lists */
+  ul {
+    padding-left: 1.5rem;
+    list-style: disc inside;
+    margin-bottom: 1rem;
+  }
+  ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  /* Highlights Grid */
+  .highlights .grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
+  .highlights .item {
+    text-align: center;
+  }
+  .highlights img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .highlights h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  /* Register Section */
+  .register p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .register h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-overlay .hero-text {
+      padding: 20px;
+      width: 80%;
+    }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-text .lead { font-size: 1.4rem; }
+    .cta-link { font-size: 1.1rem; }
+    .about .content { grid-template-columns: 1fr; }
+    .bof-item {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+    .bof-media,
+    .bof-content,
+    .bof-item.reverse {
+      width: 100%;
+    }
+    .bof-content h3 {
+      font-size: 2.4rem;
+      margin-top: 1rem;
+    }
+    .bof-content p {
+      font-size: 1.5rem;
+    }
+    .bof-item.reverse {
+      flex-direction: column;
+    }
+    .bof-item:nth-child(odd) {
+      border: none;
+    }
+    .bof-item:nth-child(even) {
+      border: none;
+    }
+  }
 </style>
