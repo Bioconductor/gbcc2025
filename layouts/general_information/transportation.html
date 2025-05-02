@@ -6,167 +6,409 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- Main Content -->
-      <main id="transportation-page" class="container">
-        <header class="page-header">
-          <h1>Getting to Cold Spring Harbor</h1>
-          <p>Find the best way to travel to GBCC 2025 at Cold Spring Harbor Laboratory.</p>
-        </header>
+      <main id="transportation-page">
 
-        <!-- By Train -->
-        <section class="transport-section">
-          <h2>🚆 By Train (From NYC)</h2>
-          <p>The <strong>Long Island Rail Road (LIRR)</strong> runs between <strong>Moynihan Train Hall (Penn Station)</strong> in NYC and <strong>Syosset LIRR Station</strong>.</p>
-          <p><b>Free Shuttle:</b> CSHL provides a complimentary <strong>shuttle service</strong> between Syosset and Grace Auditorium.</p>
-        </section>
-
-        <!-- By Taxi -->
-        <section class="transport-section">
-          <h2>🚖 By Taxi (From Syosset LIRR & Local Areas)</h2>
-          <p>Need a ride? Call a local taxi service:</p>
-          <ul>
-            <li>Syosset Taxi: <a href="tel:5169212141">(516) 921-2141</a></li>
-          </ul>
-        </section>
-
-        <!-- By Plane -->
-        <section class="transport-section">
-          <h2>✈️ By Plane</h2>
-          <div class="airport-info">
-            <h3>🛬 John F. Kennedy International Airport (JFK)</h3>
-            <p>45-90 min travel time to CSHL depending on traffic.</p>
-            <p>Take the JFK AirTrain to Jamaica Station, then connect to the LIRR.</p>
-          </div>
-
-          <div class="airport-info">
-            <h3>🛬 LaGuardia Airport (LGA)</h3>
-            <p>45-90 min travel time to CSHL.</p>
-            <p>Uber/Lyft or a reserved car is recommended.</p>
-          </div>
-
-          <div class="airport-info">
-            <h3>🛬 Long Island MacArthur Airport (ISP)</h3>
-            <p>40-60 min travel time to CSHL.</p>
-            <p>Uber/Lyft is recommended.</p>
-          </div>
-
-          <div class="airport-info">
-            <h3>🚫 Newark Liberty International Airport (EWR) (Not Recommended)</h3>
-            <p>Up to 2 hours by car and expensive.</p>
-            <p>Alternative: Take the Newark AirTrain to Penn Station NYC, then transfer to the LIRR.</p>
+        <!-- HERO BLOCK -->
+        <section class="block hero">
+          <div class="hero-text">
+            <h1>Getting to Cold Spring Harbor Laboratory</h1>
+            <p>
+              Plan your journey by train, car, taxi, rideshare, or air—and arrive ready for GBCC 2025.<br>
+              Detailed schedules, driving tips, shuttle routes, and trusted car-service contacts are all here to make your trip seamless.
+            </p>
           </div>
         </section>
 
-        <!-- Recommended Car Services -->
-        <section class="transport-section">
-          <h2>🚗 Recommended Car Services</h2>
-          <p>For safe and reliable transportation, use one of these services:</p>
-          <ul>
-            <li><b>Syosset Limousine Service (SLS)</b> - <a href="tel:5163649681">(516) 364-9681</a> | <a href="mailto:syossetlimo@aol.com">Email</a></li>
-            <li><b>Limos Long Island</b> - <a href="tel:5164003364">(516) 400-3364</a> (Use **promo code CSHL** for a discount)</li>
-            <li><b>Salmon Limousine Services</b> - <a href="tel:6315436412">(631) 543-6412</a></li>
-            <li><b>Executive Limousine</b> - <a href="tel:5168268172">(516) 826-8172</a> | <a href="https://www.executivelimousine.org" target="_blank">Website</a></li>
-          </ul>
-        </section>
-
-        <!-- Driving Directions -->
-        <section class="transport-section">
-          <h2>🛣️ Driving Directions</h2>
-          <div class="directions">
-            <h3>From NYC & Points West</h3>
-            <p>Take I-495E (Long Island Expressway) → Exit 41N → Follow 107N → 106N → 25A to Bungtown Road (CSHL entrance).</p>
+        <!-- TRANSPORT MODES -->
+        <section class="block features" id="modes">
+          <div class="feature">
+            <i class="fa fa-train fa-4x"></i>
+            <h3>By Train + Shuttle</h3>
+            <p>
+              The <strong>Long Island Rail Road (LIRR)</strong> departs Moynihan Train Hall (Penn Station) roughly every 30 minutes for Syosset (trip ≈ 55 minutes).<br>
+              From Syosset, the <strong>CSHL shuttle</strong> runs on the half-hour directly to Grace Auditorium—fully ADA-accessible and staffed by volunteers to assist with luggage.
+            </p>
           </div>
-
-          <div class="directions">
-            <h3>From Points South</h3>
-            <p>Take Southern State Pkwy → NY-135N → 25A → Bungtown Road (CSHL entrance).</p>
+          <div class="feature">
+            <i class="fa fa-taxi fa-4x"></i>
+            <h3>By Taxi or Rideshare</h3>
+            <p>
+              If shuttle times don’t align, local taxis (e.g. <strong>Syosset Taxi</strong> at <a href="tel:5169212141">(516) 921-2141</a>) serve Syosset Station 24/7.<br>
+              Uber/Lyft are plentiful—just request “Cold Spring Harbor Laboratory.” Expect a 10-15 minute ride from the station.
+            </p>
           </div>
-
-          <div class="directions">
-            <h3>From Points East</h3>
-            <p>Take I-495W → NY-231 → 25A → Bungtown Road (CSHL entrance).</p>
+          <div class="feature">
+            <i class="fa fa-plane fa-4x"></i>
+            <h3>By Air</h3>
+            <p>
+              <strong>JFK</strong> &amp; <strong>LGA</strong> both offer 45–90 minute transfers via LIRR or car, depending on traffic.<br>
+              <strong>ISP</strong> (MacArthur) is smaller but only ~40–60 minutes by car—Uber/Lyft recommended.<br>
+              We do <em>not</em> recommend <strong>EWR</strong> (Newark) due to long, multi-step transfers.
+            </p>
           </div>
         </section>
 
-        <!-- Hotel Information -->
-        <section class="transport-section">
-          <h2>🏨 Hotels & Accommodations</h2>
-          <p>CSHL arranges housing for ~90% of attendees. If you prefer to book your own accommodations, here are some local hotels:</p>
-          <table class="hotel-table">
-            <thead>
-              <tr>
-                <th>Hotel</th>
-                <th>Travel Time</th>
-                <th>Contact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>The Days Inn at Woodbury</td><td>~12 min</td><td><a href="tel:5169216900">(516) 921-6900</a></td></tr>
-              <tr><td>Comfort Inn</td><td>~15 min</td><td><a href="tel:5169211111">(516) 921-1111</a></td></tr>
-              <tr><td>Hampton Inn & Suites</td><td>~10 min</td><td><a href="tel:6318127054">(631) 812-7054</a></td></tr>
-              <tr><td>Holiday Inn</td><td>~15 min</td><td><a href="tel:5163497400">(516) 349-7400</a></td></tr>
-              <tr><td>The Inn at Fox Hollow</td><td>~12 min</td><td><a href="tel:5162248100">(516) 224-8100</a></td></tr>
-              <tr><td>Four Points by Sheraton</td><td>~15 min</td><td><a href="tel:5166946500">(516) 694-6500</a></td></tr>
-            </tbody>
-          </table>
-          <p class="note"><b>Note:</b> CSHL's free shuttle service is <strong>only available for specific hotels</strong>. Please confirm before booking.</p>
+        <!-- DRIVING DIRECTIONS -->
+        <section class="block travel" id="driving">
+          <div class="text">
+            <h2>Driving Directions</h2>
+
+            <div class="directions">
+              <h3>From Manhattan &amp; Points West</h3>
+              <p>
+                Take the Midtown Tunnel onto I-495 E (Long Island Expressway) → Exit 48 (Round Swamp Rd) → left on Jericho Turnpike → right on Bungtown Rd into the main CSHL entrance.
+              </p>
+            </div>
+
+            <div class="directions">
+              <h3>From Points South</h3>
+              <p>
+                Follow Southern State Parkway → merge onto NY-135 N → continue on Jericho Turnpike → right on Bungtown Rd. Look for “Grace Auditorium” signage.
+              </p>
+            </div>
+
+            <div class="directions">
+              <h3>From Points East</h3>
+              <p>
+                Drive west on I-495 to Exit 49 (NY-231 S) → continue onto NY-25A → left on Bungtown Rd → shuttle pick-ups in front of Grace Auditorium.
+              </p>
+            </div>
+          </div>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.781018567258!2d-73.45746198459414!3d40.86709547931452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e817be95093bbd%3A0xf0410660c43d118!2sCold%20Spring%20Harbor%20Laboratory!5e0!3m2!1sen!2sus!4v1699721714428!5m2!1sen!2sus"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
         </section>
+
+        <!-- CAR SERVICES & TRANSFERS -->
+        <section class="block about" id="car-services">
+          <div class="content">
+            <img src="/img/general_info/Limo.jpg" alt="Limousine Service">
+            <div class="text">
+              <h2>Car Services &amp; Private Shuttles</h2>
+              <p>
+                For point-to-point transfers (airports, hotels, train station), these licensed providers are highly recommended:
+              </p>
+              <ul>
+                <li>
+                  <strong><a href="https://www.syossetlimo.com" target="_blank">Syosset Limousine Service (SLS)</a></strong><br>
+                  Non-stop shuttle to/from JFK, LGA, MacArthur—serving CSHL since 1989.
+                </li>
+                <li>
+                  <strong><a href="https://www.limoslongisland.com" target="_blank">Limos Long Island</a></strong><br>
+                  Luxury sedans & SUVs—use promo code <em>CSHL</em> for 2025 discounts.
+                </li>
+                <li>
+                  <strong><a href="https://www.salmonlimo.com" target="_blank">Salmon Limousine Services</a></strong><br>
+                  24/7 service across Long Island—ideal for small groups.
+                </li>
+                <li>
+                  <strong><a href="https://www.executivelimousine.org" target="_blank">Executive Limousine Service</a></strong><br>
+                  Online reservations and corporate accounts available.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOTELS & SHUTTLE -->
+        <section class="block about" id="hotels">
+          <div class="content">
+            <img src="/img/general_info/hotel.webp" alt="Local Hotel Exterior">
+            <div class="text">
+              <h2>Partner Hotels &amp; Shuttle</h2>
+              <p>
+                CSHL’s free shuttle runs regularly between campus and these partner hotels.  
+                To guarantee service, please book directly using the CSHL group-rate link.
+              </p>
+              <ul>
+                <li>
+                  <strong><a href="https://www.wyndhamhotels.com/days-inn/woodbury-new-york/days-inn-woodbury/overview" target="_blank">Days Inn at Woodbury</a></strong> (~12 min drive)
+                </li>
+                <li>
+                  <strong><a href="https://www.choicehotels.com/new-york/syosset/comfort-inn-hotels/ny311" target="_blank">Comfort Inn, Syosset</a></strong> (~15 min drive)
+                </li>
+                <li>
+                  <strong><a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ISPHDHX&corporateCode=3340007" target="_blank">Hampton Inn & Suites, Huntington</a></strong> (~10 min drive)
+                </li>
+                <li>
+                  <strong><a href="https://www.thefoxhollow.com/hotel" target="_blank">The Inn at Fox Hollow</a></strong> (~12 min drive)
+                </li>
+                <li>
+                  <strong><a href="https://www.marriott.com/en-us/hotels/nycpf-four-points-by-sheraton-melville-long-island/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank">Four Points by Sheraton, Plainview</a></strong> (~15 min drive)
+                </li>
+                <li>
+                  <strong><a href="https://www.ihg.com/holidayinn/hotels/us/en/plainview/nycpv/hoteldetail" target="_blank">Holiday Inn, Plainview</a></strong> (~15 min drive)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Extra Info button -->
+        <section class="block submit-section">
+          <a
+            href="https://meetings.cshl.edu/travel.aspx?meet=galaxy&year=25"
+            class="cta"
+            target="_blank"
+          >
+            Full Travel &amp; Accommodation Info
+          </a>
+        </section>
+
       </main>
 
       {{ partial "footer.html" . }}
     </div>
 
     {{ partial "scripts.html" . }}
-    {{ partial "custom-scripts.html" . }}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <style>
+      :root {
+        --bg:        #1a1a1a;
+        --fg:        #fff;
+        --green:     #2E5636;
+        --accent:    #6C91C2;
+        --gradient:  linear-gradient(90deg, var(--accent), var(--cyan));
+        --pad:       24px;
+        --gap:       48px;
+        --car-block-gap: 48px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      #transportation-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+      .block {
+        background: var(--bg);
+        padding: var(--pad);
+        margin-bottom: var(--gap);
+        border-radius: 8px;
+      }
+
+      .block h2 {
+        font-size: 2.5rem;
+        position: relative;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+    .block h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        height: 50vh;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        border-radius: 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: url('/img/general_info/Train_hero.avif') center/cover no-repeat;
+      }
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.70);
+        border-radius: 8px;
+      }
+      .hero-text {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 0 var(--pad);
+      }
+      .hero-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: .75rem;
+      }
+      .hero-text p {
+        font-size: 1.4rem;
+        color: #ddd;
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+        gap: var(--gap);
+        text-align: center;
+      }
+      .feature i {
+        font-size: 3rem;
+        color: var(--accent);
+        margin-bottom: .75rem;
+      }
+      .feature h3 {
+        font-size: 1.75rem;
+        margin-bottom: .5rem;
+      }
+      .feature p {
+        font-size: 1.4rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+
+      /* Driving */
+      .travel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+        align-items: center;
+      }
+      .travel .text h2 {
+        font-size: 2.25rem;
+        color: white;
+        margin-bottom: .5rem;
+      }
+      .directions h3 {
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin-bottom: .25rem;
+      }
+      .directions p {
+        margin-bottom: 1.4rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+      .map iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 260px;
+        border: none;
+        border-radius: 8px;
+      }
+
+      /* Car Services & Hotels */
+      .about .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+        align-items: flex-start;
+      }
+      .about img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        max-height: 320px;
+      }
+      .about .text h2 {
+        font-size: 2.25rem;
+        color: white;
+        margin-bottom: .5rem;
+      }
+      .about .text p {
+        font-size: 1.4rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+      .about .text ul {
+        margin: 1rem 0;
+        color: #ccc;
+      }
+      .about .text ul li {
+        margin-bottom: .5rem;
+        font-size: 1.3rem;
+      }
+      .cta {
+        display: inline-block;
+        background: var(--green);
+        color: #fff;
+        padding: .85rem 1.75rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: background .2s;
+      }
+      .cta:hover {
+        background: var(--accent);
+      }
+
+      .block.about img {
+        max-height: 320px;
+        object-fit: cover;
+        height: 100%;
+      }
+
+      #car-services .text h2 {
+        font-size: 2.25rem;
+        color: white;
+        margin-bottom: .5rem;
+      }
+
+      #car-services .text p {
+        font-size: 1.4rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+
+      #car-services .text ul {
+        margin: 1rem 0;
+        color: #ccc;
+      }
+
+      #car-services .text ul li {
+        margin-bottom: .75rem;
+        font-size: 1.3rem;
+      }
+
+      #car-services .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--car-block-gap);
+        align-items: center;
+      }
+
+        /* Centered final CTA */
+      .submit-section {
+        text-align: center;
+      }
+      .submit-section .cta {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .travel, .about .content, .features {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 { font-size: 2.5rem; }
+        .hero-text p { font-size: 1.3rem; }
+        #car-services .content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#transportation-page {
-  padding: 20px;
-  background-color: #f5f1e3;
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-/* Section Styling */
-.transport-section {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-/* Hotel Table */
-.hotel-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.hotel-table th, .hotel-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.hotel-table th {
-  background-color: #2e5636;
-  color: white;
-}
-
-</style>
