@@ -12,7 +12,7 @@
           <div class="hero-text">
             <h1><span>Call&nbsp;for&nbsp;Abstracts</span></h1>
             <h3>GBCC 2025 Welcomes Talks & Posters</h3>
-            <p>The final posters will be accepted May 1st and presenters notified by the middle of May.</p>
+            <p>The final posters will be accepted May 9th and presenters notified by the middle of May.</p>
             <a class="pill-btn" href="https://meetings.cshl.edu/abstracts.aspx?meet=galaxy&year=25" target="_blank">
               Apply Now <i class="fa fa-arrow-right"></i>
             </a>
@@ -54,7 +54,7 @@
               <i class="fa fa-door-open"></i>
               <h3>Apply</h3>
               <p>Abstract portal open<br>
-                <strong>Poster Deadline&nbsp;May 1, 2025</strong></p>
+                <strong>Poster Deadline&nbsp;May 9, 2025</strong></p>
               <a href="https://meetings.cshl.edu/abstracts.aspx?meet=galaxy&year=25" target="_blank">Submit ↗</a>
             </div>
           </article>
@@ -74,7 +74,7 @@
               Abstracts must be no longer than <strong>2,900 characters</strong> (including spaces).
             </li>
             <li>
-              Poster abstracts are accepted through <strong>May 1, 2025</strong>. If your talk is accepted and you choose a poster instead, no additional submission is required.
+              Poster abstracts are accepted through <strong>May 9, 2025</strong>. If your talk is accepted and you choose a poster instead, no additional submission is required.
             </li>
             <li>
               Your acceptance email will include full details on:
@@ -96,8 +96,8 @@
           <div class="deadline-grid">
             <div><span>Talks Due</span> Apr 8 2025</div>
             <div><span>Decisions</span> ~ Apr 17 2025</div>
-            <div><span>Posters Due</span> May 1 2025</div>
-            <div><span>Decisions</span> ~ May 10 2025</div>
+            <div><span>Posters Due</span> May 9 2025</div>
+            <div><span>Decisions</span> ~ May 19 2025</div>
           </div>
         </article>
 
@@ -125,8 +125,8 @@
               <div class="faq-answer">
                 <p><strong>Talk Submission:</strong> April 8, 2025<br>
                    <strong>Talk Decisions:</strong> April 17, 2025<br>
-                   <strong>Poster Submission:</strong> May 1, 2025<br>
-                   <strong>Poster Decisions:</strong> May 10, 2025</p>
+                   <strong>Poster Submission:</strong> May 9, 2025<br>
+                   <strong>Poster Decisions:</strong> May 19, 2025</p>
               </div>
             </div>
             <div class="faq-item">
@@ -209,32 +209,32 @@ body {
 }
 
 /* HERO */
-/* HERO WRAPPER: flex‑center both axes, small gap */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 95vw;
+  position: relative;
+  margin: 0 auto;       
   height: 50vh;
   padding: 40px 20px;
   background: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* INNER CONTAINER: constrain width, center contents, 20px gap */
 .hero-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  max-width: 90vw;
-  width: 100%;
+  gap: 20px;
+  width: 100%;          
   height: 100%;
 }
 
 .hero-text,
 .hero-photo {
-  flex: 0 0 auto;
-  height: 100%;
-  display: flex;
+  flex: 1 1 auto;
+  max-width: 50%; 
   flex-direction: column;
   justify-content: center;
 }
@@ -252,11 +252,9 @@ body {
 
 /* IMAGE: full height of its container */
 .hero-photo img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  border: 1px solid var(--cyan);
-  border-radius: 6px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .hero-text h1 span {
