@@ -140,14 +140,14 @@ weight = 6
 
   [[menu.main]]
   parent = "cofest"
-  name = "Past Projects"
-  url = "/cofest/past_projects"
+  name = "Proposed Projects"
+  url = "/cofest/proposed_projects"
   weight = 2
 
   [[menu.main]]
   parent = "cofest"
-  name = "Proposed Projects"
-  url = "/cofest/proposed_projects"
+  name = "Past Projects"
+  url = "/cofest/past_projects"
   weight = 4
 
 [[menu.main]]

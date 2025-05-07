@@ -115,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       "cofest": [
         { name: "Cofest Overview", url: "/cofest/overview" },
-        { name: "Past Projects", url: "/cofest/past_projects" },
-        { name: "Proposed Projects", url: "/cofest/proposed_projects" }
+        { name: "Proposed Projects", url: "/cofest/proposed_projects" },
+        { name: "Past Projects", url: "/cofest/past_projects" }
       ],
       "bofs": [
         { name: "BOFs Overview", url: "/bofs/overview" }

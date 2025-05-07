@@ -7,12 +7,91 @@
       {{ partial "nav.html" . }}
 
       <!-- Main Content -->
-      <main id="coming-soon-page" class="container">
+      <main id="past-projects-page" class="container">
         <header class="page-header">
-          <h1>🚀 Something Exciting is Coming Soon!</h1>
-          <p>We're working hard to bring you something amazing. Stay tuned!</p>
+          <h1>🕰️ Cofest Past Projects</h1>
+          <p>
+            Here is a list of projects worked on in previous Cofests. You can use these as inspiration for
+            your own project ideas!
+          </p>
         </header>
 
+        <!-- Past Projects -->
+        <section class="past-projects-section">
+          <h2>
+            📝 Projects from the previous Cofest
+            <a href="https://galaxyproject.org/events/gcc2024/" target="_blank">(GCC 2024)</a>
+          </h2>
+          <p>
+            Here are some examples of projects worked on in the previous Cofest in Brno, Czech Republic.
+            Here is a link to the slides from the event:
+            <a href="https://docs.google.com/presentation/d/1uAgjha2Tqz0esolcu46xP89Jv43k3Edg4r4n4SBfHfE/edit?usp=sharing" target="_blank">
+              <b>Slides</b>
+            </a>
+          </p>
+
+          <div class="project-grid">
+            <div class="project-item">
+              <h3>🌿 Biodiversity & Ecology Resources</h3>
+              <p>Curate tools and materials for biodiversity research in Galaxy, with EDAM annotations.</p>
+
+              <p class="project-outcomes">
+                <b>Outcomes:</b>
+                <ul class="project-outcomes-list">
+                  <li>Filtered Galaxy tools for new “Ecology” and “Earth” SIGs</li>
+                  <li>A wish list for new Galaxy tools</li>
+                  <li>Some wrappers got (and some need) annotation fixed</li>
+                  <li>Additions and curation in Bio.tools</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>🔧 Galaxy ITs</h3>
+              <p>
+                Galaxy ITs often require wildcard DNS and SSL, which can be restrictive. Since Galaxy 24.0,
+                path-based ITs are supported, but tools need configuration.
+              </p>
+              <p>
+                <b>Goal:</b> Enable ITs via URL paths for easier use.
+                See: <a href="https://f1000research.com/slides/12-1163" target="_blank">F1000</a>.
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>🔬 Unifying Single Cell Subdomain Across Servers</h3>
+              <p>Create a central single cell page unifying .eu and .au subdomains, streamline content sharing, and curate tools and workflows.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>📚 Simplifying Data Citations to Match the Ease of Tool Citations</h3>
+              <p>Capture data citation information from Galaxy Data Sources and manually users upload files</p>
+
+              <p class="project-outcomes">
+                <b>Outcomes:</b>
+                <ul class="project-outcomes-list">
+                    <li>Explored differences between Galaxy Data Sources and Tools for data downloading</li>
+                    <li>Reviewed key elements of effective data citations</li>
+                    <li>Drafted user stories for data citation</li>
+                    <li>Noted databases with DOIs for entries, databases, and external primary citations</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>📅 GTN Office Hours</h3>
+              <p>
+                Share ideas, issues, or requests about the Galaxy Training Network. We can help brainstorm solutions, write tutorials, or get started
+                with GitHub/GitPod, FAQs, events, and more!
+              </p>
+            </div>
+
+            <!-- <div class="project-item">
+              <h3>🛠️ Galaxy Tool Shed</h3>
+              <p>Explore the Galaxy Tool Shed and its features, including tool management and sharing.</p>
+            </div> -->
+          </div>
+        </section>
       </main>
 
       {{ partial "footer.html" . }}
@@ -25,20 +104,20 @@
 </html>
 
 <style>
-    /* General Page Styling */
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  text-align: center;
 }
 
-#coming-soon-page {
+#past-projects-page {
   padding: 20px;
   background-color: #f5f1e3; /* Light beige background */
 }
 
 /* Header Section */
 .page-header {
+  text-align: center;
   background-color: #1b3a4b; /* Deep navy */
   color: white;
   padding: 20px;
@@ -46,9 +125,62 @@ body {
   margin-bottom: 40px;
 }
 
+.page-header p {
+  color: white;
+}
+
 .page-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+/* Sections */
+.past-projects-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Cofest Past Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-outcomes {
+  text-align: left;
+}
+
+.project-outcomes-list {
+  text-align: left;
+  list-style-type: circle;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2e5636;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #3a3a3a;
 }
 
 /* Responsive Adjustments */
