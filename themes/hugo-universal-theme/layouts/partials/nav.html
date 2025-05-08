@@ -7,23 +7,32 @@
       <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="navbar-logo">
     </a>
   </div>
-
+    
   <!-- Social Media and Navbar Container -->
   <div class="nav-container">
-    <!-- Desktop Social Media Icons (left unchanged) -->
+    <!-- Desktop Social Media Icons -->
     <div class="social-bar">
       <ul>
         <li>
-          <a href="https://github.com/Bioconductor/" target="_blank">
+          <a href="/socials#github" target="_blank">
             {{ "<i class='fab fa-github'></i>" | safeHTML }}
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/Bioconductor" target="_blank">
-            {{ "<i class='fab fa-2x fa-twitter'></i>" | safeHTML }}
+          <a href="/socials#linkedin" target="_blank">
+            {{ "<i class='fab fa-linkedin'></i>" | safeHTML }}
           </a>
         </li>
         <li>
+          <a href="/socials#bluesky" target="_blank">
+            {{ "<i class='fa-brands fa-bluesky'></i>" | safeHTML }}
+          </a>
+        </li>
+        <li>
+          <a href="/socials#mastodon" target="_blank">
+            {{ "<i class='fab fa-mastodon'></i>" | safeHTML }}
+          </a>
+        </li>
           <a href="mailto:workshop@bioconductor.org">
             {{ "<i class='fas fa-envelope'></i>" | safeHTML }}
           </a>
