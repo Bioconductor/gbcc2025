@@ -11,7 +11,7 @@
         <header class="page-header">
           <h1>📋 Cofest Proposed Projects</h1>
           <p>
-            Explore project ideas for the GBCC 2025 Cofest, and share your own ideas using the Google Form available (soon) below!
+            Explore project ideas for the GBCC 2025 Cofest, and share your own ideas using <a href="https://forms.gle/yD4Yo8M7Yi2mNrxZ7" /><strong>this Google Form</strong></a>!
           </p>
         </header>
 
@@ -53,6 +53,14 @@
             </div>
 
             <div class="project-item">
+              <h3>📦 Bioconductor Package Development</h3>
+              <p>Got a package idea, already maintaining one, or just eager to contribute? Whether you're
+              looking for feedback and guidance, or are eager to dive in and become a maintainer yourself,
+              this is your chance to connect with Bioconductor developers, learn, and contribute to the
+              Bioconductor ecosystem.</p>
+            </div>
+            
+            <div class="project-item">
               <h3>📝 Tool YAMLs and Extending Support</h3>
               <p>Explore how to create and extend tool YAMLs for better compatibility.</p>
             </div>
@@ -60,6 +68,11 @@
             <div class="project-item">
               <h3>🤖 Galaxy Machine Learning Tools</h3>
               <p>Develop and integrate machine learning tools into the Galaxy framework.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>🔧 Bioconductor Package Dependency Optimization</h3>
+              <p>Discuss and provide tooling to manage import chain complexity for Bioconductor packages.</p>
             </div>
 
             <div class="project-item">
@@ -71,12 +84,22 @@
             </div>
 
             <div class="project-item">
-              <h3>🐛 Papercuts (Bug Fixes)</h3>
+              <h3>🐛 Galaxy Papercuts (Bug Fixes)</h3>
               <p>
-                Get hands on attention from a regular Galaxy developer, get Galaxy running locally, find
+                Get hands-on attention from a regular Galaxy developer, get Galaxy running locally, find
                 an issue to work on and resolve it!
               </p>
-          </div>
+            </div>
+
+            <div class="project-item">
+              <h3>📄 Bioconductor Papercuts: Bring Your Questions, Bugs, or Suggestions</h3>
+              <p>
+                Meet and talk to Bioconductor developers, to ask questions, bring attention to bugs,
+                or suggest changes/features from Bioconductor that would improve your experience
+                using/developing Bioconductor.
+              </p>
+            </div>
+          
         </section>
 
         <!-- How to Work on a Cofest Project -->
@@ -95,8 +118,15 @@
 
         <!-- Call to Action -->
         <section class="proposed-projects-section">
-          <h2>🚀 Google Form Available Soon</h2>
-          <p>Stay tuned for the Google Form where you can suggest your own project ideas!</p>
+          <h2>💡 Suggest a Project</h2>
+          <p>
+            We are excited to hear your ideas! Please fill out the following Google Form to suggest a project:
+          </p>
+          <a href="https://forms.gle/yD4Yo8M7Yi2mNrxZ7" style="text-decoration: none;">
+            <button class="centered-button">
+              SUGGEST A PROJECT HERE!
+            </button>
+          </a>
         </section>
       </main>
 
@@ -131,6 +161,11 @@ body {
   margin-bottom: 40px;
 }
 
+.page-header a:link,
+.page-header a:visited {
+  color: #BDBDBD; /* Light Grey */
+}
+
 .page-header p {
   color: white;
 }
@@ -149,6 +184,22 @@ body {
   margin-bottom: 30px;
 }
 
+.proposed-projects-section .centered-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #1b3a4b 0%, #3a5f7d 100%);
+  border-radius: 8px;
+  border-color: #1b3a4b;
+  padding: 10px 10px;
+  font-size: 2rem;
+  color: white;
+}
+
+.proposed-projects-section .centered-button:hover {
+  background: linear-gradient(135deg, #3a5f7d 0%, #1b3a4b 100%);
+}
+
 .about-cofest-projects-headline {
   color: white;
   background: linear-gradient(135deg, #1b3a4b 0%, #2e5636 100%);
@@ -163,6 +214,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  justify-content: center;
 }
 
 .project-item {
@@ -171,6 +223,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
