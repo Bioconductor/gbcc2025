@@ -63,7 +63,7 @@ slots:
     events:
       grace:
         type: session-training
-        title: "Streamlining Bioinformatics: Bioconductor Tools in Galaxy Platform"
+        title: "Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy "
         loc: ""
       bush-auditorium:
         type: session-training
