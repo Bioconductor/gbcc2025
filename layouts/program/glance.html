@@ -25,49 +25,51 @@
         {{ range $i, $d := $days }}
           {{ $day := index $.Site.Data.schedule $d }}
           <div id="{{ $d }}" class="schedule-day {{ if eq $i 0 }}active{{ end }}">
-            <div class="schedule-grid">
-              <!-- Date header -->
-              <div class="date-header">{{ $day.title }}</div>
-              <!-- Column headers -->
-              <div class="time-header">Time</div>
-              {{ range $r := $day.rooms }}
-                <div class="room-header">{{ $r.name }}</div>
-              {{ end }}
-
-              <!-- Time slots -->
-              {{ range $slot := $day.slots }}
-                <div class="time-col">{{ $slot.time }}</div>
-
-                {{/* 1) Break rows */}}
-                {{ if $slot.break }}
-                  <div class="session-break" style="grid-column: 2 / -1;">
-                    Break
-                  </div>
-
-                {{/* 2) Span rows (dinner/lunch/networking, using either span or old colspan) */}}
-                {{ else if or $slot.span $slot.colspan }}
-                  {{ $evt := or $slot.event $slot.events }}
-                  <div class="session-block {{ $evt.type }}" style="grid-column: 2 / -1;">
-                    <div class="session-title">{{ $evt.title }}</div>
-                    {{ with $evt.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
-                  </div>
-
-                {{/* 3) Normal per-room cells */}}
-                {{ else }}
-                  {{ range $r := $day.rooms }}
-                    {{ $e := index $slot.events $r.id }}
-                    {{ if $e }}
-                      <div class="session-block {{ $e.type }}">
-                        <div class="session-title">{{ $e.title }}</div>
-                        {{ with $e.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
-                      </div>
-                    {{ else }}
-                      <div class="session-empty"></div>
+            <div class="schedule-wrapper">
+              <div class="schedule-grid">
+                <!-- Date header -->
+                <div class="date-header">{{ $day.title }}</div>
+                <!-- Column headers -->
+                <div class="time-header">Time</div>
+                {{ range $r := $day.rooms }}
+                  <div class="room-header">{{ $r.name }}</div>
+                {{ end }}
+  
+                <!-- Time slots -->
+                {{ range $slot := $day.slots }}
+                  <div class="time-col">{{ $slot.time }}</div>
+  
+                  {{/* 1) Break rows */}}
+                  {{ if $slot.break }}
+                    <div class="session-break" style="grid-column: 2 / -1;">
+                      Break
+                    </div>
+  
+                  {{/* 2) Span rows (dinner/lunch/networking, using either span or old colspan) */}}
+                  {{ else if or $slot.span $slot.colspan }}
+                    {{ $evt := or $slot.event $slot.events }}
+                    <div class="session-block {{ $evt.type }}" style="grid-column: 2 / -1;">
+                      <div class="session-title">{{ $evt.title }}</div>
+                      {{ with $evt.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
+                    </div>
+  
+                  {{/* 3) Normal per-room cells */}}
+                  {{ else }}
+                    {{ range $r := $day.rooms }}
+                      {{ $e := index $slot.events $r.id }}
+                      {{ if $e }}
+                        <div class="session-block {{ $e.type }}">
+                          <div class="session-title">{{ $e.title }}</div>
+                          {{ with $e.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
+                        </div>
+                      {{ else }}
+                        <div class="session-empty"></div>
+                      {{ end }}
                     {{ end }}
                   {{ end }}
                 {{ end }}
-              {{ end }}
-
+  
+              </div>
             </div>
           </div>
         {{ end }}
@@ -102,6 +104,7 @@
         --white:        #FFFFFF;
         --gap:          16px;
         --pad:          12px;
+        --nav-height:   140px;
 
         --color-checkin:      rgb(202, 55, 55);      
         --color-keynote:      var(--deep-navy);
@@ -120,6 +123,7 @@
 
       body {
         background: #1a1a1a;
+        padding-top: var(--nav-height);
       }
 
       .glance-container {
@@ -161,13 +165,14 @@
         background: var(--forest-green);
         color: var(--white);
       }
-      .schedule-day { display: none; }
+      .schedule-day { display: none; overflow-y: visible;}
       .schedule-day.active { display: block; }
       .schedule-grid {
         display: grid;
         grid-template-columns: 12% repeat(5, 1fr);
         grid-auto-rows: auto;
         border: 1px solid #ddd;
+        overflow-y: visible;
       }
       .schedule-grid > div {
         display: flex;
@@ -176,6 +181,12 @@
         border: 1px solid #ddd;
         padding: var(--pad);
         box-sizing: border-box;
+      }
+      .schedule-grid > .time-header,
+      .schedule-grid > .room-header {
+        position: sticky;
+        top: var(--nav-height);
+        z-index: 12;
       }
       .date-header {
         grid-column: 1 / -1;
@@ -326,16 +337,19 @@
           margin-bottom: 0 !important;
           text-align: center;
         }
-
-        .schedule-day {
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
+        .schedule-wrapper {
+          overflow-x: auto; 
+          overflow-y: visible;
+          -webkit-overflow-scrolling: touch; 
         }
         .schedule-grid {
           grid-template-columns: 25% repeat(5, minmax(120px,1fr));
-          overflow-x: auto;
+          overflow-y: visible;
         }
-
+        .schedule-grid > .time-header,
+        .schedule-grid > .room-header {
+          top: 0;
+        }
         .time-col,
         .time-header {
           font-size: 1.3rem;
