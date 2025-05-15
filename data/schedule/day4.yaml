@@ -1,39 +1,45 @@
-title: "Day 4: June 26 (Thurs.)"
+title: "Day 4 – June 26 (Thurs.)"
 
 rooms:
-  - "Grace Auditorium"
-  - "Bush Auditorium"
-  - "Bush Fireplace"
-  - "Nicholls Biondi"
-  - "Hawkins"
+  - id: grace
+    name: "Grace Auditorium"
+  - id: bush-auditorium
+    name: "Bush Auditorium"
+  - id: bush-fireplace
+    name: "Bush Fireplace"
+  - id: nicholls-biondi
+    name: "Nicholls Biondi"
+  - id: hawkins
+    name: "Hawkins"
 
-schedule:
-  - time: "9:00 - 10:00"
-    slots:
-        - session: "Keynote 3 (Jason)"
-          class: "session-keynote"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+slots:
+  - time: "7:30 - 9:00"
+    span: true
+    event:
+      type: session-breakfast
+      title: "Breakfast"
+      loc: ""
 
-  - time: "10:00 - 10:30"
-    slots:
-      - colspan: 5
-        session: "Break"
-        class: "session-break"
+  - time: "9:00 – 10:00"
+    events:
+      grace:
+        type: session-keynote
+        title: "Keynote 3 (Jason)"
+        loc: ""
 
-  - time: "10:30 - 12:00"
-    slots:
-        - session: "Oral session 4"
-          class: "session-oral"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+  - time: "10:00 – 10:30"
+    break: true
 
-  - time: "12:00 - 1:00"
-    slots:
-      - colspan: 5
-        session: "Lunch + departures"
-        class: "session-lunch"
+  - time: "10:30 – 12:00"
+    events:
+      grace:
+        type: session-oral
+        title: "Oral Session 5"
+        loc: ""
+
+  - time: "12:00 – 1:00"
+    span: true
+    event:
+      type: session-lunch
+      title: "Lunch + Departure"
+      loc: ""

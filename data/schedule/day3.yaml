@@ -1,104 +1,114 @@
-title: "Day 3: June 25 (Wed.)"
+title: "Day 3 – June 25 (Wed.)"
 
 rooms:
-  - "Grace Auditorium"
-  - "Bush Auditorium"
-  - "Bush Fireplace"
-  - "Nicholls Biondi"
-  - "Hawkins"
+  - id: grace
+    name: "Grace Auditorium"
+  - id: bush-auditorium
+    name: "Bush Auditorium"
+  - id: bush-fireplace
+    name: "Bush Fireplace"
+  - id: nicholls-biondi
+    name: "Nicholls Biondi"
+  - id: hawkins
+    name: "Hawkins"
 
-schedule:
-  - time: "9:00 - 10:00"
-    slots:
-        - session: "Keynote 2 (Charlotte)"
-          class: "session-keynote"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+slots:
+  - time: "7:30 - 9:00"
+    span: true
+    event:
+      type: session-breakfast
+      title: "Breakfast"
+      loc: ""
 
-  - time: "10:00 - 10:30"
-    slots:
-      - colspan: 5
-        session: "Break"
-        class: "session-break"
+  - time: "9:00 – 10:00"
+    events:
+      grace:
+        type: session-keynote
+        title: "Keynote 2 (Charlotte)"
+        loc: ""
 
-  - time: "10:30 - 11:15"
-    slots:
-        - session: "BoFs"
-          class: "session-bofs"  
-        - session: "BoFs"
-          class: "session-bofs"  
-        - session: "BoFs"
-          class: "session-bofs"  
-        - session: "BoFs"
-          class: "session-bofs"  
-        - session: "BoFs"
-          class: "session-bofs"  
-          
-  - time: "11:15 - 12:00"
-    slots:
-        - session: "Unconference Session"
-          class: "session-panel"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+  - time: "10:00 – 10:30"
+    break: true
 
-  - time: "12:00 - 1:00"
-    slots:
-      - colspan: 5
-        session: "Lunch"
-        class: "session-lunch"
+  - time: "10:30 – 11:15"
+    events:
+      grace:
+        type: session-lightning-talks
+        title: "Lightning Talks"
+        loc: ""
 
-  - time: "1:00 - 2:00"
-    slots:
-        - session: "Panel"
-          class: "session-panel"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
 
-  - time: "2:00 - 3:30"
-    slots:
-        - session: "Training / Demo 1"
-          class: "session-training"
-        - session: "Training / Demo 2"
-          class: "session-training"
-        - session: "Training / Demo 3"
-          class: "session-training"
-        - session: "Training / Demo 4"
-          class: "session-training"
-        - session: "Training / Demo 5"
-          class: "session-training"
+  - time: "11:15 – 12:00"
+    span: true
+    event:
+      type: session-bofs
+      title: "Birds of a Feather Sessions"
+      loc: ""
 
-  - time: "3:30 - 4:00"
-    slots:
-      - colspan: 5
-        session: "Break"
-        class: "session-break"
+  - time: "12:00 – 1:00"
+    span: true
+    event:
+      type: session-lunch
+      title: "Lunch"
+      loc: ""
 
-  - time: "4:00 - 5:00"
-    slots:
-        - session: "Oral session 3"
-          class: "session-oral"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+  - time: "1:00 – 2:00"
+    events:
+      grace:
+        type: session-oral
+        title: "Oral Session 3"
+        loc: ""
 
-  - time: "5:00 - 7:00"
-    slots:
-      - colspan: 5
-        session: "Dinner + BoFs"
-        class: "session-dinner"
+  - time: "2:00 – 3:30"
+    events:
+      grace:
+        type: session-training
+        title: "Streamlining Bioinformatics: Bioconductor Tools in Galaxy Platform"
+        loc: ""
+      bush-auditorium:
+        type: session-training
+        title: "Orchestrating Microbiome Analysis with Bioconductor and SummarizedExperiment"
+        loc: ""
+      bush-fireplace:
+        type: session-training
+        title: "Immunopeptidogenomics Pipeline in Galaxy for MHC-Bound Neoantigens"
+        loc: ""
+      nicholls-biondi:
+        type: session-training
+        title: "Leveraging BioDigs Data for Anvil Metagenomic Analysis"
+        loc: ""
+      hawkins:
+        type: session-training
+        title: "Galaxy History Based Alignment Comparison in IGB "
+        loc: ""
 
-  - time: "8:00 - 9:30"
-    slots:
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: "Posters 2"
-          class: "session-posters"
-        - session: " "
+  - time: "3:30 – 4:00"
+    break: true
+
+  - time: "4:00 – 5:00"
+    events:
+      grace:
+        type: session-oral
+        title: "Oral Session 4"
+        loc: ""
+
+  - time: "5:00 – 6:00"
+    span: true
+    event:
+      type: session-bofs
+      title: "Birds of a Feather Sessions"
+      loc: ""
+
+  - time: "6:00 – 7:00"
+    span: true
+    event:
+      type: session-dinner
+      title: "Banquet"
+      loc: ""
+
+  - time: "8:00 – 9:30"
+    events:
+      bush-auditorium:
+        type: session-party
+        title: "DJ Party & Galaxy 20th Anniversary Celebration" 
+        loc: ""
