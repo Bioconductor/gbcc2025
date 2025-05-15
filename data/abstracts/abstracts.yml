@@ -1,0 +1,730 @@
+abstracts:
+  #—— Day 1: Single Track Session 1 (10:30 – 12:00, Grace Auditorium) ——
+  - id: session1-1
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 1
+    title: "Galaxy All-in-One Agent: A Unified Natural Language Interface for Cross-Galaxy Data Analysis"
+    authors:
+      - "Junhao Qiu"
+      - "Jeremy Goecks"
+
+  - id: session1-2
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 2
+    title: "Introducing GalaxyMCP: Integrating AI Assistants with Galaxy Through the Model Context Protocol"
+    authors:
+      - "Dannon Baker"
+      - "Junhao Qiu"
+      - "Jeremy Goecks"
+      - "Mike Schatz"
+
+  - id: session1-3
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 3
+    title: "Automated integration of R/Bioconductor tools into Galaxy"
+    authors:
+      - "Jayadev Joshi"
+      - "Fabio Cumbo"
+      - "Daniel Blankenberg"
+
+  - id: session1-4
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 4
+    title: "User-Defined, Safe, and Rapidly Deployable Galaxy Tools with Embedded Type-Safe Editing"
+    authors:
+      - "Marius van den Beek"
+
+  - id: session1-5
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 5
+    title: "Bringing Data to Life: Galaxy’s New Visualization Framework"
+    authors:
+      - "Aysam Guerler"
+      - "Ahmed Awan"
+      - "Alireza Heidari"
+      - "Bjoern Gruening"
+      - "Dannon Baker"
+      - "David Lopez"
+      - "John Chilton"
+      - "Marius van den Beek"
+      - "Michelle Savage"
+      - "Anton Nekrutenko"
+      - "Michael C Schatz"
+
+  - id: session1-6
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 6
+    title: "Managing materials science workflows with Galaxy at STFC"
+    authors:
+      - "Leandro Liborio"
+      - "Subindev Devadasan"
+      - "Patrick Austin"
+      - "Milan Kumar"
+      - "Oliver Finlay"
+      - "Adam Bennet"
+      - "Archit Bhardwaj"
+      - "Kirill Fedorov"
+      - "Dan Symes"
+      - "Chris Armstrong"
+      - "Rajeev Pattathil"
+
+  - id: session1-7
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 7
+    title: "Language-agnostic strategies for genomic data representation in Bioconductor"
+    authors:
+      - "Vincent J Carey"
+
+  - id: session1-8
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 8
+    title: "Streamlining the User Experience for Reproducible Image Analysis in Galaxy"
+    authors:
+      - "Leonid Kostrykin"
+      - "Beatriz Serrano-Solano"
+      - "Riccardo Massei"
+      - "Karl Rohr"
+
+  - id: session1-9
+    day: 1
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Sehyun Oh"
+    slot: 9
+    title: "Enabling Genomic Research at Scale with NHGRI AnVIL: A Cloud Platform for Genomic Data Analysis"
+    authors:
+      - "Stephen L Mosher"
+      - "Michael C Schatz"
+      - "Jonathan Lawson"
+      - "Robert Carroll"
+
+  #—— Day 1: Parallel Track A Session 2A (3:00 – 5:00 PM, Bush Hall) ——
+  - id: session2A-1
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 1
+    title: "From Upload to Execution: A Unified Galaxy Workflow Run Interface"
+    authors:
+      - "Ahmed H Awan"
+      - "Dannon Baker"
+      - "Marius van den Beek"
+      - "John Chilton"
+      - "Aysam Guerler"
+      - "Alireza Heidari"
+      - "David Lopez"
+      - "Laila Los"
+      - "Michelle Savage"
+      - "Bjoern Gruening"
+      - "Anton Nekrutenko"
+      - "Michael C Schatz"
+
+  - id: session2A-2
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 2
+    title: "More Usable and More Powerful Galaxy Dataset Collections"
+    authors:
+      - "John Chilton"
+      - "Marius van den Beek"
+      - "Ahmed Awan"
+
+  - id: session2A-3
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 3
+    title: "AI-augmented data analyses in Galaxy"
+    authors:
+      - "Junhao Qiu"
+      - "Jeremy Goecks"
+
+  - id: session2A-4
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 4
+    title: "Benchmarking Quantum Machine Learning Models in Galaxy"
+    authors:
+      - "Bryan Raubenolt"
+      - "Akhil Mohan"
+      - "Kahn Rhrissorrakrai"
+      - "Aritra Bose"
+      - "Filippo Utro"
+      - "Laxmi Parida"
+      - "Ela Plow"
+      - "Daniel Blankenberg"
+
+  - id: session2A-5
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 5
+    title: "Leveraging Deep Learning with torch in R for Next-Generation Epigenetic Clock Development"
+    authors:
+      - "Jamie Park"
+
+  - id: session2A-6
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 6
+    title: "The Galaxy-ML2 tool suite: Using Galaxy to promote best practices in machine learning for biomedical data science"
+    authors:
+      - "Paulo Cilas Morais Lyra Junior"
+      - "Junhao Qiu"
+      - "Luke Sargent"
+      - "Qiang Gu"
+      - "Jeremy Goecks"
+
+  - id: session2A-7
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 7
+    title: "NOVA: Leveraging Galaxy for Neutrons Scattering Data Analysis and Visualization"
+    authors:
+      - "Gregory R Watson"
+
+  - id: session2A-8
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 8
+    title: "Towards the automatic integration of tools in Galaxy: the anvi’o suite and a new AI-driven automation pipeline"
+    authors:
+      - "Fabio Cumbo"
+      - "Jayadev Joshi"
+      - "Daniel Blankenberg"
+
+  - id: session2A-9
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 9
+    title: "Dynamic meta-scheduling in Galaxy with TPV Broker for smarter workload distribution"
+    authors:
+      - "Paul De Geest"
+      - "Sanjay Srikakulam"
+      - "Abdulrahman Azab"
+      - "Tomáš Vondrák"
+
+  - id: session2A-10
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 10
+    title: "One Million Heart Cells: Integrating Public Data on Galaxy to Explore How Cardiomyocytes Change in Atrial Fibrillation"
+    authors:
+      - "Marisa J Loach"
+      - "Daniel M Johnson"
+      - "Wendi Bacon"
+
+  - id: session2A-11
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 11
+    title: "gINTomics, a powerful Bioconductor package for multiomics data integration and visualization."
+    authors:
+      - "Angelo Velle"
+      - "Francesco Patanè"
+      - "Chiara Romualdi"
+
+  - id: session2A-12
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Bush Hall"
+    moderator: "Michael Love"
+    slot: 12
+    title: "Bioconductor-R-Shiny Applications on Galaxy"
+    authors:
+      - "Pavankumar Videm"
+      - "Paul Zierep"
+      - "Charlotte Soneson"
+      - "Federico Marini"
+      - "Bjoern Gruening"
+      - "Hans-Rudolf Hotz"
+
+  #—— Day 1: Parallel Track B Session 2B (3:00 – 5:00 PM, Grace Auditorium) ——
+  - id: session2B-1
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 1
+    title: "Robust ancestry inference from challenging human molecular data with RAIDS"
+    authors:
+      - "Pascal Belleau"
+      - "Xintong Li"
+      - "Astrid Deschênes"
+      - "Laine Marrah"
+      - "David A Tuveson"
+      - "Alex Krasnitz"
+
+  - id: session2B-2
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 2
+    title: "Meta-iPep: A metaimmunopeptidomics pipeline implemented within Galaxy platform to characterize HLA-bound microbial peptides for immunotherapy"
+    authors:
+      - "Katherine T Do"
+      - "Subina Mehta"
+      - "Reid Wagner"
+      - "Fengchao Yu"
+      - "Alexey Nesvizhskii"
+      - "Timothy J Griffin"
+      - "Pratik D Jagtap"
+
+  - id: session2B-3
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 3
+    title: "Analyzing allele-specific methylation using Oxford Nanopore long-read DNA sequencing"
+    authors:
+      - "Kasper D Hansen"
+
+  - id: session2B-4
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 4
+    title: "Public gene expression cancer signatures across bulk, single-cell and spatial transcriptomics data with signifinder Bioconductor package"
+    authors:
+      - "Stefania Pirrotta"
+      - "Laura Masatti"
+      - "Anna Bortolato"
+      - "Anna Corrà"
+      - "Fabiola Pedrini"
+      - "Martina Aere"
+      - "Giovanni Esposito"
+      - "Paolo Martini"
+      - "Davide Risso"
+      - "Chiara Romualdi"
+      - "Enrica Calura"
+
+  - id: session2B-5
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 5
+    title: "Host cell signaling during viral infection network perturbation analysis"
+    authors:
+      - "Pariksheet Nanda"
+      - "Jason E Shoemaker"
+
+  - id: session2B-6
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 6
+    title: "SEMplR: An R package for predicting the effects of genetic variation on transcription factor binding"
+    authors:
+      - "Grace E Kenney"
+      - "Rintsen N Sherpa"
+      - "Alan P Boyle"
+      - "Douglas H Phanstiel"
+
+  - id: session2B-7
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 7
+    title: "Enhancing rare variant analysis in biobanks: whole-genome annotation using GDS files"
+    authors:
+      - "Xiuwen Zheng"
+      - "Raven Chen"
+
+  - id: session2B-8
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 8
+    title: "Orthology Detection at the Scale of Modern Genomics"
+    authors:
+      - "Aidan H Lakshman"
+      - "Erik S Wright"
+
+  - id: session2B-9
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 9
+    title: "Multiscale analysis of lung adenocarcinoma spatial transcriptomics data"
+    authors:
+      - "Lambda Moses"
+      - "Bianca Dumitrascu"
+
+  - id: session2B-10
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 10
+    title: "Deciphering CLEC12A Negative Regulation of Neutrophil Activation by Network and Functional Enrichment Analyses"
+    authors:
+      - "Pascal Belleau"
+      - "Astrid Deschênes"
+      - "Guillaume Paré"
+      - "David Sykes"
+      - "Michael Mansour"
+      - "Matheus Jantsch"
+      - "Fidan Demir"
+      - "Ken McKleish"
+      - "Robert Faure"
+      - "Maria J Fernandes"
+
+  - id: session2B-11
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 11
+    title: "Broadening Metagenomic Horizons in Galaxy: Introducing the HiFi-MAG Pipeline, New Profilers, and Insights from BioDIGS"
+    authors:
+      - "Tyler Collins"
+      - "Alex Ostrovsky"
+      - "Michael Schatz"
+
+  - id: session2B-12
+    day: 1
+    time: "3:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Wes"
+    slot: 12
+    title: "Visualizing and analyzing differential transcript usage"
+    authors:
+      - "Beatriz Campillo"
+      - "Michael Love"
+
+  #—— Day 2: Single Track Session 3 (1:00 – 2:00 PM, Grace Auditorium) ——
+  - id: session3-1
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 1
+    title: "The Intergalactic Workflow Commission: Standardizing, Testing, and Distributing Reproducible Galaxy Workflows"
+    authors:
+      - "Marius van den Beek"
+
+  - id: session3-2
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 2
+    title: "A standardized R/Bioconductor framework for integrative analysis of histopathological images with multi-omics data"
+    authors:
+      - "Ilaria Billato"
+      - "Marcel Ramos Perez"
+      - "Sean Davis"
+      - "Mohamed Omar"
+      - "Vince J Carey"
+      - "Hervé Pagès"
+      - "Levi Waldron"
+      - "Chiara Romualdi"
+      - "Davide Risso"
+      - "Sehyun Oh"
+
+  - id: session3-3
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 3
+    title: "Advancing digital pathology with Galaxy: Tools for histological imaging foundation models"
+    authors:
+      - "Cameron Watson"
+      - "Luke Sargent"
+      - "Allison L Creason"
+
+  - id: session3-4
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 4
+    title: "Computational considerations for analysis of Visium HD: A Bioconductor user’s perspective"
+    authors:
+      - "Nicholas J Eagles"
+      - "Sarah E Maguire"
+      - "Kelsey D Montgomery"
+      - "Svitlana V Bach"
+      - "Chunyu Liu"
+      - "Brion Maher"
+      - "Keri Martinowich"
+      - "Stephanie Page"
+      - "Kristen Maynard"
+      - "Leonardo Collado-Torres"
+
+  - id: session3-5
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 5
+    title: "sosta: a framework to analyze anatomical structures from spatial omics data"
+    authors:
+      - "Samuel Gunz"
+      - "Mark D Robinson"
+
+  - id: session3-6
+    day: 2
+    time: "1:00 – 2:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Lamda Moses"
+    slot: 6
+    title: "Universally accessible interactive curation workflows for large genome assembly"
+    authors:
+      - "Delphine Lariviere"
+      - "Erick Duarte"
+      - "Bonhwang Koo"
+      - "Kirsty McCaffrey"
+      - "Richard Burhans"
+      - "Bjorn Grüning"
+      - "Saim Momin"
+      - "Patrik Smeds"
+      - "Marco Sollitto"
+      - "Marius van den Beek"
+      - "Adam M Phillippy"
+      - "Erich D Jarvis"
+      - "Michael C Schatz"
+      - "Anton Nekrutenko"
+      - "Giulio Formenti"
+
+  #—— Day 2: Single Track Session 4 (4:00 – 5:00 PM, Grace Auditorium) ——
+  - id: session4-1
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 1
+    title: "Empowering Bioinformatics in Africa through Bioconductor: Expanding Training and Community Engagement"
+    authors:
+      - "Maria Doyle"
+      - "Umar Ahmad"
+      - "Zedias Chikwambi"
+      - "Aedin Culhane"
+      - "Laurent Gatto"
+      - "Kozo Nishida"
+      - "Charlotte Soneson"
+      - "Trushar Shah"
+
+  - id: session4-2
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 2
+    title: "Building UseGalaxy Capability in Canada"
+    authors:
+      - "Carol Gauthier"
+      - "Charles Coulombe"
+      - "Jonathan Laperle"
+      - "Keith Suderman"
+      - "John Davis"
+      - "Nuwan Goonasekera"
+      - "Enis Afgan"
+      - "Pierre-Étienne Jacques"
+
+  - id: session4-3
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 3
+    title: "Mass Spectrometry-Centered Multi-Omics: Advancing Galaxy Training Materials for Integrated Analysis and Community Adoption"
+    authors:
+      - "Subina Mehta"
+      - "Katherine Do"
+      - "Saskia Hiltemann"
+      - "Reid Wagner"
+      - "Björn Grüning"
+      - "Helena Rasche"
+      - "Pratik D Jagtap"
+      - "Timothy J Griffin"
+
+  - id: session4-4
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 4
+    title: "Training and education in the cloud with the NHGRI AnVIL"
+    authors:
+      - "Natalie Kucher"
+      - "Michael C Schatz"
+      - "Jonathan Lawson"
+      - "Robert Carroll"
+
+  - id: session4-5
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 5
+    title: "Molecular ecology at the sertão - Using Galaxy to empower research in developing communities"
+    authors:
+      - "Carolina O Santana"
+      - "Pieter Spealman"
+      - "Gabriel Perron"
+
+  - id: session4-6
+    day: 2
+    time: "4:00 – 5:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Jenny"
+    slot: 6
+    title: "Democratising the Analysis of the Human Cell Atlas with Bioconductor"
+    authors:
+      - "Stefano Mangiola"
+
+  #—— Day 3: Single Track Session 5 (10:30 – 12:00, Grace Auditorium) ——
+  - id: session5-1
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 1
+    title: "plyxp: reimagining dplyr syntax for SummarizedExperiment objects"
+    authors:
+      - "Justin T Landis"
+      - "Michael I Love"
+
+  - id: session5-2
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 2
+    title: "Orchestrating Microbiome Analysis with Bioconductor"
+    authors:
+      - "Kris Sankaran"
+      - "Saritha Kodikara"
+      - "Jingyi Jessica Li"
+      - "Kim-Anh Le Cao"
+
+  - id: session5-3
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 3
+    title: "Inference with predicted data – what do we do after we have machine learned everything?"
+    authors:
+      - "Stephen Salerno"
+      - "Jiacheng Miao"
+      - "Awan Afiaz"
+      - "Kentaro Hoffman"
+      - "Anna Neufeld"
+      - "Qiongshi Lu"
+      - "Tyler H McCormick"
+      - "Jeffrey T Leek"
+
+  - id: session5-4
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 4
+    title: "Simple and Secure Credential Handling for Tools in Galaxy"
+    authors:
+      - "Alireza Heidari"
+      - "Arash Kadkhodaei"
+      - "David Lopez"
+      - "Bjoern Gruening"
+
+  - id: session5-5
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 5
+    title: "Bridging Earth System Sciences with Galaxy: Two Years of FAIR-EASE"
+    authors:
+      - "Marie Jossé"
+      - "Jérôme Detoc"
+      - "Erwan Bodéré"
+
+  - id: session5-6
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 6
+    title: "Dissect mitochondrial activity by transcriptome data with mitology R package"
+    authors:
+      - "Stefania Pirrotta"
+      - "Massimo Bonora"
+      - "Enrica Calura"
+
+  - id: session5-7
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 7
+    title: "Galaxy-E: Ecology oriented Galaxy initiative, a 2025 update!"
+    authors:
+      - "Coline Royaux"
+      - "Marie Jossé"
+      - "Pauline Séguineau"
+      - "Yvan Le Bras"
+      - "Jérôme Detoc"
+
+  - id: session5-8
+    day: 3
+    time: "10:30 – 12:00 PM"
+    location: "Grace Auditorium"
+    moderator: "Scott"
+    slot: 8
+    title: "Little errors at big scale: towards efficiency, consistency, and reliability of data in the Galaxy database"
+    authors:
+      - "John Davis"
