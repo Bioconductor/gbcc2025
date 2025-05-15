@@ -6,127 +6,201 @@
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      <!-- Main Content -->
       <main id="scientific-program-page" class="container">
-        <header class="page-header">
-          <h1>Scientific Program</h1>
-          <p>Stay tuned! More details will be available soon.</p>
-        </header>
+        <!-- Day Navigation Tabs -->
+        <nav class="schedule-tabs">
+          <button class="tab active" data-day="day1">Day 1 – June 24</button>
+          <button class="tab"      data-day="day2">Day 2 – June 25</button>
+          <button class="tab"      data-day="day3">Day 3 – June 26</button>
+        </nav>
 
-        <!-- Placeholder Section -->
-        <section class="program-placeholder">
-          <div class="announcement-box">
-            <p>We’re thrilled to announce the inaugural joint conference between <strong>BioConductor</strong> and the <strong>Galaxy Project</strong>! Although the final conference program is still being developed, we are excited to open abstract submissions now.</p>
-            
-            <p>This unique conference brings together experts and enthusiasts from both communities, offering an unparalleled opportunity to explore cutting-edge research, innovative tools, and collaborative projects at the intersection of bioinformatics and data analysis. Whether you’re passionate about genomics, computational biology, or data-driven research, this event will feature:</p>
-            
-            <ul>
-              <li>Keynote presentations by thought leaders in the fields of bioinformatics and computational biology</li>
-              <li>In-depth research presentations showcasing the latest breakthroughs and methodologies</li>
-              <li>Hands-on workshops designed to enhance your technical skills</li>
-              <li>Networking sessions that foster collaboration and idea exchange</li>
-            </ul>
-            
-            <p>To join us, please <strong>register through Cold Spring Harbor</strong>. By clicking the button below, you will be redirected to their registration portal, where you can complete your registration and submit your abstract in one seamless process. Registration is required prior to abstract submission, but don’t worry—you can defer payment until your abstract has been accepted.</p>
-            
-            <h2>
-              <a href="https://meetings.cshl.edu/abstracts.aspx?meet=galaxy&year=25" target="_blank">
-                Register for the conference and submit your abstract
-              </a>
-            </h2>
-            
-            <p>This conference is more than just an event—it’s a platform for building the future of bioinformatics and data science. Be part of a vibrant community, share your innovative ideas, and contribute to the evolution of research in these dynamic fields. We look forward to welcoming you and seeing the exciting contributions you have to offer!</p>
-          </div>
-        </section>
+        <div class="conference-schedule">
+          {{ $all := .Site.Data.abstracts.abstracts.abstracts }}
+
+          {{/* Loop over each day */}}
+          {{ range $i, $dayLabel := slice "day1" "day2" "day3" }}
+            {{ $dayNum := add $i 1 }}
+            <section class="time-block {{ if eq $i 0 }}active{{ end }}" data-day="{{ $dayLabel }}">
+              
+              {{/* First sort by ID, then by time (stable) */}}
+              {{ $byID    := sort (where $all "day" $dayNum) "id" }}
+              {{ $dayTalks := sort $byID "time" }}
+
+              {{/* Track previous session code */}}
+              {{ $.Scratch.Set "prevSession" "" }}
+
+              {{ range $idx, $talk := $dayTalks }}
+                {{/* Extract session code from id */}}
+                {{ $sessionCode := replaceRE "^session([^\\-]+)-.*$" "$1" $talk.id }}
+
+                {{/* When code changes, open a new session-group */}}
+                {{ if ne $sessionCode ($.Scratch.Get "prevSession") }}
+                  <div class="session-group">
+                    <h3 class="session-group-title">
+                      Session {{ $sessionCode }} &ndash; {{ $talk.time }}
+                    </h3>
+                    <div class="session-details">
+                      {{ $talk.location }} | Moderator: {{ $talk.moderator }}
+                    </div>
+                {{ end }}
+
+                <article class="session-card">
+                  <h4 class="session-title">{{ $talk.title }}</h4>
+                  <div class="session-authors">
+                    <strong>{{ index $talk.authors 0 }}</strong>
+                    {{ range $j, $a := $talk.authors }}{{ if ne $j 0 }}, {{ $a }}{{ end }}{{ end }}
+                  </div>
+                </article>
+
+                {{/* Prepare to close the group when the next talk has a different code */}}
+                {{ $.Scratch.Set "prevSession" $sessionCode }}
+                {{ $next := index $dayTalks (add $idx 1) | default dict }}
+                {{ $nextCode := replaceRE "^session([^\\-]+)-.*$" "$1" $next.id }}
+                {{ if or (eq $next.id "") (ne $nextCode $sessionCode) }}
+                  </div>
+                {{ end }}
+              {{ end }}
+            </section>
+          {{ end }}
+        </div>
       </main>
 
       {{ partial "footer.html" . }}
     </div>
 
     {{ partial "scripts.html" . }}
-    {{ partial "custom-scripts.html" . }}
+    <script>
+      // Tab switching
+      document.querySelectorAll('.schedule-tabs .tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+          btn.classList.add('active');
+          const day = btn.dataset.day;
+          document.querySelectorAll('.time-block')
+                  .forEach(b => b.classList.toggle('active', b.dataset.day === day));
+        });
+      });
+    </script>
   </body>
 </html>
 
 <style>
-  /* Base Typography & Layout */
+  :root {
+    --bg-light:  #f5f1e3;
+    --fg-dark:   #333;
+    --accent:    #2E5636;
+    --cyan:       #6C91C2;
+    --session-bg:    rgb(108,145,194, 0.2); 
+    --session-pad:   24px;
+    --session-gap:   16px;
+    --pad:       16px;
+    --gap:       16px;
+  }
   body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--fg-dark);
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap) 20px;
   }
 
-  /* Main Container Styling */
-  #scientific-program-page {
-    padding: 20px;
-    background-color: #f5f1e3; /* Light beige background */
+  /* Tabs */
+  .schedule-tabs {
+    display: flex; justify-content: center; gap: 12px;
+    margin-bottom: var(--gap);
+  }
+  .tab {
+    padding: 8px 16px; border-radius: 4px;
+    background: white; border: 1px solid #ccc;
+    cursor: pointer; font-weight: bold;
+  }
+  .tab.active {
+    background: var(--accent); color: white;
+    border-color: var(--accent);
   }
 
-  /* Page Header Styling */
-  .page-header {
-    text-align: center;
-    background-color: #1b3a4b; /* Deep navy */
-    color: #ffffff;
-    padding: 20px;
+  /* Time-block */
+  .time-block {
+    display: none; margin-bottom: calc(var(--gap) * 1.5);
+  }
+  .time-block.active {
+    display: block;
+  }
+  .time-bar {
+    font-size: 1.2rem; font-weight: bold;
+    background: var(--accent); color: white;
+    padding: 8px 12px; border-radius: 4px;
+    margin-bottom: var(--gap);
+  }
+  /* session group */
+  .session-group {
+    background: var(--session-bg);
+    padding: var(--session-pad);
     border-radius: 8px;
-    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: calc(var(--session-gap) + 8px);
   }
-  
-  .page-header h1 {
+
+  /* Session card */
+  .session-card {
+    background: white;
+    padding: var(--pad);
+    margin-bottom: var(--gap);
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .session-group-title {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .page-header p {
-    font-size: 1.2rem;
-  }
-
-  /* Program Placeholder Section */
-  .program-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-    text-align: center;
+    color: black;
+    margin: 0 0 var(--session-gap);
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--accent);
+    font-weight: bold;
   }
 
-  /* Announcement Box Styling */
-  .announcement-box {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
+  .session-details {
+    font-size: 1.8rem;
+    color: var(--fg-dark);
+    margin-bottom: var(--session-gap);
+    font-style: italic;
   }
-  
-  .announcement-box p {
-    font-size: 1.2rem;
-    color: #3a3a3a; /* Dark gray */
-    margin-bottom: 20px;
+  .session-title {
+    font-size: 1.8rem; margin: 0 0 8px;
+    color: var(--accent);
   }
-  
-  .announcement-box h2 {
-    color: #2e5636; /* Forest green */
-    font-size: 2rem;
-    margin-bottom: 20px;
+  .session-moderator {
+    font-size: 1.1rem; font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .session-authors {
+    font-size: 1.35rem;
+    color: var(--fg-dark);
   }
 
-  /* List Styling */
-  .announcement-box ul {
-    list-style: disc;
-    padding-left: 20px;
-    text-align: left;
-    margin: 20px 0;
-  }
-  
-  .announcement-box li {
-    margin-bottom: 10px;
-  }
-
-  /* Responsive Adjustments */
   @media (max-width: 768px) {
-    .announcement-box {
-      max-width: 90%;
+    .schedule-tabs { flex-wrap: wrap; }
+    .session-group {
+      padding: var(--session-gap);
+      margin-bottom: var(--session-gap);
+    }
+    .session-group-title {
+      font-size: 2.0rem;
+      margin-bottom: var(--session-gap);
+    }
+    .session-card {
+      margin-bottom: var(--session-gap);
+      padding: var(--pad) var(--pad) var(--pad) calc(var(--pad) - 4px);
+    }
+    .session-details {
+      font-size: 1.5rem;
+      margin-bottom: var(--session-gap);
     }
   }
 </style>
