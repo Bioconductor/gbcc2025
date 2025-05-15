@@ -1,42 +1,46 @@
-title: "Day 1: June 23 (Mon.)"
+title: "Day 1 – June 23 (Mon.)"
 
 rooms:
-  - "Grace Auditorium"
-  - "Bush Auditorium"
-  - "Bush Fireplace"
-  - "Nicholls Biondi"
-  - "Hawkins"
+  - id: grace
+    name: "Grace Auditorium"
+  - id: bush-auditorium
+    name: "Bush Auditorium"
+  - id: bush-fireplace
+    name: "Bush Fireplace"
+  - id: nicholls-biondi
+    name: "Nicholls Biondi"
+  - id: hawkins
+    name: "Hawkins"
 
-schedule:
-  - time: "3:00 - 5:00"
-    slots:
-        - session: "Check-in & Registration"
-          class: "session-checkin"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+slots:
+  # 3:00 – 5:00  → Check-in in Grace only
+  - time: "3:00 – 5:00"
+    events:
+      grace:
+        type: session-checkin
+        title: "Check-in & Registration"
+        loc: ""
 
-  - time: "5:00 - 7:00"
-    slots:
-      - colspan: 5
-        session: "Dinner"
-        class: "session-dinner"
-  
-  - time: "7:00 - 8:00"
-    slots:
-        - session: "Opening Ceremony"
-          class: "session-keynote"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+  # 5:00 – 7:00  → Dinner across all rooms
+  - time: "5:00 – 7:00"
+    span: true
+    event:
+      type: session-dinner
+      title: "Dinner"
+      loc: ""
 
-  - time: "8:00 - 9:00"
-    slots:
-        - session: "GBCC2025 LIVE!"
-          class: "session-panel"
-        - session: " "
-        - session: " "
-        - session: " "
-        - session: " "
+  # 7:00 – 8:00  → Opening Ceremony in Grace
+  - time: "7:00 – 8:00"
+    events:
+      grace:
+        type: session-keynote
+        title: "Opening Ceremony"
+        loc: ""
+
+  # 8:00 – 9:00  → GBCC2025 LIVE! in Grace
+  - time: "8:00 – 9:00"
+    events:
+      grace:
+        type: session-panel
+        title: "GBCC2025 LIVE!"
+        loc: ""
