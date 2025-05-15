@@ -8,64 +8,110 @@
 
       <!-- Main Content -->
       <main id="fun-things-page" class="container">
-        <header class="page-header">
-          <h1>Explore & Enjoy: Things to Do Around Cold Spring Harbor</h1>
-          <p>Whether you're looking to unwind after a full day of conference activities or explore the natural beauty and history of the area, we've got you covered! Here are some fantastic things to do both on and off campus.</p>
-        </header>
 
-        <!-- On Campus Activities -->
-        <section class="on-campus">
-          <h2>🏛️ On Campus Adventures</h2>
-
-          <div class="activity">
-            <h3>🏃 Exercise & Recreation</h3>
-            <p>CSHL offers a variety of recreational facilities including:</p>
-            <ul>
-              <li>Hiking, walking, and jogging trails</li>
-              <li>Volleyball & tennis courts</li>
-              <li>Kayaks & sailboats (Memorial Day–Labor Day, 12-6 PM)</li>
-              <li>Swimming pool (Banbury campus only)</li>
-              <li>Indoor fitness center</li>
-            </ul>
-            <p>For more details, inquire at the Meetings & Courses Office.</p>
-          </div>
-
-          <div class="activity">
-            <h3>🔬 Cold Spring Harbor Laboratory Tours</h3>
-            <p>Take a guided walking tour of the laboratory and explore its history, architecture, and research in areas like cancer, neuroscience, and plant biology. Tours are led by graduate students and postdoctoral fellows. </p>
-            <a href="https://www.cshl.edu" target="_blank" class="cta-button">Learn More</a>
+        <!-- Hero Section -->
+        <section class="hero hero-overlay things-hero">
+          <div class="hero-bg"></div>
+          <div class="hero-text">
+            <h1>Explore &amp; Enjoy: Things to Do Around Cold Spring Harbor</h1>
+            <p class="lead">
+              Whether you’re looking to unwind after a full day of conference activities or explore the natural beauty and history of the area, we’ve got you covered.
+            </p>
+            <p>
+              <a href="https://meetings.cshl.edu/map/" target="_blank" class="cta-link">
+                View CSHL Campus Map
+              </a>
+            </p>
           </div>
         </section>
 
-        <!-- Off Campus Activities -->
-        <section class="off-campus">
-          <h2>🌿 Off-Campus Adventures</h2>
+        <!-- On Campus Adventures -->
+        <section class="card full">
+          <h2>On Campus Adventures</h2>
 
           <div class="activity">
-            <h3>🌳 Cold Spring Harbor State Park (1 mile away)</h3>
-            <p>This 47-acre park features hilly terrains and scenic views of the harbor. It's perfect for hiking, birdwatching, and soaking in nature.</p>
+            <h3>Exercise &amp; Recreation</h3>
+            <p>
+              Cold Spring Harbor Laboratory offers a variety of recreational facilities, including hiking &amp; jogging trails, courts, pool, kayaks &amp; sailboats, and a fitness center.  
+              <!-- No dedicated URL available; inquire onsite -->
+            </p>
           </div>
 
           <div class="activity">
-            <h3>🐟 Cold Spring Harbor Fish Hatchery & Aquarium (0.2 miles)</h3>
-            <p>Originally a trout hatchery from 1883, it now serves as an educational center with freshwater reptiles, fish, amphibians, and a catch-and-keep trout fishing area.</p>
-          </div>
-
-          <div class="activity">
-            <h3>⚓ The Whaling Museum & Education Center (1.4 miles)</h3>
-            <p>Dedicated to Long Island’s maritime heritage, this museum houses a 19th-century whaleboat, scrimshaw collections, and year-round exhibits & workshops.</p>
-          </div>
-
-          <div class="activity">
-            <h3>📚 Cold Spring Harbor Library and Environmental Center (1 mile)</h3>
-            <p>Located at 95 Harbor Road, this library serves Cold Spring Harbor, Laurel Hollow, and Lloyd Harbor with great reading rooms and educational programs.</p>
-          </div>
-
-          <div class="activity">
-            <h3>☕ Local Shops & Eateries (1.5 miles)</h3>
-            <p>Stroll through Main Street and enjoy local gems like specialty boutiques, antique stores, and delicious eats at places like the Gourmet Whaler.</p>
+            <h3>
+              <a href="https://www.cshl.edu/public-events/tour-cshl/" target="_blank">
+                Cold Spring Harbor Laboratory Tours
+              </a>
+            </h3>
+            <p>
+              Guided walking tours led by CSHL graduate students and postdocs, exploring our Nobel-legacy campus and research history.  
+            </p>
+            <a href="https://www.cshl.edu/public-events/tour-cshl/" target="_blank" class="cta-link">
+              Learn More
+            </a>
           </div>
         </section>
+
+        <!-- Off Campus Adventures -->
+        <section class="card full">
+          <h2>Off Campus Adventures</h2>
+
+          <div class="activity">
+            <h3>
+              <a href="https://parks.ny.gov/parks/coldspringharbor" target="_blank">
+                Cold Spring Harbor State Park
+              </a>
+            </h3>
+            <p>
+              This 47-acre park (95 Harbor Rd) features hilly trails and harbor views—ideal for hiking and birdwatching.  
+            </p>
+          </div>
+
+          <div class="activity">
+            <h3>
+              <a href="https://cshfishhatchery.org/" target="_blank">
+                Cold Spring Harbor Fish Hatchery &amp; Aquarium
+              </a>
+            </h3>
+            <p>
+              A state trout hatchery turned nonprofit aquarium with live exhibits, outdoor ponds, and catch-and-keep fishing.  
+            </p>
+          </div>
+
+          <div class="activity">
+            <h3>
+              <a href="https://www.cshwhalingmuseum.org/" target="_blank">
+                The Whaling Museum &amp; Education Center
+              </a>
+            </h3>
+            <p>
+              Discover 6,000 artifacts—whaleboats, scrimshaw, maritime art—and year-round educational programs.  
+            </p>
+          </div>
+
+          <div class="activity">
+            <h3>
+              <a href="https://www.cshlibrary.org/" target="_blank">
+                Cold Spring Harbor Library &amp; Environmental Center
+              </a>
+            </h3>
+            <p>
+              Located at 95 Harbor Rd, this library offers special collections on local natural history, plus community programs.  
+            </p>
+          </div>
+
+          <div class="activity">
+            <h3>
+              <a href="https://www.gourmetwhalerny.com/" target="_blank">
+                The Gourmet Whaler
+              </a>
+            </h3>
+            <p>
+              Coffee shop and café at 111 Main St—famous for fresh-baked goods, award-winning fish tacos, and cozy vibes.  
+            </p>
+          </div>
+        </section>
+        
       </main>
 
       {{ partial "footer.html" . }}
@@ -77,90 +123,67 @@
 </html>
 
 <style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#fun-things-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
-
-/* Header Section */
-.page-header {
-  text-align: center;
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* Activity Sections */
-.on-campus, .off-campus {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #2e5636; /* Forest green */
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: #1b3a4b;
-  margin-bottom: 10px;
-}
-
-/* List Styling */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  font-size: 1.1rem;
-  color: #3a3a3a;
-  margin-bottom: 8px;
-}
-
-/* Call to Action Button */
-.cta-button {
-  display: inline-block;
-  background-color: #1b3a4b;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #6c91c2;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .activity {
-    padding: 15px;
+  :root { --things-bg-img: url('/img/about/venue/CSHL_volleyball_2001.webp'); }
+  body {
+    background: #f5f1e3; color: #333;
+    font-family: Arial, sans-serif; line-height: 1.6; overflow-x: hidden;
   }
-
-  .cta-button {
-    padding: 8px 12px;
+  .things-hero {
+    position: relative; width: 100vw; left: 50%; transform: translateX(-50%);
+    height: 40vh; margin-bottom: 40px; overflow: hidden;
   }
-}
-
+  .things-hero .hero-bg {
+    position: absolute; inset: 0;
+    background: var(--things-bg-img) center/cover no-repeat;
+  }
+  .things-hero .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .things-hero .hero-text {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); text-align: center;
+    padding: 20px 30px; background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px; color: #fff;
+  }
+  .things-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+  .things-hero .lead { font-size: 1.4rem; margin-bottom: 20px; }
+  .cta-link {
+    display: inline-block; padding: 10px 20px;
+    font-size: 1.3rem; border-radius: 8px;
+    text-decoration: none; background: #1b3a4b;
+    color: #f5f1e3; transition: background .2s;
+  }
+  .cta-link:hover { background: #162830; }
+  .card {
+    background: #fff; padding: 30px; border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; transition: transform .3s, box-shadow .3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  .card.full { text-align: left; }
+  h2 {
+    font-size: 2.4rem; color: #1b3a4b; margin-bottom: 20px;
+  }
+  .activity + .activity { margin-top: 20px; }
+  .activity h3 {
+    font-size: 1.6rem; color: #2e5636; margin-bottom: 10px;
+  }
+  .activity p, .activity ul {
+    font-size: 1.4rem; color: #333; margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .things-hero { height: 30vh; }
+    .things-hero h1 { font-size: 2.2rem; }
+    .things-hero .lead { font-size: 1.2rem; }
+    .card { padding: 20px; margin-bottom: 30px; }
+    h2 { font-size: 2rem; }
+    .activity h3 { font-size: 1.4rem; }
+    .activity p, .activity ul { font-size: 1.2rem; }
+    .cta-link { padding: 8px 16px; }
+  }
 </style>
