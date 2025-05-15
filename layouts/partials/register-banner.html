@@ -1,0 +1,57 @@
+<section class="register-banner">
+    <div class="container">
+      <p>
+        It’s <strong>not too late</strong> to register — registration closes on <strong>June 15, 2025</strong>!
+      </p>
+    </div>
+  </section>
+  
+
+<style>
+    :root {
+  --banner-gradient-start: #2E5636;
+  --banner-gradient-end:   #6C91C2;
+  --banner-text:           #f5f1e3;
+  --banner-padding:        32px;
+  --banner-radius:         8px;
+  --gap:                5px;
+}
+.register-banner {
+  background: linear-gradient(
+    135deg,
+    var(--banner-gradient-start),
+    var(--banner-gradient-end)
+  );
+  padding: var(--banner-padding) 0;
+  border-radius: var(--banner-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  margin-top: var(--gap);
+}
+
+.register-banner p {
+  margin: 0;
+  font-size: 3.4rem;
+  font-weight: bold;
+  color: var(--banner-text);
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+  transform: scale(1.03); 
+  transition: transform 0.3s ease;
+}
+
+.register-banner p:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .register-banner {
+    padding: 24px 0;
+  }
+  .register-banner p {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+</style>
+  
