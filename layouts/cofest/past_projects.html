@@ -7,12 +7,108 @@
       {{ partial "nav.html" . }}
 
       <!-- Main Content -->
-      <main id="coming-soon-page" class="container">
-        <header class="page-header">
-          <h1>🚀 Something Exciting is Coming Soon!</h1>
-          <p>We're working hard to bring you something amazing. Stay tuned!</p>
-        </header>
+      <main id="past-projects-page" class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero hero-overlay projects-hero">
+          <div class="hero-bg"></div>
+          <div class="hero-text">
+            <h1>Cofest Past Projects</h1>
+            <p class="lead">
+              Here is a list of projects worked on in previous Cofests. You can use these as inspiration for
+              your own project ideas!
+            </p>
+          </div>
+        </section>
 
+        <!-- Example Projects Grid -->
+        <section class="card full">
+          <h2>
+            Projects from the previous Cofest
+            <a href="https://galaxyproject.org/events/gcc2024/" class="cta-link-inline" target="_blank"><strong>(GCC 2024)</strong></a>
+          </h2>
+          <p>
+            Here are some examples of projects worked on in the previous Cofest in Brno, Czech Republic.
+            Here is a link to the slides from the event:
+            <a href="https://docs.google.com/presentation/d/1uAgjha2Tqz0esolcu46xP89Jv43k3Edg4r4n4SBfHfE/edit?usp=sharing" target="_blank">
+              <b>Slides</b>
+            </a>
+          </p>
+          <div class="project-grid">
+            <div class="project-item">
+              <h3>Biodiversity & Ecology Resources</h3>
+              <p>
+                Curate tools and materials for biodiversity research in Galaxy, with EDAM annotations.
+              </p>
+
+              <p class="project-outcomes">
+                <b>Outcomes:</b>
+                <ul class="project-outcomes-list">
+                  <li>Filtered Galaxy tools for new “Ecology” and “Earth” SIGs</li>
+                  <li>A wish list for new Galaxy tools</li>
+                  <li>Some wrappers got (and some need) annotation fixed</li>
+                  <li>Additions and curation in Bio.tools</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>Galaxy ITs</h3>
+              <p>
+                Galaxy ITs often require wildcard DNS and SSL, which can be restrictive. Since Galaxy 24.0,
+                path-based ITs are supported, but tools need configuration.
+              </p>
+              <p>
+                <b>Goal:</b> Enable ITs via URL paths for easier use.
+                See: <a href="https://f1000research.com/slides/12-1163" target="_blank">F1000</a>.
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>Unifying Single Cell Subdomain Across Servers</h3>
+              <p>Create a central single cell page unifying .eu and .au subdomains, streamline content sharing, and curate tools and workflows.</p>
+            </div>
+
+            <div class="project-item">
+              <h3>Simplifying Data Citations to Match the Ease of Tool Citations</h3>
+              <p>Capture data citation information from Galaxy Data Sources and manually users upload files</p>
+
+              <p class="project-outcomes">
+                <b>Outcomes:</b>
+                <ul class="project-outcomes-list">
+                    <li>Explored differences between Galaxy Data Sources and Tools for data downloading</li>
+                    <li>Reviewed key elements of effective data citations</li>
+                    <li>Drafted user stories for data citation</li>
+                    <li>Noted databases with DOIs for entries, databases, and external primary citations</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="project-item">
+              <h3>GTN Office Hours</h3>
+              <p>
+                Share ideas, issues, or requests about the Galaxy Training Network. We can help brainstorm solutions, write tutorials, or get started
+                with GitHub/GitPod, FAQs, events, and more!
+              </p>
+            </div>
+
+            <!-- <div class="project-item">
+              <h3>Galaxy Tool Shed</h3>
+              <p>Explore the Galaxy Tool Shed and its features, including tool management and sharing.</p>
+            </div> -->
+          </div>
+        </section>
+
+        <!-- See Proposed Projects -->
+        <section class="card full text-center">
+          <h2>Proposed Projects for Cofest GBCC 2025</h2>
+          <p>
+            Explore project ideas for GBCC 2025 CoFest, or share your own!:
+          </p>
+          <a href="{{ "cofest/proposed_projects/" | relURL }}" class="cta-link register-button">
+            PROPOSED PROJECTS
+          </a>
+        </section>
       </main>
 
       {{ partial "footer.html" . }}
@@ -25,37 +121,117 @@
 </html>
 
 <style>
-    /* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  text-align: center;
-}
-
-#coming-soon-page {
-  padding: 20px;
-  background-color: #f5f1e3; /* Light beige background */
-}
-
-/* Header Section */
-.page-header {
-  background-color: #1b3a4b; /* Deep navy */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .stay-updated form {
-    flex-direction: column;
+  :root {
+    --projects-bg-img: url('/img/cofest/overview/manhattan_skyline.jpg');
   }
-}
 
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1e3;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Hero Section */
+  .projects-hero {
+    position: relative;
+    width: 100vw; left: 50%; transform: translateX(-50%);
+    height: 40vh; margin-bottom: 40px; overflow: hidden;
+  }
+  .projects-hero .hero-bg {
+    position: absolute; inset: 0;
+    background: var(--projects-bg-img) center/cover no-repeat;
+  }
+  .projects-hero .hero-bg::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.3);
+  }
+  .projects-hero .hero-text {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; padding: 20px 30px;
+    background: rgba(0,0,0,0.7); border-radius: 8px;
+    color: #fff;
+  }
+  .projects-hero h1 {
+    font-size: 3rem; margin-bottom: 10px;
+  }
+  .projects-hero .lead {
+    font-size: 1.4rem;
+    color: #fff;
+  }
+
+  /* Reuse Overview page card styles */
+  .card {
+    background: #fff; padding: 30px;
+    border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  .card.full { text-align: left; }
+  .text-center { text-align: center; }
+
+  /* Headings & Text */
+  h2 {
+    font-size: 2.4rem; color: #1b3a4b; margin-bottom: 20px;
+  }
+  p, .project-item p {
+    font-size: 1.4rem; color: #333; margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  /* Grid of Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px; margin-top: 20px;
+  }
+  .project-item {
+    background: #fafafa; padding: 15px;
+    border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column;
+  }
+  .project-item h3 {
+    font-size: 1.6rem; color: #2e5636; margin-bottom: 10px;
+  }
+
+  /* Call-to-Action Links */
+  .cta-link {
+    display: inline-block; padding: 12px 25px;
+    font-size: 1.4rem; border-radius: 8px;
+    text-decoration: none; background: #1b3a4b;
+    color: #f5f1e3; transition: background .2s;
+  }
+  .cta-link:hover {
+    background: #162830;
+  }
+  .register-button {
+    margin-top: 15px; font-weight: bold;
+  }
+  .cta-link-inline {
+    color: #f5f1e3;
+    padding: 4px 8px;
+    background: #3a5f7d;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .cta-link-inline:hover {
+    background: #27465a;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-hero { height: 30vh; }
+    .projects-hero h1 { font-size: 2.2rem; }
+    .projects-hero .lead { font-size: 1.2rem; }
+    .card { padding: 20px; margin-bottom: 30px; }
+    h2 { font-size: 2rem; }
+    .project-item h3 { font-size: 1.4rem; }
+  }
 </style>
