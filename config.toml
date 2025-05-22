@@ -108,11 +108,11 @@ weight = 5
   url = "/registration/cofest"
   weight = 2
 
- # [[menu.main]]
- # parent = "registration"
- #  name = "Scolarships and Rewards"
- # url = "/registration/scholarships"
- # weight = 3
+  [[menu.main]]
+  parent = "registration"
+  name = "Scolarships and Rewards"
+  url = "/registration/scholarships"
+  weight = 3
 
 [[menu.main]]
 identifier = "sponsor"
