@@ -98,12 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       "abstracts": [
         { name: "Submission Guidelines", url: "/abstracts/submission_guidelines" },
-        { name: "Abstract Book", url: "/abstracts/book" }
+        // { name: "Abstract Book", url: "/abstracts/book" }
       ],
       "registration": [
         { name: "Conference Registration", url: "/registration/conference" },
         { name: "Cofest Registration", url: "/registration/cofest" },
-        // { name: "Scholarships", url: "/registration/scholarships" }
+        { name: "Scholarships", url: "/registration/scholarships" }
       ],
       "sponsor": [
         { name: "Sponsor Information", url: "/sponsorships/sponsor_info" }
