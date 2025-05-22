@@ -234,6 +234,15 @@
     line-height: 1.6;
     color: var(--fg-dark);
   }
+  .bof-item,
+  .block {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .bof-item:hover,
+  .block:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
   .cta-link {
     display: inline-block;
     background: var(--accent);
