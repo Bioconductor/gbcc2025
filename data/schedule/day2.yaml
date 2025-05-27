@@ -88,14 +88,14 @@ slots:
         title: "Networking with wine & cheese"
         loc: ""
 
-  - time: "6:00 - 8:00"
+  - time: "6:00 - 7:00"
     span: true
     event:
       type: session-dinner
       title: "Dinner"
       loc: ""
 
-  - time: "8:00 – 9:30"
+  - time: "7:30 – 9:30"
     events:
       nicholls-biondi:
         type: session-posters

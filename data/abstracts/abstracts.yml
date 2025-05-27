@@ -128,7 +128,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 1
     title: "From Upload to Execution: A Unified Galaxy Workflow Run Interface"
     authors:
@@ -149,7 +149,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 2
     title: "More Usable and More Powerful Galaxy Dataset Collections"
     authors:
@@ -161,7 +161,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 3
     title: "AI-augmented data analyses in Galaxy"
     authors:
@@ -172,7 +172,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 4
     title: "Benchmarking Quantum Machine Learning Models in Galaxy"
     authors:
@@ -189,7 +189,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 5
     title: "Leveraging Deep Learning with torch in R for Next-Generation Epigenetic Clock Development"
     authors:
@@ -199,7 +199,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 6
     title: "The Galaxy-ML2 tool suite: Using Galaxy to promote best practices in machine learning for biomedical data science"
     authors:
@@ -213,7 +213,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 7
     title: "NOVA: Leveraging Galaxy for Neutrons Scattering Data Analysis and Visualization"
     authors:
@@ -223,7 +223,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 8
     title: "Towards the automatic integration of tools in Galaxy: the anvi’o suite and a new AI-driven automation pipeline"
     authors:
@@ -235,7 +235,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 9
     title: "Dynamic meta-scheduling in Galaxy with TPV Broker for smarter workload distribution"
     authors:
@@ -248,7 +248,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 10
     title: "One Million Heart Cells: Integrating Public Data on Galaxy to Explore How Cardiomyocytes Change in Atrial Fibrillation"
     authors:
@@ -260,7 +260,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 11
     title: "gINTomics, a powerful Bioconductor package for multiomics data integration and visualization."
     authors:
@@ -272,7 +272,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
-    moderator: "Michael Love"
+    moderator: "Jenny Drnevich"
     slot: 12
     title: "Bioconductor-R-Shiny Applications on Galaxy"
     authors:
@@ -288,7 +288,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 1
     title: "Robust ancestry inference from challenging human molecular data with RAIDS"
     authors:
@@ -303,7 +303,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 2
     title: "Meta-iPep: A metaimmunopeptidomics pipeline implemented within Galaxy platform to characterize HLA-bound microbial peptides for immunotherapy"
     authors:
@@ -319,7 +319,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 3
     title: "Analyzing allele-specific methylation using Oxford Nanopore long-read DNA sequencing"
     authors:
@@ -329,7 +329,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 4
     title: "Public gene expression cancer signatures across bulk, single-cell and spatial transcriptomics data with signifinder Bioconductor package"
     authors:
@@ -349,7 +349,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 5
     title: "Host cell signaling during viral infection network perturbation analysis"
     authors:
@@ -360,7 +360,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 6
     title: "SEMplR: An R package for predicting the effects of genetic variation on transcription factor binding"
     authors:
@@ -373,7 +373,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 7
     title: "Enhancing rare variant analysis in biobanks: whole-genome annotation using GDS files"
     authors:
@@ -384,7 +384,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 8
     title: "Orthology Detection at the Scale of Modern Genomics"
     authors:
@@ -395,7 +395,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 9
     title: "Multiscale analysis of lung adenocarcinoma spatial transcriptomics data"
     authors:
@@ -406,7 +406,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 10
     title: "Deciphering CLEC12A Negative Regulation of Neutrophil Activation by Network and Functional Enrichment Analyses"
     authors:
@@ -425,7 +425,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 11
     title: "Broadening Metagenomic Horizons in Galaxy: Introducing the HiFi-MAG Pipeline, New Profilers, and Insights from BioDIGS"
     authors:
@@ -437,7 +437,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes"
+    moderator: "Wes Wilson"
     slot: 12
     title: "Visualizing and analyzing differential transcript usage"
     authors:
@@ -545,7 +545,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 1
     title: "Empowering Bioinformatics in Africa through Bioconductor: Expanding Training and Community Engagement"
     authors:
@@ -562,7 +562,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 2
     title: "Building UseGalaxy Capability in Canada"
     authors:
@@ -579,7 +579,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 3
     title: "Mass Spectrometry-Centered Multi-Omics: Advancing Galaxy Training Materials for Integrated Analysis and Community Adoption"
     authors:
@@ -596,7 +596,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 4
     title: "Training and education in the cloud with the NHGRI AnVIL"
     authors:
@@ -609,7 +609,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 5
     title: "Molecular ecology at the sertão - Using Galaxy to empower research in developing communities"
     authors:
@@ -621,7 +621,7 @@ abstracts:
     day: 2
     time: "4:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Jenny"
+    moderator: "Mike Love"
     slot: 6
     title: "Democratising the Analysis of the Human Cell Atlas with Bioconductor"
     authors:
@@ -632,7 +632,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 1
     title: "plyxp: reimagining dplyr syntax for SummarizedExperiment objects"
     authors:
@@ -643,20 +643,18 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 2
     title: "Orchestrating Microbiome Analysis with Bioconductor"
     authors:
-      - "Kris Sankaran"
-      - "Saritha Kodikara"
-      - "Jingyi Jessica Li"
-      - "Kim-Anh Le Cao"
+      - "Tuomas Borman"
+      - "Leo Lahti"
 
   - id: session5-3
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 3
     title: "Inference with predicted data – what do we do after we have machine learned everything?"
     authors:
@@ -676,7 +674,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 4
     title: "Simple and Secure Credential Handling for Tools in Galaxy"
     authors:
@@ -689,7 +687,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 5
     title: "Bridging Earth System Sciences with Galaxy: Two Years of FAIR-EASE"
     authors:
@@ -701,7 +699,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 6
     title: "Dissect mitochondrial activity by transcriptome data with mitology R package"
     authors:
@@ -713,7 +711,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 7
     title: "Galaxy-E: Ecology oriented Galaxy initiative, a 2025 update!"
     authors:
@@ -727,7 +725,7 @@ abstracts:
     day: 3
     time: "10:30 – 12:00 PM"
     location: "Grace Auditorium"
-    moderator: "Scott"
+    moderator: "Scott Cain"
     slot: 8
     title: "Little errors at big scale: towards efficiency, consistency, and reliability of data in the Galaxy database"
     authors:
