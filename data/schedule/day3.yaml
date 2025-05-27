@@ -99,7 +99,7 @@ slots:
       title: "Birds of a Feather Sessions"
       loc: ""
 
-  - time: "6:00 – 7:00"
+  - time: "6:00 – 8:00"
     span: true
     event:
       type: session-dinner
