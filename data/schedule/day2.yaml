@@ -24,7 +24,8 @@ slots:
     events:
       grace:
         type: session-keynote
-        title: "Keynote 1 (Sergei)"
+        title: "Interactive Genomic Analytics with responsive notebooks, in-the-browser computation, and AI-assisted development"
+        speaker: "Sergei Pond"
         loc: ""
 
   - time: "10:00 – 10:30"

@@ -33,7 +33,7 @@ slots:
   - time: "7:00 – 8:00"
     events:
       grace:
-        type: session-keynote
+        type: session-opening
         title: "Opening Ceremony"
         loc: ""
 
