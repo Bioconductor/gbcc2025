@@ -60,6 +60,7 @@
                       {{ if $e }}
                         <div class="session-block {{ $e.type }}">
                           <div class="session-title">{{ $e.title }}</div>
+                          {{ with $e.speaker }} <div class="session-speaker">{{ . }}</div> {{ end }}
                           {{ with $e.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
                         </div>
                       {{ else }}
@@ -234,6 +235,16 @@
         margin-bottom: 4px;
         text-align: center;
       }
+      .session-speaker {
+        font-size: 1.2rem;           
+        font-style: italic;
+        color: var(--white);
+        margin-top: 4px;
+        text-align: left;           
+        line-height: 1.1;
+        white-space: normal;
+        word-break: break-word;
+      }
       .session-loc {
         font-size: 0.9rem;
       }
@@ -254,8 +265,18 @@
         justify-content: center;
       }
 
+      .schedule-grid .session-keynote .session-title {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        text-align: left;
+        word-break: break-word;
+        hyphens: auto;                 
+        white-space: normal;
+        padding: 4px 6px;
+      }
+
       /* Session blocks */
-    
+  
       .session-lunch,
       .session-dinner,
       .session-breakfast {
@@ -265,6 +286,11 @@
 
       .session-checkin {
         background: var(--color-checkin);
+        color: var(--white);
+      }
+
+      .session-opening {
+        background: var(--color-keynote);
         color: var(--white);
       }
 
@@ -343,7 +369,7 @@
           -webkit-overflow-scrolling: touch; 
         }
         .schedule-grid {
-          grid-template-columns: 25% repeat(5, minmax(120px,1fr));
+          grid-template-columns: 25% repeat(5, minmax(150px,1fr));
           overflow-y: visible;
         }
         .schedule-grid > .time-header,
@@ -363,6 +389,11 @@
           hyphens: auto;
           -webkit-hyphens: auto;
           -ms-hyphens: auto;
+        }
+
+        .schedule-grid .session-keynote .session-title {
+          font-size: 1.2rem;
+          line-height: 1.1;
         }
       }
 

@@ -24,7 +24,8 @@ slots:
     events:
       grace:
         type: session-keynote
-        title: "Keynote 2 (Charlotte)"
+        title: "From classes to community - How Bioconductor has advanced my research"
+        speaker: "Charlotte Soneson"
         loc: ""
 
   - time: "10:00 – 10:30"

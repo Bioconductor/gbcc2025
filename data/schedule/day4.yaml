@@ -24,7 +24,8 @@ slots:
     events:
       grace:
         type: session-keynote
-        title: "Keynote 3 (Jason)"
+        title: "Conquest of Abundance: Genomics in a Time of Plenty"
+        speaker: "Jason Williams"
         loc: ""
 
   - time: "10:00 – 10:30"
