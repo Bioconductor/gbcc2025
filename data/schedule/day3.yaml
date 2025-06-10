@@ -69,7 +69,7 @@ slots:
         loc: ""
       bush-auditorium:
         type: session-training
-        title: "Orchestrating Microbiome Analysis with Bioconductor and SummarizedExperiment"
+        title: "Orchestrating Microbiome Analysis with Bioconductor"
         speaker: "Tuomas Borman"
         loc: ""
       bush-fireplace:

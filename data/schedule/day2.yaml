@@ -49,7 +49,7 @@ slots:
     events:
       grace:
         type: session-training
-        title: "How to Build Galaxy Workflows"
+        title: "Exploring Galaxy Workflows "
         speaker: "Marius van den Beek"
         loc: ""
       bush-auditorium:
@@ -69,7 +69,7 @@ slots:
         loc: ""
       hawkins:
         type: session-training
-        title: "Spatial Omics Analysis with Bioconductor"
+        title: "Making Space Count - Strategies for Analysing Spatial Omics Data"
         speaker: "Ellis Patrick"
         loc: ""
 
