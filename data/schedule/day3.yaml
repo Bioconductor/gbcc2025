@@ -64,23 +64,28 @@ slots:
     events:
       grace:
         type: session-training
-        title: "Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy "
+        title: "Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy"
+        speaker: "Daniel Blankenberg"
         loc: ""
       bush-auditorium:
         type: session-training
-        title: "Orchestrating Microbiome Analysis with Bioconductor and SummarizedExperiment"
+        title: "Orchestrating Microbiome Analysis with Bioconductor"
+        speaker: "Tuomas Borman"
         loc: ""
       bush-fireplace:
         type: session-training
         title: "Immunopeptidogenomics Pipeline in Galaxy for MHC-Bound Neoantigens"
+        speaker: "Pratik Jagtap"
         loc: ""
       nicholls-biondi:
         type: session-training
         title: "Leveraging BioDigs Data for Anvil Metagenomic Analysis"
+        speaker: "Fred Tan"
         loc: ""
       hawkins:
         type: session-training
-        title: "Galaxy History Based Alignment Comparison in IGB "
+        title: "Galaxy History Based Alignment Comparison in IGB"
+        speaker: "Ann Loraine"
         loc: ""
 
   - time: "3:30 – 4:00"
