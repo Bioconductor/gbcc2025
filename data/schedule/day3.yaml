@@ -79,8 +79,8 @@ slots:
         loc: ""
       nicholls-biondi:
         type: session-training
-        title: "Leveraging BioDigs Data for Anvil Metagenomic Analysis"
-        speaker: "Fred Tan"
+        title: "AnVIL: Secure, scalable computing for controlled access data"
+        speaker: "Frederick Tan"
         loc: ""
       hawkins:
         type: session-training
@@ -112,7 +112,7 @@ slots:
       title: "Banquet"
       loc: ""
 
-  - time: "8:00 – 9:30"
+  - time: "8:00 – 11:00"
     events:
       bush-auditorium:
         type: session-party
