@@ -60,7 +60,7 @@ slots:
       bush-fireplace:
         type: session-training
         title: "Galaxy Backend Architecture and Software Development"
-        speaker: "John Davis"
+        speaker: "John Davis and Ahmed Awan"
         loc: ""
       nicholls-biondi:
         type: session-training

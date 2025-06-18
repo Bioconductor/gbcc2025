@@ -678,6 +678,7 @@ abstracts:
     slot: 4
     title: "Simple and Secure Credential Handling for Tools in Galaxy"
     authors:
+      - "Prsented by John Davis"
       - "Alireza Heidari"
       - "Arash Kadkhodaei"
       - "David Lopez"
