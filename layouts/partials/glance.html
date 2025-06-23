@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <main class="glance-container">
+        <h1>Program</h1>
+        {{ $days := slice "day1" "day2" "day3" "day4" }}
+
+        <!-- Day Tabs -->
+        <nav class="tabs-wrapper">
+          {{ range $i, $d := $days }}
+            {{ $day := index $.Site.Data.schedule $d }}
+            <button class="tab-link {{ if eq $i 0 }}active{{ end }}"
+                    data-day="{{ $d }}">
+              {{ $day.title }}
+            </button>
+          {{ end }}
+        </nav>
+
+        <!-- Each Day -->
+        {{ range $i, $d := $days }}
+          {{ $day := index $.Site.Data.schedule $d }}
+          <div id="{{ $d }}" class="schedule-day {{ if eq $i 0 }}active{{ end }}">
+            <div class="schedule-wrapper">
+              <div class="schedule-grid">
+                <!-- Date header -->
+                <div class="date-header">{{ $day.title }}</div>
+                <!-- Column headers -->
+                <div class="time-header">Time</div>
+                {{ range $r := $day.rooms }}
+                  <div class="room-header">{{ $r.name }}</div>
+                {{ end }}
+  
+                <!-- Time slots -->
+                {{ range $slot := $day.slots }}
+                  <div class="time-col">{{ $slot.time }}</div>
+  
+                  {{/* 1) Break rows */}}
+                  {{ if $slot.break }}
+                    <div class="session-break" style="grid-column: 2 / -1;">
+                      Break
+                    </div>
+  
+                  {{/* 2) Span rows (dinner/lunch/networking, using either span or old colspan) */}}
+                  {{ else if or $slot.span $slot.colspan }}
+                    {{ $evt := or $slot.event $slot.events }}
+                    <div class="session-block {{ $evt.type }}" style="grid-column: 2 / -1;">
+                      <div class="session-title">{{ $evt.title }}</div>
+                      {{ with $evt.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
+                    </div>
+  
+                  {{/* 3) Normal per-room cells */}}
+                  {{ else }}
+                    {{ range $r := $day.rooms }}
+                      {{ $e := index $slot.events $r.id }}
+                      {{ if $e }}
+                        <div class="session-block {{ $e.type }}">
+                          <div class="session-title">{{ $e.title }}</div>
+                          {{ with $e.speaker }} <div class="session-speaker">{{ . }}</div> {{ end }}
+                          {{ with $e.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
+                        </div>
+                      {{ else }}
+                        <div class="session-empty"></div>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+  
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </main>
+    </div>
+
+    {{ partial "scripts.html" . }}
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tabs-wrapper .tab-link");
+        const days = document.querySelectorAll(".schedule-day");
+        tabs.forEach(btn => {
+          btn.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            days.forEach(d => d.classList.remove("active"));
+            btn.classList.add("active");
+            document.getElementById(btn.dataset.day).classList.add("active");
+          });
+        });
+      });
+    </script>
+
+    <style>
+      :root {
+        --deep-navy:    #1B3A4B;
+        --forest-green: #2E5636;
+        --soft-beige:   #F5F1E3;
+        --sky-blue:     #6C91C2;
+        --dark-gray:    #3A3A3A;
+        --white:        #FFFFFF;
+        --gap:          16px;
+        --pad:          12px;
+        --nav-height:   140px;
+
+        --color-checkin:      rgb(202, 55, 55);      
+        --color-keynote:      var(--deep-navy);
+        --color-oral:         var(--sky-blue);
+        --color-panel:        #ffe23f;                 
+        --color-education:    #FFE5B4;                 
+        --color-meal:         var(--forest-green);     
+        --color-networking:   #218695;                 
+        --color-training:     #FF6F61;                 
+        --color-bofs:         #537595;                 
+        --color-lightning:    #ffd968;                 
+        --color-party:        #ff61b0;                 
+        --color-posters:      #5A4E7F;                 
+        --color-break:        lightgray;       
+      }
+
+      body {
+        background: #1a1a1a;
+        padding-top: var(--nav-height);
+      }
+
+      #all {
+        background: linear-gradient(
+          to right,
+          rgb(231, 236, 230) 0%,
+          rgb(244, 247, 245) 100%
+        );
+        padding-top: 3rem;
+      }
+
+      .glance-container {
+        background: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        max-width: 1400px;
+        margin: 3rem auto;
+        padding: 1rem;
+        margin-top: 0px;
+      }
+
+      .glance-container h1 {
+        font-size: 4.5rem;
+        font-weight: 600;
+        color: var(--dark-gray);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        background: none;
+        padding: 0;
+        border: none;
+        display: block;
+      }
+
+      .tabs-wrapper {
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: var(--gap);
+      }
+      .tab-link {
+        padding: 0.5rem 1rem;
+        background: var(--soft-beige);
+        color: var(--dark-gray);
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+      }
+      .tab-link.active {
+        background: var(--forest-green);
+        color: var(--white);
+      }
+      .schedule-day { display: none; overflow-y: visible;}
+      .schedule-day.active { display: block; }
+      .schedule-grid {
+        display: grid;
+        grid-template-columns: 12% repeat(5, 1fr);
+        grid-auto-rows: auto;
+        border: 1px solid #ddd;
+        overflow-y: visible;
+      }
+      .schedule-grid > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd;
+        padding: var(--pad);
+        box-sizing: border-box;
+      }
+      .schedule-grid > .time-header,
+      .schedule-grid > .room-header {
+        position: sticky;
+        top: var(--nav-height);
+        z-index: 12;
+      }
+      .date-header {
+        grid-column: 1 / -1;
+        background-color: var(--soft-beige);
+        color: var(--dark-gray);
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.8rem;
+      }
+      .time-header {
+        background: var(--soft-beige);
+        color: var(--dark-gray);
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .room-header {
+        background: var(--dark-gray);
+        color: var(--white);
+        font-weight: bold;
+        text-align: center;
+      }
+      .time-col {
+        background: var(--soft-beige);
+        color: var(--dark-gray);
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+        
+      }
+      .session-empty {
+        background: var(--soft-beige);
+      }
+      .session-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--white);
+        border-radius: 4px;
+        padding: 8px;
+        text-align: left;
+      }
+      .session-title {
+        font-weight: bold;
+        margin-bottom: 4px;
+        text-align: center;
+      }
+      .session-speaker {
+        font-size: 1.2rem;           
+        font-style: italic;
+        color: var(--white);
+        margin-top: 4px;
+        text-align: left;           
+        line-height: 1.1;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .session-loc {
+        font-size: 0.9rem;
+      }
+
+      .schedule-grid .session-empty,
+      .schedule-grid .session-block {
+        min-height: 120px;
+      }
+
+      .schedule-grid .session-break,
+      .schedule-grid .session-block.session-lunch,
+      .schedule-grid .session-block.session-dinner,
+      .schedule-grid .session-block.session-breakfast {
+        min-height: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .schedule-grid .session-keynote .session-title {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        text-align: left;
+        word-break: break-word;
+        hyphens: auto;                 
+        white-space: normal;
+        padding: 4px 6px;
+      }
+
+      /* Session blocks */
+  
+      .session-lunch,
+      .session-dinner,
+      .session-breakfast {
+        background: var(--color-meal);
+        color: var(--white);
+      }
+
+      .session-checkin {
+        background: var(--color-checkin);
+        color: var(--white);
+      }
+
+      .session-opening {
+        background: var(--color-keynote);
+        color: var(--white);
+      }
+
+      .session-keynote {
+        background: var(--color-keynote);
+        color: var(--white);
+      }
+
+      .session-oral {
+        background: var(--color-oral);
+        color: var(--white);
+      }
+
+      .session-panel {
+        background: var(--color-panel);
+        color: var(--dark-gray);
+      }
+
+      .session-education {
+        background: var(--color-education);
+        color: var(--dark-gray);
+      }
+
+      .session-networking {
+        background: var(--color-networking);
+        color: var(--white);
+      }
+
+      .session-training {
+        background: var(--color-training);
+        color: var(--white);
+      }
+
+      .session-bofs {
+        background: var(--color-bofs);
+        color: var(--white);
+      }
+
+      .session-lightning-talks {
+        background: var(--color-lightning);
+        color: var(--dark-gray);
+      }
+
+      .session-party {
+        background: var(--color-party);
+        color: var(--white);
+      }
+
+      .session-posters {
+        background: var(--color-posters);
+        color: var(--white);
+      }
+
+      /* Break row styling (spanning all columns) */
+      .session-break {
+        grid-column: 2 / -1;
+        background: var(--color-break);
+        color: var(--dark-gray);
+        font-style: italic;
+        text-align: center;
+      }
+      @media (max-width: 768px) {
+        .tabs-wrapper {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 8px;
+        }
+        .tab-link {
+          width: 100%;
+          margin-bottom: 0 !important;
+          text-align: center;
+        }
+        .schedule-wrapper {
+          overflow-x: auto; 
+          overflow-y: visible;
+          -webkit-overflow-scrolling: touch; 
+        }
+        .schedule-grid {
+          grid-template-columns: 25% repeat(5, minmax(150px,1fr));
+          overflow-y: visible;
+        }
+        .schedule-grid > .time-header,
+        .schedule-grid > .room-header {
+          top: 0;
+        }
+        .time-col,
+        .time-header {
+          font-size: 1.3rem;
+          padding: 6px 4px;
+        }
+
+        .session-title {
+          font-size: 1.2rem;
+          overflow-wrap: break-word;
+          word-break: break-word;
+          hyphens: auto;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+        }
+
+        .schedule-grid .session-keynote .session-title {
+          font-size: 1.2rem;
+          line-height: 1.1;
+        }
+        .glance-container h1 {
+          text-align: center;
+        }
+      }
+
+    </style>
+  </body>
+</html>
+
