@@ -12,19 +12,24 @@
 
         <!-- Day Tabs -->
         <nav class="tabs-wrapper">
-          {{ range $i, $d := $days }}
+          {{ range $d := $days }}
             {{ $day := index $.Site.Data.schedule $d }}
-            <button class="tab-link {{ if eq $i 0 }}active{{ end }}"
-                    data-day="{{ $d }}">
+            <button 
+              class="tab-link" 
+              data-day="{{ $d }}" 
+              data-date="{{ $day.date }}">
               {{ $day.title }}
             </button>
           {{ end }}
         </nav>
 
         <!-- Each Day -->
-        {{ range $i, $d := $days }}
+        {{ range $d := $days }}
           {{ $day := index $.Site.Data.schedule $d }}
-          <div id="{{ $d }}" class="schedule-day {{ if eq $i 0 }}active{{ end }}">
+          <div 
+            id="{{ $d }}" 
+            class="schedule-day" 
+            data-date="{{ $day.date }}">
             <div class="schedule-wrapper">
               <div class="schedule-grid">
                 <!-- Date header -->
@@ -39,28 +44,23 @@
                 {{ range $slot := $day.slots }}
                   <div class="time-col">{{ $slot.time }}</div>
   
-                  {{/* 1) Break rows */}}
                   {{ if $slot.break }}
                     <div class="session-break" style="grid-column: 2 / -1;">
                       Break
                     </div>
-  
-                  {{/* 2) Span rows (dinner/lunch/networking, using either span or old colspan) */}}
                   {{ else if or $slot.span $slot.colspan }}
                     {{ $evt := or $slot.event $slot.events }}
                     <div class="session-block {{ $evt.type }}" style="grid-column: 2 / -1;">
                       <div class="session-title">{{ $evt.title }}</div>
                       {{ with $evt.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
                     </div>
-  
-                  {{/* 3) Normal per-room cells */}}
                   {{ else }}
                     {{ range $r := $day.rooms }}
                       {{ $e := index $slot.events $r.id }}
                       {{ if $e }}
                         <div class="session-block {{ $e.type }}">
                           <div class="session-title">{{ $e.title }}</div>
-                          {{ with $e.speaker }} <div class="session-speaker">{{ . }}</div> {{ end }}
+                          {{ with $e.speaker }}<div class="session-speaker">{{ . }}</div>{{ end }}
                           {{ with $e.loc }}<div class="session-loc">{{ . }}</div>{{ end }}
                         </div>
                       {{ else }}
@@ -80,15 +80,29 @@
     {{ partial "scripts.html" . }}
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const tabs = document.querySelectorAll(".tabs-wrapper .tab-link");
+        const tabs = Array.from(document.querySelectorAll(".tabs-wrapper .tab-link"));
         const days = document.querySelectorAll(".schedule-day");
+        const today = new Date();
+        
+        // find tab with date closest to today
+        let closestTab = tabs.reduce((best, tab) => {
+          const d = new Date(tab.dataset.date);
+          const diff = Math.abs(d - today);
+          return (!best || diff < best.diff) ? { tab, diff } : best;
+        }, null).tab;
+
+        // activate that tab & day
+        function activate(el) {
+          tabs.forEach(t => t.classList.remove("active"));
+          days.forEach(d => d.classList.remove("active"));
+          el.classList.add("active");
+          document.getElementById(el.dataset.day).classList.add("active");
+        }
+        activate(closestTab);
+
+        // bind clicks
         tabs.forEach(btn => {
-          btn.addEventListener("click", () => {
-            tabs.forEach(t => t.classList.remove("active"));
-            days.forEach(d => d.classList.remove("active"));
-            btn.classList.add("active");
-            document.getElementById(btn.dataset.day).classList.add("active");
-          });
+          btn.addEventListener("click", () => activate(btn));
         });
       });
     </script>
