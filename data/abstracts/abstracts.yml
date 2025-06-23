@@ -288,7 +288,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 1
     title: "Robust ancestry inference from challenging human molecular data with RAIDS"
     authors:
@@ -303,7 +303,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 2
     title: "Meta-iPep: A metaimmunopeptidomics pipeline implemented within Galaxy platform to characterize HLA-bound microbial peptides for immunotherapy"
     authors:
@@ -319,7 +319,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 3
     title: "Analyzing allele-specific methylation using Oxford Nanopore long-read DNA sequencing"
     authors:
@@ -329,7 +329,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 4
     title: "Public gene expression cancer signatures across bulk, single-cell and spatial transcriptomics data with signifinder Bioconductor package"
     authors:
@@ -349,7 +349,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 5
     title: "Host cell signaling during viral infection network perturbation analysis"
     authors:
@@ -360,7 +360,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 6
     title: "SEMplR: An R package for predicting the effects of genetic variation on transcription factor binding"
     authors:
@@ -373,7 +373,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 7
     title: "Enhancing rare variant analysis in biobanks: whole-genome annotation using GDS files"
     authors:
@@ -384,7 +384,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 8
     title: "Orthology Detection at the Scale of Modern Genomics"
     authors:
@@ -395,7 +395,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 9
     title: "Multiscale analysis of lung adenocarcinoma spatial transcriptomics data"
     authors:
@@ -406,7 +406,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 10
     title: "Deciphering CLEC12A Negative Regulation of Neutrophil Activation by Network and Functional Enrichment Analyses"
     authors:
@@ -425,7 +425,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 11
     title: "Broadening Metagenomic Horizons in Galaxy: Introducing the HiFi-MAG Pipeline, New Profilers, and Insights from BioDIGS"
     authors:
@@ -437,7 +437,7 @@ abstracts:
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
-    moderator: "Wes Wilson"
+    moderator: "Vincent Carey"
     slot: 12
     title: "Visualizing and analyzing differential transcript usage"
     authors:
