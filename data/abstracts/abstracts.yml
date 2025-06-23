@@ -124,7 +124,7 @@ abstracts:
       - "Robert Carroll"
 
   #—— Day 1: Parallel Track A Session 2A (3:00 – 5:00 PM, Bush Hall) ——
-  - id: session2A-1
+  - id: session2A-01
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -145,7 +145,7 @@ abstracts:
       - "Anton Nekrutenko"
       - "Michael C Schatz"
 
-  - id: session2A-2
+  - id: session2A-02
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -157,7 +157,7 @@ abstracts:
       - "Marius van den Beek"
       - "Ahmed Awan"
 
-  - id: session2A-3
+  - id: session2A-03
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -168,7 +168,7 @@ abstracts:
       - "Junhao Qiu"
       - "Jeremy Goecks"
 
-  - id: session2A-4
+  - id: session2A-04
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -185,7 +185,7 @@ abstracts:
       - "Ela Plow"
       - "Daniel Blankenberg"
 
-  - id: session2A-5
+  - id: session2A-05
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -195,7 +195,7 @@ abstracts:
     authors:
       - "Jamie Park"
 
-  - id: session2A-6
+  - id: session2A-06
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -209,7 +209,7 @@ abstracts:
       - "Qiang Gu"
       - "Jeremy Goecks"
 
-  - id: session2A-7
+  - id: session2A-07
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -219,7 +219,7 @@ abstracts:
     authors:
       - "Gregory R Watson"
 
-  - id: session2A-8
+  - id: session2A-08
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -231,7 +231,7 @@ abstracts:
       - "Jayadev Joshi"
       - "Daniel Blankenberg"
 
-  - id: session2A-9
+  - id: session2A-09
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Bush Hall"
@@ -284,7 +284,7 @@ abstracts:
       - "Hans-Rudolf Hotz"
 
   #—— Day 1: Parallel Track B Session 2B (3:00 – 5:00 PM, Grace Auditorium) ——
-  - id: session2B-1
+  - id: session2B-01
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -299,7 +299,7 @@ abstracts:
       - "David A Tuveson"
       - "Alex Krasnitz"
 
-  - id: session2B-2
+  - id: session2B-02
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -315,7 +315,7 @@ abstracts:
       - "Timothy J Griffin"
       - "Pratik D Jagtap"
 
-  - id: session2B-3
+  - id: session2B-03
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -325,7 +325,7 @@ abstracts:
     authors:
       - "Kasper D Hansen"
 
-  - id: session2B-4
+  - id: session2B-04
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -345,7 +345,7 @@ abstracts:
       - "Chiara Romualdi"
       - "Enrica Calura"
 
-  - id: session2B-5
+  - id: session2B-05
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -356,7 +356,7 @@ abstracts:
       - "Pariksheet Nanda"
       - "Jason E Shoemaker"
 
-  - id: session2B-6
+  - id: session2B-06
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -369,7 +369,7 @@ abstracts:
       - "Alan P Boyle"
       - "Douglas H Phanstiel"
 
-  - id: session2B-7
+  - id: session2B-07
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -380,7 +380,7 @@ abstracts:
       - "Xiuwen Zheng"
       - "Raven Chen"
 
-  - id: session2B-8
+  - id: session2B-08
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"
@@ -391,7 +391,7 @@ abstracts:
       - "Aidan H Lakshman"
       - "Erik S Wright"
 
-  - id: session2B-9
+  - id: session2B-09
     day: 1
     time: "3:00 – 5:00 PM"
     location: "Grace Auditorium"

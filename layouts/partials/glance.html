@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  <body>
-    <div id="all">
-      {{ partial "top.html" . }}
-      {{ partial "nav.html" . }}
-
-      <main class="glance-container">
+<main class="glance-container">
         <h1>Program</h1>
         {{ $days := slice "day1" "day2" "day3" "day4" }}
 
@@ -74,8 +66,7 @@
             </div>
           </div>
         {{ end }}
-      </main>
-    </div>
+</main>
 
     {{ partial "scripts.html" . }}
     <script>
@@ -85,11 +76,9 @@
         const today = new Date();
         
         // find tab with date closest to today
-        let closestTab = tabs.reduce((best, tab) => {
-          const d = new Date(tab.dataset.date);
-          const diff = Math.abs(d - today);
-          return (!best || diff < best.diff) ? { tab, diff } : best;
-        }, null).tab;
+        let todayStr = today.toISOString().slice(0, 10);
+        let exactTab = tabs.find(tab => tab.dataset.date === todayStr);
+        let closestTab = exactTab || tabs[tabs.length - 1];
 
         // activate that tab & day
         function activate(el) {
@@ -137,15 +126,6 @@
       body {
         background: #1a1a1a;
         padding-top: var(--nav-height);
-      }
-
-      #all {
-        background: linear-gradient(
-          to right,
-          rgb(231, 236, 230) 0%,
-          rgb(244, 247, 245) 100%
-        );
-        padding-top: 3rem;
       }
 
       .glance-container {
@@ -423,6 +403,4 @@
       }
 
     </style>
-  </body>
-</html>
 
