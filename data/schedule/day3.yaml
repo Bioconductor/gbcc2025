@@ -66,26 +66,31 @@ slots:
         type: session-training
         title: "Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy"
         speaker: "Daniel Blankenberg"
+        description: "This beginner-friendly session introduces participants to integrating software tools—especially Bioconductor packages—into the Galaxy platform. Attendees will learn the fundamentals of tool integration, enabling them to make complex R-based analyses more accessible, reproducible, and user-friendly. The session includes hands-on examples and guidance on building simple Galaxy workflows that incorporate Bioconductor functionality. No prior experience with Galaxy or Bioconductor is needed, making this an ideal entry point for researchers new to tool development or workflow design. By the end of the session, participants will be ready to start creating and sharing their own Galaxy-wrapped Bioconductor tools."
         loc: ""
       bush-auditorium:
         type: session-training
         title: "Orchestrating Microbiome Analysis with Bioconductor"
         speaker: "Tuomas Borman"
+        description: "This session introduces participants to microbiome data analysis using the TreeSummarizedExperiment framework, an extension of SummarizedExperiment tailored for microbiome workflows. Compared to traditional tools like phyloseq, this approach offers improved interoperability with the Bioconductor ecosystem and greater scalability for large and complex datasets. Attendees will learn how to apply a suite of methods developed specifically for TreeSummarizedExperiment objects to perform robust microbiome analysis. The session is supported by the Orchestrating Microbiome Analysis with Bioconductor online book, which serves as a practical guide and reference for reproducible, standards-based workflows. By the end of the session, participants will be equipped with modern tools and best practices for microbiome data science in R."
         loc: ""
       bush-fireplace:
         type: session-training
         title: "Immunopeptidogenomics Pipeline in Galaxy for MHC-Bound Neoantigens"
         speaker: "Pratik Jagtap"
+        description: "This session introduces iPepGen, a Galaxy-based pipeline designed to integrate multi-omic data for identifying MHC-bound tumor-specific neoantigens. By combining next-generation sequencing and mass spectrometry, participants will learn how to connect genomic mutations and transcript variants to peptides presented on the cell surface. The training will walk through the five core modules of iPepGen, highlighting how each contributes to the identification and validation of immunogenic peptides. Emphasis will be placed on the power of Galaxy to provide scalable, user-friendly infrastructure for complex immunopeptidogenomics workflows. Participants will leave with the skills and resources needed to apply this pipeline to cancer immunology research using accessible tools and community-supported training materials."
         loc: ""
       nicholls-biondi:
         type: session-training
         title: "AnVIL: Secure, scalable computing for controlled access data"
         speaker: "Frederick Tan"
+        description: "This session provides an introduction to the NHGRI AnVIL (Analysis, Visualization, and Informatics Lab-space) platform, a cloud-based environment for secure and scalable analysis of controlled-access biomedical data. Attendees will learn how AnVIL enables collaborative research by integrating data access, analysis tools, and reproducible workflows within a compliant, cloud-native infrastructure. "
         loc: ""
       hawkins:
         type: session-training
         title: "Galaxy History Based Alignment Comparison in IGB"
         speaker: "Ann Loraine"
+        description: "In this hands-on workshop, participants will learn how to use Integrated Genome Browser (IGB) to visualize and explore RNA-Seq data directly from Galaxy history files. Using a pre-configured public Galaxy history, the session will guide users through examining alignment data from both single-cell and bulk RNA-Seq experiments. Attendees will use IGB to compare patterns of read alignment, identify discrepancies between the two data types, and assess the biological or technical significance of observed differences. The workshop emphasizes practical skills in integrating visualization tools with Galaxy-based workflows for enhanced data interpretation. By the end, participants will be confident in using IGB to explore and validate high-throughput sequencing results in a genome-aware context."
         loc: ""
 
   - time: "3:30 – 4:00"
