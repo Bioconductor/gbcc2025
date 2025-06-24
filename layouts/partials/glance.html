@@ -76,7 +76,14 @@
         const today = new Date();
         
         // find tab with date closest to today
-        let todayStr = today.toISOString().slice(0, 10);
+        function getTodayEST() {
+          // EST is UTC-5, but during daylight saving it's UTC-4 (EDT)
+          // This uses the America/New_York timezone, which handles DST automatically
+          const now = new Date();
+          // Format as YYYY-MM-DD in EST/EDT
+          return now.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+        }
+        let todayStr = getTodayEST();
         let exactTab = tabs.find(tab => tab.dataset.date === todayStr);
         let closestTab = exactTab || tabs[tabs.length - 1];
 
