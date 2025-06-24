@@ -51,26 +51,31 @@ slots:
         type: session-training
         title: "Exploring Galaxy Workflows "
         speaker: "Marius van den Beek"
+        description: "This session will walk attendees through building Galaxy workflows, starting with a simple, linear example and progressively incorporating advanced features. Participants will explore tools like dataset collections, workflow parameters, conditionals, subworkflows, and reporting to create powerful, modular workflows. The session will also cover best practices for workflow design and reproducibility, with a focus on using Galaxy’s most recent capabilities. Whether youre new to workflows or looking to enhance existing ones, this training will help you take full advantage of what Galaxy has to offer. By the end, attendees will have the skills to build scalable, flexible workflows suitable for real-world analysis."
         loc: ""
       bush-auditorium:
         type: session-training
         title: "Inference Challenges and Corrections for AI-Predicted Outcomes"
         speaker: "Stephen Salerno"
+        description: "As AI and machine learning increasingly drive high-throughput data analysis, researchers often substitute predicted outcomes for direct measurements—introducing new challenges for statistical inference. This session explores the pitfalls of using standard analytical tools on AI/ML-generated data, particularly in genomic studies where predicted gene expression or imputed genotypes replace observed outcomes. Through real-world examples, attendees will learn how this issue affects bias, variance, and the reliability of downstream conclusions. The session will introduce recent correction methods—including those implemented in the {ipd} R package—that aim to restore valid inference when working with predicted data. Participants will leave with a deeper understanding of the limitations of machine learned everything approaches and practical tools to improve the robustness of AI/ML-integrated analyses."
         loc: ""
       bush-fireplace:
         type: session-training
         title: "Galaxy Backend Architecture and Software Development"
         speaker: "John Davis and Ahmed Awan"
+        description: "How about this:This hands-on training session introduces participants to the Galaxy platform's core codebase and development workflow. Attendees will learn how to run a local instance of Galaxy, navigate its architecture, and understand key components relevant to feature development. The session will guide trainees through making a simple but meaningful code contribution, demystifying the process of improving Galaxy from the inside. By focusing on real-world development practices, the training empowers participants to become active contributors to the platform. No prior Galaxy development experience is required—just curiosity and a willingness to dive into open-source software."
         loc: ""
       nicholls-biondi:
         type: session-training
         title: "Deploying Autonomous Galaxy Workflows for Materials Laboratories"
         speaker: "Greg Watson"
+        description: "This session highlights the growing role of Galaxy in powering automated, scalable workflows across national scientific facilities conducting x-ray, neutron, and muon experiments. Presentations will showcase how institutions like ORNL and STFC are deploying Galaxy to manage large-scale, instrument-driven data workflows, including those requiring high-performance computing and GPU acceleration. Attendees will gain insight into how Galaxy is being adapted for real-time data processing, experimental steering, and cloud-based tool deployment. The session emphasizes collaborative development and the challenges of supporting automation, reproducibility, and cross-institutional experiments in the materials science domain. Concluding with a forward-looking discussion, the session explores Galaxys potential as a foundational platform for autonomous, data-intensive laboratories of the future."
         loc: ""
       hawkins:
         type: session-training
         title: "Making Space Count - Strategies for Analysing Spatial Omics Data"
         speaker: "Ellis Patrick"
+        description: "This training introduces a comprehensive framework for analyzing data from spatial transcriptomics and proteomics platforms such as Phenocycler, IMC, and Xenium. Participants will explore core analytical steps using Bioconductor packages including simpleSeg, FuseSOM, spicyR, listClust, statial, scFeatures, and ClassifyR. The session covers cell segmentation, feature normalization, cell type classification, microenvironment profiling, spatial hypothesis testing, and patient-level classification. Attendees will learn to read spatial datasets into R, prepare them for analysis, evaluate data quality, and apply key spatial analysis techniques. While tool-based examples will be drawn from the trainers own packages, the emphasis will be on generalizable analytical concepts, data challenges, and biological interpretation."
         loc: ""
 
   - time: "2:30 – 3:00"
